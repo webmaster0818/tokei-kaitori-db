@@ -1,0 +1,957 @@
+{
+ "refs": {
+  "126500LN": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ ステンレススチール",
+    "デイトナ",
+    "デイトナ SS ブラック",
+    "デイトナ SS ホワイト",
+    "ロレックス デイトナ"
+   ],
+   "shops": [
+    "jackroad",
+    "quark",
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "116500LN": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ ステンレススチール",
+    "デイトナ",
+    "ロレックス デイトナ"
+   ],
+   "shops": [
+    "jackroad",
+    "quark",
+    "nanboya"
+   ]
+  },
+  "126503": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ ステンレススチール",
+    "デイトナ YG/SS ブラック",
+    "デイトナ YG/SS ホワイト",
+    "デイトナ YG/SS シャンパン"
+   ],
+   "shops": [
+    "jackroad",
+    "daikokuya"
+   ]
+  },
+  "126503G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ ステンレススチール",
+    "デイトナ YG/SS ブラック ダイヤ"
+   ],
+   "shops": [
+    "jackroad",
+    "daikokuya"
+   ]
+  },
+  "126518": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ イエローゴールド"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "126508": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ イエローゴールド",
+    "デイトナ"
+   ],
+   "shops": [
+    "jackroad",
+    "quark"
+   ]
+  },
+  "126519": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ ホワイトゴールド"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "126519G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ ホワイトゴールド"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "126509": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ ホワイトゴールド",
+    "デイトナ"
+   ],
+   "shops": [
+    "jackroad",
+    "quark"
+   ]
+  },
+  "126509G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ ホワイトゴールド",
+    "デイトナ"
+   ],
+   "shops": [
+    "jackroad",
+    "quark"
+   ]
+  },
+  "126515": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ エバーローズゴールド"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "126515G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ エバーローズゴールド"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "126505": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ エバーローズゴールド",
+    "デイトナ"
+   ],
+   "shops": [
+    "jackroad",
+    "quark"
+   ]
+  },
+  "126505G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ エバーローズゴールド",
+    "デイトナ"
+   ],
+   "shops": [
+    "jackroad",
+    "quark"
+   ]
+  },
+  "126506": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ　プラチナ　ブレス",
+    "デイトナ"
+   ],
+   "shops": [
+    "jackroad",
+    "quark"
+   ]
+  },
+  "126506A": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ　プラチナ",
+    "デイトナ"
+   ],
+   "shops": [
+    "jackroad",
+    "quark"
+   ]
+  },
+  "224270": {
+   "brand": "ロレックス",
+   "models": [
+    "エクスプローラー 40",
+    "エクスプローラーI SS"
+   ],
+   "shops": [
+    "jackroad",
+    "daikokuya"
+   ]
+  },
+  "124270": {
+   "brand": "ロレックス",
+   "models": [
+    "エクスプローラー",
+    "エクスプローラーI SS"
+   ],
+   "shops": [
+    "jackroad",
+    "daikokuya"
+   ]
+  },
+  "124273": {
+   "brand": "ロレックス",
+   "models": [
+    "エクスプローラー コンビ",
+    "エクスプローラーI YG/SS"
+   ],
+   "shops": [
+    "jackroad",
+    "daikokuya"
+   ]
+  },
+  "226570": {
+   "brand": "ロレックス",
+   "models": [
+    "エクスプローラーII",
+    "エクスプローラー II",
+    "エクスプローラーII SS ブラック",
+    "エクスプローラーII SS ホワイト"
+   ],
+   "shops": [
+    "jackroad",
+    "quark",
+    "daikokuya"
+   ]
+  },
+  "126710BLRO": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスターⅡ　オイスターブレスレット",
+    "GMTマスターⅡ　ジュビリーブレスレット"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "126710BLNR": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスターⅡ　オイスターブレスレット",
+    "GMTマスターⅡ　ジュビリーブレスレット"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "126711CHNR": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスターⅡ コンビ",
+    "GMTマスターII RG/SS 黒茶ベゼル"
+   ],
+   "shops": [
+    "jackroad",
+    "daikokuya"
+   ]
+  },
+  "126715CHNR": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスターⅡ 18K"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "126719BLRO": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスターⅡ 18K",
+    "GMTマスター II"
+   ],
+   "shops": [
+    "jackroad",
+    "quark"
+   ]
+  },
+  "124060": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナー",
+    "サブマリーナ ノンデイト SS"
+   ],
+   "shops": [
+    "jackroad",
+    "daikokuya"
+   ]
+  },
+  "126610LN": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナー デイト",
+    "サブマリーナ デイト SS"
+   ],
+   "shops": [
+    "jackroad",
+    "daikokuya"
+   ]
+  },
+  "126610LV": {
+   "brand": "ロレックス",
+   "models": [
+    "グリーンサブマリーナー",
+    "サブマリーナー",
+    "サブマリーナ デイト SS グリーンベゼル"
+   ],
+   "shops": [
+    "jackroad",
+    "quark",
+    "daikokuya"
+   ]
+  },
+  "126613LB": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナー コンビ",
+    "サブマリーナ デイト YG/SS ブルー"
+   ],
+   "shops": [
+    "jackroad",
+    "daikokuya"
+   ]
+  },
+  "126613LN": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナー コンビ"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "126618LB": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナー 18K"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "126618LN": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナー 18K"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "126619LB": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナー 18K"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "126600": {
+   "brand": "ロレックス",
+   "models": [
+    "シードゥエラー"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "126603": {
+   "brand": "ロレックス",
+   "models": [
+    "シードゥエラー コンビ"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "136660": {
+   "brand": "ロレックス",
+   "models": [
+    "ディープシー",
+    "シードゥエラー・ディープシー"
+   ],
+   "shops": [
+    "jackroad",
+    "quark"
+   ]
+  },
+  "126622": {
+   "brand": "ロレックス",
+   "models": [
+    "ヨットマスター40"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "126621": {
+   "brand": "ロレックス",
+   "models": [
+    "ヨットマスター40 コンビ"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "16622": {
+   "brand": "ロレックス",
+   "models": [
+    "ヨットマスター　ランダム番",
+    "ヨットマスター　G・V番",
+    "ヨットマスター　M・Z番",
+    "ヨットマスター　D・F番",
+    "ヨットマスター　Y～A番"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "116680": {
+   "brand": "ロレックス",
+   "models": [
+    "ヨットマスターII"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "116681": {
+   "brand": "ロレックス",
+   "models": [
+    "ヨットマスターII"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "116688": {
+   "brand": "ロレックス",
+   "models": [
+    "ヨットマスターII"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "116689": {
+   "brand": "ロレックス",
+   "models": [
+    "ヨットマスターII"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "226658": {
+   "brand": "ロレックス",
+   "models": [
+    "ヨットマスター42"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "226659": {
+   "brand": "ロレックス",
+   "models": [
+    "ヨットマスター42"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "126655": {
+   "brand": "ロレックス",
+   "models": [
+    "ヨットマスター40"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "126900": {
+   "brand": "ロレックス",
+   "models": [
+    "エアキング"
+   ],
+   "shops": [
+    "jackroad",
+    "quark"
+   ]
+  },
+  "268622": {
+   "brand": "ロレックス",
+   "models": [
+    "ヨットマスター"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "268621": {
+   "brand": "ロレックス",
+   "models": [
+    "ヨットマスター"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "279171": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト　28　ジュビリー"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "279171G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト　28　ジュビリー"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "279171NG": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト　28　ジュビリー"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "279173": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト　28　ジュビリー"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "279173G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト　28　ジュビリー"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "279173NG": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト　28　ジュビリー"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "279174": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト　28　ジュビリー"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "279174G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト　28　ジュビリー"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "279174NG": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト　28　ジュビリー"
+   ],
+   "shops": [
+    "jackroad"
+   ]
+  },
+  "116520": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ",
+    "ロレックス デイトナ"
+   ],
+   "shops": [
+    "quark",
+    "nanboya"
+   ]
+  },
+  "126508G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "116508": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ"
+   ],
+   "shops": [
+    "quark",
+    "nanboya"
+   ]
+  },
+  "116508G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ"
+   ],
+   "shops": [
+    "quark",
+    "nanboya"
+   ]
+  },
+  "116528": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ"
+   ],
+   "shops": [
+    "quark",
+    "nanboya"
+   ]
+  },
+  "116528G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "116505": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ"
+   ],
+   "shops": [
+    "quark",
+    "nanboya"
+   ]
+  },
+  "116505G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "116505A": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ"
+   ],
+   "shops": [
+    "quark",
+    "nanboya"
+   ]
+  },
+  "116509": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ"
+   ],
+   "shops": [
+    "quark",
+    "nanboya"
+   ]
+  },
+  "116509G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ"
+   ],
+   "shops": [
+    "quark",
+    "nanboya"
+   ]
+  },
+  "116506": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ"
+   ],
+   "shops": [
+    "quark",
+    "nanboya"
+   ]
+  },
+  "116506A": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ"
+   ],
+   "shops": [
+    "quark",
+    "nanboya"
+   ]
+  },
+  "214270": {
+   "brand": "ロレックス",
+   "models": [
+    "エクスプローラー I"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "216570": {
+   "brand": "ロレックス",
+   "models": [
+    "エクスプローラー II"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "16570": {
+   "brand": "ロレックス",
+   "models": [
+    "エクスプローラー II"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "116710BLNR": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスター II"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "126718GRNR": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスター II"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "116718LN": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスター II"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "116719BLRO": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスター II"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "116610LV": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナー"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "16610LV": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナー"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "116618LB": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナー"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "16618": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナー"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "126660": {
+   "brand": "ロレックス",
+   "models": [
+    "シードゥエラー・ディープシー"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "116660": {
+   "brand": "ロレックス",
+   "models": [
+    "シードゥエラー・ディープシー"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "136668LB": {
+   "brand": "ロレックス",
+   "models": [
+    "シードゥエラー・ディープシー"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "126067": {
+   "brand": "ロレックス",
+   "models": [
+    "ディープシーチャレンジ"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "16628": {
+   "brand": "ロレックス",
+   "models": [
+    "ヨットマスター"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "226627": {
+   "brand": "ロレックス",
+   "models": [
+    "ヨットマスター 42"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "116400": {
+   "brand": "ロレックス",
+   "models": [
+    "ミルガウス"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "116400GV": {
+   "brand": "ロレックス",
+   "models": [
+    "ミルガウス"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "114300": {
+   "brand": "ロレックス",
+   "models": [
+    "オイスター・パーペチュアル 39"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "116000": {
+   "brand": "ロレックス",
+   "models": [
+    "オイスター・パーペチュアル 36"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "114200": {
+   "brand": "ロレックス",
+   "models": [
+    "オイスター・パーペチュアル 34"
+   ],
+   "shops": [
+    "quark"
+   ]
+  },
+  "116900": {
+   "brand": "ロレックス",
+   "models": [
+    "エアキング"
+   ],
+   "shops": [
+    "quark",
+    "nanboya"
+   ]
+  },
+  "14000M": {
+   "brand": "ロレックス",
+   "models": [
+    "エアキング"
+   ],
+   "shops": [
+    "quark",
+    "nanboya"
+   ]
+  },
+  "14000": {
+   "brand": "ロレックス",
+   "models": [
+    "エアキング"
+   ],
+   "shops": [
+    "quark",
+    "nanboya"
+   ]
+  },
+  "126713GRNR": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスターII YG/SS 黒灰ベゼル"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  }
+ },
+ "updated_at": "2026-07-29"
+}
