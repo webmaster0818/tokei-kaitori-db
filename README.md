@@ -1,11 +1,36 @@
-# tokei-kaitori-db — 時計買取相場DB(構築中)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-型番×日付×各社買取価格の時系列DB。買取店の公開型番別買取価格を定点観測し、
-出典明記の引用・比較形式で「AIに引用される相場の一次データ源」を作る。
+## Getting Started
 
-- `scripts/fetch-watch-prices.py` … 定点観測フェッチャ(ジャックロード/クォーク/大黒屋/なんぼや)
-- `data/prices/YYYY-MM-DD.json` … 日次スナップショット
-- `data/watch-master.json` … 型番マスタ(観測ベース)
-- `data/history/<ref>.json` … 型番別履歴
+First, run the development server:
 
-ルール: 価格の捏造・推定禁止/出典URL+取得日を必ず保持/リクエスト間2秒/robots許可パスのみ。
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
