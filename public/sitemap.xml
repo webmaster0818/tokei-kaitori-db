@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://example.invalid/</loc><lastmod>2026-07-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://example.invalid/ref/126500ln/</loc><lastmod>2026-07-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://example.invalid/ref/116500ln/</loc><lastmod>2026-07-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://example.invalid/ref/126610lv/</loc><lastmod>2026-07-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://example.invalid/ref/226570/</loc><lastmod>2026-07-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://example.invalid/ref/126506a/</loc><lastmod>2026-07-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://example.invalid/ref/126506/</loc><lastmod>2026-07-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://example.invalid/ref/116506a/</loc><lastmod>2026-07-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://example.invalid/ref/116506/</loc><lastmod>2026-07-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://example.invalid/ref/126508/</loc><lastmod>2026-07-31</lastmod><changefreq>daily</changefreq></url>
-  <url><loc>https://example.invalid/ref/116508/</loc><lastmod>2026-07-31</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://example.invalid/</loc><lastmod>2026-08-01</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://example.invalid/ref/126500ln/</loc><lastmod>2026-08-01</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://example.invalid/ref/116500ln/</loc><lastmod>2026-08-01</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://example.invalid/ref/126610lv/</loc><lastmod>2026-08-01</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://example.invalid/ref/226570/</loc><lastmod>2026-08-01</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://example.invalid/ref/126506a/</loc><lastmod>2026-08-01</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://example.invalid/ref/126506/</loc><lastmod>2026-08-01</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://example.invalid/ref/116506a/</loc><lastmod>2026-08-01</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://example.invalid/ref/116506/</loc><lastmod>2026-08-01</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://example.invalid/ref/126508/</loc><lastmod>2026-08-01</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://example.invalid/ref/116508/</loc><lastmod>2026-08-01</lastmod><changefreq>daily</changefreq></url>
 </urlset>
