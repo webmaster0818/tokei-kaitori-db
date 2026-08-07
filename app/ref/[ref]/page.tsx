@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
-import { latestDate, monthlyHistory, prototypeRefs, summarize, yen } from "@/lib/prices";
+import { latestDate, monthlyHistory, publishableRefs, summarize, yen } from "@/lib/prices";
 
 export function generateStaticParams() {
-  return prototypeRefs().map((ref) => ({ ref: ref.toLowerCase() }));
+  return publishableRefs().map((ref) => ({ ref: ref.toLowerCase() }));
 }
 
 function resolve(param: string) {
-  return prototypeRefs().find((r) => r.toLowerCase() === param.toLowerCase());
+  return publishableRefs().find((r) => r.toLowerCase() === param.toLowerCase());
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ ref: string }> }): Promise<Metadata> {
@@ -34,7 +34,7 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
   if (!s) notFound();
   const date = latestDate();
   const history = monthlyHistory(ref);
-  const others = prototypeRefs().filter((r) => r !== ref).slice(0, 6);
+  const others = publishableRefs().filter((r) => r !== ref).slice(0, 6);
 
   const ld = {
     "@context": "https://schema.org",

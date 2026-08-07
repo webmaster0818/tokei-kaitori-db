@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
-import { latestDate, prototypeRefs, summarize, yen } from "@/lib/prices";
+import { latestDate, publishableRefs, summarize, yen } from "@/lib/prices";
 
 export const metadata: Metadata = {
   title: `${SITE_NAME} — ${SITE_TAGLINE}`,
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const date = latestDate();
-  const rows = prototypeRefs()
+  const rows = publishableRefs()
     .map((ref) => summarize(ref))
     .filter((s): s is NonNullable<ReturnType<typeof summarize>> => !!s)
     .sort((a, b) => (b.ceilingMax ?? 0) - (a.ceilingMax ?? 0));

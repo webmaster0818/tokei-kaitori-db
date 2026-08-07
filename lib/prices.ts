@@ -83,9 +83,36 @@ export function summarize(ref: string, date = latestDate()): RefSummary | null {
   };
 }
 
+export type MasterRef = { brand: string; models: string[]; shops: string[] };
+
+/** 型番マスタ (data/watch-master.json) */
+export function masterRefs(): Record<string, MasterRef> {
+  const p = path.join(process.cwd(), "data", "watch-master.json");
+  if (!fs.existsSync(p)) return {};
+  return (JSON.parse(fs.readFileSync(p, "utf8")).refs ?? {}) as Record<string, MasterRef>;
+}
+
 export function prototypeRefs(): string[] {
   const p = path.join(process.cwd(), "data", "prototype-refs.json");
   return fs.existsSync(p) ? (JSON.parse(fs.readFileSync(p, "utf8")) as string[]) : [];
+}
+
+/**
+ * ページを生成する型番の一覧。
+ *
+ * 以前は prototype-refs.json（10件）に限定していたが、
+ * 実データは97型番すべてに存在するため全件を対象にする。
+ * ⚠️ ただし「価格レコードが1件も無い型番」はページを作らない。
+ *    中身の無いページを量産すると Scaled Content と判定されるため
+ *    （takushoku-biyori でスパム扱いを受けた前例あり）。
+ */
+export function publishableRefs(): string[] {
+  const refs = Object.keys(masterRefs());
+  return refs.filter((ref) => {
+    const s = summarize(ref);
+    // 複数店舗の価格が取れているものだけを公開する（比較サイトとして成立する最低条件）
+    return !!s && s.records.length > 0 && s.shops.length >= 2;
+  });
 }
 
 export const yen = (n: number) => `${n.toLocaleString("ja-JP")}円`;
