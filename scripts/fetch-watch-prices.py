@@ -27,7 +27,10 @@ UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
 SLEEP = 2.0
 
 # なんぼやref取得数の上限(プロトタイプ。他社と突合できる型番を優先)
-NANBOYA_CAP = 15
+# なんぼやは1URL=1型番なので取得数がそのまま公開型番数の上限になる。
+# 15では「既存の公開ページ維持」だけで枠を使い切り、新規を1件も増やせなかった。
+# 1件あたり約2.5秒なので、40件でも所要は+1分程度。
+NANBOYA_CAP = 40
 
 
 def fetch(url: str, encoding: str = "utf-8") -> str:
@@ -85,23 +88,47 @@ def parse_quark(html: str, url: str) -> list[dict]:
 
 
 def parse_daikokuya(html: str, url: str) -> list[dict]:
-    # 行: モデル名 SS<br><span class="ref">REF</span></td><td class="price-cell">¥未使用</td><td class="price-cell">〜 ¥中古</td>
-    out = []
-    pat = re.compile(
-        r'([^<>]{2,40})<br><span class="ref">([A-Za-z0-9./-]{4,20})</span></td>'
-        r'<td class="price-cell">([^<]*)</td><td class="price-cell">([^<]*)</td>'
-    )
-    for m in pat.finditer(html):
-        ref = norm_ref(m.group(2))
-        model = re.sub(r"\s+", " ", m.group(1)).strip()
-        for cond, raw in (("未使用", m.group(3)), ("中古", m.group(4))):
-            v = yen(raw.replace("&yen;", ""))
-            if v:
-                out.append({"shop": "大黒屋", "shop_id": "daikokuya", "ref": ref, "model": model,
-                            "price_type": "上限", "condition": cond, "price_jpy": v,
-                            "source_url": url, "fetched_at": TODAY})
-    return out
+    """大黒屋の買取価格表。1行 = 1型番（未使用/中古の2価格）。
 
+    ⚠️ 単一の巨大な正規表現で通していたら datejust/daydate が0件だった。原因は2つ:
+      1. デイトジャストは型番のあとに文字盤色が入る
+         <span class="ref">126300</span><br><span class="end">アズーロブルー</span>
+         → 「refの直後に</td>」を前提にしていたため全滅（89型番を取り逃していた）
+      2. デイデイトは価格セルの中身が「お問い合わせ」リンクで、価格が存在しない
+         → [^<]* ではタグを含むセルにマッチできない
+
+    そのため <tr> 単位に分割してから項目を拾う方式に変えた。
+    文字盤色は捨てずに dial として持つ（他社と粒度を揃えるため）。
+    """
+    out = []
+    row_pat = re.compile(r"<tr[^>]*>([\s\S]*?)</tr>", re.I)
+    ref_pat = re.compile(r'<span class="ref">([A-Za-z0-9./-]{4,20})</span>')
+    name_pat = re.compile(r'<td class="item-name">([^<]{2,40})<br>')
+    dial_pat = re.compile(r'<span class="end">([^<]{1,30})</span>')
+    cell_pat = re.compile(r'<td class="price-cell">([\s\S]*?)</td>', re.I)
+
+    for row in row_pat.findall(html):
+        m_ref = ref_pat.search(row)
+        if not m_ref:
+            continue
+        ref = norm_ref(m_ref.group(1))
+        m_name = name_pat.search(row)
+        model = re.sub(r"\s+", " ", m_name.group(1)).strip() if m_name else ""
+        m_dial = dial_pat.search(row)
+        dial = m_dial.group(1).strip() if m_dial else None
+
+        cells = cell_pat.findall(row)[:2]
+        for cond, raw in zip(("未使用", "中古"), cells):
+            # 「お問い合わせ」等、価格が掲載されていないセルは黙って飛ばす（0円にしない）
+            v = yen(re.sub(r"<[^>]+>", " ", raw).replace("&yen;", ""))
+            if v:
+                rec = {"shop": "大黒屋", "shop_id": "daikokuya", "ref": ref, "model": model,
+                       "price_type": "上限", "condition": cond, "price_jpy": v,
+                       "source_url": url, "fetched_at": TODAY}
+                if dial:
+                    rec["dial"] = dial
+                out.append(rec)
+    return out
 
 def parse_nanboya(html: str, url: str) -> list[dict]:
     out = []
@@ -156,9 +183,29 @@ def main() -> None:
         m = re.search(r"/ref-([a-z0-9-]+)/", u)
         return norm_ref(m.group(1).replace("-", ".")) if m else ""
 
-    prioritized = [u for u in nb_urls if nb_ref(u) in other_refs]
-    rest = [u for u in nb_urls if nb_ref(u) not in other_refs]
-    for u in (prioritized + rest)[:NANBOYA_CAP]:
+    # ⚠️ 取得はNANBOYA_CAPで打ち切られるため、優先順位が変わると
+    #    「昨日まで2社以上そろっていた型番」が今日1社に落ち、公開中のページが消える。
+    #    実際に大黒屋のパーサを直した日に、デイトナ9型番がこれで落ちた。
+    #    そのため「前日すでに2社以上そろっていた型番」を最優先で固定する。
+    def already_published() -> set[str]:
+        snaps = sorted((ROOT / "data" / "prices").glob("*.json"))
+        prev = [f for f in snaps if f.stem != TODAY]
+        if not prev:
+            return set()
+        recs = json.loads(prev[-1].read_text(encoding="utf-8")).get("records", [])
+        month = prev[-1].stem[:7]
+        by: dict[str, set[str]] = {}
+        for r in recs:
+            if r.get("price_month") and r["price_month"] != month:
+                continue
+            by.setdefault(r["ref"], set()).add(r["shop"])
+        return {k for k, v in by.items() if len(v) >= 2}
+
+    keep = already_published()
+    tier1 = [u for u in nb_urls if nb_ref(u) in keep]                              # 既存ページを維持
+    tier2 = [u for u in nb_urls if nb_ref(u) in other_refs and nb_ref(u) not in keep]  # 新たに2社目になれる
+    tier3 = [u for u in nb_urls if nb_ref(u) not in other_refs and nb_ref(u) not in keep]
+    for u in (tier1 + tier2 + tier3)[:NANBOYA_CAP]:
         try:
             html = fetch(u)
             rows = parse_nanboya(html, u)

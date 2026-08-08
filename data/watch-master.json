@@ -21,12 +21,15 @@
    "models": [
     "デイトナ ステンレススチール",
     "デイトナ",
-    "ロレックス デイトナ"
+    "ロレックス デイトナ",
+    "デイトナ SS ブラック",
+    "デイトナ SS ホワイト"
    ],
    "shops": [
     "jackroad",
     "quark",
-    "nanboya"
+    "nanboya",
+    "daikokuya"
    ]
   },
   "126503": {
@@ -194,7 +197,8 @@
    ],
    "shops": [
     "jackroad",
-    "daikokuya"
+    "daikokuya",
+    "nanboya"
    ]
   },
   "124273": {
@@ -205,7 +209,8 @@
    ],
    "shops": [
     "jackroad",
-    "daikokuya"
+    "daikokuya",
+    "nanboya"
    ]
   },
   "226570": {
@@ -219,27 +224,32 @@
    "shops": [
     "jackroad",
     "quark",
-    "daikokuya"
+    "daikokuya",
+    "nanboya"
    ]
   },
   "126710BLRO": {
    "brand": "ロレックス",
    "models": [
     "GMTマスターⅡ　オイスターブレスレット",
-    "GMTマスターⅡ　ジュビリーブレスレット"
+    "GMTマスターⅡ　ジュビリーブレスレット",
+    "GMTマスターII SS 青赤ベゼル"
    ],
    "shops": [
-    "jackroad"
+    "jackroad",
+    "daikokuya"
    ]
   },
   "126710BLNR": {
    "brand": "ロレックス",
    "models": [
     "GMTマスターⅡ　オイスターブレスレット",
-    "GMTマスターⅡ　ジュビリーブレスレット"
+    "GMTマスターⅡ　ジュビリーブレスレット",
+    "GMTマスターII SS 黒青ベゼル"
    ],
    "shops": [
-    "jackroad"
+    "jackroad",
+    "daikokuya"
    ]
   },
   "126711CHNR": {
@@ -250,57 +260,27 @@
    ],
    "shops": [
     "jackroad",
-    "daikokuya"
+    "daikokuya",
+    "nanboya"
    ]
   },
   "126715CHNR": {
    "brand": "ロレックス",
    "models": [
-    "GMTマスターⅡ 18K"
+    "GMTマスターⅡ 18K",
+    "GMTマスターII RG 黒茶ベゼル"
    ],
    "shops": [
-    "jackroad"
+    "jackroad",
+    "daikokuya"
    ]
   },
   "126719BLRO": {
    "brand": "ロレックス",
    "models": [
     "GMTマスターⅡ 18K",
-    "GMTマスター II"
-   ],
-   "shops": [
-    "jackroad",
-    "quark"
-   ]
-  },
-  "124060": {
-   "brand": "ロレックス",
-   "models": [
-    "サブマリーナー",
-    "サブマリーナ ノンデイト SS"
-   ],
-   "shops": [
-    "jackroad",
-    "daikokuya"
-   ]
-  },
-  "126610LN": {
-   "brand": "ロレックス",
-   "models": [
-    "サブマリーナー デイト",
-    "サブマリーナ デイト SS"
-   ],
-   "shops": [
-    "jackroad",
-    "daikokuya"
-   ]
-  },
-  "126610LV": {
-   "brand": "ロレックス",
-   "models": [
-    "グリーンサブマリーナー",
-    "サブマリーナー",
-    "サブマリーナ デイト SS グリーンベゼル"
+    "GMTマスター II",
+    "GMTマスターII WG ブルー"
    ],
    "shops": [
     "jackroad",
@@ -308,24 +288,69 @@
     "daikokuya"
    ]
   },
+  "124060": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナー",
+    "サブマリーナ ノンデイト SS",
+    "ロレックス サブマリーナー"
+   ],
+   "shops": [
+    "jackroad",
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "126610LN": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナー デイト",
+    "サブマリーナ デイト SS",
+    "ロレックス サブマリーナー"
+   ],
+   "shops": [
+    "jackroad",
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "126610LV": {
+   "brand": "ロレックス",
+   "models": [
+    "グリーンサブマリーナー",
+    "サブマリーナー",
+    "サブマリーナ デイト SS グリーンベゼル",
+    "ロレックス サブマリーナー"
+   ],
+   "shops": [
+    "jackroad",
+    "quark",
+    "daikokuya",
+    "nanboya"
+   ]
+  },
   "126613LB": {
    "brand": "ロレックス",
    "models": [
     "サブマリーナー コンビ",
-    "サブマリーナ デイト YG/SS ブルー"
+    "サブマリーナ デイト YG/SS ブルー",
+    "ロレックス サブマリーナー"
    ],
    "shops": [
     "jackroad",
-    "daikokuya"
+    "daikokuya",
+    "nanboya"
    ]
   },
   "126613LN": {
    "brand": "ロレックス",
    "models": [
-    "サブマリーナー コンビ"
+    "サブマリーナー コンビ",
+    "サブマリーナ デイト YG/SS ブラック"
    ],
    "shops": [
-    "jackroad"
+    "jackroad",
+    "daikokuya"
    ]
   },
   "126618LB": {
@@ -591,11 +616,14 @@
    "brand": "ロレックス",
    "models": [
     "デイトナ",
-    "ロレックス デイトナ"
+    "ロレックス デイトナ",
+    "デイトナ SS ブラック",
+    "デイトナ SS ホワイト"
    ],
    "shops": [
     "quark",
-    "nanboya"
+    "nanboya",
+    "daikokuya"
    ]
   },
   "126508G": {
@@ -718,46 +746,59 @@
   "214270": {
    "brand": "ロレックス",
    "models": [
-    "エクスプローラー I"
+    "エクスプローラー I",
+    "エクスプローラーI(旧型) SS",
+    "エクスプローラーI SS"
    ],
    "shops": [
-    "quark"
+    "quark",
+    "daikokuya"
    ]
   },
   "216570": {
    "brand": "ロレックス",
    "models": [
-    "エクスプローラー II"
+    "エクスプローラー II",
+    "エクスプローラーII SS ブラック",
+    "エクスプローラーII SS ホワイト"
    ],
    "shops": [
-    "quark"
+    "quark",
+    "daikokuya"
    ]
   },
   "16570": {
    "brand": "ロレックス",
    "models": [
-    "エクスプローラー II"
+    "エクスプローラー II",
+    "エクスプローラーII SS ブラック",
+    "エクスプローラーII SS ホワイト"
    ],
    "shops": [
-    "quark"
+    "quark",
+    "daikokuya"
    ]
   },
   "116710BLNR": {
    "brand": "ロレックス",
    "models": [
-    "GMTマスター II"
+    "GMTマスター II",
+    "GMTマスターII SS 黒青ベゼル"
    ],
    "shops": [
-    "quark"
+    "quark",
+    "daikokuya"
    ]
   },
   "126718GRNR": {
    "brand": "ロレックス",
    "models": [
-    "GMTマスター II"
+    "GMTマスター II",
+    "GMTマスターII YG 黒灰ベゼル"
    ],
    "shops": [
-    "quark"
+    "quark",
+    "daikokuya"
    ]
   },
   "116718LN": {
@@ -772,37 +813,45 @@
   "116719BLRO": {
    "brand": "ロレックス",
    "models": [
-    "GMTマスター II"
+    "GMTマスター II",
+    "GMTマスターII WG ブラック"
    ],
    "shops": [
-    "quark"
+    "quark",
+    "daikokuya"
    ]
   },
   "116610LV": {
    "brand": "ロレックス",
    "models": [
-    "サブマリーナー"
+    "サブマリーナー",
+    "サブマリーナ デイト SS グリーンベゼル"
    ],
    "shops": [
-    "quark"
+    "quark",
+    "daikokuya"
    ]
   },
   "16610LV": {
    "brand": "ロレックス",
    "models": [
-    "サブマリーナー"
+    "サブマリーナー",
+    "サブマリーナデイト SS グリーンベゼル"
    ],
    "shops": [
-    "quark"
+    "quark",
+    "daikokuya"
    ]
   },
   "116618LB": {
    "brand": "ロレックス",
    "models": [
-    "サブマリーナー"
+    "サブマリーナー",
+    "サブマリーナデイト YG ブルー"
    ],
    "shops": [
-    "quark"
+    "quark",
+    "daikokuya"
    ]
   },
   "16618": {
@@ -950,6 +999,363 @@
    ],
    "shops": [
     "daikokuya"
+   ]
+  },
+  "114060": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナ ノンデイト SS"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "116610LN": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナ デイト SS"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "116613LB": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナ デイト YG/SS ブルー"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "116613LN": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナ デイト YG/SS ブラック"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "14060M": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナ ノンデイト SS"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "16610": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナデイト SS"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "116613GLN": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナデイト YG/SS ブラック ダイヤ"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "116613GLB": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナデイト YG/SS ブルー ダイヤ"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "116619LB": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナデイト WG ブルー"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "116503": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ YG/SS ブラック",
+    "デイトナ YG/SS ホワイト",
+    "デイトナ YG/SS シャンパン"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "116503G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ YG/SS ブラック ダイヤ"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "116503NG": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトナ YG/SS ブラックシェル ダイヤ",
+    "デイトナ YG/SS ホワイトシェル ダイヤ"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "126720VTNR": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスターII SS 緑黒ベゼル"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "126710GRNR": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスターII SS 黒灰ベゼル"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "16700": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスターI SS"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "16710": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスターII SS"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "116710LN": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスターII SS 黒ベゼル"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "16713": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスターII YG/SS ブラウン"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "16713RG": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスターII YG/SS"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "116713LN": {
+   "brand": "ロレックス",
+   "models": [
+    "GMTマスターII YG/SS 黒ベゼル"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "14270": {
+   "brand": "ロレックス",
+   "models": [
+    "エクスプローラーI SS"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "114270": {
+   "brand": "ロレックス",
+   "models": [
+    "エクスプローラーI SS"
+   ],
+   "shops": [
+    "daikokuya"
+   ]
+  },
+  "126300": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト41 SS オイスターブレス",
+    "デイトジャスト41 SS ジュビリーブレス"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "126334": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト41 SS オイスターブレス",
+    "デイトジャスト41 SS ジュビリーブレス"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "126334G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト41 SS オイスターブレス ダイヤ",
+    "デイトジャスト41 SS ジュビリーブレス ダイヤ"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "126333": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト41 YG/SS オイスターブレス",
+    "デイトジャスト41 YG/SS ジュビリーブレス"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "126331": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト41 RG/SS ジュビリーブレス"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "126234": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト36 SS ジュビリーブレス"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "116234": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト メンズ SS"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "116233": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト メンズ SS/YG"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "116233G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト メンズ SS/YG ダイヤ"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "116231": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト メンズ SS/RG"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "116231G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャスト メンズ SS/RG ダイヤ"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "116300": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャストII SS"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "116334": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャストII SS"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "116334G": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャストII SS"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
+   ]
+  },
+  "116333": {
+   "brand": "ロレックス",
+   "models": [
+    "デイトジャストII SS/YG"
+   ],
+   "shops": [
+    "daikokuya",
+    "nanboya"
    ]
   }
  },

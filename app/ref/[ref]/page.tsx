@@ -114,7 +114,12 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
                 <tr key={i} className="border-b border-neutral-100 last:border-0">
                   <td className="px-4 py-3 text-neutral-800">{r.shop}</td>
                   <td className="px-4 py-3 text-neutral-500">{r.price_type}</td>
-                  <td className="px-4 py-3 text-neutral-500">{[r.condition, r.dial, r.material].filter(Boolean).join(" / ") || "—"}</td>
+                  {/* 同じ型番でもブレス違い等でモデル名が分かれることがある（例: 126300 の
+                      オイスターブレス/ジュビリーブレス）。モデルが複数ある型番では名前を出さないと
+                      「同じ状態・同じ文字盤なのに価格が違う行」に見えてしまうため、そのときだけ併記する。 */}
+                  <td className="px-4 py-3 text-neutral-500">
+                    {[s.models.length > 1 ? r.model : null, r.condition, r.dial, r.material].filter(Boolean).join(" / ") || "—"}
+                  </td>
                   <td className="px-4 py-3 text-right font-medium text-neutral-900">{yen(r.price_jpy)}</td>
                   <td className="px-4 py-3">
                     <a href={r.source_url} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 underline decoration-neutral-300 hover:text-neutral-800">
