@@ -748,11 +748,13 @@
    "models": [
     "エクスプローラー I",
     "エクスプローラーI(旧型) SS",
-    "エクスプローラーI SS"
+    "エクスプローラーI SS",
+    "ロレックス エクスプローラー"
    ],
    "shops": [
     "quark",
-    "daikokuya"
+    "daikokuya",
+    "nanboya"
    ]
   },
   "216570": {
@@ -760,11 +762,13 @@
    "models": [
     "エクスプローラー II",
     "エクスプローラーII SS ブラック",
-    "エクスプローラーII SS ホワイト"
+    "エクスプローラーII SS ホワイト",
+    "ロレックス エクスプローラー"
    ],
    "shops": [
     "quark",
-    "daikokuya"
+    "daikokuya",
+    "nanboya"
    ]
   },
   "16570": {
@@ -776,18 +780,21 @@
    ],
    "shops": [
     "quark",
-    "daikokuya"
+    "daikokuya",
+    "nanboya"
    ]
   },
   "116710BLNR": {
    "brand": "ロレックス",
    "models": [
     "GMTマスター II",
-    "GMTマスターII SS 黒青ベゼル"
+    "GMTマスターII SS 黒青ベゼル",
+    "ロレックス GMTマスター"
    ],
    "shops": [
     "quark",
-    "daikokuya"
+    "daikokuya",
+    "nanboya"
    ]
   },
   "126718GRNR": {
@@ -818,7 +825,8 @@
    ],
    "shops": [
     "quark",
-    "daikokuya"
+    "daikokuya",
+    "nanboya"
    ]
   },
   "116610LV": {
@@ -1359,5 +1367,5 @@
    ]
   }
  },
- "updated_at": "2026-08-08"
+ "updated_at": "2026-08-09"
 }
