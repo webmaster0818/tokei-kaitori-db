@@ -152,21 +152,59 @@ def parse_nanboya(html: str, url: str) -> list[dict]:
     return out
 
 
+def parse_quark3(html: str, url: str) -> list[dict]:
+    """クォークの3列表（モデル / Ref.No. / 通常査定額(上限)）。
+
+    ⚠️ ロレックスのページは5列（素材・文字盤あり）で、既存の parse_quark が対応している。
+       オメガのページは3列なので別扱いにする。同じ会社でもブランドごとに表が違う。
+       なお同ページ上部には価格が画像(GIF)の区画もあるが、そちらは読まない。
+    """
+    out = []
+    pat = re.compile(
+        r"<td><b>([^<]{2,40})</b></td>\s*<td><b>([A-Za-z0-9./-]{4,20})</b></td>"
+        r"\s*<td[^>]*>￥([\d,]+)</td>"
+    )
+    for m in pat.finditer(html):
+        v = yen(m.group(3))
+        if v:
+            out.append({"shop": "クォーク", "shop_id": "quark", "ref": norm_ref(m.group(2)),
+                        "model": m.group(1).strip(),
+                        "price_type": "上限", "condition": "中古", "price_jpy": v,
+                        "source_url": url, "fetched_at": TODAY})
+    return out
+
+
 def main() -> None:
     records: list[dict] = []
     errors: list[str] = []
 
-    jobs = [("jackroad", "https://www.jackroad.co.jp/shop/pages/j_rolex_kaitori.aspx", "cp932", parse_jackroad),
-            ("quark", "https://www.909.co.jp/rolex_buy.html", "utf-8", parse_quark)]
+    # (名前, URL, 文字コード, パーサ, ブランド)
+    jobs = [("jackroad", "https://www.jackroad.co.jp/shop/pages/j_rolex_kaitori.aspx", "cp932", parse_jackroad, "ロレックス"),
+            ("quark", "https://www.909.co.jp/rolex_buy.html", "utf-8", parse_quark, "ロレックス")]
     for series in ["submariner", "daytona", "gmt_master", "explorer", "datejust", "daydate"]:
         jobs.append((f"daikokuya:{series}",
                      f"https://kaitori.e-daikoku.com/brand/brand/rolex_{series}.html",
-                     "utf-8", parse_daikokuya))
+                     "utf-8", parse_daikokuya, "ロレックス"))
+    # ブランド拡張（2026-08-14）。型番別の買取価格を公表しているブランドのみ追加する。
+    # 実測: 大黒屋はオメガ44型番/AP37/VC24に価格表あり。カルティエ・IWC等は型番表なし。
+    # クォークはオメガのみ3列表で公表。ジャックロードのオメガページには型番別価格表がない。
+    jobs.append(("daikokuya:omega",
+                 "https://kaitori.e-daikoku.com/brand/brand/omega.html",
+                 "utf-8", parse_daikokuya, "オメガ"))
+    jobs.append(("daikokuya:audemarspiguet",
+                 "https://kaitori.e-daikoku.com/brand/brand/audemarspiguet.html",
+                 "utf-8", parse_daikokuya, "オーデマ・ピゲ"))
+    jobs.append(("daikokuya:vacheronconstantin",
+                 "https://kaitori.e-daikoku.com/brand/brand/vacheronconstantin.html",
+                 "utf-8", parse_daikokuya, "ヴァシュロン・コンスタンタン"))
+    jobs.append(("quark:omega", "https://www.909.co.jp/omega_buy.html", "utf-8", parse_quark3, "オメガ"))
 
-    for name, url, enc, parser in jobs:
+    for name, url, enc, parser, brand in jobs:
         try:
             html = fetch(url, enc)
             rows = parser(html, url)
+            for _r in rows:
+                _r["brand"] = brand   # ブランドはレコードに持たせる（マスタで固定しない）
             records.extend(rows)
             print(f"{name}: {len(rows)} records")
         except Exception as e:
@@ -209,6 +247,8 @@ def main() -> None:
         try:
             html = fetch(u)
             rows = parse_nanboya(html, u)
+            for _r in rows:
+                _r["brand"] = "ロレックス"   # なんぼやはロレックスの型番URLのみ保有
             records.extend(rows)
             print(f"nanboya {nb_ref(u)}: {len(rows)} records")
         except Exception as e:
@@ -227,7 +267,10 @@ def main() -> None:
     master = json.load(open(master_path)) if master_path.exists() else {"refs": {}}
     for r in records:
         ref = r["ref"]
-        e = master["refs"].setdefault(ref, {"brand": "ロレックス", "models": [], "shops": []})
+        e = master["refs"].setdefault(ref, {"brand": r.get("brand", "ロレックス"), "models": [], "shops": []})
+        # 既存レコードのブランドが不明/誤りの場合は取得元の値で上書きする
+        if r.get("brand") and e.get("brand") != r["brand"] and r["brand"] != "ロレックス":
+            e["brand"] = r["brand"]
         if r.get("model") and r["model"] not in e["models"]:
             e["models"].append(r["model"])
         if r["shop_id"] not in e["shops"]:
