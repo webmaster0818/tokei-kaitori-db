@@ -26,11 +26,12 @@ TODAY = datetime.now().strftime("%Y-%m-%d")
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 SLEEP = 2.0
 
-# なんぼやref取得数の上限(プロトタイプ。他社と突合できる型番を優先)
-# なんぼやは1URL=1型番なので取得数がそのまま公開型番数の上限になる。
-# 15では「既存の公開ページ維持」だけで枠を使い切り、新規を1件も増やせなかった。
-# 1件あたり約2.5秒なので、40件でも所要は+1分程度。
-NANBOYA_CAP = 40
+# なんぼやref取得数の上限。なんぼやは1URL=1型番なので、
+# 取得数がそのまま「2社以上そろう型番＝公開できるページ」の上限になる。
+# 小さすぎると tier1（既存公開ページの維持）だけで枠を使い切り、新規が1件も増えない。
+# オメガ163件を追加した結果、tier1（既存公開ページの維持）とtier2（新たに2社目になれる型番）を
+# 取り切るのに40では足りなくなったので引き上げた。180件×2秒＝約6分。
+NANBOYA_CAP = 180
 
 
 def fetch(url: str, encoding: str = "utf-8") -> str:
@@ -130,13 +131,37 @@ def parse_daikokuya(html: str, url: str) -> list[dict]:
                 out.append(rec)
     return out
 
+def nanboya_ref(url: str) -> str:
+    """なんぼやの型番URLから型番を取り出す。
+
+    ⚠️ ブランドによってURLの形が違う:
+        ロレックス .../rolex/air-king/ref-114210/
+        オメガ     .../omega/speedmaster/311-30-42-30-01-006/   ← ref- が付かない
+    """
+    m = re.search(r"/([a-z0-9-]+)/$", url)
+    if not m:
+        return ""
+    seg = m.group(1)
+    seg = seg[4:] if seg.startswith("ref-") else seg
+    return norm_ref(seg.replace("-", "."))
+
+
+def nanboya_brand(url: str) -> str:
+    m = re.search(r"/price-list/([a-z-]+)/", url)
+    return {"rolex": "ロレックス", "omega": "オメガ"}.get(m.group(1) if m else "", "")
+
+
 def parse_nanboya(html: str, url: str) -> list[dict]:
     out = []
-    ref_m = re.search(r"/ref-([a-z0-9-]+)/", url)
-    ref = norm_ref(ref_m.group(1).replace("-", ".")) if ref_m else "?"
+    ref = nanboya_ref(url) or "?"
     upd = re.search(r'更新日：<time datetime="([\d-]+)"', html)
-    model_m = re.search(r"<title>([^<|]+?)\s*Ref\.", html)
-    model = model_m.group(1).strip() if model_m else ""
+    # タイトル例: 「オメガ スピードマスター プロフェッショナル 311.30.42.30.01.006 買取価格相場」
+    #             「ロレックス エアキング Ref.114210 買取価格相場」
+    # 型番の直前までがモデル名。型番の書き方が2通りあるのでどちらでも切れるようにする。
+    model = ""
+    title_m = re.search(r"<title>([^<|]+?)\s*買取価格相場", html)
+    if title_m:
+        model = re.split(r"\s*(?:Ref\.|[0-9]{3,}[0-9.]*\s*$)", title_m.group(1).strip())[0].strip()
     # 月次履歴テーブル
     hist_pat = re.compile(
         r"<span>(20\d\d)年</span><span>(\d{1,2})月</span></td>\s*"
@@ -214,12 +239,13 @@ def main() -> None:
 
     # なんぼや: 他社と突合できる型番を優先して取得
     other_refs = {r["ref"] for r in records}
-    nb_urls_path = ROOT / "data" / "nanboya-ref-urls.txt"
-    nb_urls = [u.strip() for u in nb_urls_path.read_text().splitlines() if u.strip()]
+    nb_urls = []
+    for fn in ("nanboya-ref-urls.txt", "nanboya-omega-ref-urls.txt"):
+        p = ROOT / "data" / fn
+        if p.exists():
+            nb_urls += [u.strip() for u in p.read_text().splitlines() if u.strip()]
 
-    def nb_ref(u: str) -> str:
-        m = re.search(r"/ref-([a-z0-9-]+)/", u)
-        return norm_ref(m.group(1).replace("-", ".")) if m else ""
+    nb_ref = nanboya_ref
 
     # ⚠️ 取得はNANBOYA_CAPで打ち切られるため、優先順位が変わると
     #    「昨日まで2社以上そろっていた型番」が今日1社に落ち、公開中のページが消える。
@@ -248,7 +274,7 @@ def main() -> None:
             html = fetch(u)
             rows = parse_nanboya(html, u)
             for _r in rows:
-                _r["brand"] = "ロレックス"   # なんぼやはロレックスの型番URLのみ保有
+                _r["brand"] = nanboya_brand(u)
             records.extend(rows)
             print(f"nanboya {nb_ref(u)}: {len(rows)} records")
         except Exception as e:
