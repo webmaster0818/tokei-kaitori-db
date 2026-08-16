@@ -30,8 +30,8 @@ SLEEP = 2.0
 # 取得数がそのまま「2社以上そろう型番＝公開できるページ」の上限になる。
 # 小さすぎると tier1（既存公開ページの維持）だけで枠を使い切り、新規が1件も増えない。
 # オメガ163件を追加した結果、tier1（既存公開ページの維持）とtier2（新たに2社目になれる型番）を
-# 取り切るのに40では足りなくなったので引き上げた。180件×2秒＝約6分。
-NANBOYA_CAP = 180
+# 取り切るのに40では足りなくなったので引き上げた。320件×2秒＝約11分。
+NANBOYA_CAP = 320
 
 
 def fetch(url: str, encoding: str = "utf-8") -> str:
@@ -49,7 +49,16 @@ def yen(t: str) -> int | None:
 
 
 def norm_ref(ref: str) -> str:
-    return ref.upper().strip()
+    """型番の表記ゆれをそろえる。
+
+    ⚠️ 区切り記号は店によって違う。同じ時計が別型番として扱われる原因になる。
+        大黒屋   4500V/110A-B126
+        なんぼや  4500V.110A.B126   ← URL由来
+       実測で、ヴァシュロン16型番が「共通ゼロ」に見えていたのはこれが理由だった。
+       スラッシュ・ハイフンをドットに寄せて比較できるようにする。
+       （ロレックスは区切りなし、オメガ/APはもともとドットなので影響しない）
+    """
+    return re.sub(r"[./-]+", ".", ref.strip()).upper()
 
 
 def parse_jackroad(html: str, url: str) -> list[dict]:
@@ -148,7 +157,9 @@ def nanboya_ref(url: str) -> str:
 
 def nanboya_brand(url: str) -> str:
     m = re.search(r"/price-list/([a-z-]+)/", url)
-    return {"rolex": "ロレックス", "omega": "オメガ"}.get(m.group(1) if m else "", "")
+    return {"rolex": "ロレックス", "omega": "オメガ",
+            "audemarspiguet": "オーデマ・ピゲ",
+            "vacheron-constantin": "ヴァシュロン・コンスタンタン"}.get(m.group(1) if m else "", "")
 
 
 def parse_nanboya(html: str, url: str) -> list[dict]:
@@ -240,7 +251,8 @@ def main() -> None:
     # なんぼや: 他社と突合できる型番を優先して取得
     other_refs = {r["ref"] for r in records}
     nb_urls = []
-    for fn in ("nanboya-ref-urls.txt", "nanboya-omega-ref-urls.txt"):
+    for fn in ("nanboya-ref-urls.txt", "nanboya-omega-ref-urls.txt",
+               "nanboya-other-ref-urls.txt"):
         p = ROOT / "data" / fn
         if p.exists():
             nb_urls += [u.strip() for u in p.read_text().splitlines() if u.strip()]
@@ -301,6 +313,18 @@ def main() -> None:
             e["models"].append(r["model"])
         if r["shop_id"] not in e["shops"]:
             e["shops"].append(r["shop_id"])
+    # ⚠️ マスタは setdefault で積むだけなので、型番の正規化ルールを変えると
+    #    旧表記のキーが残り続ける（実測: ヴァシュロンの 4500V/110A-B126 が
+    #    正規化後の 4500V.110A.B126 と二重に残っていた）。
+    #    残骸は summarize がnullを返すので害はないが、マスタ件数が実態とずれて
+    #    「何型番あるのか」を誤って読むことになる。当日のレコードに無いキーは落とす。
+    live = {r["ref"] for r in records}
+    dropped = [k for k in master["refs"] if k not in live]
+    for k in dropped:
+        del master["refs"][k]
+    if dropped:
+        print(f"マスタから旧表記/消滅した型番を除去: {len(dropped)}件")
+
     master["updated_at"] = TODAY
     json.dump(master, open(master_path, "w"), ensure_ascii=False, indent=1)
 

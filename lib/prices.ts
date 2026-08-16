@@ -34,16 +34,32 @@ export function latestDate(): string {
   return d[d.length - 1] ?? "";
 }
 
+// ⚠️ 呼ばれるたびにJSONを読み直していたため、レコードが8,500件規模になった時点で
+//    ビルドが1ページ60秒を超えて失敗した（summarize / monthlyHistory が各ページで複数回呼ぶ）。
+//    日付ごとに1回だけ読んで使い回す。
+const snapshotCache = new Map<string, PriceRecord[]>();
+
 function readSnapshot(date: string): PriceRecord[] {
+  const hit = snapshotCache.get(date);
+  if (hit) return hit;
   const p = path.join(DATA_DIR, `${date}.json`);
-  if (!fs.existsSync(p)) return [];
-  return (JSON.parse(fs.readFileSync(p, "utf8")).records ?? []) as PriceRecord[];
+  const rows = fs.existsSync(p)
+    ? ((JSON.parse(fs.readFileSync(p, "utf8")).records ?? []) as PriceRecord[])
+    : [];
+  snapshotCache.set(date, rows);
+  return rows;
 }
 
 /** 当日スナップショット(なんぼやの過去月履歴は除外) */
+const currentCache = new Map<string, PriceRecord[]>();
+
 export function currentRecords(date = latestDate()): PriceRecord[] {
+  const hit = currentCache.get(date);
+  if (hit) return hit;
   const month = date.slice(0, 7);
-  return readSnapshot(date).filter((r) => !r.price_month || r.price_month === month);
+  const rows = readSnapshot(date).filter((r) => !r.price_month || r.price_month === month);
+  currentCache.set(date, rows);
+  return rows;
 }
 
 /** なんぼやの月次履歴(型番別・古い順) */
