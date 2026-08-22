@@ -1231,10 +1231,13 @@
   "126720VTNR": {
    "brand": "ロレックス",
    "models": [
-    "GMTマスターII SS 緑黒ベゼル"
+    "GMTマスターII SS 緑黒ベゼル",
+    "GMTマスターⅡ　オイスターブレスレット",
+    "GMTマスターⅡ　ジュビリーブレスレット"
    ],
    "shops": [
-    "daikokuya"
+    "daikokuya",
+    "jackroad"
    ]
   },
   "126710GRNR": {
@@ -4417,5 +4420,5 @@
    ]
   }
  },
- "updated_at": "2026-08-21"
+ "updated_at": "2026-08-22"
 }
