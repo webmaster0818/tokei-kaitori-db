@@ -210,6 +210,38 @@ def parse_quark3(html: str, url: str) -> list[dict]:
     return out
 
 
+def parse_watchnian(html: str, url: str) -> list[dict]:
+    """ウォッチニアン（buy.watchnian.com/brand_xxx/）。
+
+    1ブロック = 1型番で、新品／中古の買取上限額が入る。
+      <p class="casestudyList04_title">サブマリーナ</p>
+      <p class="casestudyList04_sub">116610LN 【※保証書日付や状態で金額は変わります】</p>
+      <dt><span>中 古 品</span></dt><dd><strong>～¥1,680,000</strong></dd>
+    ⚠️ 掲載額は「〜」付きの上限値なので、price_type は「上限」で入れる
+       （大黒屋と同じ扱い。中央値として扱わないこと）。
+    ⚠️ 状態ラベルは全角スペース入り（"新　　品" / "中 古 品"）なので空白を潰して判定する。
+    """
+    out: list[dict] = []
+    blocks = re.findall(
+        r'casestudyList04_title">([^<]+)</p>\s*<p class="casestudyList04_sub">([^<\s]+)[^<]*</p>(.*?)'
+        r'(?=casestudyList04_title"|\Z)', html, re.S)
+    for model, ref, body in blocks:
+        ref = norm_ref(ref.strip())
+        if not ref:
+            continue
+        for cond_raw, price in re.findall(
+                r'<dt><span>([^<]+)</span></dt>\s*<dd><strong>[^\d]*([\d,]+)</strong>', body):
+            cond = re.sub(r"[\s\u3000]", "", cond_raw)
+            v = yen(price)
+            if not v:
+                continue
+            out.append({"shop": "ウォッチニアン", "shop_id": "watchnian", "ref": ref,
+                        "model": model.strip(), "dial": "",
+                        "price_type": "上限", "condition": "新品" if "新品" in cond else "中古",
+                        "price_jpy": v, "source_url": url})
+    return out
+
+
 def main() -> None:
     records: list[dict] = []
     errors: list[str] = []
@@ -234,6 +266,15 @@ def main() -> None:
                  "https://kaitori.e-daikoku.com/brand/brand/vacheronconstantin.html",
                  "utf-8", parse_daikokuya, "ヴァシュロン・コンスタンタン"))
     jobs.append(("quark:omega", "https://www.909.co.jp/omega_buy.html", "utf-8", parse_quark3, "オメガ"))
+
+    # 5社目（2026-08-28）。ウォッチニアンは型番別の買取上限額を毎日更新で公表している。
+    # 実測の内訳: ロレックス51 / オメガ42 / カルティエ12 / IWC5 / パネライ3 / ウブロ1。
+    # ⚠️ カルティエ・IWC・パネライは他社と型番が重ならず2社そろわない（公開対象にならない）。
+    #    それでも取得はする——将来6社目が入ったときに即2社になるため。
+    for _b, _label in [("rolex", "ロレックス"), ("omega", "オメガ"), ("cartier", "カルティエ"),
+                       ("iwc", "IWC"), ("panerai", "パネライ"), ("hublot", "ウブロ")]:
+        jobs.append((f"watchnian:{_b}", f"https://buy.watchnian.com/brand_{_b}/",
+                     "utf-8", parse_watchnian, _label))
 
     for name, url, enc, parser, brand in jobs:
         try:
