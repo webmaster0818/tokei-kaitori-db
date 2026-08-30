@@ -1,2 +1,4 @@
+# ⚠️【ドメイン確定までの暫定】確認用のpages.devを検索エンジンに拾わせない。
+# ドメイン確定後に「User-agent: *／Allow: /／Sitemap: <本番URL>/sitemap.xml」へ戻す。
 User-agent: *
-Allow: /
+Disallow: /
