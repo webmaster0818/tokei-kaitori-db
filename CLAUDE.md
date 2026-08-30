@@ -19,3 +19,11 @@
 - ⚠️ **カルティエ・IWC・パネライは公開できない**: ウォッチニアンはサントス系（WSSA*）、なんぼやはバロンブルー/タンク系で**型番の突合ゼロ**。なんぼやに santos ページは存在しない（404実測）。**取得はしておく**（6社目が入った瞬間に2社になるため）。
 - ⚠️ **数え方の注意**: 生スナップショットで2社以上=201だが、`lib/prices.ts` の `currentRecords` が **`price_month` が当月でないレコードを除外**するため実ページは189。なんぼやは月次履歴を持つので、**素の集計と公開数は一致しない**。報告する数字は必ず当月フィルタ後で数える。
 - 🚨 **未解決**: ドメイン未確定のため `sitemap.xml` は `https://example.invalid` のまま。**gitリモート未設定＝ローカルcommitのみで、デプロイ先が無い**。公開にはドメイン決定が前提。
+
+### 2026-08-30 GitHubリポジトリ作成・push（MediaXAI「君が作って。ドメイン購入はその後僕がやる」）
+- **`webmaster0818/tokei-kaitori-db`（Private）を作成し、41コミットをpush**。`~/.openclaw/workspace/create-github-repo.sh` を使用（リポ作成→デプロイキー登録→SSHエイリアス生成まで自動）。
+- **ブランチを `master` → `main` に変更**（他サイトと統一。CF Pages連携時の既定ブランチ指定で迷わないため）。
+- **remoteはSSHエイリアス** `git@github.com-webmaster0818-tokei-kaitori-db:...`。⚠️ adminトークンは**リポ作成とデプロイキー登録のみ**に使い、`git remote` には設定しない。
+- **push前に監査**: `.gitignore` に `/out/` `/.next/` `.env*` があることを確認、追跡590ファイル、**全コミットの履歴と内容を走査して秘密情報の混入ゼロを確認**してからpushした。
+- ⚠️ **`-deploy` リポジトリは作らない判断**: 生成物は 1,740ファイル / HTML 192ページで、Cloudflare Pages の20,000ファイル上限に対して十分小さい。**GitHub連携で直接ビルドできる**（peatbidのようにファイル数の都合で分ける必要がない）。
+- 🚨 **ドメイン確定まで公開できない状態は継続**。`public/sitemap.xml` は `https://example.invalid`、canonical・robots.txt・OGPも未確定。**ドメインが決まったらこの4点を差し替えてpush→本番確認**する。ドメイン名とリポジトリ名は一致させる必要がない（既存も peatbid.com→peatbid、woman-gym.com→g-personal-gym）。
