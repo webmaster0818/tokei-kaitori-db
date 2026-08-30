@@ -27,3 +27,11 @@
 - **push前に監査**: `.gitignore` に `/out/` `/.next/` `.env*` があることを確認、追跡590ファイル、**全コミットの履歴と内容を走査して秘密情報の混入ゼロを確認**してからpushした。
 - ⚠️ **`-deploy` リポジトリは作らない判断**: 生成物は 1,740ファイル / HTML 192ページで、Cloudflare Pages の20,000ファイル上限に対して十分小さい。**GitHub連携で直接ビルドできる**（peatbidのようにファイル数の都合で分ける必要がない）。
 - 🚨 **ドメイン確定まで公開できない状態は継続**。`public/sitemap.xml` は `https://example.invalid`、canonical・robots.txt・OGPも未確定。**ドメインが決まったらこの4点を差し替えてpush→本番確認**する。ドメイン名とリポジトリ名は一致させる必要がない（既存も peatbid.com→peatbid、woman-gym.com→g-personal-gym）。
+
+### 2026-08-30（続き）確認用デプロイ（ドメイン確定前）
+- MediaXAIの通常フロー（プロジェクト作成→デプロイ→ドメイン購入→紐付け）に合わせ、**先にCF Pagesプロジェクトを作って公開**した。`https://tokei-kaitori-db.pages.dev/`（直接アップロード方式・wrangler）。
+- 🚨 **ドメイン未確定のまま公開するので、noindexで完全に塞いだ**: `app/layout.tsx` の metadata に `robots: { index: false, follow: false }`、`public/robots.txt` は `Disallow: /`。
+  理由＝`SITE_URL` が `https://example.invalid` のままで、**インデックスされると全ページのcanonicalが不正なURLを指す**。gold-biyoriで「ルートlayoutの静的canonicalを全ページが継承してトップに集約された」事故と同型なので、確定まで塞ぐ。**ドメイン設定時にこの2箇所を解除する。**
+- ⚠️ **URLは小文字**（`/ref/126500ln/`）。型番の表示は大文字（126500LN）だが、ディレクトリ名は小文字で生成される。**macOSは大小同一視するのでローカルでは気づけない**（Cloudflareは区別するので大文字URLは404）。sitemap・内部リンクとも小文字で一貫していることを実測確認済み。
+- 検証: TOP/型番/robots/sitemap すべて200、noindexの反映、**1型番のページに5社（なんぼや・大黒屋・クォーク・ジャックロード・ウォッチニアン）すべての価格が描画**、sitemap 190URL。
+- ⚠️ **CFトークンにZone権限が無い**（`/zones` が0件）。Pagesプロジェクトの作成・デプロイ・カスタムドメイン追加はできるが、**DNSレコードの作成が必要な場合はMediaXAI側の操作が要る可能性がある**。ドメインをCloudflareで購入すれば同一アカウント内なので自動生成される見込み。
