@@ -3,7 +3,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.invalid";
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://brandwatchbank.com";
 const root = process.cwd();
 const dates = fs.readdirSync(path.join(root, "data/prices")).filter((f) => f.endsWith(".json")).map((f) => f.replace(".json", "")).sort();
 const lastmod = dates[dates.length - 1];
