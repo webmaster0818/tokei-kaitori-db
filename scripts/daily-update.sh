@@ -30,5 +30,28 @@ else
   git commit -q -m "daily: 買取価格スナップショット $(date '+%F')" >>"$LOG" 2>&1 && say "コミット完了"
 fi
 
-# TODO(ドメイン確定後): out/ を deploy リポジトリへ rsync → push（CF Pages）
+# GitHubへpush。⚠️2026-09-01まで「TODO」のまま放置されており、
+#   コミットだけがローカルに溜まっていた（他サイトは push まで自動なのにここだけ手動だった）。
+if git push -q origin main >>"$LOG" 2>&1; then
+  say "push OK"
+else
+  say "🚨 push 失敗"
+fi
+
+# Cloudflare Pages へ直接アップロード（GitHub連携ではなく wrangler 方式）。
+# ⚠️ トークンはファイルから読む。ログにも環境にも残さない。
+CF_ID_FILE="$HOME/.openclaw/workspace/secrets/cf-account-id.txt"
+CF_TOKEN_FILE="$HOME/.openclaw/workspace/secrets/cf-pages-token.txt"
+if [ -f "$CF_ID_FILE" ] && [ -f "$CF_TOKEN_FILE" ]; then
+  if CLOUDFLARE_ACCOUNT_ID="$(cat "$CF_ID_FILE")" CLOUDFLARE_API_TOKEN="$(cat "$CF_TOKEN_FILE")" \
+     npx --yes wrangler@latest pages deploy out --project-name=tokei-kaitori-db \
+     --branch=main --commit-dirty=true >>"$LOG" 2>&1; then
+    say "デプロイOK"
+  else
+    say "🚨 デプロイ失敗"
+  fi
+else
+  say "⚠️ CF資格情報が見つからずデプロイをスキップ"
+fi
+
 say "=== 完了 ==="
