@@ -52,11 +52,30 @@ function readSnapshot(date: string): PriceRecord[] {
 
 /** 当日スナップショット(なんぼやの過去月履歴は除外) */
 const currentCache = new Map<string, PriceRecord[]>();
+const monthCache = new Map<string, string>();
+
+/**
+ * 採用する月＝「データに実在する最新の月」。
+ *
+ * ⚠️ 以前は暦の当月で絞っていたが、なんぼやは月次公開なので毎月1日は当月データが
+ *    まだ存在せず、なんぼやのレコードが丸ごと落ちて公開型番が 189→60 に激減した
+ *    （2026-09-01に実際に発生）。暦ではなくデータ実体に合わせる。
+ */
+export function latestPriceMonth(date = latestDate()): string {
+  const hit = monthCache.get(date);
+  if (hit) return hit;
+  const months = readSnapshot(date)
+    .map((r) => r.price_month)
+    .filter((m): m is string => !!m);
+  const m = months.length ? months.reduce((a, b) => (a > b ? a : b)) : date.slice(0, 7);
+  monthCache.set(date, m);
+  return m;
+}
 
 export function currentRecords(date = latestDate()): PriceRecord[] {
   const hit = currentCache.get(date);
   if (hit) return hit;
-  const month = date.slice(0, 7);
+  const month = latestPriceMonth(date);
   const rows = readSnapshot(date).filter((r) => !r.price_month || r.price_month === month);
   currentCache.set(date, rows);
   return rows;

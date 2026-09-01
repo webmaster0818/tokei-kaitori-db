@@ -13,7 +13,12 @@ const lastmod = dates[dates.length - 1];
 // lib/prices.ts の publishableRefs() と同じ条件（当月に2社以上の価格がある型番）で揃える。
 const master = JSON.parse(fs.readFileSync(path.join(root, "data/watch-master.json"), "utf8")).refs ?? {};
 const snapshot = JSON.parse(fs.readFileSync(path.join(root, `data/prices/${lastmod}.json`), "utf8")).records ?? [];
-const month = lastmod.slice(0, 7);
+// ⚠️ 暦の当月ではなく「データに実在する最新の月」を使う。
+// なんぼやは月次公開なので毎月1日は当月データが無く、暦で絞ると
+// なんぼやのレコードが丸ごと落ちて sitemap が 190→61 に激減する（2026-09-01に発生）。
+// lib/prices.ts の latestPriceMonth() と同じ考え方に揃える。
+const months = snapshot.map((r) => r.price_month).filter(Boolean);
+const month = months.length ? months.reduce((a, b) => (a > b ? a : b)) : lastmod.slice(0, 7);
 const shopsByRef = new Map();
 for (const r of snapshot) {
   if (r.price_month && r.price_month !== month) continue;
