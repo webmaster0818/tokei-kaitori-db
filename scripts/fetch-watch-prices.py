@@ -265,6 +265,10 @@ def main() -> None:
     jobs.append(("daikokuya:vacheronconstantin",
                  "https://kaitori.e-daikoku.com/brand/brand/vacheronconstantin.html",
                  "utf-8", parse_daikokuya, "ヴァシュロン・コンスタンタン"))
+    # ⚠️ 2026-08-31、クォークが omega_buy.html から**型番別の買取価格表を撤去**した
+    #    （ページは200で開くが、円表記0件・型番0件。当方のパーサのバグではない）。
+    #    先方が復活させたら自動で戻るようジョブは残す。0件でも失敗にはしない。
+    #    影響: オメガの公開型番が 41→37 に減少（クォークが2社目だった型番が落ちた）。
     jobs.append(("quark:omega", "https://www.909.co.jp/omega_buy.html", "utf-8", parse_quark3, "オメガ"))
 
     # 5社目（2026-08-28）。ウォッチニアンは型番別の買取上限額を毎日更新で公表している。
