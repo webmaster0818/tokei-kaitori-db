@@ -75,3 +75,6 @@
 - **残りの手順（MediaXAI側）**: ②GitHubでCloudflareアプリに `tokei-kaitori-db` を許可 ③pilates/goldアカウントで Connect to Git（`npm run build` / 出力 `out` / `NODE_VERSION=20`）④同アカウントで `brandwatchbank.com` を追加（同一アカウントならDNSは自動生成＝**私が権限不足で止まっていたDNS問題もここで解決する**）。
 - **③完了後に私がやること**: 日次cronから wrangler デプロイを外して push のみにする（**③完了前に外すと更新が止まるのでやらない**）。その後、旧アカウントの `tokei-kaitori-db` プロジェクトを削除。
 - **教訓**: **確立した運用方式を、詰まったからといって黙って変えない。**変えるなら「方式を変えることになります」と明示して承認を取る。今回は「作業ゼロでできます」という利点だけを伝えて、代償（他サイトと運用が揃わなくなる）を伝えていなかった。
+- **2026-09-02 リポジトリをPublicへ変更（MediaXAI承認）**: 他サイト（pilates-biyori / -deploy / kin-kaitori-biyori / -deploy / gakki-…-deploy / peatbid-deploy）は**全てPublic**なのに、このリポだけ私が「Privateで作ります」と言ってPrivateにしていた。**Cloudflareの検索に出なかった最有力の原因**。
+  ⚠️ 公開前に監査: 追跡593ファイル・秘密情報ファイル0件・**実際のトークン値とアカウントIDで全コミット履歴を検索して0件**（スクリプトは値をファイルから読む実装なので変数名しか含まれない）。
+  ⚠️ **私のGitHub PATではCloudflare Appの設定（②）は読むことも変えることもできない**（`/user/installations` は「GitHub Appの認可トークンが必要」、`/repos/.../installation` は「JWTがデコードできない」）。過去に②が不要だったのは、リポジトリがPublicで自動的に見えていたためと考えられる。
