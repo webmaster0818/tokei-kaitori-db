@@ -60,3 +60,18 @@
 - **教訓2つ**:
   ① **「当月」で絞る処理は、月次更新の外部データと組み合わせると月初に必ず壊れる。**暦ではなくデータ実体を見る。
   ② **自動デプロイを入れる日は、入れた直後の出力を必ず数える。**今回は自動化した当日にこのバグが本番へ出た（ドメイン未接続だったので実害はゼロ）。
+
+### 2026-09-02 デプロイ方式をGitHub連携へ戻す（MediaXAI「Bにして。pilatesやgoldと同じアカウント側で」）
+- 🚨 **私の判断ミス**: 8/30にGitHub連携がCloudflareの画面に出なかったため、**方式を直接アップロード（wrangler）へ勝手に切り替えた**。「MediaXAIの作業ゼロでできます」と提案はしたが、**それが方式変更を意味することを明示していなかった**。主力サイト（pilates/gold/gakki/peatbid/woman-gym/takushoku）は全て**方式B（deployリポへpush→CFがビルド）**であり、揃えるべきだった。
+- ⚠️ **重要な事実誤認を1つ訂正した**: 「pilatesは自分が運用している」と言われたが、**私が触っているのはGitHub（`webmaster0818/pilates-biyori-deploy` へのpush）だけで、Cloudflareのアカウントには一度も入っていない**。実測で確認:
+  ```
+  手元のCFトークンで pilates-biyori / pilates-biyori-deploy / biyori-pilates /
+  kin-kaitori-biyori-deploy / gakki-kaitori-biyori-deploy / peatbid-deploy を直接指定
+  → すべて "Project not found"
+  見えるのは10件のみ（ETA系4・eta-se/eta-pl・whisky-kaitori・figure-kaitori-hikaku・denki-gas-switch・tokei）
+  ```
+  **主力サイトは別のCloudflareアカウント。私はそこにAPIもダッシュボードもアクセス権が無い。**
+- **実行済み（①）**: 旧アカウント側の `tokei-kaitori-db` から `brandwatchbank.com` / `www` の**カスタムドメイン登録を解除**。新アカウントで登録するとドメインが二重登録になり競合するため、先に外す必要があった（**8/30に私が登録したもの＝自分で作った障害**）。DNS未作成でドメインは未接続だったため実害ゼロ。
+- **残りの手順（MediaXAI側）**: ②GitHubでCloudflareアプリに `tokei-kaitori-db` を許可 ③pilates/goldアカウントで Connect to Git（`npm run build` / 出力 `out` / `NODE_VERSION=20`）④同アカウントで `brandwatchbank.com` を追加（同一アカウントならDNSは自動生成＝**私が権限不足で止まっていたDNS問題もここで解決する**）。
+- **③完了後に私がやること**: 日次cronから wrangler デプロイを外して push のみにする（**③完了前に外すと更新が止まるのでやらない**）。その後、旧アカウントの `tokei-kaitori-db` プロジェクトを削除。
+- **教訓**: **確立した運用方式を、詰まったからといって黙って変えない。**変えるなら「方式を変えることになります」と明示して承認を取る。今回は「作業ゼロでできます」という利点だけを伝えて、代償（他サイトと運用が揃わなくなる）を伝えていなかった。
