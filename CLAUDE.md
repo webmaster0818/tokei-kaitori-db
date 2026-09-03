@@ -78,3 +78,19 @@
 - **2026-09-02 リポジトリをPublicへ変更（MediaXAI承認）**: 他サイト（pilates-biyori / -deploy / kin-kaitori-biyori / -deploy / gakki-…-deploy / peatbid-deploy）は**全てPublic**なのに、このリポだけ私が「Privateで作ります」と言ってPrivateにしていた。**Cloudflareの検索に出なかった最有力の原因**。
   ⚠️ 公開前に監査: 追跡593ファイル・秘密情報ファイル0件・**実際のトークン値とアカウントIDで全コミット履歴を検索して0件**（スクリプトは値をファイルから読む実装なので変数名しか含まれない）。
   ⚠️ **私のGitHub PATではCloudflare Appの設定（②）は読むことも変えることもできない**（`/user/installations` は「GitHub Appの認可トークンが必要」、`/repos/.../installation` は「JWTがデコードできない」）。過去に②が不要だったのは、リポジトリがPublicで自動的に見えていたためと考えられる。
+
+### 2026-09-03 本番公開 brandwatchbank.com（MediaXAIがGitHub連携＋ドメイン紐付けを完了）✅
+- **公開確認（全て実測）**:
+  ```
+  https://brandwatchbank.com/            200
+  /ref/126500ln/                         200
+  /sitemap.xml                           200（156URL）
+  /robots.txt                            200（Allow: / ＋ Sitemap行は本番URL）
+  canonical  すべて https://brandwatchbank.com/... を指す
+  example.invalid / pages.dev の混入     0件
+  noindex の残存                          0件（暫定noindexは解除済み）
+  ```
+- **Search Console 登録**: FILE方式で所有権確認 → URL-prefixプロパティ `https://brandwatchbank.com/` を追加 → sitemap送信（**エラー0・警告0**）。権限 siteOwner。
+  ⚠️ **`register-new-site.py` の到達判定（200待ち）は、このサイトでは通らない**。`trailingSlash: true` の影響で Cloudflare Pages が `/googleXXXX.html` を **308で `/googleXXXX`（.html無し）へリダイレクト**するため、素の200にならない。**Google自身は308を追って取得できるので、verify APIを直接叩けば成功する**。同構成のサイトを追加するときは、ポーリングを待たずに verify を叩く。
+- **Indexing API**: 156URL中 **150件送信成功**（残りは日次クォータ超過。翌日ローテーションで送る）。
+- 🚨 **未解決: `www.brandwatchbank.com` が名前解決しない**（apexは解決）。CNAMEが apex しか作られていない可能性。**wwwで来た人が到達できない**ので、追加をお願いする必要がある。
