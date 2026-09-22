@@ -27,7 +27,52 @@ for (const r of snapshot) {
 }
 const refs = Object.keys(master).filter((ref) => (shopsByRef.get(ref)?.size ?? 0) >= 2);
 
-const urls = [`${SITE}/`, ...refs.map((r) => `${SITE}/ref/${r.toLowerCase()}/`)];
+// モデル/ブランドのハブも載せる。
+// ⚠️ 判定は lib/models.ts と同じ「最長一致」にする。先頭一致だと
+//    「スピードマスター デイデイト」(オメガ) が デイデイト(ロレックス) に入る。
+const FAMILIES = [
+  ["daytona", "ロレックス", ["デイトナ"]],
+  ["submariner", "ロレックス", ["サブマリーナ"]],
+  ["gmt-master-2", "ロレックス", ["GMTマスター II", "GMTマスターII", "GMT マスター II"]],
+  ["gmt-master", "ロレックス", ["GMTマスター", "GMT マスター"]],
+  ["datejust", "ロレックス", ["デイトジャスト"]],
+  ["day-date", "ロレックス", ["デイデイト"]],
+  ["explorer", "ロレックス", ["エクスプローラー"]],
+  ["yacht-master", "ロレックス", ["ヨットマスター"]],
+  ["sea-dweller", "ロレックス", ["シードゥエラー", "シードウェラー"]],
+  ["sky-dweller", "ロレックス", ["スカイドゥエラー"]],
+  ["milgauss", "ロレックス", ["ミルガウス"]],
+  ["air-king", "ロレックス", ["エアキング"]],
+  ["oyster-perpetual", "ロレックス", ["オイスターパーペチュアル"]],
+  ["cellini", "ロレックス", ["チェリーニ"]],
+  ["royal-oak", "オーデマ・ピゲ", ["ロイヤルオーク"]],
+  ["speedmaster", "オメガ", ["スピードマスター"]],
+  ["seamaster", "オメガ", ["シーマスター"]],
+  ["constellation", "オメガ", ["コンステレーション"]],
+  ["de-ville", "オメガ", ["デ・ヴィル", "デビル"]],
+  ["overseas", "ヴァシュロン・コンスタンタン", ["オーヴァーシーズ", "オーバーシーズ"]],
+  ["santos", "カルティエ", ["サントス"]],
+  ["tank", "カルティエ", ["タンク"]],
+  ["ballon-bleu", "カルティエ", ["バロンブルー"]],
+];
+const BRANDS = [["rolex","ロレックス"],["omega","オメガ"],["audemars-piguet","オーデマ・ピゲ"],
+                ["vacheron-constantin","ヴァシュロン・コンスタンタン"],["cartier","カルティエ"]];
+const famCount = {}, brandCount = {};
+for (const ref of refs) {
+  const text = (master[ref]?.models ?? []).join(" ");
+  let best = null, bestLen = 0;
+  for (const [slug, , keys] of FAMILIES)
+    for (const k of keys)
+      if (text.includes(k) && k.length > bestLen) { best = slug; bestLen = k.length; }
+  if (best) famCount[best] = (famCount[best] ?? 0) + 1;
+  const b = BRANDS.find(([, label]) => label === master[ref]?.brand);
+  if (b) brandCount[b[0]] = (brandCount[b[0]] ?? 0) + 1;
+}
+// ⚠️ 型番が2件未満の家族/ブランドはページを作っていないので sitemap にも載せない
+const modelUrls = Object.entries(famCount).filter(([, n]) => n >= 2).map(([slug]) => `${SITE}/model/${slug}/`);
+const brandUrls = Object.entries(brandCount).filter(([, n]) => n >= 2).map(([slug]) => `${SITE}/brand/${slug}/`);
+
+const urls = [`${SITE}/`, ...brandUrls, ...modelUrls, ...refs.map((r) => `${SITE}/ref/${r.toLowerCase()}/`)];
 const xml = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',

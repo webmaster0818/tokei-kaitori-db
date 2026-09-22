@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
-import { latestDate, monthlyHistory, publishableRefs, summarize, yen } from "@/lib/prices";
+import { latestDate, masterRefs, monthlyHistory, publishableRefs, summarize, yen } from "@/lib/prices";
+import { publishedBrandOf, publishedFamilyOf } from "@/lib/models";
 
 export function generateStaticParams() {
   return publishableRefs().map((ref) => ({ ref: ref.toLowerCase() }));
@@ -18,9 +19,13 @@ export async function generateMetadata({ params }: { params: Promise<{ ref: stri
   if (!ref) return { title: "型番が見つかりません" };
   const s = summarize(ref);
   const model = s?.models[0] ?? "";
-  const head = s?.ceilingMax ? `買取上限${yen(s.ceilingMax)}` : "買取価格";
+  // ⚠️ 以前は型番が先頭だったため、型番を知らない人には何のページか分からなかった
+  //    （GSC実測 2026-09-21: 流入が型番クエリだけ・CTR 0.72%）。
+  //    モデル名を先頭に出し、うちにしか出せない「店による差額」を見出しに使う。
+  const ym = `${latestDate().slice(0, 4)}年${Number(latestDate().slice(5, 7))}月`;
+  const gap = s?.spread ? `${s.shops.length}社で最大${yen(s.spread)}差` : `${s?.shops.length ?? 0}社比較`;
   return {
-    title: `${ref} ${model}の買取価格【${latestDate()}時点】${head}・${s?.shops.length ?? 0}社比較 | ${SITE_NAME}`,
+    title: `${model} ${ref}の買取相場｜${gap}【${ym}】| ${SITE_NAME}`,
     description: `${model} Ref.${ref}の買取価格を${s?.shops.length ?? 0}社の公開情報から比較。${s?.ceilingMin && s?.ceilingMax ? `上限提示は${yen(s.ceilingMin)}〜${yen(s.ceilingMax)}で、店による差は${yen(s.spread ?? 0)}。` : ""}各社の出典リンクと取得日を明記しています。`,
     alternates: { canonical: `${SITE_URL}/ref/${ref.toLowerCase()}/` },
   };
@@ -34,6 +39,11 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
   if (!s) notFound();
   const date = latestDate();
   const history = monthlyHistory(ref);
+  // ⚠️ この型番が属するモデル／ブランドのハブへ必ず繋ぐ。
+  //    繋がないとハブが孤立し、作っても評価が集まらない（pilatesの店舗ページで同じ失敗をした）。
+  const master = masterRefs();
+  const fam = publishedFamilyOf(master[ref]?.models ?? []);
+  const brand = publishedBrandOf(master[ref]?.brand);
   const others = publishableRefs().filter((r) => r !== ref).slice(0, 6);
 
   const ld = {
@@ -56,6 +66,18 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
 
       <nav className="mb-6 text-xs text-neutral-500">
         <Link href="/" className="hover:underline">ホーム</Link>
+        {brand ? (
+          <>
+            <span className="mx-2">/</span>
+            <Link href={`/brand/${brand.slug}/`} className="hover:underline">{brand.label}</Link>
+          </>
+        ) : null}
+        {fam ? (
+          <>
+            <span className="mx-2">/</span>
+            <Link href={`/model/${fam.slug}/`} className="hover:underline">{fam.label}</Link>
+          </>
+        ) : null}
         <span className="mx-2">/</span>
         <span className="text-neutral-800">Ref.{ref}</span>
       </nav>

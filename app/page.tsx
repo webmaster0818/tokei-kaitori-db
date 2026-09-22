@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 import { latestDate, publishableRefs, summarize, yen } from "@/lib/prices";
+import { BRANDS, FAMILIES, refsByBrand, refsByFamily } from "@/lib/models";
 
 export const metadata: Metadata = {
   title: `${SITE_NAME} — ${SITE_TAGLINE}`,
@@ -19,9 +20,37 @@ export default function Home() {
   const spreads = rows.map((r) => r.spread).filter((v): v is number => v != null && v > 0);
   const maxSpread = spreads.length ? Math.max(...spreads) : null;
 
+  // ⚠️ ハブは作るだけでなくTOPから繋ぐ。繋がないと孤立して評価が集まらない。
+  const byFam = refsByFamily();
+  const byBrand = refsByBrand();
+  const famLinks = FAMILIES.filter((f) => (byFam[f.slug]?.length ?? 0) >= 2);
+  const brandLinks = BRANDS.filter((b) => (byBrand[b.slug]?.length ?? 0) >= 2);
+
   return (
     <main className="mx-auto max-w-3xl px-5 py-12">
       <h1 className="text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl">{SITE_NAME}</h1>
+
+      <section className="mt-8">
+        <h2 className="text-lg font-semibold text-neutral-900">ブランドから探す</h2>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {brandLinks.map((b) => (
+            <Link key={b.slug} href={`/brand/${b.slug}/`}
+                  className="rounded border border-neutral-200 px-3 py-1.5 text-sm hover:border-neutral-400">
+              {b.label}（{byBrand[b.slug]?.length ?? 0}型番）
+            </Link>
+          ))}
+        </div>
+
+        <h2 className="mt-6 text-lg font-semibold text-neutral-900">モデルから探す</h2>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {famLinks.map((f) => (
+            <Link key={f.slug} href={`/model/${f.slug}/`}
+                  className="rounded border border-neutral-200 px-3 py-1.5 text-sm hover:border-neutral-400">
+              {f.label}（{byFam[f.slug]?.length ?? 0}型番）
+            </Link>
+          ))}
+        </div>
+      </section>
       <p className="mt-3 text-sm leading-relaxed text-neutral-600">
         腕時計の買取価格を、買取店が公開している「型番別の買取価格」から毎日収集して比較しています。
         価格は各社の公開ページを出典として、取得日つきで掲載します。
