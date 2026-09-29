@@ -103,9 +103,9 @@ export default function Home() {
               {rows.map((s) => (
                 <tr key={s.ref} className="border-b border-neutral-100 last:border-0">
                   <td className="px-4 py-3">
-                    <Link href={`/ref/${s.ref.toLowerCase()}/`} className="font-medium text-neutral-900 underline decoration-neutral-300 hover:decoration-neutral-800">
+                    <a href={`/ref/${s.ref.toLowerCase()}/`} className="font-medium text-neutral-900 underline decoration-neutral-300 hover:decoration-neutral-800">
                       {s.ref}
-                    </Link>
+                    </a>
                   </td>
                   <td className="px-4 py-3 text-neutral-600">{s.models[0] ?? "—"}</td>
                   <td className="px-4 py-3 text-right text-neutral-900">{s.ceilingMax != null ? yen(s.ceilingMax) : "—"}</td>

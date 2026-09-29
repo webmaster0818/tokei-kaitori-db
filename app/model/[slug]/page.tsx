@@ -103,14 +103,14 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-neutral-700">
             {top?.max && (
               <li>
-                上限が最も高いのは <Link className="underline" href={`/ref/${top.ref.toLowerCase()}/`}>{top.ref}</Link>
+                上限が最も高いのは <a className="underline" href={`/ref/${top.ref.toLowerCase()}/`}>{top.ref}</a>
                 （{top.model}）の <strong>{yen(top.max)}</strong> です。
               </li>
             )}
             {widest?.spread ? (
               <li>
                 同じ型番でも店によって差が出ます。差が最も大きいのは{" "}
-                <Link className="underline" href={`/ref/${widest.ref.toLowerCase()}/`}>{widest.ref}</Link> で、
+                <a className="underline" href={`/ref/${widest.ref.toLowerCase()}/`}>{widest.ref}</a> で、
                 <strong>{yen(widest.spread)}</strong> の開きがあります。
               </li>
             ) : null}
@@ -134,7 +134,7 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
               {r.map((x, i) => (
                 <tr key={x.ref} className={i % 2 ? "bg-neutral-50" : "bg-white"}>
                   <td className="border-t border-neutral-200 px-3 py-2 font-medium">
-                    <Link className="underline" href={`/ref/${x.ref.toLowerCase()}/`}>{x.ref}</Link>
+                    <a className="underline" href={`/ref/${x.ref.toLowerCase()}/`}>{x.ref}</a>
                   </td>
                   <td className="border-t border-neutral-200 px-3 py-2 text-neutral-600">{x.model}</td>
                   <td className="border-t border-neutral-200 px-3 py-2 text-right whitespace-nowrap">

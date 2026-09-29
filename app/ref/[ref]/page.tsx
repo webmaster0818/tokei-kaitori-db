@@ -219,9 +219,9 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
           <h2 className="text-sm font-semibold text-neutral-900">他の型番の買取価格</h2>
           <div className="mt-3 flex flex-wrap gap-2">
             {others.map((r) => (
-              <Link key={r} href={`/ref/${r.toLowerCase()}/`} className="rounded-full border border-neutral-300 px-3 py-1.5 text-xs text-neutral-700 hover:border-neutral-500">
+              <a key={r} href={`/ref/${r.toLowerCase()}/`} className="rounded-full border border-neutral-300 px-3 py-1.5 text-xs text-neutral-700 hover:border-neutral-500">
                 Ref.{r}
-              </Link>
+              </a>
             ))}
           </div>
         </section>
