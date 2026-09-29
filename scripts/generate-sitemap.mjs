@@ -86,3 +86,40 @@ for (const dir of ["public", "out"]) {
   if (fs.existsSync(d)) fs.writeFileSync(path.join(d, "sitemap.xml"), xml);
 }
 console.log(`sitemap: ${urls.length} URLs (lastmod=${lastmod}, site=${SITE})`);
+
+/*
+  🚨 内部リンクの末尾スラッシュを補う（2026-09-29）
+
+  `trailingSlash: true` でも、**型番にドットが含まれると Next が拡張子と見なして
+  <Link> の末尾スラッシュを落とす**（例: /ref/311.30.42.30.01.005）。
+  結果、内部リンク1,521本のうち578本が末尾スラッシュ無しで出力され、
+  クリックのたびに Cloudflare の 308 リダイレクトを1回挟んでいた。
+
+  ビルド後に、実在するディレクトリを指す href だけスラッシュを補う。
+  （存在しないパスには触らない＝リンク切れを作らない）
+*/
+{
+  const outDir = path.join(root, "out");
+  const has = (p) => fs.existsSync(path.join(outDir, p, "index.html"));
+  let files = 0, fixed = 0;
+  const walk = (d) => {
+    for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+      const f = path.join(d, e.name);
+      if (e.isDirectory()) walk(f);
+      else if (e.name.endsWith(".html")) {
+        const src = fs.readFileSync(f, "utf8");
+        let n = 0;
+        const out = src.replace(/href="(\/[^"?#]*[^/"])"/g, (m, p1) => {
+          if (p1.startsWith("/_next") || !has(p1.replace(/^\//, ""))) return m;
+          n++; return `href="${p1}/"`;
+        });
+        if (n) { fs.writeFileSync(f, out); fixed += n; }
+        files++;
+      }
+    }
+  };
+  if (fs.existsSync(outDir)) {
+    walk(outDir);
+    console.log(`内部リンクの末尾スラッシュを補正: ${fixed}本 / ${files}ファイル`);
+  }
+}

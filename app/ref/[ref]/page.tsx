@@ -44,7 +44,12 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
   const master = masterRefs();
   const fam = publishedFamilyOf(master[ref]?.models ?? []);
   const brand = publishedBrandOf(master[ref]?.brand);
-  const others = publishableRefs().filter((r) => r !== ref).slice(0, 6);
+  // ⚠️ 先頭6件を固定で出していたため、その6ページにしかリンクが集まらず、
+  //    73型番がTOPからの1本だけで孤立していた（2026-09-29に判明）。
+  //    並びの中で自分の前後を出して、鎖状に全型番が繋がるようにする。
+  const all = publishableRefs();
+  const idx = all.indexOf(ref);
+  const others = all.slice(Math.max(0, idx - 3), idx + 4).filter((r) => r !== ref);
 
   const ld = {
     "@context": "https://schema.org",

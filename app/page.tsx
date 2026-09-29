@@ -26,7 +26,19 @@ export default function Home() {
   const famLinks = FAMILIES.filter((f) => (byFam[f.slug]?.length ?? 0) >= 2);
   const brandLinks = BRANDS.filter((b) => (byBrand[b.slug]?.length ?? 0) >= 2);
 
+  const ld = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: `${SITE_URL}/`,
+    description: `${rows.length}型番の買取価格を買取店ごとに比較できるデータベース。${SITE_TAGLINE}。`,
+    inLanguage: "ja",
+    publisher: { "@type": "Organization", name: SITE_NAME, url: `${SITE_URL}/` },
+  };
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
     <main className="mx-auto max-w-3xl px-5 py-12">
       <h1 className="text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl">{SITE_NAME}</h1>
 
@@ -116,5 +128,6 @@ export default function Home() {
         </p>
       </section>
     </main>
+    </>
   );
 }

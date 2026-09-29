@@ -58,7 +58,19 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
     return { ...f, count: rows.length, max, spread };
   });
 
+  const ld = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: `${b.label} の買取価格比較データ`,
+    description: `${b.label}の${refs.length}型番について、買取店が公開している買取価格を収集・比較したデータ（${date}時点）。`,
+    creator: { "@type": "Organization", name: SITE_NAME },
+    dateModified: date,
+    url: `${SITE_URL}/brand/${slug}/`,
+  };
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
     <main className="mx-auto max-w-3xl px-5 py-10">
       <nav className="text-xs text-neutral-500">
         <Link href="/" className="hover:underline">ホーム</Link>
@@ -121,5 +133,6 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
           ))}
       </div>
     </main>
+    </>
   );
 }
