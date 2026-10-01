@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 import { latestDate, publishableRefs, summarize, yen } from "@/lib/prices";
 import { BRANDS, FAMILIES, refsByBrand, refsByFamily } from "@/lib/models";
+import { graph, itemList, organization } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: `${SITE_NAME} — ${SITE_TAGLINE}`,
@@ -26,15 +27,21 @@ export default function Home() {
   const famLinks = FAMILIES.filter((f) => (byFam[f.slug]?.length ?? 0) >= 2);
   const brandLinks = BRANDS.filter((b) => (byBrand[b.slug]?.length ?? 0) >= 2);
 
-  const ld = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: SITE_NAME,
-    url: `${SITE_URL}/`,
-    description: `${rows.length}型番の買取価格を買取店ごとに比較できるデータベース。${SITE_TAGLINE}。`,
-    inLanguage: "ja",
-    publisher: { "@type": "Organization", name: SITE_NAME, url: `${SITE_URL}/` },
-  };
+  const ld = graph(
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      name: SITE_NAME,
+      url: `${SITE_URL}/`,
+      description: `${rows.length}型番の買取価格を買取店ごとに比較できるデータベース。${SITE_TAGLINE}。`,
+      inLanguage: "ja",
+      publisher: { "@id": `${SITE_URL}/#organization` },
+    },
+    organization,
+    // 画面に出ているハブのリンクと同じ並びにする
+    itemList("ブランドから探す", brandLinks.map((b) => ({ name: b.label, path: `/brand/${b.slug}/` }))),
+    itemList("モデルから探す", famLinks.map((f) => ({ name: f.label, path: `/model/${f.slug}/` }))),
+  );
 
   return (
     <>

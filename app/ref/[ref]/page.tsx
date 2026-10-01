@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { latestDate, masterRefs, monthlyHistory, publishableRefs, summarize, yen } from "@/lib/prices";
 import { publishedBrandOf, publishedFamilyOf } from "@/lib/models";
+import { breadcrumb, graph, organization } from "@/lib/jsonld";
 
 export function generateStaticParams() {
   return publishableRefs().map((ref) => ({ ref: ref.toLowerCase() }));
@@ -51,19 +52,29 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
   const idx = all.indexOf(ref);
   const others = all.slice(Math.max(0, idx - 3), idx + 4).filter((r) => r !== ref);
 
-  const ld = {
-    "@context": "https://schema.org",
-    "@type": "Dataset",
-    name: `${s.models[0] ?? ""} Ref.${ref} の買取価格比較データ`,
-    description: `買取店${s.shops.length}社が公開している Ref.${ref} の買取価格を収集・比較したデータ（${date}時点）。`,
-    creator: { "@type": "Organization", name: SITE_NAME },
-    dateModified: date,
-    variableMeasured: [
-      s.ceilingMax != null ? { "@type": "PropertyValue", name: "買取上限の最高提示額", value: s.ceilingMax, unitText: "JPY" } : null,
-      s.ceilingMin != null ? { "@type": "PropertyValue", name: "買取上限の最低提示額", value: s.ceilingMin, unitText: "JPY" } : null,
-      s.spread != null ? { "@type": "PropertyValue", name: "店舗間の提示差", value: s.spread, unitText: "JPY" } : null,
-    ].filter(Boolean),
-  };
+  const ld = graph(
+    {
+      "@type": "Dataset",
+      name: `${s.models[0] ?? ""} Ref.${ref} の買取価格比較データ`,
+      description: `買取店${s.shops.length}社が公開している Ref.${ref} の買取価格を収集・比較したデータ（${date}時点）。`,
+      creator: { "@id": `${SITE_URL}/#organization` },
+      dateModified: date,
+      url: `${SITE_URL}/ref/${ref.toLowerCase()}/`,
+      variableMeasured: [
+        s.ceilingMax != null ? { "@type": "PropertyValue", name: "買取上限の最高提示額", value: s.ceilingMax, unitText: "JPY" } : null,
+        s.ceilingMin != null ? { "@type": "PropertyValue", name: "買取上限の最低提示額", value: s.ceilingMin, unitText: "JPY" } : null,
+        s.spread != null ? { "@type": "PropertyValue", name: "店舗間の提示差", value: s.spread, unitText: "JPY" } : null,
+      ].filter(Boolean),
+    },
+    organization,
+    // 画面の <nav> と同じ並び（ブランド・モデルは出ていない場合があるので同じ条件で落とす）
+    breadcrumb([
+      { name: "ホーム", path: "/" },
+      ...(brand ? [{ name: brand.label, path: `/brand/${brand.slug}/` }] : []),
+      ...(fam ? [{ name: fam.label, path: `/model/${fam.slug}/` }] : []),
+      { name: `Ref.${ref}` },
+    ]),
+  );
 
   return (
     <main className="mx-auto max-w-3xl px-5 py-10">

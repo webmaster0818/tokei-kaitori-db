@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { latestDate, masterRefs, summarize, yen } from "@/lib/prices";
 import { BRANDS, FAMILIES, familyOf, refsByBrand, refsByFamily } from "@/lib/models";
+import { breadcrumb, graph, itemList, organization } from "@/lib/jsonld";
 
 /*
   ブランド別ハブ（/brand/rolex/ など）。モデルハブへの入口。
@@ -58,15 +59,21 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
     return { ...f, count: rows.length, max, spread };
   });
 
-  const ld = {
-    "@context": "https://schema.org",
-    "@type": "Dataset",
-    name: `${b.label} の買取価格比較データ`,
-    description: `${b.label}の${refs.length}型番について、買取店が公開している買取価格を収集・比較したデータ（${date}時点）。`,
-    creator: { "@type": "Organization", name: SITE_NAME },
-    dateModified: date,
-    url: `${SITE_URL}/brand/${slug}/`,
-  };
+  const ld = graph(
+    {
+      "@type": "Dataset",
+      name: `${b.label} の買取価格比較データ`,
+      description: `${b.label}の${refs.length}型番について、買取店が公開している買取価格を収集・比較したデータ（${date}時点）。`,
+      creator: { "@id": `${SITE_URL}/#organization` },
+      dateModified: date,
+      url: `${SITE_URL}/brand/${slug}/`,
+    },
+    organization,
+    // 画面上部の <nav> と同じ並び
+    breadcrumb([{ name: "ホーム", path: "/" }, { name: b.label }]),
+    // 画面の「モデル別」表に出ている行と同じ
+    itemList(`${b.label}のモデル`, summary.map((f) => ({ name: f.label, path: `/model/${f.slug}/` }))),
+  );
 
   return (
     <>

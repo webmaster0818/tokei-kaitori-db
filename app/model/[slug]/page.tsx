@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { latestDate, masterRefs, summarize, yen } from "@/lib/prices";
 import { FAMILIES, MIN_REFS, refsByFamily } from "@/lib/models";
+import { breadcrumb, graph, itemList, organization } from "@/lib/jsonld";
 
 /*
   モデル別ハブ（/model/daytona/ など）。
@@ -70,15 +71,20 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
   const widest = r.reduce<Row | null>((a, b) => (!a || (b.spread ?? 0) > (a.spread ?? 0) ? b : a), null);
   const others = families().filter((x) => x.slug !== slug);
 
-  const ld = {
-    "@context": "https://schema.org",
-    "@type": "Dataset",
-    name: `${f.brand} ${f.label} の買取価格比較データ`,
-    description: `${f.brand} ${f.label}の${r.length}型番について、買取店が公開している買取価格を収集・比較したデータ（${date}時点）。`,
-    creator: { "@type": "Organization", name: SITE_NAME },
-    dateModified: date,
-    url: `${SITE_URL}/model/${slug}/`,
-  };
+  const ld = graph(
+    {
+      "@type": "Dataset",
+      name: `${f.brand} ${f.label} の買取価格比較データ`,
+      description: `${f.brand} ${f.label}の${r.length}型番について、買取店が公開している買取価格を収集・比較したデータ（${date}時点）。`,
+      creator: { "@id": `${SITE_URL}/#organization` },
+      dateModified: date,
+      url: `${SITE_URL}/model/${slug}/`,
+    },
+    organization,
+    breadcrumb([{ name: "ホーム", path: "/" }, { name: f.label }]),
+    // 画面の型番表に出ている行と同じ（URLは小文字。大文字だとCloudflareで404）
+    itemList(`${f.brand} ${f.label}の型番`, r.map((x) => ({ name: x.ref, path: `/ref/${x.ref.toLowerCase()}/` }))),
+  );
 
   return (
     <>
