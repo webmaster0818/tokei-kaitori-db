@@ -3752,114 +3752,6 @@
     "nanboya"
    ]
   },
-  "126518LN": {
-   "brand": "ロレックス",
-   "models": [
-    "デイトナ"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "126519LN": {
-   "brand": "ロレックス",
-   "models": [
-    "デイトナ"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "228238": {
-   "brand": "ロレックス",
-   "models": [
-    "デイデイト"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "18238MR": {
-   "brand": "ロレックス",
-   "models": [
-    "デイデイト"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "118348A": {
-   "brand": "ロレックス",
-   "models": [
-    "デイデイト"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "128238": {
-   "brand": "ロレックス",
-   "models": [
-    "デイデイト"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "228396TBR": {
-   "brand": "ロレックス",
-   "models": [
-    "デイデイト"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "336934": {
-   "brand": "ロレックス",
-   "models": [
-    "スカイドゥエラー"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "336239": {
-   "brand": "ロレックス",
-   "models": [
-    "スカイドゥエラー"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "336238": {
-   "brand": "ロレックス",
-   "models": [
-    "スカイドゥエラー"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "326235": {
-   "brand": "ロレックス",
-   "models": [
-    "スカイドゥエラー"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "336933": {
-   "brand": "ロレックス",
-   "models": [
-    "スカイドゥエラー"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
   "116600": {
    "brand": "ロレックス",
    "models": [
@@ -3893,78 +3785,6 @@
     "nanboya"
    ]
   },
-  "325.92.43.79.01.001": {
-   "brand": "オメガ",
-   "models": [
-    "スピードマスター"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "324.23.38.50.02.002": {
-   "brand": "オメガ",
-   "models": [
-    "スピードマスター"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "329.92.43.51.10.001": {
-   "brand": "オメガ",
-   "models": [
-    "スピードマスター"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "332.10.41.51.11.001": {
-   "brand": "オメガ",
-   "models": [
-    "スピードマスター"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "324.23.38.50.02.001": {
-   "brand": "オメガ",
-   "models": [
-    "スピードマスター"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "304.93.44.52.03.002": {
-   "brand": "オメガ",
-   "models": [
-    "スピードマスター"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "311.92.44.30.01.001": {
-   "brand": "オメガ",
-   "models": [
-    "スピードマスター ムーンウォッチ"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "310.32.42.50.01.001": {
-   "brand": "オメガ",
-   "models": [
-    "スピードマスター ムーンウォッチ"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
   "311.30.42.30.01.004": {
    "brand": "オメガ",
    "models": [
@@ -3976,49 +3796,11 @@
     "nanboya"
    ]
   },
-  "234.30.41.21.01.001": {
-   "brand": "オメガ",
-   "models": [
-    "シーマスター"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "210.32.42.20.01.001": {
-   "brand": "オメガ",
-   "models": [
-    "シーマスター"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
   "210.92.42.20.01.001": {
    "brand": "オメガ",
    "models": [
     "シーマスター",
     "オメガ シーマスター"
-   ],
-   "shops": [
-    "watchnian",
-    "nanboya"
-   ]
-  },
-  "231.10.42.21.01.004": {
-   "brand": "オメガ",
-   "models": [
-    "シーマスターアクアテラ"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "231.10.39.60.06.001": {
-   "brand": "オメガ",
-   "models": [
-    "シーマスターアクアテラ",
-    "オメガ シーマスター アクアテラ クオーツ"
    ],
    "shops": [
     "watchnian",
@@ -4052,17 +3834,6 @@
    "models": [
     "シーマスターアクアテラ",
     "オメガ シーマスター アクアテラ 150M マスターコーアクシャル"
-   ],
-   "shops": [
-    "watchnian",
-    "nanboya"
-   ]
-  },
-  "231.10.39.60.02.001": {
-   "brand": "オメガ",
-   "models": [
-    "シーマスターアクアテラ",
-    "オメガ シーマスター"
    ],
    "shops": [
     "watchnian",
@@ -4135,17 +3906,6 @@
     "nanboya"
    ]
   },
-  "215.92.44.21.99.001": {
-   "brand": "オメガ",
-   "models": [
-    "シーマスター プラネットオーシャン",
-    "オメガ シーマスター 600M プラネットオーシャン マスタークロノメーター ラバーベルト"
-   ],
-   "shops": [
-    "watchnian",
-    "nanboya"
-   ]
-  },
   "222.32.38.50.01.001": {
    "brand": "オメガ",
    "models": [
@@ -4155,213 +3915,6 @@
    "shops": [
     "watchnian",
     "nanboya"
-   ]
-  },
-  "220.10.40.20.01.001": {
-   "brand": "オメガ",
-   "models": [
-    "レイルマスター"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "1460.75": {
-   "brand": "オメガ",
-   "models": [
-    "コンステレーション"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "WSSA0013": {
-   "brand": "カルティエ",
-   "models": [
-    "サントス"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "WSSA0048": {
-   "brand": "カルティエ",
-   "models": [
-    "サントス"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "WSSA0029": {
-   "brand": "カルティエ",
-   "models": [
-    "サントス"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "WSSA0046": {
-   "brand": "カルティエ",
-   "models": [
-    "サントス"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "WSSA0062": {
-   "brand": "カルティエ",
-   "models": [
-    "サントス"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "WSSA0065": {
-   "brand": "カルティエ",
-   "models": [
-    "サントス"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "WSSA0078": {
-   "brand": "カルティエ",
-   "models": [
-    "サントス"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "W51008Q3": {
-   "brand": "カルティエ",
-   "models": [
-    "タンク"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "W5200013": {
-   "brand": "カルティエ",
-   "models": [
-    "タンク"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "WSTA0056": {
-   "brand": "カルティエ",
-   "models": [
-    "タンク"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "WSTA0055": {
-   "brand": "カルティエ",
-   "models": [
-    "タンク"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "WGBB0035": {
-   "brand": "カルティエ",
-   "models": [
-    "バロンブルーSM"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "IW358304": {
-   "brand": "IWC",
-   "models": [
-    "ポルトギーゼ"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "IW500705": {
-   "brand": "IWC",
-   "models": [
-    "ポルトギーゼ"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "IW371609": {
-   "brand": "IWC",
-   "models": [
-    "ポルトギーゼ"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "IW358305": {
-   "brand": "IWC",
-   "models": [
-    "ポルトギーゼ"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "IW323904": {
-   "brand": "IWC",
-   "models": [
-    "インヂュニア"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "PAM00422": {
-   "brand": "パネライ",
-   "models": [
-    "ルミノール"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "PAM00049": {
-   "brand": "パネライ",
-   "models": [
-    "ルミノール"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "PAM00048": {
-   "brand": "パネライ",
-   "models": [
-    "ルミノール"
-   ],
-   "shops": [
-    "watchnian"
-   ]
-  },
-  "541.CM.1171.RX": {
-   "brand": "ウブロ",
-   "models": [
-    "クラシックフュージョン"
-   ],
-   "shops": [
-    "watchnian"
    ]
   },
   "3590.50": {
@@ -4962,7 +4515,34 @@
    "shops": [
     "quark"
    ]
+  },
+  "116518LNNG": {
+   "brand": "ロレックス",
+   "models": [
+    "ロレックス デイトナ 116518LNNG"
+   ],
+   "shops": [
+    "nanboya"
+   ]
+  },
+  "116519": {
+   "brand": "ロレックス",
+   "models": [
+    "ロレックス デイトナ"
+   ],
+   "shops": [
+    "nanboya"
+   ]
+  },
+  "116519LN": {
+   "brand": "ロレックス",
+   "models": [
+    "ロレックス デイトナ"
+   ],
+   "shops": [
+    "nanboya"
+   ]
   }
  },
- "updated_at": "2026-09-30"
+ "updated_at": "2026-10-01"
 }
