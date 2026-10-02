@@ -135,7 +135,7 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
 
       {/* 各社比較表 */}
       <section className="mt-10">
-        <h2 className="border-b border-neutral-200 pb-2 text-lg font-semibold text-neutral-900">各社の買取価格（{date}時点）</h2>
+        <h2 className="border-b border-neutral-200 pb-2 text-lg font-semibold text-neutral-900">各社の買取価格</h2>
         <div className="mt-4 overflow-x-auto rounded-lg border border-neutral-200 bg-white">
           <table className="w-full text-sm">
             <thead>
@@ -144,6 +144,7 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
                 <th className="px-4 py-3">区分</th>
                 <th className="px-4 py-3">状態・仕様</th>
                 <th className="px-4 py-3 text-right">価格</th>
+                <th className="px-4 py-3">取得日</th>
                 <th className="px-4 py-3">出典</th>
               </tr>
             </thead>
@@ -159,6 +160,13 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
                     {[s.models.length > 1 ? r.model : null, r.condition, r.dial, r.material].filter(Boolean).join(" / ") || "—"}
                   </td>
                   <td className="px-4 py-3 text-right font-medium text-neutral-900">{yen(r.price_jpy)}</td>
+                  {/* ⚠️ 店ごとに取得日を出す。取得元のサイトが落ちた日は直近の値を引き継ぐため、
+                      全部を「今日時点」と書くと嘘になる（2026-10-02のウォッチニアン停止で発生）。 */}
+                  <td className="px-4 py-3 text-xs text-neutral-500 whitespace-nowrap">
+                    {!r.fetched_at ? "—"
+                      : r.fetched_at === date ? r.fetched_at
+                      : <strong className="text-neutral-700">{r.fetched_at}</strong>}
+                  </td>
                   <td className="px-4 py-3">
                     <a href={r.source_url} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 underline decoration-neutral-300 hover:text-neutral-800">
                       公開ページ
@@ -170,7 +178,8 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
           </table>
         </div>
         <p className="mt-3 text-xs leading-relaxed text-neutral-400">
-          ※各社が公開している買取価格を{date}に取得して掲載しています。「上限」は状態が良い場合の最大額、「相場」は各社が相場として公開している値です。実際の査定額は個体の状態・付属品・時期により変動します。最新価格は各社の公開ページでご確認ください。
+          ※価格は各社の公開ページから取得したもので、取得日は店ごとに上の表に記載しています。
+          取得元のサイトが一時的に閲覧できない日は、直近で取得できた日の価格をそのまま掲載し、その取得日を表示します。「上限」は状態が良い場合の最大額、「相場」は各社が相場として公開している値です。実際の査定額は個体の状態・付属品・時期により変動します。最新価格は各社の公開ページでご確認ください。
         </p>
       </section>
 

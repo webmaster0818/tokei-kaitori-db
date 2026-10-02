@@ -240,7 +240,7 @@ def parse_watchnian(html: str, url: str) -> list[dict]:
             out.append({"shop": "ウォッチニアン", "shop_id": "watchnian", "ref": ref,
                         "model": model.strip(), "dial": "",
                         "price_type": "上限", "condition": "新品" if "新品" in cond else "中古",
-                        "price_jpy": v, "source_url": url})
+                        "price_jpy": v, "source_url": url, "fetched_at": TODAY})
     return out
 
 
@@ -377,6 +377,12 @@ def main() -> None:
         prev = json.loads(f.read_text(encoding="utf-8")).get("records", [])
         for shop in {r["shop"] for r in prev} - today_shops - set(carried):
             rows = [r for r in prev if r["shop"] == shop]
+            # ⚠️ 取得日が入っていないレコードがある（ウォッチニアンは入れていなかった）。
+            #    引き継ぐ以上、いつ取った値かを必ず持たせる。無いとページで空欄になる。
+            for r in rows:
+                r.setdefault("fetched_at", None)
+                if not r["fetched_at"]:
+                    r["fetched_at"] = f.stem
             records.extend(rows)
             carried[shop] = f.stem
             errors.append(f"{shop}: 今日は0件。{f.stem} の {len(rows)}件を引き継いだ")
