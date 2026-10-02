@@ -72,11 +72,46 @@ export function latestPriceMonth(date = latestDate()): string {
   return m;
 }
 
+/** 月次公開の店について、採用してよい最も古い月（これより古い価格は載せない） */
+const STALE_MONTHS = 3;
+
+function monthsBefore(month: string, n: number): string {
+  const [y, m] = month.split("-").map(Number);
+  const d = new Date(Date.UTC(y, m - 1 - n, 1));
+  return `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}`;
+}
+
+/**
+ * 掲載に使うレコード。
+ *
+ * ⚠️ 「最新月のレコードだけ」にすると、月次公開の店（なんぼや）が今月の一覧から
+ *    落とした型番のページが毎月まとめて消える。2026-10-01の月替わりで**32ページが
+ *    404になり、うち20ページは直近28日に検索表示があった**（最大76表示・クリックあり）。
+ *    毎月これを繰り返すとインデックスが育たない。
+ *
+ * そこで月次公開の店は「型番ごとに、持っている中で最も新しい月」を採る。
+ * 9月の価格でも先方が実際に公開した価格なので、取得月を明記すれば事実に反しない。
+ * ただし古すぎるものは載せない（STALE_MONTHS か月より前は捨てる）。
+ */
 export function currentRecords(date = latestDate()): PriceRecord[] {
   const hit = currentCache.get(date);
   if (hit) return hit;
   const month = latestPriceMonth(date);
-  const rows = readSnapshot(date).filter((r) => !r.price_month || r.price_month === month);
+  const floor = monthsBefore(month, STALE_MONTHS);
+  const rows: PriceRecord[] = [];
+  // 型番×店ごとに、採用した月を覚えておく（同じ店の古い月を二重に出さない）
+  const picked = new Map<string, string>();
+  for (const r of readSnapshot(date)) {
+    if (!r.price_month) { rows.push(r); continue; }   // 日次公開の店はそのまま
+    if (r.price_month < floor) continue;              // 古すぎる
+    const key = `${r.ref}\u0000${r.shop}`;
+    const cur = picked.get(key);
+    if (!cur || r.price_month > cur) picked.set(key, r.price_month);
+  }
+  for (const r of readSnapshot(date)) {
+    if (!r.price_month) continue;
+    if (picked.get(`${r.ref}\u0000${r.shop}`) === r.price_month) rows.push(r);
+  }
   currentCache.set(date, rows);
   return rows;
 }

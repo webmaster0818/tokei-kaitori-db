@@ -19,9 +19,24 @@ const snapshot = JSON.parse(fs.readFileSync(path.join(root, `data/prices/${lastm
 // lib/prices.ts の latestPriceMonth() と同じ考え方に揃える。
 const months = snapshot.map((r) => r.price_month).filter(Boolean);
 const month = months.length ? months.reduce((a, b) => (a > b ? a : b)) : lastmod.slice(0, 7);
+// ⚠️ さらに「最新月だけ」も不可。なんぼやが今月の一覧から落とした型番のページが
+//    毎月まとめて消える（2026-10-01に32ページが404化・うち20ページは検索表示があった）。
+//    月次公開の店は「型番ごとに持っている中で最も新しい月」を採る。
+//    lib/prices.ts の currentRecords() と同じ基準。片方だけ直すと sitemap と実ページが食い違う。
+const STALE_MONTHS = 3;
+const [fy, fm] = month.split("-").map(Number);
+const fd = new Date(Date.UTC(fy, fm - 1 - STALE_MONTHS, 1));
+const floor = `${fd.getUTCFullYear()}-${String(fd.getUTCMonth() + 1).padStart(2, "0")}`;
+const newestByRefShop = new Map();
+for (const r of snapshot) {
+  if (!r.price_month || r.price_month < floor) continue;
+  const k = `${r.ref}\u0000${r.shop}`;
+  const cur = newestByRefShop.get(k);
+  if (!cur || r.price_month > cur) newestByRefShop.set(k, r.price_month);
+}
 const shopsByRef = new Map();
 for (const r of snapshot) {
-  if (r.price_month && r.price_month !== month) continue;
+  if (r.price_month && newestByRefShop.get(`${r.ref}\u0000${r.shop}`) !== r.price_month) continue;
   if (!shopsByRef.has(r.ref)) shopsByRef.set(r.ref, new Set());
   shopsByRef.get(r.ref).add(r.shop);
 }

@@ -18,7 +18,7 @@ import json
 import re
 import time
 import urllib.request
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -32,6 +32,8 @@ SLEEP = 2.0
 # オメガ163件を追加した結果、tier1（既存公開ページの維持）とtier2（新たに2社目になれる型番）を
 # 取り切るのに40では足りなくなったので引き上げた。320件×2秒＝約11分。
 NANBOYA_CAP = 320
+# 「前日公開していた型番」を何日さかのぼって拾うか（取得元の一時障害に耐えるため）
+KEEP_LOOKBACK_DAYS = 5
 
 
 def fetch(url: str, encoding: str = "utf-8") -> str:
@@ -313,11 +315,29 @@ def main() -> None:
         prev = [f for f in snaps if f.stem != TODAY]
         if not prev:
             return set()
-        recs = json.loads(prev[-1].read_text(encoding="utf-8")).get("records", [])
-        month = prev[-1].stem[:7]
+        # ⚠️ 前日1日分だけを見てはいけない（2026-10-02に判明）。
+        #    取得元が1日落ちると、その日のスナップショットは既に欠けた状態なので、
+        #    「昨日公開していた型番」が少なく見積もられ、優先順位から外れて今日も取得されない。
+        #    ＝障害が1日で終わっても、こちらの都合でページが戻らない。
+        #    直近数日のどれかで2社そろっていれば維持する（union）。
+        recs = []
+        for f in prev[-KEEP_LOOKBACK_DAYS:]:
+            recs.extend(json.loads(f.read_text(encoding="utf-8")).get("records", []))
+        # ⚠️ ここで「ファイル名の暦月」で絞ってはいけない（2026-10-02に判明）。
+        #    月が変わった瞬間、月次公開のなんぼやは当月データが少ないため keep が縮み、
+        #    NANBOYA_CAP の優先順位から外れた型番が今日は取得されず、公開中のページが消える。
+        #    実際に10/1〜10/2で15ページがこれで落ちた。
+        #    lib/prices.ts の currentRecords() と同じ「店ごとに最も新しい月」で数える。
+        newest: dict[tuple[str, str], str] = {}
+        for r in recs:
+            if not r.get("price_month"):
+                continue
+            k = (r["ref"], r["shop"])
+            if k not in newest or r["price_month"] > newest[k]:
+                newest[k] = r["price_month"]
         by: dict[str, set[str]] = {}
         for r in recs:
-            if r.get("price_month") and r["price_month"] != month:
+            if r.get("price_month") and newest.get((r["ref"], r["shop"])) != r["price_month"]:
                 continue
             by.setdefault(r["ref"], set()).add(r["shop"])
         return {k for k, v in by.items() if len(v) >= 2}
@@ -339,10 +359,36 @@ def main() -> None:
             print(f"NG nanboya {u}: {e}")
         time.sleep(SLEEP)
 
+    # ⚠️ 店のサイトが落ちると、その店のレコードが丸ごと0件になり、
+    #    2社目を失った型番のページが**その日のうちに404になる**。
+    #    2026-10-01にウォッチニアンが落ち（www=502・buyは接続不可）、192件→0件。
+    #    32ページが消え、うち20ページは直近28日に検索表示があった（最大76表示・クリックあり）。
+    #    先方が復旧すれば戻るものを、こちらが消してしまうのは損。
+    #    → 今日0件だった店は、直近で取れていた日の値を引き継ぐ。
+    #      各レコードは元の fetched_at を持っており、ページには取得日が出るので
+    #      「いつ時点の価格か」は読者に正しく伝わる。古すぎるものは引き継がない。
+    CARRY_DAYS = 14
+    today_shops = {r["shop"] for r in records}
+    snaps = sorted((ROOT / "data" / "prices").glob("*.json"))
+    carried: dict[str, str] = {}
+    for f in reversed([x for x in snaps if x.stem != TODAY]):
+        if (date.fromisoformat(TODAY) - date.fromisoformat(f.stem)).days > CARRY_DAYS:
+            break
+        prev = json.loads(f.read_text(encoding="utf-8")).get("records", [])
+        for shop in {r["shop"] for r in prev} - today_shops - set(carried):
+            rows = [r for r in prev if r["shop"] == shop]
+            records.extend(rows)
+            carried[shop] = f.stem
+            errors.append(f"{shop}: 今日は0件。{f.stem} の {len(rows)}件を引き継いだ")
+            print(f"⚠️ {shop} が0件 → {f.stem} の {len(rows)}件を引き継ぎ")
+    if carried:
+        print(f"⚠️ 引き継いだ店: {carried}（先方サイトの復旧を確認すること）")
+
     # 保存
     out_dir = ROOT / "data" / "prices"
     out_dir.mkdir(parents=True, exist_ok=True)
-    json.dump({"fetched_at": TODAY, "records": records, "errors": errors},
+    json.dump({"fetched_at": TODAY, "records": records, "errors": errors,
+               "carried_over": carried},
               open(out_dir / f"{TODAY}.json", "w"), ensure_ascii=False, indent=1)
 
     # 型番マスタ更新(観測ベース: どの社に載っているか=実需の証拠)

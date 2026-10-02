@@ -22,6 +22,17 @@ fi
 node scripts/generate-sitemap.mjs >>"$LOG" 2>&1
 say "ビルド+sitemap OK"
 
+# 公開ページ数が前日から大きく減ったら、その日は公開しない（2026-10-02の事故を受けて追加）。
+# 取得元の障害や月替わりで2社そろわなくなると、生きていたページが一気に404になる。
+# 「減った状態を本番に出す」より「昨日のまま止める」方が損が小さい。
+PREV=$(git show HEAD:public/sitemap.xml 2>/dev/null | grep -c "<loc>" || echo 0)
+NOW=$(grep -c "<loc>" public/sitemap.xml 2>/dev/null || echo 0)
+if [ "$PREV" -gt 0 ] && [ "$NOW" -lt $(( PREV * 95 / 100 )) ]; then
+  say "🚨 公開URLが急減 ${PREV} → ${NOW}。原因が分かるまで公開を止めます"
+  python3 "$SRC/scripts/notify-drop.py" "$PREV" "$NOW" >>"$LOG" 2>&1
+  exit 1
+fi
+
 # 変更をコミット（データの履歴を残す）
 git add -A >>"$LOG" 2>&1
 if git diff --cached --quiet; then
