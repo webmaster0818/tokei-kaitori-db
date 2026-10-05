@@ -383,6 +383,13 @@ def main() -> None:
                 r.setdefault("fetched_at", None)
                 if not r["fetched_at"]:
                     r["fetched_at"] = f.stem
+            # ⚠️ 前日のスナップショットには「引き継いだ行」も入っている。ファイルの日付だけで
+            #    判定すると、前日→今日→翌日と受け渡されて期限が永久に来ない（2026-10-05 に発見。
+            #    9/30 の値が 10/4 まで毎日「前日から」引き継がれていた）。行の元の取得日で切る。
+            rows = [r for r in rows
+                    if (date.fromisoformat(TODAY) - date.fromisoformat(r["fetched_at"][:10])).days <= CARRY_DAYS]
+            if not rows:
+                continue
             records.extend(rows)
             carried[shop] = f.stem
             errors.append(f"{shop}: 今日は0件。{f.stem} の {len(rows)}件を引き継いだ")
