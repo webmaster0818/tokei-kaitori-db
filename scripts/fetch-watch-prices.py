@@ -213,35 +213,62 @@ def parse_quark3(html: str, url: str) -> list[dict]:
 
 
 def parse_watchnian(html: str, url: str) -> list[dict]:
-    """ウォッチニアン（buy.watchnian.com/brand_xxx/）。
+    """ウォッチニアン。2026-10-06 に新サイト（watchnian.com/buy/）の構造へ書き換え。
 
-    1ブロック = 1型番で、新品／中古の買取上限額が入る。
-      <p class="casestudyList04_title">サブマリーナ</p>
-      <p class="casestudyList04_sub">116610LN 【※保証書日付や状態で金額は変わります】</p>
-      <dt><span>中 古 品</span></dt><dd><strong>～¥1,680,000</strong></dd>
-    ⚠️ 掲載額は「〜」付きの上限値なので、price_type は「上限」で入れる
-       （大黒屋と同じ扱い。中央値として扱わないこと）。
-    ⚠️ 状態ラベルは全角スペース入り（"新　　品" / "中 古 品"）なので空白を潰して判定する。
+    旧サイト（buy.watchnian.com/brand_xxx/・casestudyList04_*）は 10/1 に停止し、10/6 に
+    `watchnian.com/buy/categories/item_watch/brand_xxx/` へ 301 で移った。価格表の1カードが1型番:
+      <article class="c-price-card">
+        <h4 class="c-price-card__name">ロレックス サブマリーナ 126613LN</h4>
+        <p class="c-price-card__color">ブラック</p>
+        <span class="c-badge c-badge--dark">新品</span>
+        <span class="c-price-card__amount"><span class="c-price-card__yen">¥</span>3,110,000</span>
+        <span class="c-badge c-badge--gray">中古</span>
+        <span class="c-price-card__amount-sub">～￥2,820,000</span>
+        <p class="c-price-card__date">更新日<span class="c-price-card__date-value">2026.09.30 00:01</span></p>
+    ⚠️ 金額の span の中に「¥」の span が入れ子になっている。`</span>` までで切ると金額が取れない
+       （最初の実装で 3 件しか取れなかった原因）。行の `</div>` までを取って、タグを剥がして読む。
+    ⚠️ 「お問合せください」の行は価格なし → スキップ（捏造しない）。
+    ⚠️ 同じページに「買取実績」のカード（c-record-card・過去に買い取った額）もある。
+       これは提示額ではないので読まない（c-price-card だけを対象にする）。
+    ⚠️ 「～」付きは上限額（price_type=上限）。新サイトの新品は「～」無しの定額表示なので「通常」で入れる
+       （上限の比較に混ぜない。表示上は価格種別の列で区別がつく）。
+    ⚠️ 同じ型番が文字盤色ごとに複数カードある（126710BLRO ×2 等）。(型番, 状態) ごとに最大額を採る。
+    ⚠️ 詳細ページ（/buy/listing/…）にも同じカードがあるが、一覧と同じ内容だったので巡回しない。
     """
-    out: list[dict] = []
-    blocks = re.findall(
-        r'casestudyList04_title">([^<]+)</p>\s*<p class="casestudyList04_sub">([^<\s]+)[^<]*</p>(.*?)'
-        r'(?=casestudyList04_title"|\Z)', html, re.S)
-    for model, ref, body in blocks:
-        ref = norm_ref(ref.strip())
-        if not ref:
+    rows: dict[tuple[str, str], dict] = {}
+    for card in re.findall(r'<article class="c-price-card">(.*?)</article>', html, re.S):
+        m = re.search(r'c-price-card__name">([^<]+)', card)
+        if not m:
             continue
-        for cond_raw, price in re.findall(
-                r'<dt><span>([^<]+)</span></dt>\s*<dd><strong>[^\d]*([\d,]+)</strong>', body):
-            cond = re.sub(r"[\s\u3000]", "", cond_raw)
-            v = yen(price)
+        name = m.group(1).strip()
+        parts = name.split()
+        if len(parts) < 2:
+            continue
+        # 末尾のトークンが型番。「126710BLNRジュビリー」のように和文が続くことがあるので ASCII だけ残す
+        ref = norm_ref(re.sub(r"[^\x21-\x7e]", "", parts[-1]))
+        if not ref or not re.search(r"\d", ref):
+            continue
+        model = " ".join(parts[1:-1])  # 先頭はブランド名（ロレックス 等）
+        dial_m = re.search(r'c-price-card__color">([^<]*)', card)
+        upd_m = re.search(r'date-value">([^<]+)', card)
+        for cond, body in re.findall(r'c-badge--\w+">(新品|中古)</span>(.*?)</div>', card, re.S):
+            txt = re.sub(r"\s+", "", re.sub(r"<[^>]+>", "", body))
+            pm = re.search(r"([\d,]{5,})", txt)
+            if not pm:
+                continue  # 「お問合せください」等
+            v = yen(pm.group(1))
             if not v:
                 continue
-            out.append({"shop": "ウォッチニアン", "shop_id": "watchnian", "ref": ref,
-                        "model": model.strip(), "dial": "",
-                        "price_type": "上限", "condition": "新品" if "新品" in cond else "中古",
-                        "price_jpy": v, "source_url": url, "fetched_at": TODAY})
-    return out
+            is_ceiling = ("～" in txt) or ("〜" in txt)
+            rec = {"shop": "ウォッチニアン", "shop_id": "watchnian", "ref": ref,
+                   "model": model, "dial": (dial_m.group(1).strip() if dial_m else ""),
+                   "price_type": "上限" if is_ceiling else "通常", "condition": cond,
+                   "price_jpy": v, "source_url": url, "fetched_at": TODAY,
+                   "page_updated": upd_m.group(1).strip() if upd_m else None}
+            k = (ref, cond)
+            if k not in rows or v > rows[k]["price_jpy"]:
+                rows[k] = rec
+    return list(rows.values())
 
 
 def main() -> None:
@@ -277,9 +304,12 @@ def main() -> None:
     # 実測の内訳: ロレックス51 / オメガ42 / カルティエ12 / IWC5 / パネライ3 / ウブロ1。
     # ⚠️ カルティエ・IWC・パネライは他社と型番が重ならず2社そろわない（公開対象にならない）。
     #    それでも取得はする——将来6社目が入ったときに即2社になるため。
+    # ⚠️ 2026-10-01〜10-05 停止。10/6 に新サイト watchnian.com/buy/ で復旧（旧URLは 301）。
+    #    新URLを直接叩く。実測（10/6）: ロレックス68カード中54に価格・オメガ32。
     for _b, _label in [("rolex", "ロレックス"), ("omega", "オメガ"), ("cartier", "カルティエ"),
                        ("iwc", "IWC"), ("panerai", "パネライ"), ("hublot", "ウブロ")]:
-        jobs.append((f"watchnian:{_b}", f"https://buy.watchnian.com/brand_{_b}/",
+        jobs.append((f"watchnian:{_b}",
+                     f"https://watchnian.com/buy/categories/item_watch/brand_{_b}/",
                      "utf-8", parse_watchnian, _label))
 
     for name, url, enc, parser, brand in jobs:
@@ -394,6 +424,27 @@ def main() -> None:
             carried[shop] = f.stem
             errors.append(f"{shop}: 今日は0件。{f.stem} の {len(rows)}件を引き継いだ")
             print(f"⚠️ {shop} が0件 → {f.stem} の {len(rows)}件を引き継ぎ")
+    # ⚠️ 復旧直後の店（前回のスナップショットで引き継ぎ中だった店）は、新サイトで掲載型番が
+    #    入れ替わっていることがある（2026-10-06 ウォッチニアン: 112型番→101。43型番が消え、32型番が増えた）。
+    #    店が「今日は取れた」扱いになると上の引き継ぎが止まり、消えた型番の2社目が一斉に落ちて
+    #    公開URLが 215→199（-7%）になる＝5%の公開停止ガードに掛かり、増えた8ページも出せない。
+    #    → 復旧した店について、前回まで引き継いでいた型番だけは同じ期限（元の取得日から14日）まで引き継ぐ。
+    #      期限が来れば自然に消える。恒久的に残す仕組みではない。ページには元の取得日が出る。
+    prev_snaps = [x for x in snaps if x.stem != TODAY]
+    if prev_snaps:
+        prev_doc = json.loads(prev_snaps[-1].read_text(encoding="utf-8"))
+        for shop in set(prev_doc.get("carried_over", {})) & today_shops:
+            today_refs = {r["ref"] for r in records if r["shop"] == shop}
+            rows = [r for r in prev_doc.get("records", [])
+                    if r["shop"] == shop and r["ref"] not in today_refs and r.get("fetched_at")
+                    and (date.fromisoformat(TODAY) - date.fromisoformat(r["fetched_at"][:10])).days <= CARRY_DAYS]
+            if rows:
+                records.extend(rows)
+                carried[shop] = prev_snaps[-1].stem
+                msg = (f"{shop}: 復旧したが掲載から消えた {len({r['ref'] for r in rows})}型番"
+                       f"（{len(rows)}件）を前回の値（取得日つき）で引き継いだ")
+                errors.append(msg)
+                print("⚠️ " + msg)
     if carried:
         print(f"⚠️ 引き継いだ店: {carried}（先方サイトの復旧を確認すること）")
 
