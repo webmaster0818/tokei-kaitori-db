@@ -16,7 +16,9 @@
 from __future__ import annotations
 import json
 import re
+import ssl
 import time
+import urllib.error
 import urllib.request
 from datetime import date, datetime
 from pathlib import Path
@@ -36,10 +38,36 @@ NANBOYA_CAP = 320
 KEEP_LOOKBACK_DAYS = 5
 
 
+def _ssl_context(attempt: int):
+    """1回目は既定の証明書ストア。失敗したら certifi のストアで再試行する。
+
+    ⚠️ 2026-10-06 watchnian.com（新サイト・Amazon の証明書）が homebrew の python3 既定ストアで
+       「self-signed certificate」と判定され、6ブランド全部が取得失敗した（curl・openssl は検証OK）。
+       certifi のストアでは通った。既定で通る日もあるので、まず既定 → 失敗時に certifi の順で試す。
+    """
+    if attempt == 0:
+        return None
+    try:
+        import certifi  # type: ignore
+        return ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        return None
+
+
 def fetch(url: str, encoding: str = "utf-8") -> str:
     req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=25) as res:
-        return res.read().decode(encoding, errors="replace")
+    last: Exception | None = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=25, context=_ssl_context(attempt)) as res:
+                return res.read().decode(encoding, errors="replace")
+        except (ssl.SSLError, urllib.error.URLError) as e:
+            # 証明書・接続の一時エラーだけ再試行する。HTTP 4xx/5xx（HTTPError も URLError の子）は
+            # 2回目以降も同じ結果になるので、3回で諦めて最後の例外を投げる。
+            last = e
+            time.sleep(1.5)
+    assert last is not None
+    raise last
 
 
 def yen(t: str) -> int | None:
