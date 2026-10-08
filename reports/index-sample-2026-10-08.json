@@ -1,0 +1,1304 @@
+{
+ "site": "brandwatchbank.com",
+ "date": "2026-10-08",
+ "checked_at_jst": "2026-10-08 09:30頃",
+ "property": "https://brandwatchbank.com/",
+ "policy": "A（様子見＋毎朝の登録率計測）。構造変更・デプロイなし",
+ "index_sample": {
+  "n": 32,
+  "method": "sitemap の <loc> を md5 順に並べた先頭32本（daily-site-check.py INDEX_SAMPLE と同一）",
+  "sitemap_url_count_at_check": 233,
+  "today": {
+   "Crawled - currently not indexed": 20,
+   "URL is unknown to Google": 9,
+   "Not found (404)": 1,
+   "Submitted and indexed": 2
+  },
+  "today_indexed": 2,
+  "today_not_indexed": 20,
+  "today_unknown": 9,
+  "today_404": 1,
+  "yesterday": {
+   "source": "sites.md / secrets/daily-site-check-state.json（URL単位の結果は保存されていない。件数のみ）",
+   "checked_at": "2026-10-07 ~12:34 JST",
+   "indexed": 2,
+   "not_indexed": 20,
+   "unknown": 9,
+   "other_404": 1,
+   "indexed_lastCrawl_note": "sites.md 記載では登録済み2本のクロール日は 9/8・9/18"
+  },
+  "url_level_diff": {
+   "note": "昨日の URL 単位の結果は保存されていないため、状態の遷移（新たに未登録／登録に戻った）は URL 単位では確定できない。件数・内訳（登録2・未登録20・未知9・404 1）は昨日と完全に同じ。登録済み2本は今日も Submitted and indexed（lastCrawl 9/8・9/10）で、昨日の報告の『2本登録済み』と整合。今日の JSON を保存したので明日から URL 単位で比べられる",
+   "crawled_after_yesterday_check_count": 10,
+   "crawled_after_yesterday_check": [
+    "https://brandwatchbank.com/ref/47040.b01a.9094/",
+    "https://brandwatchbank.com/ref/214270/",
+    "https://brandwatchbank.com/ref/331.10.42.51.01.001/",
+    "https://brandwatchbank.com/ref/126331/",
+    "https://brandwatchbank.com/ref/15450st.oo.1256st.03/",
+    "https://brandwatchbank.com/ref/26331st.oo.1220st.03/",
+    "https://brandwatchbank.com/ref/16713/",
+    "https://brandwatchbank.com/ref/3576.50/",
+    "https://brandwatchbank.com/ref/116506/",
+    "https://brandwatchbank.com/ref/116710blnr/"
+   ],
+   "stale_404": {
+    "url": "https://brandwatchbank.com/ref/126900/",
+    "note": "Google 側は 9/20 クロール時の 404 を保持。sitemap 履歴では 126900 は 10/3 以前は存在せず 10/6（215→233）で追加された新規ページ。現在は live 200。再クロール待ち"
+   }
+  },
+  "urls": [
+   {
+    "url": "https://brandwatchbank.com/ref/126505/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-02T14:43:26Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/126505/",
+    "userCanonical": "https://brandwatchbank.com/ref/126505/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1151,
+     "shops": [
+      "クォーク",
+      "ジャックロード"
+     ],
+     "shop_count": 2,
+     "tables": 1,
+     "tr": 6,
+     "unique_chars": 560,
+     "unique_prose_chars": 302,
+     "price_segments": 10
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/126334g/",
+    "verdict": "NEUTRAL",
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "googleCanonical": null,
+    "userCanonical": null,
+    "crawledAs": null,
+    "sitemap": null,
+    "referringUrls": null,
+    "content": {
+     "main_chars": 1513,
+     "shops": [
+      "なんぼや",
+      "大黒屋"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 19,
+     "unique_chars": 699,
+     "unique_prose_chars": 348,
+     "price_segments": 23
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/277200/",
+    "verdict": "NEUTRAL",
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "googleCanonical": null,
+    "userCanonical": null,
+    "crawledAs": null,
+    "sitemap": null,
+    "referringUrls": null,
+    "content": {
+     "main_chars": 1562,
+     "shops": [
+      "なんぼや",
+      "ウォッチニアン"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 21,
+     "unique_chars": 706,
+     "unique_prose_chars": 307,
+     "price_segments": 27
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/47040.b01a.9094/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-07T15:36:59Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/47040.b01a.9094/",
+    "userCanonical": "https://brandwatchbank.com/ref/47040.b01a.9094/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/ref/47040.b01a.9094"
+    ],
+    "content": {
+     "main_chars": 1325,
+     "shops": [
+      "なんぼや",
+      "大黒屋"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 16,
+     "unique_chars": 601,
+     "unique_prose_chars": 261,
+     "price_segments": 23
+    },
+    "crawled_after_yesterday_check": true
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/116520/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-05T05:23:10Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/116520/",
+    "userCanonical": "https://brandwatchbank.com/ref/116520/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1467,
+     "shops": [
+      "なんぼや",
+      "大黒屋",
+      "クォーク"
+     ],
+     "shop_count": 3,
+     "tables": 2,
+     "tr": 20,
+     "unique_chars": 678,
+     "unique_prose_chars": 251,
+     "price_segments": 27
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/231.10.43.22.03.001/",
+    "verdict": "NEUTRAL",
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "googleCanonical": null,
+    "userCanonical": null,
+    "crawledAs": null,
+    "sitemap": null,
+    "referringUrls": null,
+    "content": {
+     "main_chars": 1142,
+     "shops": [
+      "なんぼや",
+      "ウォッチニアン"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 16,
+     "unique_chars": 423,
+     "unique_prose_chars": 187,
+     "price_segments": 21
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/214270/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-07T15:38:49Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/214270/",
+    "userCanonical": "https://brandwatchbank.com/ref/214270/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1409,
+     "shops": [
+      "なんぼや",
+      "大黒屋",
+      "クォーク",
+      "ウォッチニアン"
+     ],
+     "shop_count": 4,
+     "tables": 2,
+     "tr": 19,
+     "unique_chars": 643,
+     "unique_prose_chars": 229,
+     "price_segments": 22
+    },
+    "crawled_after_yesterday_check": true
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/331.10.42.51.01.001/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-07T14:40:20Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/331.10.42.51.01.001/",
+    "userCanonical": "https://brandwatchbank.com/ref/331.10.42.51.01.001/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/ref/331.10.42.51.01.001"
+    ],
+    "content": {
+     "main_chars": 1265,
+     "shops": [
+      "なんぼや",
+      "大黒屋"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 16,
+     "unique_chars": 537,
+     "unique_prose_chars": 240,
+     "price_segments": 21
+    },
+    "crawled_after_yesterday_check": true
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/5500v.110a.b075/",
+    "verdict": "NEUTRAL",
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "googleCanonical": null,
+    "userCanonical": null,
+    "crawledAs": null,
+    "sitemap": null,
+    "referringUrls": null,
+    "content": {
+     "main_chars": 1127,
+     "shops": [
+      "なんぼや",
+      "大黒屋"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 6,
+     "unique_chars": 517,
+     "unique_prose_chars": 299,
+     "price_segments": 10
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/14000/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-06T11:17:36Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/14000/",
+    "userCanonical": "https://brandwatchbank.com/ref/14000/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/ref/126500ln/"
+    ],
+    "content": {
+     "main_chars": 1144,
+     "shops": [
+      "なんぼや",
+      "クォーク"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 16,
+     "unique_chars": 417,
+     "unique_prose_chars": 112,
+     "price_segments": 20
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/126900/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Not found (404)",
+    "lastCrawlTime": "2026-09-20T05:18:11Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "pageFetchState": "NOT_FOUND",
+    "googleCanonical": null,
+    "userCanonical": null,
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 834,
+     "shops": [
+      "クォーク",
+      "ウォッチニアン"
+     ],
+     "shop_count": 2,
+     "tables": 1,
+     "tr": 4,
+     "unique_chars": 289,
+     "unique_prose_chars": 128,
+     "price_segments": 6
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/226659/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-06T20:07:29Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/226659/",
+    "userCanonical": "https://brandwatchbank.com/ref/226659/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1302,
+     "shops": [
+      "なんぼや",
+      "ジャックロード"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 17,
+     "unique_chars": 550,
+     "unique_prose_chars": 176,
+     "price_segments": 22
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/522.30.42.30.04.001/",
+    "verdict": "PASS",
+    "coverageState": "Submitted and indexed",
+    "lastCrawlTime": "2026-09-10T04:01:48Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/522.30.42.30.04.001/",
+    "userCanonical": "https://brandwatchbank.com/ref/522.30.42.30.04.001/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1388,
+     "shops": [
+      "なんぼや",
+      "大黒屋"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 16,
+     "unique_chars": 652,
+     "unique_prose_chars": 333,
+     "price_segments": 20
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/126331/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-07T15:33:03Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/126331/",
+    "userCanonical": "https://brandwatchbank.com/ref/126331/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1349,
+     "shops": [
+      "なんぼや",
+      "大黒屋"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 17,
+     "unique_chars": 591,
+     "unique_prose_chars": 226,
+     "price_segments": 23
+    },
+    "crawled_after_yesterday_check": true
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/15450st.oo.1256st.03/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-07T14:47:53Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/15450st.oo.1256st.03/",
+    "userCanonical": "https://brandwatchbank.com/ref/15450st.oo.1256st.03/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/ref/15450st.oo.1256st.03",
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1376,
+     "shops": [
+      "なんぼや",
+      "大黒屋"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 16,
+     "unique_chars": 644,
+     "unique_prose_chars": 287,
+     "price_segments": 22
+    },
+    "crawled_after_yesterday_check": true
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/116233g/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-06T18:58:34Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/116233g/",
+    "userCanonical": "https://brandwatchbank.com/ref/116233g/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1254,
+     "shops": [
+      "なんぼや",
+      "大黒屋"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 16,
+     "unique_chars": 516,
+     "unique_prose_chars": 207,
+     "price_segments": 19
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/brand/vacheron-constantin/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-04T10:12:14Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/brand/vacheron-constantin/",
+    "userCanonical": "https://brandwatchbank.com/brand/vacheron-constantin/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/ref/7900v.110a.b546/"
+    ],
+    "content": {
+     "main_chars": 248,
+     "shops": [],
+     "shop_count": 0,
+     "tables": 1,
+     "tr": 2,
+     "unique_chars": null,
+     "unique_prose_chars": null,
+     "price_segments": null
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/15500st.oo.1220st.01/",
+    "verdict": "NEUTRAL",
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "googleCanonical": null,
+    "userCanonical": null,
+    "crawledAs": null,
+    "sitemap": null,
+    "referringUrls": null,
+    "content": {
+     "main_chars": 1369,
+     "shops": [
+      "なんぼや",
+      "大黒屋"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 16,
+     "unique_chars": 635,
+     "unique_prose_chars": 285,
+     "price_segments": 21
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/model/seamaster/",
+    "verdict": "NEUTRAL",
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "googleCanonical": null,
+    "userCanonical": null,
+    "crawledAs": null,
+    "sitemap": null,
+    "referringUrls": null,
+    "content": {
+     "main_chars": 2068,
+     "shops": [],
+     "shop_count": 0,
+     "tables": 1,
+     "tr": 29,
+     "unique_chars": null,
+     "unique_prose_chars": null,
+     "price_segments": null
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/26331st.oo.1220st.03/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-07T13:59:28Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/26331st.oo.1220st.03/",
+    "userCanonical": "https://brandwatchbank.com/ref/26331st.oo.1220st.03/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/ref/26331st.oo.1220st.03",
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1378,
+     "shops": [
+      "なんぼや",
+      "大黒屋"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 16,
+     "unique_chars": 644,
+     "unique_prose_chars": 312,
+     "price_segments": 21
+    },
+    "crawled_after_yesterday_check": true
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/16713/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-07T15:39:38Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/16713/",
+    "userCanonical": "https://brandwatchbank.com/ref/16713/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1254,
+     "shops": [
+      "なんぼや",
+      "大黒屋"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 16,
+     "unique_chars": 524,
+     "unique_prose_chars": 167,
+     "price_segments": 23
+    },
+    "crawled_after_yesterday_check": true
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/116509g/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-06T12:40:42Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/116509g/",
+    "userCanonical": "https://brandwatchbank.com/ref/116509g/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1239,
+     "shops": [
+      "なんぼや",
+      "クォーク"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 16,
+     "unique_chars": 504,
+     "unique_prose_chars": 188,
+     "price_segments": 19
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/116300/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-06T21:21:17Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/116300/",
+    "userCanonical": "https://brandwatchbank.com/ref/116300/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1242,
+     "shops": [
+      "なんぼや",
+      "大黒屋"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 16,
+     "unique_chars": 522,
+     "unique_prose_chars": 137,
+     "price_segments": 25
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/3576.50/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-07T15:29:30Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/3576.50/",
+    "userCanonical": "https://brandwatchbank.com/ref/3576.50/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/ref/3576.50",
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1361,
+     "shops": [
+      "なんぼや",
+      "大黒屋",
+      "クォーク"
+     ],
+     "shop_count": 3,
+     "tables": 2,
+     "tr": 17,
+     "unique_chars": 644,
+     "unique_prose_chars": 336,
+     "price_segments": 22
+    },
+    "crawled_after_yesterday_check": true
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/15300st.oo.1220st.01/",
+    "verdict": "PASS",
+    "coverageState": "Submitted and indexed",
+    "lastCrawlTime": "2026-09-08T12:26:32Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/15300st.oo.1220st.01/",
+    "userCanonical": "https://brandwatchbank.com/ref/15300st.oo.1220st.01/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1377,
+     "shops": [
+      "なんぼや",
+      "大黒屋"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 16,
+     "unique_chars": 647,
+     "unique_prose_chars": 287,
+     "price_segments": 23
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/4500v.110a.b126/",
+    "verdict": "NEUTRAL",
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "googleCanonical": null,
+    "userCanonical": null,
+    "crawledAs": null,
+    "sitemap": null,
+    "referringUrls": null,
+    "content": {
+     "main_chars": 1111,
+     "shops": [
+      "なんぼや",
+      "大黒屋"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 6,
+     "unique_chars": 493,
+     "unique_prose_chars": 282,
+     "price_segments": 9
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/326934/",
+    "verdict": "NEUTRAL",
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "googleCanonical": null,
+    "userCanonical": null,
+    "crawledAs": null,
+    "sitemap": null,
+    "referringUrls": null,
+    "content": {
+     "main_chars": 1344,
+     "shops": [
+      "なんぼや",
+      "ウォッチニアン"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 18,
+     "unique_chars": 557,
+     "unique_prose_chars": 159,
+     "price_segments": 21
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/116506/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-07T13:22:10Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/116506/",
+    "userCanonical": "https://brandwatchbank.com/ref/116506/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1267,
+     "shops": [
+      "なんぼや",
+      "クォーク"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 16,
+     "unique_chars": 542,
+     "unique_prose_chars": 151,
+     "price_segments": 24
+    },
+    "crawled_after_yesterday_check": true
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/116710blnr/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-07T12:39:36Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/116710blnr/",
+    "userCanonical": "https://brandwatchbank.com/ref/116710blnr/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1326,
+     "shops": [
+      "なんぼや",
+      "大黒屋",
+      "クォーク"
+     ],
+     "shop_count": 3,
+     "tables": 2,
+     "tr": 17,
+     "unique_chars": 603,
+     "unique_prose_chars": 241,
+     "price_segments": 22
+    },
+    "crawled_after_yesterday_check": true
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/210.30.42.20.03.001/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-06T22:30:13Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/210.30.42.20.03.001/",
+    "userCanonical": "https://brandwatchbank.com/ref/210.30.42.20.03.001/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/ref/210.30.42.20.03.001",
+     "https://brandwatchbank.com/"
+    ],
+    "content": {
+     "main_chars": 1342,
+     "shops": [
+      "なんぼや",
+      "大黒屋",
+      "ウォッチニアン"
+     ],
+     "shop_count": 3,
+     "tables": 2,
+     "tr": 17,
+     "unique_chars": 639,
+     "unique_prose_chars": 292,
+     "price_segments": 24
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/ref/47450.b01a.9227/",
+    "verdict": "NEUTRAL",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-07T00:30:53Z",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "pageFetchState": "SUCCESSFUL",
+    "googleCanonical": "https://brandwatchbank.com/ref/47450.b01a.9227/",
+    "userCanonical": "https://brandwatchbank.com/ref/47450.b01a.9227/",
+    "crawledAs": "MOBILE",
+    "sitemap": null,
+    "referringUrls": [
+     "https://brandwatchbank.com/ref/47450.b01a.9227"
+    ],
+    "content": {
+     "main_chars": 1344,
+     "shops": [
+      "なんぼや",
+      "大黒屋"
+     ],
+     "shop_count": 2,
+     "tables": 2,
+     "tr": 16,
+     "unique_chars": 608,
+     "unique_prose_chars": 289,
+     "price_segments": 20
+    },
+    "crawled_after_yesterday_check": false
+   },
+   {
+    "url": "https://brandwatchbank.com/model/oyster-perpetual/",
+    "verdict": "NEUTRAL",
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "googleCanonical": null,
+    "userCanonical": null,
+    "crawledAs": null,
+    "sitemap": null,
+    "referringUrls": null,
+    "content": {
+     "main_chars": 776,
+     "shops": [],
+     "shop_count": 0,
+     "tables": 1,
+     "tr": 8,
+     "unique_chars": null,
+     "unique_prose_chars": null,
+     "price_segments": null
+    },
+    "crawled_after_yesterday_check": false
+   }
+  ]
+ },
+ "gsc_daily": {
+  "final": [
+   {
+    "date": "2026-09-28",
+    "clicks": 5,
+    "impressions": 99,
+    "position": 22.6
+   },
+   {
+    "date": "2026-09-29",
+    "clicks": 0,
+    "impressions": 112,
+    "position": 29.6
+   },
+   {
+    "date": "2026-09-30",
+    "clicks": 3,
+    "impressions": 136,
+    "position": 21.6
+   },
+   {
+    "date": "2026-10-01",
+    "clicks": 0,
+    "impressions": 36,
+    "position": 59.5
+   },
+   {
+    "date": "2026-10-02",
+    "clicks": 0,
+    "impressions": 22,
+    "position": 53.5
+   },
+   {
+    "date": "2026-10-03",
+    "clicks": 0,
+    "impressions": 12,
+    "position": 51.3
+   },
+   {
+    "date": "2026-10-04",
+    "clicks": 0,
+    "impressions": 0,
+    "position": 0
+   }
+  ],
+  "fresh_dataState_all_10_01_onward": [
+   {
+    "date": "2026-10-01",
+    "clicks": 0,
+    "impressions": 36,
+    "position": 59.5
+   },
+   {
+    "date": "2026-10-02",
+    "clicks": 0,
+    "impressions": 22,
+    "position": 53.5
+   },
+   {
+    "date": "2026-10-03",
+    "clicks": 0,
+    "impressions": 12,
+    "position": 51.3
+   },
+   {
+    "date": "2026-10-04",
+    "clicks": 0,
+    "impressions": 0,
+    "position": 0
+   },
+   {
+    "date": "2026-10-05",
+    "clicks": 0,
+    "impressions": 0,
+    "position": 0
+   },
+   {
+    "date": "2026-10-06",
+    "clicks": 0,
+    "impressions": 1,
+    "position": 76,
+    "page": "/ref/216570/"
+   }
+  ],
+  "note": "確定データは 10/4 まで。10/5=0、10/6=1表示（fresh・未確定）。10/7 以降は未集計"
+ },
+ "sitemaps": [
+  {
+   "path": "https://brandwatchbank.com/sitemap.xml",
+   "lastSubmitted": "2026-10-07T00:40:39.622Z",
+   "lastDownloaded": "2026-10-07T00:40:40.808Z",
+   "isPending": false,
+   "errors": "0",
+   "warnings": "0",
+   "contents": [
+    {
+     "type": "web",
+     "submitted": "233",
+     "indexed": "0"
+    }
+   ]
+  }
+ ],
+ "sources": {
+  "checked_at_jst": "2026-10-08 09:25",
+  "results": {
+   "https://watchnian.com/buy/categories/item_watch/brand_rolex/": 200,
+   "https://kaitori.e-daikoku.com/brand/brand/rolex_submariner.html": 200,
+   "https://www.909.co.jp/rolex_buy.html": 200,
+   "https://www.jackroad.co.jp/shop/pages/j_rolex_kaitori.aspx": 200,
+   "https://buy.watchnian.com/brand_rolex/": "200（watchnian.com/buy/… へ 301）"
+  }
+ },
+ "daily_update": {
+  "launchd": "com.tokei.daily-update 11:25 起動。10/8 分は点検時点（09:30）で未実行",
+  "last_run": "2026-10-07 11:25〜11:38 価格取得OK→ビルド+sitemap OK→コミット→push OK→デプロイOK（/tmp/tokei-daily-launchd.out）",
+  "err_log_bytes": 0,
+  "public_pages_sitemap": 233,
+  "sitemap_history": {
+   "2026-09-28": 208,
+   "2026-09-30": 208,
+   "2026-10-01": 181,
+   "2026-10-02": "176→215",
+   "2026-10-03": 215,
+   "2026-10-05": 215,
+   "2026-10-06": 233,
+   "2026-10-07": 233
+  }
+ },
+ "expiry_2026_10_15": {
+  "carried_over_records": 58,
+  "carried_over_refs": 43,
+  "carried_fetched_at": "2026-09-30",
+  "carry_days": 14,
+  "last_day_kept": "2026-10-14",
+  "published_now": 212,
+  "published_after_expiry": 196,
+  "pages_lost": 16,
+  "lost_refs": [
+   "116622",
+   "126713GRNR",
+   "210.92.42.20.01.001",
+   "222.32.38.50.01.001",
+   "222.32.38.50.01.003",
+   "228235",
+   "228239",
+   "231.10.39.21.02.002",
+   "231.10.42.21.03.003",
+   "231.10.44.50.01.001",
+   "231.10.44.50.06.001",
+   "232.30.42.21.01.001",
+   "232.30.46.21.01.001",
+   "310.30.42.50.01.001",
+   "311.30.42.30.01.004",
+   "3513.50"
+  ],
+  "method": "data/prices/2026-10-07.json を lib/prices.ts currentRecords と同じ規則（店ごとの最新 price_month・3か月まで）で集計し、ウォッチニアンの 9/30 引き継ぎ行を除いて 2社未満になる ref を数えた"
+ },
+ "content_comparison": {
+  "method": "live HTML の <main> からタグ除去。unique_chars=32本中の ref ページ半数以上に共通する断片（テンプレ45断片・624字）を除いた文字数。unique_prose_chars=そのうち価格（円）を含まず20字以上の断片",
+  "by_state_ref_pages_only": {
+   "Submitted and indexed": {
+    "main_chars": {
+     "n": 2,
+     "mean": 1382.5,
+     "min": 1377,
+     "max": 1388
+    },
+    "unique_chars": {
+     "n": 2,
+     "mean": 649.5,
+     "min": 647,
+     "max": 652
+    },
+    "unique_prose_chars": {
+     "n": 2,
+     "mean": 310,
+     "min": 287,
+     "max": 333
+    },
+    "shop_count": {
+     "n": 2,
+     "mean": 2,
+     "min": 2,
+     "max": 2
+    },
+    "price_segments": {
+     "n": 2,
+     "mean": 21.5,
+     "min": 20,
+     "max": 23
+    }
+   },
+   "Crawled - currently not indexed": {
+    "main_chars": {
+     "n": 19,
+     "mean": 1305,
+     "min": 1144,
+     "max": 1467
+    },
+    "unique_chars": {
+     "n": 19,
+     "mean": 577.2,
+     "min": 417,
+     "max": 678
+    },
+    "unique_prose_chars": {
+     "n": 19,
+     "mean": 231.8,
+     "min": 112,
+     "max": 336
+    },
+    "shop_count": {
+     "n": 19,
+     "mean": 2.3,
+     "min": 2,
+     "max": 4
+    },
+    "price_segments": {
+     "n": 19,
+     "mean": 21.5,
+     "min": 10,
+     "max": 27
+    }
+   },
+   "URL is unknown to Google": {
+    "main_chars": {
+     "n": 7,
+     "mean": 1309.7,
+     "min": 1111,
+     "max": 1562
+    },
+    "unique_chars": {
+     "n": 7,
+     "mean": 575.7,
+     "min": 423,
+     "max": 706
+    },
+    "unique_prose_chars": {
+     "n": 7,
+     "mean": 266.7,
+     "min": 159,
+     "max": 348
+    },
+    "shop_count": {
+     "n": 7,
+     "mean": 2,
+     "min": 2,
+     "max": 2
+    },
+    "price_segments": {
+     "n": 7,
+     "mean": 18.9,
+     "min": 9,
+     "max": 27
+    }
+   }
+  },
+  "pair": {
+   "indexed": {
+    "main_chars": 1388,
+    "shops": [
+     "なんぼや",
+     "大黒屋"
+    ],
+    "shop_count": 2,
+    "tables": 2,
+    "tr": 16,
+    "unique_chars": 652,
+    "unique_prose_chars": 333,
+    "price_segments": 20,
+    "url": "https://brandwatchbank.com/ref/522.30.42.30.04.001/",
+    "coverageState": "Submitted and indexed",
+    "lastCrawlTime": "2026-09-10T04:01:48Z",
+    "title": "スピードマスター クロノグラフ 42mm シルバー 522.30.42.30.04.001の買取相場｜2社で最大150,000円差【2026年10月】| 時計買取相場データベース",
+    "h2": [
+     "各社の買取価格",
+     "買取相場の推移（月次）",
+     "このデータの読み方",
+     "他の型番の買取価格"
+    ]
+   },
+   "not_indexed": {
+    "main_chars": 1349,
+    "shops": [
+     "なんぼや",
+     "大黒屋"
+    ],
+    "shop_count": 2,
+    "tables": 2,
+    "tr": 17,
+    "unique_chars": 591,
+    "unique_prose_chars": 226,
+    "price_segments": 23,
+    "url": "https://brandwatchbank.com/ref/126331/",
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-07T15:33:03Z",
+    "title": "デイトジャスト41 RG/SS ジュビリーブレス 126331の買取相場｜2社で最大200,000円差【2026年10月】| 時計買取相場データベース",
+    "h2": [
+     "各社の買取価格",
+     "買取相場の推移（月次）",
+     "このデータの読み方",
+     "他の型番の買取価格"
+    ]
+   }
+  },
+  "finding": "登録済み2本と未登録20本で本文量・価格表の社数・独自テキスト量に差はない（未登録側の分布の中に登録済み2本が収まる）。独自テキストはパンくず・型番名・状態ラベル・関連型番の列挙のみで、解説文はどのページにも無い"
+ }
+}
