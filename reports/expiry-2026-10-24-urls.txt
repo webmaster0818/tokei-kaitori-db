@@ -1,0 +1,22 @@
+# 2026-10-24 に消えるはずのURL（19本）。2026-10-13 に data/prices/2026-10-12.json（HEAD 46741326）から再計算。
+# 計算: 元の取得日から14日を超える行（ウォッチニアン 10/9取得）だけを落として generate-sitemap.mjs を実行した差分。
+# ⚠️ 10/15 を 227 で通した後の差分（10/15 の15本は含まない）
+https://brandwatchbank.com/model/day-date/
+https://brandwatchbank.com/model/sky-dweller/
+https://brandwatchbank.com/ref/116621/
+https://brandwatchbank.com/ref/18038a/
+https://brandwatchbank.com/ref/212.30.42.50.03.001/
+https://brandwatchbank.com/ref/215.30.46.51.01.002/
+https://brandwatchbank.com/ref/215.90.44.21.99.001/
+https://brandwatchbank.com/ref/226627/
+https://brandwatchbank.com/ref/231.10.39.21.01.002/
+https://brandwatchbank.com/ref/231.10.43.22.03.001/
+https://brandwatchbank.com/ref/232.30.46.51.01.002/
+https://brandwatchbank.com/ref/232.32.42.21.01.003/
+https://brandwatchbank.com/ref/310.20.42.50.01.001/
+https://brandwatchbank.com/ref/310.30.42.50.01.002/
+https://brandwatchbank.com/ref/310.32.42.50.01.002/
+https://brandwatchbank.com/ref/311.30.40.30.01.001/
+https://brandwatchbank.com/ref/326933/
+https://brandwatchbank.com/ref/332.10.41.51.01.001/
+https://brandwatchbank.com/ref/522.30.42.30.06.001/
