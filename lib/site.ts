@@ -3,4 +3,4 @@
 //    NEXT_PUBLIC_SITE_URL を持たずにビルドした瞬間に全canonicalが壊れる。
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://brandwatchbank.com";
 export const SITE_NAME = "時計買取相場データベース";
-export const SITE_TAGLINE = "型番ごとの買取価格を複数店で毎日比較";
+export const SITE_TAGLINE = "型番ごとの買取価格を複数の買取店で毎日比較";

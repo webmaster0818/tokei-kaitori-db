@@ -17,17 +17,17 @@ function resolve(param: string) {
 export async function generateMetadata({ params }: { params: Promise<{ ref: string }> }): Promise<Metadata> {
   const { ref: p } = await params;
   const ref = resolve(p);
-  if (!ref) return { title: "型番が見つかりません" };
+  if (!ref) return { title: "該当する型番のページはありません" };
   const s = summarize(ref);
   const model = s?.models[0] ?? "";
   // ⚠️ 以前は型番が先頭だったため、型番を知らない人には何のページか分からなかった
   //    （GSC実測 2026-09-21: 流入が型番クエリだけ・CTR 0.72%）。
   //    モデル名を先頭に出し、うちにしか出せない「店による差額」を見出しに使う。
   const ym = `${latestDate().slice(0, 4)}年${Number(latestDate().slice(5, 7))}月`;
-  const gap = s?.spread ? `${s.shops.length}社で最大${yen(s.spread)}差` : `${s?.shops.length ?? 0}社比較`;
+  const gap = s?.spread ? `${s.shops.length}社で最大${yen(s.spread)}の差` : `${s?.shops.length ?? 0}社比較`;
   return {
     title: `${model} ${ref}の買取相場｜${gap}【${ym}】| ${SITE_NAME}`,
-    description: `${model} Ref.${ref}の買取価格を${s?.shops.length ?? 0}社の公開情報から比較。${s?.ceilingMin && s?.ceilingMax ? `上限提示は${yen(s.ceilingMin)}〜${yen(s.ceilingMax)}で、店による差は${yen(s.spread ?? 0)}。` : ""}各社の出典リンクと取得日を明記しています。`,
+    description: `${model} Ref.${ref}の買取価格を、${s?.shops.length ?? 0}社の公開情報から比較しています。${s?.ceilingMin && s?.ceilingMax ? `上限額は${yen(s.ceilingMin)}〜${yen(s.ceilingMax)}で、店舗間の差額は${yen(s.spread ?? 0)}です。` : ""}各社の出典リンクと取得日を明記しています。`,
     alternates: { canonical: `${SITE_URL}/ref/${ref.toLowerCase()}/` },
   };
 }
@@ -61,9 +61,9 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
       dateModified: date,
       url: `${SITE_URL}/ref/${ref.toLowerCase()}/`,
       variableMeasured: [
-        s.ceilingMax != null ? { "@type": "PropertyValue", name: "買取上限の最高提示額", value: s.ceilingMax, unitText: "JPY" } : null,
-        s.ceilingMin != null ? { "@type": "PropertyValue", name: "買取上限の最低提示額", value: s.ceilingMin, unitText: "JPY" } : null,
-        s.spread != null ? { "@type": "PropertyValue", name: "店舗間の提示差", value: s.spread, unitText: "JPY" } : null,
+        s.ceilingMax != null ? { "@type": "PropertyValue", name: "買取上限額（最高）", value: s.ceilingMax, unitText: "JPY" } : null,
+        s.ceilingMin != null ? { "@type": "PropertyValue", name: "買取上限額（最低）", value: s.ceilingMin, unitText: "JPY" } : null,
+        s.spread != null ? { "@type": "PropertyValue", name: "店舗間の差額", value: s.spread, unitText: "JPY" } : null,
       ].filter(Boolean),
     },
     organization,
@@ -105,30 +105,30 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
 
       {/* 結論ボックス */}
       <section className="mt-8 rounded-xl border border-neutral-200 bg-white p-6">
-        <p className="text-xs font-medium uppercase tracking-widest text-neutral-400">まず結論</p>
+        <p className="text-xs font-medium uppercase tracking-widest text-neutral-400">買取価格の概要</p>
         <div className="mt-4 grid grid-cols-2 gap-4 text-center md:grid-cols-4">
           <div>
             <p className="text-xl font-semibold text-neutral-900">{s.ceilingMax != null ? yen(s.ceilingMax) : "—"}</p>
-            <p className="mt-1 text-xs text-neutral-500">最高の上限提示</p>
+            <p className="mt-1 text-xs text-neutral-500">上限額（最高）</p>
           </div>
           <div>
             <p className="text-xl font-semibold text-neutral-900">{s.ceilingMin != null ? yen(s.ceilingMin) : "—"}</p>
-            <p className="mt-1 text-xs text-neutral-500">最低の上限提示</p>
+            <p className="mt-1 text-xs text-neutral-500">上限額（最低）</p>
           </div>
           <div>
             <p className="text-xl font-semibold text-neutral-900">{s.spread != null ? yen(s.spread) : "—"}</p>
-            <p className="mt-1 text-xs text-neutral-500">店による差</p>
+            <p className="mt-1 text-xs text-neutral-500">店舗間の差額</p>
           </div>
           <div>
             <p className="text-xl font-semibold text-neutral-900">{s.shops.length}社</p>
-            <p className="mt-1 text-xs text-neutral-500">比較した店舗数</p>
+            <p className="mt-1 text-xs text-neutral-500">比較社数</p>
           </div>
         </div>
         {s.topShop && (
           <p className="mt-4 text-sm leading-relaxed text-neutral-700">
-            {date}時点で最も高い上限額を公開しているのは<strong>{s.topShop.shop}</strong>の{yen(s.topShop.price)}
+            {date}時点で最も高い上限額を公開しているのは、<strong>{s.topShop.shop}</strong>の{yen(s.topShop.price)}
             {s.topShop.condition ? `（${s.topShop.condition}）` : ""}です。
-            {s.spread != null && s.spread > 0 && <>同じ型番でも店によって最大{yen(s.spread)}の差があります。</>}
+            {s.spread != null && s.spread > 0 && <>同じ型番でも、買取店により最大{yen(s.spread)}の差があります。</>}
           </p>
         )}
       </section>
@@ -178,8 +178,8 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
           </table>
         </div>
         <p className="mt-3 text-xs leading-relaxed text-neutral-400">
-          ※価格は各社の公開ページから取得したもので、取得日は店ごとに上の表に記載しています。
-          取得元のサイトが一時的に閲覧できない日は、直近で取得できた日の価格をそのまま掲載し、その取得日を表示します。「上限」は状態が良い場合の最大額、「相場」は各社が相場として公開している値です。実際の査定額は個体の状態・付属品・時期により変動します。最新価格は各社の公開ページでご確認ください。
+          ※価格は各社の公開ページから取得したもので、取得日は買取店ごとに上表に記載しています。
+          取得元のサイトを一時的に閲覧できない日は、直近で取得できた日の価格を掲載し、その取得日を表示しています。「上限」は状態が良好な場合の最大額、「相場」は各社が相場として公開している値です。実際の査定額は、個体の状態・付属品・時期により変動します。ご利用前に、各社の公開ページにて最新の価格をご確認ください。
         </p>
       </section>
 
@@ -214,23 +214,23 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
             </table>
           </div>
           <p className="mt-3 text-xs text-neutral-400">
-            ※月次の相場推移は
+            ※月次の相場推移は、
             <a href={history[0].source_url} target="_blank" rel="noopener noreferrer" className="underline decoration-neutral-300">出典元</a>
-            が公開している履歴データに基づきます。
+            が公開している履歴データにもとづいています。
           </p>
         </section>
       )}
 
       {/* 高く売るための実務ポイント(データから導ける事実のみ) */}
       <section className="mt-10">
-        <h2 className="border-b border-neutral-200 pb-2 text-lg font-semibold text-neutral-900">このデータの読み方</h2>
+        <h2 className="border-b border-neutral-200 pb-2 text-lg font-semibold text-neutral-900">掲載データについて</h2>
         <ul className="mt-4 space-y-2 text-sm leading-relaxed text-neutral-700">
-          <li>・掲載額は各社が公開している「買取価格」です。実際の査定は個体差（傷・付属品・保証書の有無）で上下します。</li>
+          <li>・掲載額は、各社が公開している「買取価格」です。実際の査定額は、個体差（傷・付属品・保証書の有無）により上下します。</li>
           {s.spread != null && s.spread > 0 && (
-            <li>・同じ型番でも公開額に{yen(s.spread)}の差があるため、1社だけの査定で決めないことが実質的な差になります。</li>
+            <li>・同じ型番でも公開額に{yen(s.spread)}の差があるため、売却の際は複数社の査定額を比較されることをおすすめします。</li>
           )}
-          <li>・文字盤色や素材で価格が分かれる型番があります。上の表で仕様が明記されている行は、その条件での価格です。</li>
-          <li>・価格は毎日更新される店舗もあるため、当ページも日次で取得し直しています（最終取得: {date}）。</li>
+          <li>・文字盤の色や素材により価格が分かれる型番があります。上表で仕様を明記している行は、その条件での価格です。</li>
+          <li>・価格を毎日更新する買取店もあるため、当サイトでも日次で取得し直しています（最終取得日：{date}）。</li>
         </ul>
       </section>
 

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image", images: ["/og-image.png"] },
   title: SITE_NAME,
-  description: "腕時計の型番別買取価格を複数の買取店の公開情報から毎日比較するデータベース。",
+  description: "腕時計の型番別の買取価格を、複数の買取店の公開情報にもとづき毎日比較するデータベースです。",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

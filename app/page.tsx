@@ -8,7 +8,7 @@ import { graph, itemList, organization } from "@/lib/jsonld";
 export const metadata: Metadata = {
   title: `${SITE_NAME} — ${SITE_TAGLINE}`,
   description:
-    "腕時計の型番ごとの買取価格を、買取店が公開している価格から毎日収集して比較。同じ型番で店によっていくら差があるかを、出典リンクと取得日つきで確認できます。",
+    "腕時計の型番ごとの買取価格を、買取店が公開している価格から毎日収集して比較しています。同じ型番における店舗間の差額を、出典リンクと取得日を併記して掲載しています。",
   alternates: { canonical: `${SITE_URL}/` },
 };
 
@@ -71,12 +71,12 @@ export default function Home() {
         </div>
       </section>
       <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-        腕時計の買取価格を、買取店が公開している「型番別の買取価格」から毎日収集して比較しています。
-        価格は各社の公開ページを出典として、取得日つきで掲載します。
+        当サイトでは、買取店が公開している腕時計の「型番別の買取価格」を毎日収集し、比較しています。
+        価格は各社の公開ページを出典とし、取得日を併記して掲載しています。
       </p>
 
       <section className="mt-8 rounded-xl border border-neutral-200 bg-white p-6">
-        <p className="text-xs font-medium uppercase tracking-widest text-neutral-400">現在のデータ</p>
+        <p className="text-xs font-medium uppercase tracking-widest text-neutral-400">掲載データの概要</p>
         <div className="mt-4 grid grid-cols-3 gap-4 text-center">
           <div>
             <p className="text-xl font-semibold text-neutral-900">{rows.length}</p>
@@ -84,7 +84,7 @@ export default function Home() {
           </div>
           <div>
             <p className="text-xl font-semibold text-neutral-900">{maxSpread != null ? yen(maxSpread) : "—"}</p>
-            <p className="mt-1 text-xs text-neutral-500">店による差の最大</p>
+            <p className="mt-1 text-xs text-neutral-500">店舗間の差額（最大）</p>
           </div>
           <div>
             <p className="text-xl font-semibold text-neutral-900">{date}</p>
@@ -101,9 +101,9 @@ export default function Home() {
               <tr className="border-b border-neutral-200 text-left text-xs uppercase tracking-wider text-neutral-500">
                 <th className="px-4 py-3">型番</th>
                 <th className="px-4 py-3">モデル</th>
-                <th className="px-4 py-3 text-right">上限の最高</th>
-                <th className="px-4 py-3 text-right">店による差</th>
-                <th className="px-4 py-3 text-right">比較店舗</th>
+                <th className="px-4 py-3 text-right">上限額（最高）</th>
+                <th className="px-4 py-3 text-right">店舗間の差額</th>
+                <th className="px-4 py-3 text-right">比較社数</th>
               </tr>
             </thead>
             <tbody>
@@ -124,14 +124,14 @@ export default function Home() {
           </table>
         </div>
         <p className="mt-3 text-xs leading-relaxed text-neutral-400">
-          ※各社が公開している買取価格を{date}に取得したものです。実際の査定額は個体の状態・付属品・時期により変動します。
+          ※各社が公開している買取価格を{date}に取得したものです。実際の査定額は、個体の状態・付属品・時期により変動します。
         </p>
       </section>
 
       <section className="mt-10 border-t border-neutral-200 pt-8 text-xs leading-relaxed text-neutral-500">
         <p>
-          データの取得方法: 各買取店が自社サイトで公開している型番別の買取価格ページを定期取得し、型番・日付・店舗・価格の組で記録しています。
-          価格の推定や補完は行わず、公開されていない項目は掲載しません。出典は各型番ページ内にリンクで明記しています。
+          データの取得方法：当サイトでは、各買取店が自社サイトで公開している型番別の買取価格ページを定期的に取得し、型番・日付・買取店・価格の組み合わせで記録しています。
+          価格の推定や補完は行わず、公開されていない項目は掲載しておりません。出典は、各型番ページ内にリンクで明記しています。
         </p>
       </section>
     </main>

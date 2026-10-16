@@ -33,12 +33,12 @@ function familiesOfBrand(slug: string) {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const b = brands().find((x) => x.slug === slug);
-  if (!b) return { title: "見つかりません" };
+  if (!b) return { title: "ページが見つかりません" };
   const refs = refsByBrand()[slug] ?? [];
   const d = latestDate();
   return {
     title: `${b.label}の買取相場｜${refs.length}型番を買取店で比較【${d.slice(0, 7).replace("-", "年")}月】`,
-    description: `${b.label}の買取価格を型番ごとに比較。${d}時点の公開情報を各社の出典つきで掲載しています。モデル別に相場と店舗間の差額を確認できます。`,
+    description: `${b.label}の買取価格を型番ごとに比較しています。${d}時点の公開情報を、各社の出典とあわせて掲載しています。モデル別の上限額と店舗間の差額をご確認いただけます。`,
     alternates: { canonical: `${SITE_URL}/brand/${slug}/` },
   };
 }
@@ -92,15 +92,15 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
         {date} 時点 / {refs.length}型番 / モデル {summary.length}種
       </p>
 
-      <h2 className="mt-8 text-lg font-semibold text-neutral-900">モデル別</h2>
+      <h2 className="mt-8 text-lg font-semibold text-neutral-900">モデル別の買取価格</h2>
       <div className="mt-4 overflow-x-auto">
         <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="bg-neutral-900 text-white">
               <th className="px-3 py-2 text-left">モデル</th>
               <th className="px-3 py-2 text-right whitespace-nowrap">型番数</th>
-              <th className="px-3 py-2 text-right whitespace-nowrap">上限の最高</th>
-              <th className="px-3 py-2 text-right whitespace-nowrap">店による差（最大）</th>
+              <th className="px-3 py-2 text-right whitespace-nowrap">上限額（最高）</th>
+              <th className="px-3 py-2 text-right whitespace-nowrap">店舗間の差額（最大）</th>
             </tr>
           </thead>
           <tbody>
@@ -125,8 +125,8 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
         </table>
       </div>
       <p className="mt-3 text-xs leading-relaxed text-neutral-500">
-        ※ 各社が公開している買取価格を {date} に取得して掲載しています。ブランド全体の平均額は出していません。
-        型番ごとに年式も仕様も違い、平均に意味が無いためです。
+        ※ 各社が公開している買取価格を {date} に取得して掲載しています。
+        型番ごとに年式や仕様が異なるため、ブランド全体の平均額は掲載しておりません。
       </p>
 
       <h2 className="mt-10 text-lg font-semibold text-neutral-900">他のブランド</h2>
