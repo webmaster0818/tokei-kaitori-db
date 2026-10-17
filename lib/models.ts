@@ -10,42 +10,14 @@
 // ⚠️ 判定は**最長一致**にする。単純な先頭一致だと
 //    「スピードマスター デイデイト」（オメガ）が デイデイト（ロレックス）に入る。
 import { masterRefs, publishableRefs } from "./prices";
+import familiesData from "./families.json";
 
 export type Family = { slug: string; label: string; brand: string; keys: string[] };
 
-export const FAMILIES: Family[] = [
-  { slug: "daytona", label: "デイトナ", brand: "ロレックス", keys: ["デイトナ"] },
-  { slug: "submariner", label: "サブマリーナ", brand: "ロレックス", keys: ["サブマリーナ"] },
-  { slug: "gmt-master-2", label: "GMTマスター II", brand: "ロレックス", keys: ["GMTマスター II", "GMTマスターII", "GMT マスター II"] },
-  { slug: "gmt-master", label: "GMTマスター", brand: "ロレックス", keys: ["GMTマスター", "GMT マスター"] },
-  { slug: "datejust", label: "デイトジャスト", brand: "ロレックス", keys: ["デイトジャスト"] },
-  { slug: "day-date", label: "デイデイト", brand: "ロレックス", keys: ["デイデイト"] },
-  { slug: "explorer", label: "エクスプローラー", brand: "ロレックス", keys: ["エクスプローラー"] },
-  { slug: "yacht-master", label: "ヨットマスター", brand: "ロレックス", keys: ["ヨットマスター"] },
-  { slug: "sea-dweller", label: "シードゥエラー", brand: "ロレックス", keys: ["シードゥエラー", "シードウェラー"] },
-  { slug: "sky-dweller", label: "スカイドゥエラー", brand: "ロレックス", keys: ["スカイドゥエラー"] },
-  { slug: "milgauss", label: "ミルガウス", brand: "ロレックス", keys: ["ミルガウス"] },
-  { slug: "air-king", label: "エアキング", brand: "ロレックス", keys: ["エアキング"] },
-  { slug: "oyster-perpetual", label: "オイスターパーペチュアル", brand: "ロレックス", keys: ["オイスターパーペチュアル"] },
-  { slug: "cellini", label: "チェリーニ", brand: "ロレックス", keys: ["チェリーニ"] },
-  { slug: "royal-oak", label: "ロイヤルオーク", brand: "オーデマ・ピゲ", keys: ["ロイヤルオーク"] },
-  { slug: "speedmaster", label: "スピードマスター", brand: "オメガ", keys: ["スピードマスター"] },
-  { slug: "seamaster", label: "シーマスター", brand: "オメガ", keys: ["シーマスター"] },
-  { slug: "constellation", label: "コンステレーション", brand: "オメガ", keys: ["コンステレーション"] },
-  { slug: "de-ville", label: "デ・ヴィル", brand: "オメガ", keys: ["デ・ヴィル", "デビル"] },
-  { slug: "overseas", label: "オーヴァーシーズ", brand: "ヴァシュロン・コンスタンタン", keys: ["オーヴァーシーズ", "オーバーシーズ"] },
-  { slug: "santos", label: "サントス", brand: "カルティエ", keys: ["サントス"] },
-  { slug: "tank", label: "タンク", brand: "カルティエ", keys: ["タンク"] },
-  { slug: "ballon-bleu", label: "バロンブルー", brand: "カルティエ", keys: ["バロンブルー"] },
-];
+// ⚠️ 定義の実体は lib/families.json（scripts/generate-redirects.mjs と共有するため）。
+export const FAMILIES: Family[] = familiesData.families;
 
-export const BRANDS: { slug: string; label: string }[] = [
-  { slug: "rolex", label: "ロレックス" },
-  { slug: "omega", label: "オメガ" },
-  { slug: "audemars-piguet", label: "オーデマ・ピゲ" },
-  { slug: "vacheron-constantin", label: "ヴァシュロン・コンスタンタン" },
-  { slug: "cartier", label: "カルティエ" },
-];
+export const BRANDS: { slug: string; label: string }[] = familiesData.brands;
 
 /** 型番のモデル表記から家族を判定する（最長一致） */
 export function familyOf(models: string[]): Family | null {

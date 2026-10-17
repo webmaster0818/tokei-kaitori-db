@@ -5,7 +5,12 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { latestDate, masterRefs, monthlyHistory, publishableRefs, summarize, yen } from "@/lib/prices";
 import { publishedBrandOf, publishedFamilyOf } from "@/lib/models";
 import { breadcrumb, graph, organization } from "@/lib/jsonld";
-import { IconDocument, IconFigures, IconLink, IconTable, IconTrend } from "@/components/Icons";
+import { IconDocument, IconFigures, IconLink, IconShop, IconTable, IconTrend } from "@/components/Icons";
+import { ceilingChange, fromMs, priceSeries } from "@/lib/history";
+import { man, refPath, signedPct, signedYen, similarPriced } from "@/lib/insights";
+import { SHOP_IDS } from "@/lib/shops";
+import { PriceHistoryChart } from "@/components/PriceHistoryChart";
+import { ShopGapBars } from "@/components/ShopGapBars";
 
 export function generateStaticParams() {
   return publishableRefs().map((ref) => ({ ref: ref.toLowerCase() }));
@@ -52,6 +57,13 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
   const all = publishableRefs();
   const idx = all.indexOf(ref);
   const others = all.slice(Math.max(0, idx - 3), idx + 4).filter((r) => r !== ref);
+  // 価格推移（data/history）と、上限額（最高）の7日前比・30日前比（計算できる場合のみ）
+  const ps = priceSeries(ref);
+  const changes = [ceilingChange(ref, 7), ceilingChange(ref, 30)].filter((c): c is NonNullable<typeof c> => !!c);
+  const similar = similarPriced(ref, 6);
+  const shopLink = (id: string) => (SHOP_IDS as readonly string[]).includes(id) ? `/shop/${id}/` : null;
+  const ceilingShopIds = new Set(s.records.filter((r) => r.price_type === "上限" || r.price_type === "相場").map((r) => r.shop_id));
+  const regularOnly = [...new Set(s.records.filter((r) => !ceilingShopIds.has(r.shop_id)).map((r) => r.shop))];
 
   const ld = graph(
     {
@@ -159,7 +171,9 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
             <tbody>
               {s.records.map((r, i) => (
                 <tr key={i}>
-                  <td className="strong whitespace-nowrap">{r.shop}</td>
+                  <td className="strong whitespace-nowrap">
+                    {shopLink(r.shop_id) ? <a href={shopLink(r.shop_id)!}>{r.shop}</a> : r.shop}
+                  </td>
                   <td className="whitespace-nowrap">{r.price_type}</td>
                   {/* 同じ型番でもブレス違い等でモデル名が分かれることがある（例: 126300 の
                       オイスターブレス/ジュビリーブレス）。モデルが複数ある型番では名前を出さないと
@@ -191,6 +205,49 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
           取得元のサイトを一時的に閲覧できない日は、直近で取得できた日の価格を掲載し、その取得日を表示しています。「上限」は状態が良好な場合の最大額、「相場」は各社が相場として公開している値です。実際の査定額は、個体の状態・付属品・時期により変動します。ご利用前に、各社の公開ページにて最新の価格をご確認ください。
         </p>
       </section>
+
+      {/* 店舗間の差額（横棒）。上限・相場の価格を出している店が2社以上ある場合のみ */}
+      {ceilingShopIds.size >= 2 && (
+        <section className="reveal">
+          <h2 className="block-title"><IconShop />店舗間の差額</h2>
+          <ShopGapBars records={s.records} />
+          <p className="note mt-4">
+            ※各社が公開している上限額・相場のうち、最も高い価格を1社1本で表示しています。棒の長さは、最も高い価格を100%とした割合です。
+            {regularOnly.length > 0 && <>{regularOnly.join("・")}は通常の買取価格のみを公開しているため、この図には含めていません（各社の価格は上表に記載しています）。</>}
+          </p>
+        </section>
+      )}
+
+      {/* 価格推移（日次の記録がある場合のみ） */}
+      {ps && ps.series.length > 0 && (
+        <section className="reveal">
+          <h2 className="block-title"><IconTrend />買取価格の推移</h2>
+          <p className="prose-jp mb-5">
+            当サイトでは、各社の公開価格を毎日取得して記録しています。Ref.{ref}の記録は{fromMs(ps.start)}から{fromMs(ps.end)}までです。実線は上限額、破線は通常の買取価格、点線は相場（月ごとの相場として公開され、その日に掲載されていた値）を表しています。
+          </p>
+          <PriceHistoryChart series={ps.series} start={ps.start} end={ps.end} refLabel={`Ref.${ref}`} />
+          {changes.length > 0 && (
+            <dl className="delta-list">
+              {changes.map((c) => (
+                <div key={c.days}>
+                  <dt>上限額（最高）の{c.days}日前比</dt>
+                  <dd className={c.diff > 0 ? "up" : c.diff < 0 ? "down" : ""}>
+                    {signedYen(c.diff)}（{signedPct(c.pct)}）
+                    <small>
+                      <span className="nobr">{c.then.date}：{yen(c.then.max)}（{c.then.shop}）</span>→<span className="nobr">{c.now.date}：{yen(c.now.max)}（{c.now.shop}）</span>
+                    </small>
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          )}
+          <p className="note mt-4">
+            ※日次の値は、各社が取得日に公開していた価格のうち、区分ごとに最も高いものです。取得できなかった期間は線を途切れさせています。
+            {changes.some((c) => !c.sameShops) && "比較している期間に、上限額・相場を公開している買取店の顔ぶれが変わっているため、増減には掲載店の入れ替わりによる差が含まれます。"}
+            {changes.length === 0 && "記録の期間が短いため、7日前比・30日前比は表示していません。"}
+          </p>
+        </section>
+      )}
 
       {/* 月次推移(データがある場合のみ) */}
       {history.length >= 2 && (
@@ -241,6 +298,38 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
           <li>文字盤の色や素材により価格が分かれる型番があります。上表で仕様を明記している行は、その条件での価格です。</li>
           <li>価格を毎日更新する買取店もあるため、当サイトでも日次で取得し直しています（最終取得日：{date}）。</li>
         </ul>
+      </section>
+
+      {similar.length > 0 && s.ceilingMax != null && (
+        <section className="reveal">
+          <h2 className="block-title"><IconLink />同じ価格帯の型番</h2>
+          <p className="prose-jp mb-5">
+            上限額（最高）が{man(s.ceilingMax)}の前後15%（{man(Math.round(s.ceilingMax * 0.85))}〜{man(Math.round(s.ceilingMax * 1.15))}）に入る、他のモデルの型番です。
+          </p>
+          <div className="ref-cards">
+            {similar.map((r) => (
+              <a key={r.ref} href={refPath(r.ref)} className="ref-card">
+                <span className="ref-card__ref num">Ref.{r.ref}</span>
+                <span className="ref-card__model">{r.brand} {r.model}</span>
+                <span className="ref-card__price">上限額（最高） {yen(r.s.ceilingMax as number)}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <section className="reveal">
+        <h2 className="block-title"><IconLink />関連ページ</h2>
+        <div className="chip-row">
+          {brand && <a href={`/brand/${brand.slug}/`} className="btn btn-sm">{brand.label}の買取相場</a>}
+          {fam && <a href={`/model/${fam.slug}/`} className="btn btn-sm">{fam.label}の買取相場</a>}
+          <a href="/ranking/" className="btn btn-sm">買取価格ランキング</a>
+          {[...new Set(s.records.map((r) => r.shop_id))]
+            .filter((id) => shopLink(id))
+            .map((id) => (
+              <a key={id} href={shopLink(id)!} className="btn btn-sm">{s.records.find((r) => r.shop_id === id)!.shop}の掲載データ</a>
+            ))}
+        </div>
       </section>
 
       {others.length > 0 && (

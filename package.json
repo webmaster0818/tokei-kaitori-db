@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/generate-sitemap.mjs",
+    "build": "next build && node scripts/generate-sitemap.mjs && node scripts/generate-redirects.mjs",
     "start": "next start"
   },
   "dependencies": {

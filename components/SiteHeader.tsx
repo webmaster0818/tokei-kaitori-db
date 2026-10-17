@@ -16,8 +16,9 @@ export function SiteHeader() {
         <nav className="site-nav" aria-label="サイト内メニュー">
           <a href="/#brands">ブランド</a>
           <a href="/#models">モデル</a>
-          <a href="/#search">型番から探す</a>
-          <a href="/#policy">掲載ポリシー</a>
+          <a href="/ranking/">ランキング</a>
+          <a href="/#shops">買取店</a>
+          <a href="/#search">型番検索</a>
         </nav>
       </div>
     </header>
