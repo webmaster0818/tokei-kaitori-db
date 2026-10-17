@@ -50,6 +50,8 @@ export function specFor(ref: string): SpecView | null {
   const d = JSON.parse(fs.readFileSync(p, "utf8")) as SpecJson;
   // ⚠️ ファイル名は英数字だけに潰した名前なので、別の型番と衝突していないか中身の ref で確かめる
   if (alnum(d.ref) !== alnum(ref)) return null;
+  // 製品名と素材の一行しか公式に無い型番（カルティエの旧型番など）は仕様表として出さない（2026-10-17）
+  if ((d as unknown as { spec_level?: string }).spec_level === "name_only") return null;
   const source = d.sources?.[0];
   if (!source?.url) return null;
   const english = d.sources.some((s) => s.lang === "en");
