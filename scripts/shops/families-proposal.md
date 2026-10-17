@@ -4,10 +4,10 @@
 
 ## 1. 結論
 
-- 4店（ロデオドライブ・GINZA RASIN・ギャラリーレア・宝石広場）と既存5社に出てくる型番は 3582 型番（ブランドと型番の組。チューダーは案B）。うち 3191 型番をコレクションに振り分け、391 型番は振り分けなかった。
+- 4店（ロデオドライブ・GINZA RASIN・ギャラリーレア・宝石広場）と既存5社に出てくる型番は 3582 型番（ブランドと型番の組。チューダーは案B）。うち 3294 型番をコレクションに振り分け、288 型番は振り分けなかった。
 - コレクションは11ブランドで 78 件（既存23件の slug はすべて残し、新設 55 件）。ブランド別: ロレックス 18、オメガ 4、オーデマ・ピゲ 4、ヴァシュロン・コンスタンタン 7、カルティエ 11、パテック フィリップ 9、チューダー 8、IWC 6、パネライ 4、ウブロ 2、グランドセイコー 5。
-- ページ化の対象（2社以上の価格がある型番が2つ以上入るコレクション）は、宝石広場を含めないと 44 件、含めると 55 件。現行（既存5社だけ・既存の分け方）は16件。
-- 2社以上の価格がある型番は、宝石広場を含めないと 750 型番、含めると 1319 型番。このうち振り分けられなかったのは 12 型番／52 型番。
+- ページ化の対象（2社以上の価格がある型番が2つ以上入るコレクション）は、宝石広場を含めないと 44 件、含めると 56 件。現行（既存5社だけ・既存の分け方）は16件。
+- 2社以上の価格がある型番は、宝石広場を含めないと 750 型番、含めると 1319 型番。このうち振り分けられなかったのは 12 型番／44 型番。
 - 既存の分け方の主な変更: ロイヤル オーク オフショアをロイヤル オークから分ける、レディ デイトジャストをデイトジャストから分ける、ディープシーをシードゥエラーから分ける、5件の label を公式表記に合わせる。いずれも現行で公開中のモデルページを消さない（詳細は5章）。
 
 ## 2. 前提と数え方
@@ -19,7 +19,7 @@
   - 既存5社の価格はマスタにある型番だけを数えた（publishableRefs がマスタの型番だけを見るため）。4店の型番はマスタに無いものも、組み込み時にマスタへ追加される前提で数えた。
   - 宝石広場は一覧ページの価格で数えた。詳細ページで「更新から3か月以内」に絞ると減る可能性がある（housekihiroba_detail.py 参照）。
 - 振り分けの根拠（優先順）:
-  1. メーカー公式の型番一覧で家族を確認できた型番は、公式の家族に入れた（ロレックス: 公式サイトの sitemap にある型番ページの URL の家族名。パテック フィリップ: 公式 sitemap の型番ページの URL のコレクション名。店の型番が公式の型番と末尾まで一致するか、末尾を書いていない（公式の型番の先頭部分と一致する）場合だけ使い、基本番号（先頭4桁）だけの一致には広げていない。グランドセイコー: 公式の型番ページに書かれたコレクション名）。
+  1. メーカー公式の型番一覧で家族を確認できた型番は、公式の家族に入れた（ロレックス: 公式サイトの sitemap にある型番ページの URL の家族名。パテック フィリップ: 公式 sitemap の型番ページの URL のコレクション名。店の型番が公式の型番と末尾まで一致するか、末尾を書いていない（公式の型番の先頭部分と一致する）場合だけ使い、基本番号（先頭4桁）だけの一致には広げていない。グランドセイコー: 公式の型番ページ、または Wayback Machine に保存された公式の型番ページに書かれたコレクション名。gs-ref-collection.md 参照）。グランドセイコーは行名からは振り分けていない（公式で確認できた型番だけ）。
   2. それ以外は、店の行名とマスタの models に書かれたモデル名に、公式で確認できたコレクション名が含まれるかで決めた（最長一致。既存の familyOf と同じ考え方）。
   3. 行名にコレクション名が無い型番、公式で確認できない名前しか無い型番、店によってモデル名が割れて決められない型番は振り分けなかった（推測で埋めていない）。
 - コレクション名（label）はメーカー公式サイトの日本語表記。公式サイトが当方のアクセスで 403 になるブランド（ロレックス・チューダー・カルティエ・IWC・パネライ・ウブロ・ヴァシュロン・コンスタンタン）は Wayback Machine の保存版で確認した。オメガは公式サイトに接続できなかったため保存版で確認した。
@@ -103,13 +103,13 @@
 | パネライ | radiomir | ラジオミール | 新設 | 80 | 18 | 36 | 0 | 0 |
 | ウブロ | big-bang | ビッグ・バン | 新設 | 152 | 46 | 57 | 0 | 0 |
 | ウブロ | classic-fusion | クラシック・フュージョン | 新設 | 108 | 15 | 38 | 0 | 0 |
-| グランドセイコー | gs-heritage | ヘリテージコレクション | 新設 | 32 | 0 | 6 | 0 | 24 |
-| グランドセイコー | gs-evolution9 | エボリューション9 コレクション | 新設 | 1 | 0 | 0 | 0 | 1 |
-| グランドセイコー | gs-sport | スポーツコレクション | 新設 | 5 | 0 | 0 | 0 | 5 |
-| グランドセイコー | gs-elegance | エレガンスコレクション | 新設 | 4 | 0 | 1 | 0 | 4 |
+| グランドセイコー | gs-heritage | ヘリテージコレクション | 新設 | 98 | 0 | 10 | 0 | 98 |
+| グランドセイコー | gs-evolution9 | エボリューション9 コレクション | 新設 | 2 | 0 | 0 | 0 | 2 |
+| グランドセイコー | gs-sport | スポーツコレクション | 新設 | 25 | 0 | 4 | 0 | 25 |
+| グランドセイコー | gs-elegance | エレガンスコレクション | 新設 | 20 | 0 | 1 | 0 | 20 |
 | グランドセイコー | gs-masterpiece | マスターピースコレクション | 新設 | 0 | 0 | 0 | 0 | 0 |
-| （振り分けなし） | - | - | - | 391 | 12 | 52 | 0 | - |
-| 合計 | - | - | - | 3582 | 750 | 1319 | 206 | 195 |
+| （振り分けなし） | - | - | - | 288 | 12 | 44 | 0 | - |
+| 合計 | - | - | - | 3582 | 750 | 1319 | 206 | 306 |
 
 ## 4. ページ化の対象
 
@@ -128,7 +128,7 @@
 - パネライ（3）: ルミノール（52）、サブマーシブル（3）、ラジオミール（18）
 - ウブロ（2）: ビッグ・バン（46）、クラシック・フュージョン（15）
 
-### 宝石広場を含める: 55 件（上の 44 件に次の 11 件が加わる）
+### 宝石広場を含める: 56 件（上の 44 件に次の 12 件が加わる）
 
 - ロレックス チェリーニ（6）
 - ヴァシュロン・コンスタンタン パトリモニー（2）
@@ -140,11 +140,12 @@
 - パテック フィリップ Twenty~4（2）
 - チューダー ロイヤル（5）
 - パネライ ルミノール ドゥエ（5）
-- グランドセイコー ヘリテージコレクション（6）
+- グランドセイコー ヘリテージコレクション（10）
+- グランドセイコー スポーツコレクション（4）
 
 ### 型番が足りずページにならないコレクション（宝石広場を含めても2社以上が1型番以下）
 
-ロレックス GMTマスター（1）、ロレックス ランドドゥエラー（0）、ロレックス 1908（1）、オーデマ・ピゲ ロイヤル オーク コンセプト（0）、ヴァシュロン・コンスタンタン ヒストリーク（0）、ヴァシュロン・コンスタンタン エジェリー（0）、ヴァシュロン・コンスタンタン マルタ（0）、カルティエ クレ ドゥ カルティエ（0）、カルティエ ベニュワール（0）、カルティエ トーチュ（0）、パテック フィリップ グランド・コンプリケーション（0）、パテック フィリップ ゴンドーロ（1）、パテック フィリップ ゴールデン・エリプス（0）、パテック フィリップ Cubitus（0）、チューダー クレア ドゥ ローズ（0）、チューダー ノースフラッグ（1）、チューダー モナーク（0）、チューダー 1926（0）、IWC ダ・ヴィンチ（0）、グランドセイコー エボリューション9 コレクション（0）、グランドセイコー スポーツコレクション（0）、グランドセイコー エレガンスコレクション（1）、グランドセイコー マスターピースコレクション（0）
+ロレックス GMTマスター（1）、ロレックス ランドドゥエラー（0）、ロレックス 1908（1）、オーデマ・ピゲ ロイヤル オーク コンセプト（0）、ヴァシュロン・コンスタンタン ヒストリーク（0）、ヴァシュロン・コンスタンタン エジェリー（0）、ヴァシュロン・コンスタンタン マルタ（0）、カルティエ クレ ドゥ カルティエ（0）、カルティエ ベニュワール（0）、カルティエ トーチュ（0）、パテック フィリップ グランド・コンプリケーション（0）、パテック フィリップ ゴンドーロ（1）、パテック フィリップ ゴールデン・エリプス（0）、パテック フィリップ Cubitus（0）、チューダー クレア ドゥ ローズ（0）、チューダー ノースフラッグ（1）、チューダー モナーク（0）、チューダー 1926（0）、IWC ダ・ヴィンチ（0）、グランドセイコー エボリューション9 コレクション（0）、グランドセイコー エレガンスコレクション（1）、グランドセイコー マスターピースコレクション（0）
 
 ## 5. 既存の分け方（lib/families.json）の変更点
 
@@ -236,9 +237,9 @@ slug はすべて残す（URL を変えない）。下の「影響する型番�
 
 ## 8. 振り分けられなかった型番
 
-391 型番（宝石広場なしで2社以上 12、ありで 52）。理由の内訳: 行名・マスタにモデル名が無い 197、公式で確認できない名前しか無い（保留） 146、行名に公式のコレクション名が無い 46、店によって名前が割れた 2。
+288 型番（宝石広場なしで2社以上 12、ありで 44）。理由の内訳: 行名・マスタにモデル名が無い 0、公式で確認できない名前しか無い（保留） 146、行名に公式のコレクション名が無い 21、店によって名前が割れた 2。
 
-- 行名・マスタにモデル名が無い: ほぼグランドセイコー（GINZA RASIN と宝石広場の行名が型番だけ）。公式の型番ページが残っている型番（現行品）は公式のコレクション名で振り分けた。公式ページが404の型番は振り分けていない。
+- グランドセイコー: 公式の製品ページ（現行・保存版）でコレクションを確認できなかった型番。型番ごとの理由は gs-ref-collection.md。
 - 公式で確認できない名前（保留）: 公式の日本語サイト（保存版を含む）でコレクションとして確認できなかった名前。カリブル ドゥ カルティエは公式の時計ページの meta description に「カリブル」とあるだけで、コレクションのページを確認できなかったため保留にした。
 - 行名に公式のコレクション名が無い: 「フリーガーUTC」「バロン ブラン」「デクラレーション」のように、公式で確認したコレクション名を含まない行名。
 
@@ -310,10 +311,9 @@ slug はすべて残す（URL を変えない）。下の「影響する型番�
 - 行名に公式のコレクション名が無い（1）: 731QX1140RX
 - 公式で確認できない名前（保留）：アエロフュージョン（1）: 525HI0170RWORL21
 
-### グランドセイコー（222）
+### グランドセイコー（119）
 
-- 行名・マスタにモデル名が無い（197）: SBGA001、SBGA003、SBGA011、SBGA025、SBGA029、SBGA031、SBGA041、SBGA059、SBGA073、SBGA075、SBGA079、SBGA081、SBGA083、SBGA085、SBGA093、SBGA099、SBGA105、SBGA127、SBGA201、SBGA203、SBGA225、SBGA227、SBGA229、SBGA241、SBGA259、SBGA279、SBGA281、SBGA283、SBGA285、SBGA293、SBGA347、SBGA349、SBGA373、SBGA401、SBGA425、SBGB001、SBGB003、SBGC001、SBGC003、SBGC005、SBGC007、SBGC203、SBGC205、SBGC207、SBGC221、SBGC223、SBGE005、SBGE009、SBGE011、SBGE013、SBGE015、SBGE025、SBGE027、SBGE205、SBGE209、SBGE211、SBGE215、SBGE225、SBGE227、SBGE251、SBGH001、SBGH005、SBGH013、SBGH035、SBGH037、SBGH039、SBGH213、SBGH243、SBGH252、SBGH255、SBGH269、SBGH277、SBGH279、SBGH281、SBGJ001、SBGJ003、SBGJ005、SBGJ011、SBGJ013、SBGJ211、SBGJ213、SBGJ217、SBGJ219、SBGJ233、SBGJ235、SBGJ239、SBGK007、SBGK009、SBGM021、SBGM023、SBGM025、SBGM027、SBGM029、SBGM031、SBGN005、SBGN011、SBGN013、SBGP003、SBGP007、SBGP015、SBGR051、SBGR055、SBGR057、SBGR061、SBGR067、SBGR069、SBGR071、SBGR073、SBGR077、SBGR089、SBGR095、SBGR253、SBGR287、SBGR307、SBGR309、SBGR321、SBGT035、SBGT037、SBGT038、SBGT235、SBGT237、SBGT238、SBGV005、SBGV007、SBGV013、SBGV015、SBGV017、SBGV205、SBGV207、SBGV213、SBGV215、SBGV217、SBGV223、SBGV229、SBGV231、SBGV233、SBGV235、SBGV237、SBGV239、SBGV243、SBGV245、SBGW031、SBGW035、SBGW231、SBGW235、SBGX005、SBGX009、SBGX041、SBGX053、SBGX055、SBGX061、SBGX065、SBGX067、SBGX071、SBGX073、SBGX085、SBGX087、SBGX091、SBGX095、SBGX097、SBGX259、SBGX267、SBGX269、SBGX295、SBGX297、SBGX319、SBGX321、SBGX331、SBGX335、SBGX337、STGF253、STGF255、STGF268、STGF269、STGF271、STGF273、STGF281、STGF283、STGF285、STGF287、STGF289、STGF291、STGF293、STGF295、STGF297、STGF310、STGF312、STGF313、STGF315、STGF316、STGF325、STGF327、STGF329、STGF331、STGF334、STGF337、STGF343
-- 行名に公式のコレクション名が無い（25）: SBGA101★、SBGA129、SBGA231★、SBGA461、SBGC201★、SBGE201★、SBGH007、SBGH201★、SBGH205★、SBGH245★、SBGJ201★、SBGJ203★、SBGN003★、SBGR079★、SBGR083★、SBGR087★、SBGW047、SBGX059★、SBGX063★、SBGX069★、SBGX083、SBGX093★、SBGX115★、SBGX117★、SLGA009
+- GS公式の製品ページ（保存版を含む）でコレクションを確認できず（gs-ref-collection.md 参照）（119）: SBGA001、SBGA003、SBGA011、SBGA025、SBGA029、SBGA031、SBGA041、SBGA059、SBGA073、SBGA075、SBGA079、SBGA081、SBGA083、SBGA085、SBGA093、SBGA099、SBGA101★、SBGA105、SBGA127、SBGA129、SBGA203、SBGA293、SBGA299★、SBGA349、SBGA425、SBGA461、SBGB001、SBGB003、SBGC001、SBGC003、SBGC005、SBGC007、SBGE005、SBGE009、SBGE011、SBGE013、SBGE015、SBGE025、SBGE027、SBGH001、SBGH005、SBGH007、SBGH013、SBGH035、SBGH037、SBGH039、SBGH213、SBGJ001、SBGJ003、SBGJ005、SBGJ011、SBGJ013、SBGM021、SBGM023、SBGM025、SBGM027、SBGM029、SBGM031、SBGN005、SBGR051、SBGR055、SBGR057、SBGR061、SBGR067、SBGR069、SBGR071、SBGR073、SBGR077、SBGR079★、SBGR083★、SBGR087★、SBGR089、SBGR095、SBGR289、SBGR321、SBGT035、SBGT037、SBGT038、SBGT241、SBGV005、SBGV007、SBGV013、SBGV015、SBGV017、SBGW031、SBGW035、SBGW047、SBGX005、SBGX009、SBGX041、SBGX053、SBGX055、SBGX059★、SBGX061、SBGX063★、SBGX065、SBGX067、SBGX069★、SBGX071、SBGX073、SBGX083、SBGX085、SBGX087、SBGX091、SBGX093★、SBGX095、SBGX097、SBGX115★、SBGX117★、SBGX269、SBGX321、STGF287、STGF293、STGF297、STGF310、STGF312、STGF313、STGF316、STGF329
 
 ★★ = 宝石広場なしでも2社以上 / ★ = 宝石広場を含めると2社以上
 
@@ -349,9 +349,9 @@ slug はすべて残す（URL を変えない）。下の「影響する型番�
 28. https://www.patek.com/en/sitemap.xml … パテック フィリップ 型番ページのコレクション名（公式 sitemap）
 29. https://web.archive.org/web/20191218145132/https://www.tudorwatch.com/ja … チューダー 2019 年の保存版（Heritage Ranger・Heritage Chrono 等が英語表記で並ぶ。日本語のコレクション名は確認できず保留の根拠）
 30. https://web.archive.org/web/20191218032120/https://www.hublot.com/ja … ウブロ 2019 年の保存版（ビッグ・バン ウニコの表記）
-31〜64. グランドセイコー 型番ページ 34 件（コレクション名を確認できた現行品）: https://www.grand-seiko.com/jp-ja/collections/sbga211 https://www.grand-seiko.com/jp-ja/collections/sbga375 https://www.grand-seiko.com/jp-ja/collections/sbga407 https://www.grand-seiko.com/jp-ja/collections/sbga445 https://www.grand-seiko.com/jp-ja/collections/sbge248 https://www.grand-seiko.com/jp-ja/collections/sbge253 https://www.grand-seiko.com/jp-ja/collections/sbge255 https://www.grand-seiko.com/jp-ja/collections/sbge257 https://www.grand-seiko.com/jp-ja/collections/sbgj237 https://www.grand-seiko.com/jp-ja/collections/sbgj249 https://www.grand-seiko.com/jp-ja/collections/sbgm221 https://www.grand-seiko.com/jp-ja/collections/sbgp001 https://www.grand-seiko.com/jp-ja/collections/sbgp005 https://www.grand-seiko.com/jp-ja/collections/sbgp009 https://www.grand-seiko.com/jp-ja/collections/sbgp011 https://www.grand-seiko.com/jp-ja/collections/sbgp013 https://www.grand-seiko.com/jp-ja/collections/sbgr261 https://www.grand-seiko.com/jp-ja/collections/sbgr315 https://www.grand-seiko.com/jp-ja/collections/sbgr317 https://www.grand-seiko.com/jp-ja/collections/sbgx261 https://www.grand-seiko.com/jp-ja/collections/sbgx263 https://www.grand-seiko.com/jp-ja/collections/sbgx265 https://www.grand-seiko.com/jp-ja/collections/slgh005 https://www.grand-seiko.com/jp-ja/collections/stgf265 https://www.grand-seiko.com/jp-ja/collections/stgf267 https://www.grand-seiko.com/jp-ja/collections/stgf274 https://www.grand-seiko.com/jp-ja/collections/stgf275 https://www.grand-seiko.com/jp-ja/collections/stgf277 https://www.grand-seiko.com/jp-ja/collections/stgf286 https://www.grand-seiko.com/jp-ja/collections/stgf345 https://www.grand-seiko.com/jp-ja/collections/stgf347 https://www.grand-seiko.com/jp-ja/collections/stgf349 https://www.grand-seiko.com/jp-ja/collections/stgk007 https://www.grand-seiko.com/jp-ja/collections/stgk009
+31〜175. グランドセイコー 型番ページ 145 件（現行の公式ページ 34 件と Wayback Machine の保存版 111 件。一覧は gs-ref-collection.json の source_url）
 
-出典URLは計 64 件。グランドセイコーは店に出てくる 264 型番すべての公式ページを1.2秒間隔で開き、230 型番は404（ページなし）だった。
+出典URLは計 175 件。グランドセイコーの確認方法と、確認できなかった 119 型番の理由は gs-ref-collection.md。
 
 ## 10. 確認できず書かなかったこと
 
@@ -365,5 +365,6 @@ slug はすべて残す（URL を変えない）。下の「影響する型番�
 
 ## 11. 修正履歴
 
-- 2026-10-17 第2版: 116660DBLUE・126660DBLUE・136660DBLUE（店の行名「ロレックス シードウェラー ディープブルー 116660D-BLUE」等）が sea-dweller に入っていたため deepsea に移した（saburo-2 の指摘・tomomi-2 の指示）。ディープシーの型番（136660 は公式 sitemap で deepsea、116660・126660 は行名で deepsea）に店が文字盤の略号 D-BLUE を付けたもの。deepsea に ref_patterns ^(116660|126660|136660)(DBLUE)?$ と、キー「ディープブルー」「シードウェラー ディープブルー」等を足した。sea-dweller に残る116660・126660・136660 系の型番は、この3件のほかに無いことを確認した。3件とも1社だけの価格のため、2社以上の型番数とページ化の対象の数（宝石広場なし 44 件／あり 55 件）は変わらない。件数は sea-dweller 4型番・deepsea 8型番。
+- 2026-10-17 第2版: 116660DBLUE・126660DBLUE・136660DBLUE（店の行名「ロレックス シードウェラー ディープブルー 116660D-BLUE」等）が sea-dweller に入っていたため deepsea に移した（saburo-2 の指摘・tomomi-2 の指示）。ディープシーの型番（136660 は公式 sitemap で deepsea、116660・126660 は行名で deepsea）に店が文字盤の略号 D-BLUE を付けたもの。deepsea に ref_patterns ^(116660|126660|136660)(DBLUE)?$ と、キー「ディープブルー」「シードウェラー ディープブルー」等を足した。sea-dweller に残る116660・126660・136660 系の型番は、この3件のほかに無いことを確認した。3件とも1社だけの価格のため、2社以上の型番数とページ化の対象の数（宝石広場なし 44 件／あり 56 件）は変わらない。件数は sea-dweller 4型番・deepsea 8型番。
+- 2026-10-17 第3版: グランドセイコーの振り分けを gs-ref-collection.json（公式の製品ページ。現行のページ 34 型番＋Wayback Machine の保存版 111 型番）に置き換えた。第1版では公式ページが残る 34 型番に加えて、店の行名に「ヘリテージコレクション」等がある型番も振り分けていたが、行名による振り分けをやめ、公式で確認できた型番だけにした。GS の keys は空にし、ref_keys で引く形にした。件数: ヘリテージコレクション 98、エボリューション9 コレクション 2、スポーツコレクション 25、エレガンスコレクション 20、マスターピースコレクション 0。2社以上の価格がある型番は、宝石広場なしでは0（GS の価格を出しているのは採用済みの店では GINZA RASIN だけ）、ありでは ヘリテージコレクション 10、エボリューション9 コレクション 0、スポーツコレクション 4、エレガンスコレクション 1、マスターピースコレクション 0。ページ化の対象（宝石広場あり）にスポーツコレクションが加わり 56 件になった（宝石広場なしは 44 件のまま）。
 
