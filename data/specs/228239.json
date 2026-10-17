@@ -1,0 +1,50 @@
+{
+  "ref": "228239",
+  "brand": "ロレックス",
+  "model": "ロレックス デイデイト",
+  "case_diameter_mm": 40,
+  "case_material": "18 ct ホワイトゴールド",
+  "bezel": "フルーテッド",
+  "crown": "スクリュー式、トゥインロック（二重防水システム）",
+  "crystal": "傷防止サファイア、日付表示部にサイクロップレンズ",
+  "dial": "パヴェダイヤモンド＆サファイア入り",
+  "movement": "パーペチュアル、機械式、自動巻",
+  "caliber": "3255",
+  "precision": "日差-2～+2秒（ケーシング後）",
+  "functions": "時針、分針、秒針。早送り機能付き瞬時に変わる曜日と日付。秒針停止機能による正確な時刻設定",
+  "oscillator": "常磁性ブルー パラクロム・ヘアスプリング。高性能パラフレックス ショック・アブソーバ",
+  "winding": "パーペチュアルローターによる両方向自動巻",
+  "power_reserve_h": 70,
+  "water_resistance_m": 100,
+  "bracelet": "プレジデント、半円型リンク（3列）",
+  "clasp": "クラウンクラスプ（コンシールドタイプ）",
+  "certification": "Superlative Chronometer（公認クロノメーター認定、ケーシング後にロレックス認定）",
+  "status": "2026-10-11時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.rolex.com/ja/watches/day-date/m228239-0049",
+      "archive": "http://web.archive.org/web/20261011122418/https://www.rolex.com/ja/watches/day-date/m228239-0049",
+      "snapshot": "2026-10-11",
+      "checked": "2026-10-17",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "certification",
+        "clasp",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "oscillator",
+        "power_reserve_h",
+        "precision",
+        "water_resistance_m",
+        "winding"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "ref": "124200",
+  "brand": "ロレックス",
+  "model": "オイスターパーペチュアル",
+  "case_diameter_mm": 34,
+  "case_material": "オイスタースチール",
+  "bezel": "ドーム",
+  "crown": "スクリュー式、トゥインロック（二重防水システム）",
+  "crystal": "傷防止サファイア",
+  "dial": "ピスタチオ",
+  "movement": "パーペチュアル、機械式、自動巻",
+  "caliber": "2232",
+  "precision": "日差-2～+2秒（ケーシング後）",
+  "functions": "時針、分針、秒針。秒針停止機能による正確な時刻設定",
+  "oscillator": "特許形状のシリコン製シロキシ・ヘアスプリング。高性能パラフレックス ショック・アブソーバ",
+  "winding": "パーペチュアルローターによる両方向自動巻",
+  "power_reserve_h": 55,
+  "water_resistance_m": 100,
+  "bracelet": "オイスター（3列リンク）",
+  "clasp": "オイスタークラスプ、 イージーリンク（約5 mmのエクステンションリンク）",
+  "certification": "高精度クロノメーター (COSC、ケーシング後にロレックス認定)",
+  "status": "2025-10-07時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.rolex.com/ja/watches/oyster-perpetual/m124200-0006",
+      "archive": "http://web.archive.org/web/20251007204504/https://www.rolex.com/ja/watches/oyster-perpetual/m124200-0006",
+      "snapshot": "2025-10-07",
+      "checked": "2026-10-17",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "certification",
+        "clasp",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "oscillator",
+        "power_reserve_h",
+        "precision",
+        "water_resistance_m",
+        "winding"
+      ]
+    }
+  ]
+}

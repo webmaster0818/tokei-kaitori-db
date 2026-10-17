@@ -1,0 +1,50 @@
+{
+  "ref": "126505",
+  "brand": "ロレックス",
+  "model": "デイトナ エバーローズゴールド",
+  "case_diameter_mm": 40,
+  "case_material": "18 ct エバーローズゴールド",
+  "bezel": "固定式、タキメーター、18 ct エバーローズゴールド",
+  "crown": "スクリュー式、トリプロック（三重防水システム）",
+  "crystal": "傷防止サファイア",
+  "dial": "サンダスト＆ブライトブラック",
+  "movement": "パーペチュアル、機械式クロノグラフ、自動巻",
+  "caliber": "4131",
+  "precision": "日差-2～+2秒（ケーシング後）",
+  "functions": "時針、分針、スモールセコンド（6時位置）。中央の秒針によるクロノグラフ、積算計（30分／3時位置、 12時間／9時位置）。秒針停止機能による正確な時刻設定",
+  "oscillator": "常磁性ブルー パラクロム・ヘアスプリング。高性能パラフレックス ショック・アブソーバ",
+  "winding": "パーペチュアルローターによる両方向自動巻",
+  "power_reserve_h": 72,
+  "water_resistance_m": 100,
+  "bracelet": "オイスター（3列リンク）",
+  "clasp": "セーフティキャッチ付オイスターロック、イージーリンク（約5 mmのエクステンションリンク）",
+  "certification": "Superlative Chronometer（公認クロノメーター認定、ケーシング後にロレックス認定）",
+  "status": "2026-10-12時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.rolex.com/ja/watches/cosmograph-daytona/m126505-0003",
+      "archive": "http://web.archive.org/web/20261012235910/https://www.rolex.com/ja/watches/cosmograph-daytona/m126505-0003",
+      "snapshot": "2026-10-12",
+      "checked": "2026-10-17",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "certification",
+        "clasp",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "oscillator",
+        "power_reserve_h",
+        "precision",
+        "water_resistance_m",
+        "winding"
+      ]
+    }
+  ]
+}
