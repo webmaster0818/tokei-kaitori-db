@@ -3,9 +3,9 @@
   "brand": "ロレックス",
   "model": "ヨットマスター40",
   "case_diameter_mm": 40,
-  "case_material": "オイスタースチール＆プラチナ",
+  "case_material": "ロレジウム - オイスタースチール＆プラチナ",
   "bezel": "両方向回転式、60時間目盛り入り、レイズド仕上げの数字、プラチナ",
-  "crown": "直径 40 mm",
+  "crown": "スクリュー式、トリプロック（三重防水システム）",
   "crystal": "傷防止サファイア、日付表示部にサイクロップレンズ",
   "dial": "ブライトブルー",
   "movement": "パーペチュアル、機械式、自動巻",
@@ -19,7 +19,7 @@
   "bracelet": "オイスター（3列リンク）",
   "clasp": "セーフティキャッチ付オイスターロック、イージーリンク（約5 mmのエクステンションリンク）",
   "certification": "Superlative Chronometer（公認クロノメーター認定、ケーシング後にロレックス認定）",
-  "status": "現行（公式サイトに掲載）",
+  "status": "2026-10-11時点の公式サイトに掲載",
   "sources": [
     {
       "url": "https://www.rolex.com/ja/watches/yacht-master/m126622-0002",

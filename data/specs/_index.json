@@ -6,13 +6,25 @@
     "値は各型番の公式ページ（https://www.rolex.com/ja/）のWaybackアーカイブからのみ取得する",
     "販売店・ブログ・Wikiなど公式以外からは値を補わない",
     "出典で確認できなかった項目はキー自体を書かない（推測で埋めない）",
-    "スナップショットは、その型番で取得できるいちばん新しいものを使う"
+    "スナップショットは、その型番で取得できるいちばん新しいものを使う",
+    "status は「<スナップショットの日付>時点の公式サイトに掲載」と書く（現時点で現行かは確認していない）",
+    "日本語ページのアーカイブを優先し、無い場合のみ英語ページを使い lang に記録する"
   ],
-  "verification": "書き込んだ全項目（21型番・356項目）を、同じアーカイブ本文に同じ文字列で出てくるか機械照合した。不一致0件。",
+  "verification": "全21型番・357項目について、値が公式ページの該当ラベル（直径／ベゼル／リューズ…）の直下の行かどうかを機械照合した。不一致0件。",
+  "known_issues_fixed": [
+    "2026-10-17 v1: crown にケース径の文言（「直径 41 mm」）が入っていた。平坦化した本文でラベルを正規表現照合したため、オイスター アーキテクチャーの値に含まれる「リューズ」に先に当たっていた。ラベル行→値行の構造を読む方式に変更して修正（同時に functions・case_material・dial の取り違えも解消）",
+    "2026-10-17 v1: status が「現行（公式サイトに掲載）」だったが、根拠はアーカイブの日付であるためスナップショット日付つきの表記に変更"
+  ],
+  "available_but_not_stored": [
+    "ブレスレットの素材",
+    "ダイアルの詳細（ルミネッセンス等）",
+    "オイスター アーキテクチャー"
+  ],
   "counts": {
     "created": 21,
     "not_created": 4,
-    "snapshot_2025_or_earlier": 14
+    "snapshot_2025_or_earlier": 14,
+    "fields_total": 357
   },
   "created": [
     {
@@ -21,6 +33,7 @@
       "model": "サブマリーナー",
       "fields": 17,
       "snapshot": "2026-06-09",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/submariner/m124060-0001",
       "archive": "http://web.archive.org/web/20260609061546/https://www.rolex.com/ja/watches/submariner/m124060-0001"
     },
@@ -30,6 +43,7 @@
       "model": "エクスプローラー",
       "fields": 17,
       "snapshot": "2026-01-25",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/explorer/m124270-0001",
       "archive": "http://web.archive.org/web/20260125131246/https://www.rolex.com/ja/watches/explorer/m124270-0001"
     },
@@ -37,8 +51,9 @@
       "ref": "126500LN",
       "file": "data/specs/126500ln.json",
       "model": "デイトナ ステンレススチール",
-      "fields": 16,
+      "fields": 17,
       "snapshot": "2025-12-28",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/cosmograph-daytona/m126500ln-0001",
       "archive": "http://web.archive.org/web/20251228085305/https://www.rolex.com/ja/watches/cosmograph-daytona/m126500ln-0001",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
@@ -49,6 +64,7 @@
       "model": "デイトナ ステンレススチール",
       "fields": 17,
       "snapshot": "2025-10-01",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/cosmograph-daytona/m126503-0001",
       "archive": "http://web.archive.org/web/20251001174924/https://www.rolex.com/ja/watches/cosmograph-daytona/m126503-0001",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
@@ -59,6 +75,7 @@
       "model": "デイトナ イエローゴールド",
       "fields": 17,
       "snapshot": "2026-01-18",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/cosmograph-daytona/m126508-0001",
       "archive": "http://web.archive.org/web/20260118113814/https://www.rolex.com/ja/watches/cosmograph-daytona/m126508-0001"
     },
@@ -68,6 +85,7 @@
       "model": "シードゥエラー コンビ",
       "fields": 17,
       "snapshot": "2025-09-14",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/sea-dweller/m126603-0001",
       "archive": "http://web.archive.org/web/20250914175714/https://www.rolex.com/ja/watches/sea-dweller/m126603-0001",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
@@ -78,6 +96,7 @@
       "model": "サブマリーナー デイト",
       "fields": 17,
       "snapshot": "2025-07-12",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/submariner/m126610ln-0001",
       "archive": "http://web.archive.org/web/20250712013443/https://www.rolex.com/ja/watches/submariner/m126610ln-0001",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
@@ -88,6 +107,7 @@
       "model": "グリーンサブマリーナー",
       "fields": 17,
       "snapshot": "2025-09-10",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/submariner/m126610lv-0002",
       "archive": "http://web.archive.org/web/20250910085116/https://www.rolex.com/ja/watches/submariner/m126610lv-0002",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
@@ -98,6 +118,7 @@
       "model": "サブマリーナー コンビ",
       "fields": 17,
       "snapshot": "2025-11-04",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/submariner/m126613lb-0002",
       "archive": "http://web.archive.org/web/20251104212018/https://www.rolex.com/ja/watches/submariner/m126613lb-0002",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
@@ -108,6 +129,7 @@
       "model": "サブマリーナー コンビ",
       "fields": 17,
       "snapshot": "2025-11-14",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/submariner/m126613ln-0002",
       "archive": "http://web.archive.org/web/20251114050137/https://www.rolex.com/ja/watches/submariner/m126613ln-0002",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
@@ -118,6 +140,7 @@
       "model": "サブマリーナー 18K",
       "fields": 17,
       "snapshot": "2025-09-13",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/submariner/m126619lb-0003",
       "archive": "http://web.archive.org/web/20250913144413/https://www.rolex.com/ja/watches/submariner/m126619lb-0003",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
@@ -128,6 +151,7 @@
       "model": "ヨットマスター40 コンビ",
       "fields": 17,
       "snapshot": "2026-09-16",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/yacht-master/m126621-0001",
       "archive": "http://web.archive.org/web/20260916183357/https://www.rolex.com/ja/watches/yacht-master/m126621-0001"
     },
@@ -137,6 +161,7 @@
       "model": "ヨットマスター40",
       "fields": 17,
       "snapshot": "2026-10-11",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/yacht-master/m126622-0002",
       "archive": "http://web.archive.org/web/20261011130232/https://www.rolex.com/ja/watches/yacht-master/m126622-0002"
     },
@@ -146,6 +171,7 @@
       "model": "GMTマスターⅡ　オイスターブレスレット",
       "fields": 17,
       "snapshot": "2025-07-15",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/gmt-master-ii/m126710blnr-0002",
       "archive": "http://web.archive.org/web/20250715125046/https://www.rolex.com/ja/watches/gmt-master-ii/m126710blnr-0002",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
@@ -156,6 +182,7 @@
       "model": "GMTマスターⅡ　オイスターブレスレット",
       "fields": 17,
       "snapshot": "2025-11-18",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/gmt-master-ii/m126710blro-0002",
       "archive": "http://web.archive.org/web/20251118011726/https://www.rolex.com/ja/watches/gmt-master-ii/m126710blro-0002",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
@@ -166,6 +193,7 @@
       "model": "GMTマスターⅡ コンビ",
       "fields": 17,
       "snapshot": "2026-01-02",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/gmt-master-ii/m126711chnr-0002",
       "archive": "http://web.archive.org/web/20260102133807/https://www.rolex.com/ja/watches/gmt-master-ii/m126711chnr-0002"
     },
@@ -175,6 +203,7 @@
       "model": "GMTマスターⅡ 18K",
       "fields": 17,
       "snapshot": "2025-09-07",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/gmt-master-ii/m126715chnr-0001",
       "archive": "http://web.archive.org/web/20250907233454/https://www.rolex.com/ja/watches/gmt-master-ii/m126715chnr-0001",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
@@ -185,6 +214,7 @@
       "model": "GMTマスターⅡ 18K",
       "fields": 17,
       "snapshot": "2025-08-18",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/gmt-master-ii/m126719blro-0002",
       "archive": "http://web.archive.org/web/20250818175602/https://www.rolex.com/ja/watches/gmt-master-ii/m126719blro-0002",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
@@ -195,6 +225,7 @@
       "model": "GMTマスターII SS 緑黒ベゼル",
       "fields": 17,
       "snapshot": "2026-06-09",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/gmt-master-ii/m126720vtnr-0001",
       "archive": "http://web.archive.org/web/20260609063627/https://www.rolex.com/ja/watches/gmt-master-ii/m126720vtnr-0001"
     },
@@ -204,6 +235,7 @@
       "model": "エクスプローラー 40",
       "fields": 17,
       "snapshot": "2025-12-06",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/explorer/m224270-0001",
       "archive": "http://web.archive.org/web/20251206033148/https://www.rolex.com/ja/watches/explorer/m224270-0001",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
@@ -214,6 +246,7 @@
       "model": "エクスプローラーII",
       "fields": 17,
       "snapshot": "2025-08-03",
+      "lang": "ja",
       "source_url": "https://www.rolex.com/ja/watches/explorer/m226570-0001",
       "archive": "http://web.archive.org/web/20250803054754/https://www.rolex.com/ja/watches/explorer/m226570-0001",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
