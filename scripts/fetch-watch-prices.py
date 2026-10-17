@@ -264,7 +264,7 @@ def parse_daikokuya(html: str, url: str) -> list[dict]:
     out = []
     row_pat = re.compile(r"<tr[^>]*>([\s\S]*?)</tr>", re.I)
     ref_pat = re.compile(r'<span class="ref">([A-Za-z0-9./-]{4,20})</span>')
-    name_pat = re.compile(r'<td class="item-name">([^<]{2,40})<br>')
+    name_pat = re.compile(r'<td class="item-name">([^<]{2,80})<br>')  # 2026-10-17: 40字で止まり長い名前（例 シーマスター ダイバー 300M コーアクシャル マスター クロノメーター 42MM）が空欄になっていた（jiro-2 指摘）
     dial_pat = re.compile(r'<span class="end">([^<]{1,30})</span>')
     cell_pat = re.compile(r'<td class="price-cell">([\s\S]*?)</td>', re.I)
 
