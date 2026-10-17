@@ -18,6 +18,8 @@
 - 更新日: 見出し直下の <time datetime="2026-10-13">（ブランドページ単位）。
 ⚠️ 同じページの「高価買取実績」（掲載日つき・買取価格：）は過去の買取額で提示額ではないので読まない。
    serv_tbl の行だけを対象にする。
+- 行の区別: dial＝「カラー」列の表記（例 BK・WH）。variant＝行名（店の表記そのまま。例「チューダー ブラックベイ GMT 3列ブレス BL/RDベゼル M79830RB-0001」）。
+  ブレス・ベゼル等の区別の語は行名の途中に入るため、行名全体を残す。
 ⚠️ 「お問い合わせ」等、数字の無いセルは飛ばす（0円にしない）。ロレックスは新品279行・未使用品260行が「お問い合わせ」
    （2026-10-17 実測。中古品は362行中329行に価格あり）。
 ⚠️ 先方の表記どおりに読むため、先方の誤記らしき値もそのまま入る。実例: デイデイト40 228235（BR）の中古品が
@@ -27,6 +29,10 @@
 - 第2弾（2026-10-17）: パテック フィリップ 19型番・チューダー 87型番を追加（表の形は他ブランドと同じ1価格＝中古）。
   ⚠️ チューダーの型番は「M79833MN-0003」（M接頭＋文字盤コード）。GINZA RASIN は「79363N」と書くので、
      norm_ref のままでは同じ時計が一致しない（宝石広場はロデオと同じ書き方）。突合の規則は組み込み側で決めること。
+
+★ 2026-10-17 方針変更（tomomi-2）: 同じ型番の行を最大額にまとめず、表の行をすべて返す。
+  各行を区別する文言は店の表記のまま dial / material / variant に入れる（推測で補わない。無ければ空欄）。
+  ★ variant は PriceRecord に無いキーで、このとき追加した（行を区別する店の表記をそのまま入れる）。
 """
 from __future__ import annotations
 
@@ -67,7 +73,7 @@ def parse(html: str, url: str) -> list[dict]:
     html = strip_comments(html)
     upd = re.search(r'<time datetime="(\d{4}-\d{2}-\d{2})" class="serv_date"', html)
     page_updated = upd.group(1) if upd else None
-    rows: dict[tuple[str, str], dict] = {}
+    rows: list[dict] = []
     for tbl in re.findall(r'<table class="serv_tbl[^"]*">([\s\S]*?)</table>', html):
         for tr in re.findall(r"<tr[^>]*>([\s\S]*?)</tr>", tbl):
             m_name = re.search(r'<p class="servtbl_ttl">([\s\S]*?)</p>', tr)
@@ -81,6 +87,7 @@ def parse(html: str, url: str) -> list[dict]:
             i, raw_ref = hit
             ref = norm_ref(raw_ref)
             model = " ".join(tokens[1:i])  # 先頭はブランド名
+            variant = name
             tds = re.findall(r"<td[^>]*>([\s\S]*?)</td>", tr)
             dial = text(tds[1]) if len(tds) > 1 else ""
             cells = re.findall(r'<td class="serv_tbl_price fnt_ex02">([\s\S]*?)</td>', tr)
@@ -96,13 +103,10 @@ def parse(html: str, url: str) -> list[dict]:
                 if not v:
                     continue
                 rec = {"shop": SHOP, "shop_id": SHOP_ID, "ref": ref, "model": model, "dial": dial,
-                       "price_type": "上限", "condition": cond, "price_jpy": v,
+                       "variant": variant, "price_type": "上限", "condition": cond, "price_jpy": v,
                        "source_url": url, "page_updated": page_updated, "fetched_at": TODAY}
-                # 同じ型番が文字盤色ごとに複数行ある → (型番, 状態) ごとに最大額を採る（ウォッチニアンと同じ）
-                k = (ref, cond)
-                if k not in rows or v > rows[k]["price_jpy"]:
-                    rows[k] = rec
-    return list(rows.values())
+                rows.append(rec)  # 同じ型番の文字盤違いの行もまとめずに返す
+    return rows
 
 
 if __name__ == "__main__":

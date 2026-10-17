@@ -30,8 +30,13 @@
   採用する場合は一覧ではなく詳細ページ（housekihiroba_detail.py）で状態別に取る。
 このファイルの parse() は一覧（/watch_brand/<id>）用 → 1型番1レコード・condition=None・page_updated=None。
 detail_urls(一覧HTML) で {型番: [詳細URL, …]} が取れる（詳細URL一覧の生成に使う）。
-⚠️ 同じ型番が文字盤色・素材ごとに複数カードある → 型番ごとに最大額を採る。
+- 行の区別: dial＝「色:」、material＝「材質:」の表記そのまま。variant＝カードの商品名（1つ目の <span>）と、色・材質以外の語の表記そのまま。
+⚠️ 同じ型番が文字盤色・素材ごとに複数カードある → まとめずに全カード返す。
 ⚠️ 価格が「お問い合わせ」のカードは飛ばす（0円にしない）。
+
+★ 2026-10-17 方針変更（tomomi-2）: 同じ型番の行を最大額にまとめず、表の行をすべて返す。
+  各行を区別する文言は店の表記のまま dial / material / variant に入れる（推測で補わない。無ければ空欄）。
+  ★ variant は PriceRecord に無いキーで、このとき追加した（行を区別する店の表記をそのまま入れる）。
 """
 from __future__ import annotations
 
@@ -87,7 +92,7 @@ def parse(html: str, url: str) -> list[dict]:
         from housekihiroba_detail import parse as parse_detail
         return parse_detail(html, url)
     html = strip_comments(html)
-    rows: dict[str, dict] = {}
+    rows: list[dict] = []
     for _href, body in CARD.findall(html):
         pm = re.search(r'<li class="text_right red_text">([^<]*)</li>', body)
         if not pm:
@@ -105,14 +110,14 @@ def parse(html: str, url: str) -> list[dict]:
         ref = norm_ref(raw_ref)
         dial = next((s.split(":", 1)[1] for s in spans if s.startswith("色:")), "")
         material = next((s.split(":", 1)[1] for s in spans if s.startswith("材質:")), "")
+        variant = " ".join([model] + [s for s in spans[2:] if not s.startswith(("色:", "材質:"))])
         rec = {"shop": SHOP, "shop_id": SHOP_ID, "ref": ref, "model": model, "dial": dial,
-               "material": material,
+               "material": material, "variant": variant,
                "price_type": "上限" if ("〜" in price_txt or "～" in price_txt) else "通常",
                "condition": None, "price_jpy": v, "source_url": url,
                "page_updated": None, "fetched_at": TODAY}
-        if ref not in rows or v > rows[ref]["price_jpy"]:
-            rows[ref] = rec
-    return list(rows.values())
+        rows.append(rec)
+    return rows
 
 
 if __name__ == "__main__":

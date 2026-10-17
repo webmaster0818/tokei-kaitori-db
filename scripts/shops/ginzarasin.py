@@ -29,7 +29,14 @@
    当サイトの型番は 116503NG のように連結しているので、直後の NG / G は連結する。
 - 第2弾（2026-10-17）: パテック フィリップ 109型番・チューダー 72型番・グランドセイコー 258型番を追加（既存の parse のまま読める）。
   ⚠️ チューダーは「79363N」（M接頭・文字盤コードなし）。ロデオドライブ・宝石広場は「M79833MN-0003」。
-⚠️ 同じ型番に複数行（文字盤違い）→ (型番, 状態) ごとに最大額を採る。
+- 行の区別: variant＝行名（店の表記そのまま。例「ロレックス サブマリーナ ノンデイト ブラック 124060」）。
+  dial＝行名で型番より後ろに書かれた語（例「ホワイトシェル」。無ければ空欄）。
+  文字盤の語は行名の途中に入るのが普通で、モデル名との切れ目は表記から決められないため、行名全体を variant に残す。
+⚠️ 同じ型番に複数行（文字盤違い）がある。チューダー 79363N のように行名が完全に同じで価格だけ違う行もある（区別の文言なし）。
+
+★ 2026-10-17 方針変更（tomomi-2）: 同じ型番の行を最大額にまとめず、表の行をすべて返す。
+  各行を区別する文言は店の表記のまま dial / material / variant に入れる（推測で補わない。無ければ空欄）。
+  ★ variant は PriceRecord に無いキーで、このとき追加した（行を区別する店の表記をそのまま入れる）。
 """
 from __future__ import annotations
 
@@ -85,14 +92,15 @@ def parse(html: str, url: str) -> list[dict]:
     html = strip_comments(html)
     upd = re.search(r'class="(?:souba|kaitori)_update">\s*(\d{4})年(\d{1,2})月(\d{1,2})日', html)
     page_updated = (f"{upd.group(1)}-{int(upd.group(2)):02d}-{int(upd.group(3)):02d}" if upd else None)
-    rows: dict[tuple[str, str], dict] = {}
+    rows: list[dict] = []
     for tr in re.findall(r"<tr>([\s\S]*?)</tr>", html):
         if "souba_specialprice" not in tr:
             continue
         m = NAME.search(tr)
         if not m:
             continue
-        tokens = text(m.group(1)).split()
+        row_name = text(m.group(1))
+        tokens = row_name.split()
         hit = _split_ref(tokens)
         if not hit:
             continue
@@ -115,13 +123,11 @@ def parse(html: str, url: str) -> list[dict]:
             v = yen(text(body))
             if not v:
                 continue  # 「ASK」等
-            rec = {"shop": SHOP, "shop_id": SHOP_ID, "ref": ref, "model": model, "dial": tail,
+            rec = {"shop": SHOP, "shop_id": SHOP_ID, "ref": ref, "model": model, "dial": tail, "variant": row_name,
                    "price_type": "上限", "condition": cond, "price_jpy": v, "source_url": url,
                    "page_updated": page_updated, "fetched_at": TODAY}
-            k = (ref, cond)
-            if k not in rows or v > rows[k]["price_jpy"]:
-                rows[k] = rec
-    return list(rows.values())
+            rows.append(rec)
+    return rows
 
 
 if __name__ == "__main__":

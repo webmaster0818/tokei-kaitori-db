@@ -21,8 +21,9 @@
 ⚠️ 更新日は額ごとに違い、数か月更新されていない額がある（実測: 126610LN の未使用品は 2026-03-02）。
    parse(..., max_age_months=3) で「更新日が取得日から3か月以内の額だけ」に絞れる（更新日が無い額も落とす）。
    既定（None）は絞らない。
-⚠️ 同じ型番に文字盤・素材違いの詳細ページが複数ある。1ページ＝1商品なので、型番×状態の最大額は
-   merge_max() でまとめる（組み込み側で使う）。
+⚠️ 同じ型番に文字盤・素材違いの詳細ページが複数ある。1ページ＝1商品。parse() はまとめない。
+   型番×状態の最大額が必要なときだけ merge_max() を使う（2026-10-17 の方針では使わない）。
+- 行の区別: dial＝仕様表の「色」、material＝「材質名」、variant＝「管理NO」の表記（例「管理NO RX2950」）。
 ⚠️ 価格が「お問い合わせ」の状態は飛ばす（0円にしない）。
 
 使い方:
@@ -30,6 +31,10 @@
   python3 scripts/shops/housekihiroba_detail.py --build-urls 一覧HTML…
       一覧ページ（/watch_brand/<id> を保存したもの。ファイル名はURLSのキー）から、
       data/watch-master.json の型番と一致する詳細URLを housekihiroba_detail_urls.tsv に書き出す。
+
+★ 2026-10-17 方針変更（tomomi-2）: 同じ型番の行を最大額にまとめず、表の行をすべて返す。
+  各行を区別する文言は店の表記のまま dial / material / variant に入れる（推測で補わない。無ければ空欄）。
+  ★ variant は PriceRecord に無いキーで、このとき追加した（行を区別する店の表記をそのまま入れる）。
 """
 from __future__ import annotations
 
@@ -112,6 +117,7 @@ def parse(html: str, url: str, max_age_months: int | None = None, today: str | N
             continue
         out.append({"shop": SHOP, "shop_id": SHOP_ID, "ref": ref, "model": model,
                     "dial": spec.get("色", ""), "material": spec.get("材質名", ""),
+                    "variant": f"管理NO {spec['管理NO']}" if spec.get("管理NO") else "",
                     "price_type": "上限" if ("〜" in pm.group(1) or "～" in pm.group(1)) else "通常",
                     "condition": "未使用" if cond == "未使用品" else "中古", "price_jpy": v,
                     "source_url": url, "page_updated": upd, "fetched_at": fetched})

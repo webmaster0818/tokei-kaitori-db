@@ -24,7 +24,13 @@
   条件を満たした場合の額 → price_type=上限（ロデオドライブ・GINZA RASIN と同じ扱い）。
 - 更新日: 価格表の直前の <time> 「更新日：2026年10月13日」。
 ⚠️ 同じページの「高価買取実績」（○年○月お取引の買取実績）は過去の取引額なので読まない。
-⚠️ 同じ型番に文字盤違いの行がある → (型番, 状態) ごとに最大額を採る。
+- 行の区別: variant＝<span> 内の型番より前の表記そのまま（例「SS / ホワイト文字盤 / ランダム」）。
+  dial＝その中で「文字盤」を含む語（例「ホワイト文字盤」）。material は表記から決められないので空欄。
+⚠️ 同じ型番に文字盤違いの行がある → まとめずに全行返す。
+
+★ 2026-10-17 方針変更（tomomi-2）: 同じ型番の行を最大額にまとめず、表の行をすべて返す。
+  各行を区別する文言は店の表記のまま dial / material / variant に入れる（推測で補わない。無ければ空欄）。
+  ★ variant は PriceRecord に無いキーで、このとき追加した（行を区別する店の表記をそのまま入れる）。
 """
 from __future__ import annotations
 
@@ -55,7 +61,7 @@ def parse(html: str, url: str) -> list[dict]:
     head = html[max(0, start - 6000):start]
     um = re.findall(r"更新日：(\d{4})年(\d{1,2})月(\d{1,2})日", head)
     page_updated = f"{um[-1][0]}-{int(um[-1][1]):02d}-{int(um[-1][2]):02d}" if um else None
-    rows: dict[tuple[str, str], dict] = {}
+    rows: list[dict] = []
     for name_html, prices_html in ROW.findall(html[start:]):
         m = re.match(r"([\s\S]*?)<span>([\s\S]*?)</span>", name_html)
         if not m:
@@ -66,19 +72,18 @@ def parse(html: str, url: str) -> list[dict]:
         if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9./-]{3,}", raw_ref) or not re.search(r"\d{3,}", raw_ref):
             continue
         ref = norm_ref(raw_ref)
-        dial = " / ".join(parts[:-1])
+        variant = " / ".join(parts[:-1])
+        dial = next((p for p in parts[:-1] if "文字盤" in p), "")
         prices = re.findall(r'<td class="pricetable__price">([^<]*)</td>', prices_html)
         for cond, raw in zip(("未使用", "中古"), prices):
             v = yen(raw)
             if not v:
                 continue  # 「-」
             rec = {"shop": SHOP, "shop_id": SHOP_ID, "ref": ref, "model": model, "dial": dial,
-                   "price_type": "上限", "condition": cond, "price_jpy": v, "source_url": url,
+                   "variant": variant, "price_type": "上限", "condition": cond, "price_jpy": v, "source_url": url,
                    "page_updated": page_updated, "fetched_at": TODAY}
-            k = (ref, cond)
-            if k not in rows or v > rows[k]["price_jpy"]:
-                rows[k] = rec
-    return list(rows.values())
+            rows.append(rec)
+    return rows
 
 
 if __name__ == "__main__":
