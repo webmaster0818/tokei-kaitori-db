@@ -1,0 +1,9 @@
+{
+ "_note": "check-names.py の例外表。表記の違いとして扱うと決まった不一致を許可する。条件（ref・shop・kind・detail_contains）はすべて満たしたときだけ許可。省いた条件は問わない。",
+ "allow": [
+  {"ref": "126234", "shop": "大黒屋", "kind": "素材", "detail_contains": "ホワイトロレゾール",
+   "reason": "ホワイトロレゾール（ケースはオイスタースチール・ベゼルのみWG）を「SS」と表記。2026-10-17 tomomi-2 が表記の違いと判断（master-mismatch.md 5章）"},
+  {"ref": "126334", "shop": "大黒屋", "kind": "素材", "detail_contains": "ホワイトロレゾール",
+   "reason": "同上"}
+ ]
+}
