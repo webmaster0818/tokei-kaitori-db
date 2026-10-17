@@ -60,6 +60,12 @@ try {
   console.log("git 履歴を読めないため、data/ever-published-refs.json のみを使います。");
 }
 for (const p of published) ever.add(p);
+// 確認待ちで公開を止めた型番（data/ref-overrides.json の hold）は転送しない（一度も本番に出ていない。2026-10-17）
+{
+  const op = path.join(root, "data", "ref-overrides.json");
+  const hold = fs.existsSync(op) ? Object.keys(JSON.parse(fs.readFileSync(op, "utf8")).hold ?? {}) : [];
+  for (const h of hold) ever.delete(h.toLowerCase());
+}
 
 // 転送先の決定に使う型番マスタとモデル定義（lib/families.json は lib/models.ts と共有）
 const master = JSON.parse(fs.readFileSync(path.join(root, "data", "watch-master.json"), "utf8")).refs ?? {};

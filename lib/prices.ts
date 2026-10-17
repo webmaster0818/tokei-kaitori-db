@@ -246,7 +246,11 @@ export function summarize(ref: string, date = latestDate()): RefSummary | null {
   const best = reps[0] ?? null;
   return {
     ref,
-    models: [...new Set(records.map((r) => r.model).filter((m): m is string => !!m))],
+    models: (() => {
+      const ms = [...new Set(records.map((r) => r.model).filter((m): m is string => !!m))];
+      const o = refOverrides().name[ref];
+      return o ? [o, ...ms.filter((m) => m !== o)] : ms;
+    })(),
     records: [...records].sort((a, b) => b.price_jpy - a.price_jpy),
     shops: [...new Set(records.map((r) => r.shop))],
     ceilingMin: prices.length ? Math.min(...prices) : null,
@@ -281,6 +285,16 @@ export function prototypeRefs(): string[] {
  *    （takushoku-biyori でスパム扱いを受けた前例あり）。
  */
 const publishableCache = new Map<string, string[]>();
+// 型番マスタの取り違えの手当て（data/ref-overrides.json）
+let overridesCache: { name: Record<string, string>; hold: Record<string, string> } | null = null;
+export function refOverrides() {
+  if (overridesCache) return overridesCache;
+  const p = path.join(process.cwd(), "data", "ref-overrides.json");
+  const d = fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, "utf8")) : {};
+  overridesCache = { name: d.name ?? {}, hold: d.hold ?? {} };
+  return overridesCache;
+}
+
 // 段階的な公開（data/publish-gate.json）。brands が null なら全ブランド。
 function publishGateBrands(): Set<string> | null {
   const p = path.join(process.cwd(), "data", "publish-gate.json");
@@ -298,6 +312,7 @@ export function publishableRefs(): string[] {
   const refs = Object.keys(master);
   const out = refs.filter((ref) => {
     if (gate && !gate.has(master[ref]?.brand)) return false;
+    if (refOverrides().hold[ref]) return false;
     const s = summarize(ref);
     // 複数店舗の価格が取れているものだけを公開する（比較サイトとして成立する最低条件）
     return !!s && s.records.length > 0 && s.shops.length >= 2;
