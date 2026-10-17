@@ -709,11 +709,8 @@
       "status": "existing",
       "ref_keys": [
         "116600",
-        "116660DBLUE",
         "126600",
         "126603",
-        "126660DBLUE",
-        "136660DBLUE",
         "16600"
       ],
       "ref_keys_by_official_ref": [
@@ -721,7 +718,7 @@
         "126603"
       ],
       "counts": {
-        "refs": 7,
+        "refs": 4,
         "multi_shop_wo_hk": 4,
         "multi_shop_w_hk": 4,
         "published_now": 4
@@ -737,16 +734,26 @@
         "シードゥエラー ディープシー",
         "シードゥエラー・ディープシー",
         "シードウェラーディープシー",
-        "シードウェラー ディープシー"
+        "シードウェラー ディープシー",
+        "ディープブルー",
+        "シードゥエラーディープブルー",
+        "シードウェラーディープブルー",
+        "シードウェラー ディープブルー"
       ],
       "source_url": "https://web.archive.org/web/20260115050129/https://www.rolex.com/ja/watches",
       "checked_at": "2026-10-17",
       "status": "new",
+      "ref_patterns": [
+        "^(116660|126660|136660)(DBLUE)?$"
+      ],
       "ref_keys": [
         "116660",
+        "116660DBLUE",
         "126067",
         "126660",
+        "126660DBLUE",
         "136660",
+        "136660DBLUE",
         "136668LB"
       ],
       "ref_keys_by_official_ref": [
@@ -755,7 +762,7 @@
         "136668LB"
       ],
       "counts": {
-        "refs": 5,
+        "refs": 8,
         "multi_shop_wo_hk": 4,
         "multi_shop_w_hk": 5,
         "published_now": 3
