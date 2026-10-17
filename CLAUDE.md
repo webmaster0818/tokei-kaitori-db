@@ -161,3 +161,11 @@
 - **P2 GSC 日別（dataState=all）**: 9/20〜9/30 は 21〜249/日 → 10/1 36・10/2 22・10/3 12 → **10/4〜10/16 の13日で合計5**（10/6 1・10/8 1・10/14 2・10/15 1）。減少が続いているのではなく 0 付近で横ばい。07:00 点検の「71→3」は 10/1〜7（36+22+12+1=71）と 10/8〜14（1+2=3）の比較。
 - **登録サンプル（`reports/index-sample-2026-10-17.json`）**: 0/32（未登録22・未知9・404 1）。10/16 07:00 も 0/32。10/15 ファイルとの URL 単位差分＝状態変化1（522.30.42.30.04.001 登録→未登録・10/16 に既知）、クロール日が進んだ15本・戻った0本。
 - 本番: robots `Allow: /`・sitemap 227・sitemap 全227URL が 200（cb付き）・主要5ページ noindex/X-Robots-Tag 無し・canonical 自己参照・Googlebot UA 200・http→https 301。サイト側の事故なし。
+
+### 2026-10-17 夕 デザイン刷新（ミッドナイトネイビー案・MediaXAI 承認）✅本番反映（`59b49db1`）
+- **TOP 再構築**: FV＝新規生成の無銘時計写真（Nano Banana Pro・3針スモールセコンド・文字盤に文字なし・タキメーター／王冠なし。`public/images/hero-watch{,-sm}.webp`）＋明朝見出し「その時計の、いまの価値を。」＋型番検索（公開型番のみ・`/ref/<小文字>/` へ遷移。`components/RefSearch.tsx`）＋2ボタン＋実績帯。**実績帯とサブコピーの数字はビルド時に `publishableRefs()` 由来で算出**（現在 掲載206型番・比較5社・4ブランド）。既存セクション（ブランド・モデル・説明文・掲載データの概要・型番別表・取得方法）は全て残した。
+- **新設**: 「比較している買取店」5社カード＋公式サイトのキャプチャ（`public/images/shops/*.webp`・出典：〇〇 公式サイト（2026年10月17日時点）。CDP 固定待機・実UA・5社とも撮影成功し目視確認済み）。撮り直したら `lib/shops.ts` の `CAPTURED_ON` を更新する。
+- **共通テーマ**: ヘッダー／フッター（`components/`）、ロゴ案A を SVG 化（`components/Logo.tsx`・`app/icon.svg`・`app/favicon.ico`・`public/og-image.png`）、ボタンは `.btn` 1種類、表は `.data-table`、単色線画アイコン、スクロール表示（`<html class="js">` のときだけ・reduced-motion では動かさない）。フォント＝Shippori Mincho＋Zen Kaku Gothic New（Google Fonts link）。
+- **変えていないもの（本番と突合して差分0）**: title・meta description・canonical・JSON-LD・OG メタ（6ページ）。価格データ・sitemap ロジック・文言。h1 は従来どおりサイト名（FV の小見出しとして表示）。
+- 検証: build OK・sitemap 227・precheck 全項目OK・絵文字0・ASP リンク0・1440/390 で横あふれ0。本番 TOP/型番/モデル/ブランド/画像/icon/favicon/og 200、sitemap 227。本番スクショ `design-proposals/prod-*.png`（リポ外・.gitignore）。
+- デプロイは daily-update.sh と同じ手順（push＋wrangler pages deploy）。⚠️ スマホ幅の確認は CDP の `Emulation.setDeviceMetricsOverride(width:390)` なら iframe 無しで撮れる（`--window-size` の 500px 下限は受けない）。
