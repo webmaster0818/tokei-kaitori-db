@@ -1,0 +1,26 @@
+{
+  "ref": "W5330003",
+  "brand": "カルティエ",
+  "model": "Tank MC watch",
+  "prices": [
+    {
+      "price_jpy": 814000,
+      "tax_included": true,
+      "tax_note": "消費税込",
+      "as_of": "2021-06-12",
+      "url": "https://www.cartier.jp/ja/%E5%95%86%E5%93%81%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%83%BC/%E6%99%82%E8%A8%88/%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/valentines-day/w5330003-tank-mc-watch.html",
+      "archive": "http://web.archive.org/web/20210612164537/https://www.cartier.jp/ja/%E5%95%86%E5%93%81%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%83%BC/%E6%99%82%E8%A8%88/%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/valentines-day/w5330003-tank-mc-watch.html",
+      "snapshot": "2021-06-12"
+    },
+    {
+      "price_jpy": 869000,
+      "tax_included": true,
+      "as_of": "2021-09-24",
+      "url": "https://www.cartier.jp/ja/%E5%95%86%E5%93%81%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%83%BC/%E6%99%82%E8%A8%88/%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/valentines-day/w5330003-tank-mc-watch.html",
+      "tax_note": "消費税込",
+      "archive": "http://web.archive.org/web/20210924081238/https://www.cartier.jp/ja/%E5%95%86%E5%93%81%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%83%BC/%E6%99%82%E8%A8%88/%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/valentines-day/w5330003-tank-mc-watch.html",
+      "snapshot": "2021-09-24"
+    }
+  ],
+  "checked": "2026-10-17"
+}

@@ -1,0 +1,32 @@
+{
+  "ref": "126610LN",
+  "brand": "ロレックス",
+  "model": "サブマリーナー デイト",
+  "prices": [
+    {
+      "price_jpy": 1481700,
+      "tax_included": null,
+      "as_of": "2024-02-29",
+      "url": "https://www.rolex.com/ja/watches/submariner/m126610ln-0001",
+      "archive": "http://web.archive.org/web/20240229024329/https://www.rolex.com/ja/watches/submariner/m126610ln-0001",
+      "snapshot": "2024-02-29"
+    },
+    {
+      "price_jpy": 1481700,
+      "tax_included": null,
+      "as_of": "2024-10-05",
+      "url": "https://www.rolex.com/ja/watches/submariner/m126610ln-0001",
+      "archive": "http://web.archive.org/web/20241005002839/https://www.rolex.com/ja/watches/submariner/m126610ln-0001",
+      "snapshot": "2024-10-05"
+    },
+    {
+      "price_jpy": 1570800,
+      "tax_included": null,
+      "as_of": "2025-05-21",
+      "url": "https://www.rolex.com/ja/watches/submariner/m126610ln-0001",
+      "archive": "http://web.archive.org/web/20250521001324/https://www.rolex.com/ja/watches/submariner/m126610ln-0001",
+      "snapshot": "2025-05-21"
+    }
+  ],
+  "checked": "2026-10-17"
+}

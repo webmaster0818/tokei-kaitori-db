@@ -1,0 +1,48 @@
+{
+  "ref": "226570",
+  "brand": "ロレックス",
+  "model": "エクスプローラー Ⅱ",
+  "prices": [
+    {
+      "price_jpy": 1262800,
+      "tax_included": null,
+      "as_of": "2023-12-09",
+      "url": "https://www.rolex.com/ja/watches/explorer/m226570-0001",
+      "archive": "http://web.archive.org/web/20231209211301/https://www.rolex.com/ja/watches/explorer/m226570-0001",
+      "snapshot": "2023-12-09"
+    },
+    {
+      "price_jpy": 1392600,
+      "tax_included": null,
+      "as_of": "2024-01-04",
+      "url": "https://www.rolex.com/ja/watches/explorer/m226570-0001",
+      "archive": "http://web.archive.org/web/20240104172811/https://www.rolex.com/ja/watches/explorer/m226570-0001",
+      "snapshot": "2024-01-04"
+    },
+    {
+      "price_jpy": 1392600,
+      "tax_included": null,
+      "as_of": "2024-06-17",
+      "url": "https://www.rolex.com/ja/watches/explorer/m226570-0001",
+      "archive": "http://web.archive.org/web/20240617231452/https://www.rolex.com/ja/watches/explorer/m226570-0001",
+      "snapshot": "2024-06-17"
+    },
+    {
+      "price_jpy": 1477300,
+      "tax_included": null,
+      "as_of": "2025-05-03",
+      "url": "https://www.rolex.com/ja/watches/explorer/m226570-0001",
+      "archive": "http://web.archive.org/web/20250503124513/https://www.rolex.com/ja/watches/explorer/m226570-0001",
+      "snapshot": "2025-05-03"
+    },
+    {
+      "price_jpy": 1477300,
+      "tax_included": null,
+      "as_of": "2025-08-03",
+      "url": "https://www.rolex.com/ja/watches/explorer/m226570-0001",
+      "archive": "http://web.archive.org/web/20250803054754/https://www.rolex.com/ja/watches/explorer/m226570-0001",
+      "snapshot": "2025-08-03"
+    }
+  ],
+  "checked": "2026-10-17"
+}

@@ -1,0 +1,24 @@
+{
+  "ref": "336934",
+  "brand": "ロレックス",
+  "model": "スカイドゥエラー",
+  "prices": [
+    {
+      "price_jpy": 2252800,
+      "tax_included": null,
+      "as_of": "2024-03-24",
+      "url": "https://www.rolex.com/ja/watches/sky-dweller/m336934-0001",
+      "archive": "http://web.archive.org/web/20240324030551/https://www.rolex.com/ja/watches/sky-dweller/m336934-0001",
+      "snapshot": "2024-03-24"
+    },
+    {
+      "price_jpy": 2442000,
+      "tax_included": null,
+      "as_of": "2025-07-10",
+      "url": "https://www.rolex.com/ja/watches/sky-dweller/m336934-0001",
+      "archive": "http://web.archive.org/web/20250710083516/https://www.rolex.com/ja/watches/sky-dweller/m336934-0001",
+      "snapshot": "2025-07-10"
+    }
+  ],
+  "checked": "2026-10-17"
+}

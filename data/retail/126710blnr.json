@@ -1,0 +1,24 @@
+{
+  "ref": "126710BLNR",
+  "brand": "ロレックス",
+  "model": "GMTマスター Ⅱ",
+  "prices": [
+    {
+      "price_jpy": 1569700,
+      "tax_included": null,
+      "as_of": "2024-01-05",
+      "url": "https://www.rolex.com/ja/watches/gmt-master-ii/m126710blnr-0002",
+      "archive": "http://web.archive.org/web/20240105023130/https://www.rolex.com/ja/watches/gmt-master-ii/m126710blnr-0002",
+      "snapshot": "2024-01-05"
+    },
+    {
+      "price_jpy": 1664300,
+      "tax_included": null,
+      "as_of": "2025-07-15",
+      "url": "https://www.rolex.com/ja/watches/gmt-master-ii/m126710blnr-0002",
+      "archive": "http://web.archive.org/web/20250715125046/https://www.rolex.com/ja/watches/gmt-master-ii/m126710blnr-0002",
+      "snapshot": "2025-07-15"
+    }
+  ],
+  "checked": "2026-10-17"
+}
