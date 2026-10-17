@@ -1,0 +1,33 @@
+{
+  "ref": "311.10.39.30.01.001",
+  "brand": "オメガ",
+  "model": "スピードマスター Speedmaster '57 クロノグラフ 38.6MM",
+  "case_diameter_mm": 38.6,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Hesalite crystal with OMEGA logo in the centre",
+  "caliber": "Omega 1861",
+  "power_reserve_h": 48,
+  "water_resistance_m": 60,
+  "bracelet": "Material",
+  "status": "2025-04-27時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-speedmaster-57-chronograph-38-6-mm-31110393001001",
+      "archive": "http://web.archive.org/web/20250427001643/https://www.omegawatches.com/watch-omega-speedmaster-57-chronograph-38-6-mm-31110393001001",
+      "snapshot": "2025-04-27",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

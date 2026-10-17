@@ -1,0 +1,29 @@
+{
+  "ref": "310.20.42.50.01.001",
+  "brand": "オメガ",
+  "model": "スピードマスター ムーンウォッチ",
+  "case_diameter_mm": 42,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "water_resistance_m": 50,
+  "bracelet": "steel",
+  "status": "2020-09-29時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-speedmaster-moonwatch-anniversary-limited-series-31020425001001",
+      "archive": "http://web.archive.org/web/20200929172908/https://www.omegawatches.com/watch-omega-speedmaster-moonwatch-anniversary-limited-series-31020425001001",
+      "snapshot": "2020-09-29",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

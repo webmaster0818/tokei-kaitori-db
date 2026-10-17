@@ -1,0 +1,35 @@
+{
+  "ref": "304.30.44.52.01.001",
+  "brand": "オメガ",
+  "model": "スピードマスター ムーンフェイズ クロノグラフ 44.25mm",
+  "case_diameter_mm": 44.25,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 9904",
+  "power_reserve_h": 60,
+  "water_resistance_m": 100,
+  "bracelet": "Material",
+  "status": "2026-02-10時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-moonphase-co-axial-master-chronometer-moonphase-chronograph-44-25-mm-30430445201001",
+      "archive": "http://web.archive.org/web/20260210161815/https://www.omegawatches.com/en-us/watch-omega-speedmaster-moonphase-co-axial-master-chronometer-moonphase-chronograph-44-25-mm-30430445201001",
+      "snapshot": "2026-02-10",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

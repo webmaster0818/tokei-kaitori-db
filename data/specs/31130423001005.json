@@ -1,0 +1,35 @@
+{
+  "ref": "311.30.42.30.01.005",
+  "brand": "オメガ",
+  "model": "スピードマスター ムーンウォッチ プロフェッショナル クロノグラフ 42mm",
+  "case_diameter_mm": 42,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Hesalite crystal",
+  "movement": "Manual‑winding",
+  "caliber": "Omega 1861",
+  "power_reserve_h": 48,
+  "water_resistance_m": 50,
+  "bracelet": "Material",
+  "status": "2026-08-25時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-moonwatch-professional-chronograph-42-mm-31130423001005",
+      "archive": "http://web.archive.org/web/20260825072448/https://www.omegawatches.com/en-us/watch-omega-speedmaster-moonwatch-professional-chronograph-42-mm-31130423001005",
+      "snapshot": "2026-08-25",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

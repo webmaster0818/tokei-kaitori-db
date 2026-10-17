@@ -1,0 +1,26 @@
+{
+  "ref": "327.10.43.50.06.001",
+  "brand": "オメガ",
+  "model": "オメガ スピードマスター マークII",
+  "case_material": "ステンレススティール",
+  "dial": "グレー",
+  "crystal": "両面に無反射加工を施したフラット強化無反射サファイアガラス",
+  "water_resistance_m": 100,
+  "bracelet": "ステンレススティール",
+  "status": "2021-01-23時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.jp/ja/watch-omega-speedmaster-mark-ii-co-axial-chronometer-chronograph-42-4-x-46-2-mm-32710435006001",
+      "archive": "http://web.archive.org/web/20210123231856/https://www.omegawatches.jp/ja/watch-omega-speedmaster-mark-ii-co-axial-chronometer-chronograph-42-4-x-46-2-mm-32710435006001",
+      "snapshot": "2021-01-23",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "ref": "522.30.42.30.06.001",
+  "brand": "オメガ",
+  "model": "スピードマスター クロノグラフ 42mm グレー",
+  "case_diameter_mm": 42,
+  "case_material": "ステンレススティール",
+  "dial": "グレー",
+  "crystal": "両面に無反射処理を施した、ボックス型強化サファイアガラス",
+  "water_resistance_m": 50,
+  "bracelet": "ステンレススティール",
+  "status": "2021-06-20時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.jp/ja/watch-omega-speedmaster-anniversary-series-chronograph-42-mm-52230423006001",
+      "archive": "http://web.archive.org/web/20210620214250/https://www.omegawatches.jp/ja/watch-omega-speedmaster-anniversary-series-chronograph-42-mm-52230423006001",
+      "snapshot": "2021-06-20",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

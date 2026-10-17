@@ -1,0 +1,33 @@
+{
+  "ref": "15510ST.OO.1320ST.06",
+  "brand": "オーデマ・ピゲ",
+  "model": "ロイヤルオーク",
+  "case_diameter_mm": 41,
+  "case_material": "ステンレススティール",
+  "dial": "「グランドタペストリー」模様の「ナイトブルー、クラウド50」ダイヤル、蓄光処理を施したホワイトゴールドのアプライドアワーマーカーとロイヤルオーク針。",
+  "movement": "自動巻き",
+  "caliber": "4302",
+  "functions": "時、分、センターセコンド、デイト",
+  "power_reserve_h": 70,
+  "water_resistance_m": 50,
+  "bracelet": "ステンレススティールブレスレット、APフォールディングバックル。",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15510ST.OO.1320ST.06",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "dial",
+        "functions",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "ref": "210.30.42.20.03.001",
+  "brand": "オメガ",
+  "model": "オメガ シーマスター 300M コーアクシャル マスター クロノメーター",
+  "case_diameter_mm": 42,
+  "case_material": "Steel",
+  "dial": "Blue",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 8800",
+  "power_reserve_h": 55,
+  "water_resistance_m": 300,
+  "bracelet": "Material",
+  "status": "2026-09-30時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21030422003001",
+      "archive": "http://web.archive.org/web/20260930073011/https://www.omegawatches.com/en-us/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21030422003001",
+      "snapshot": "2026-09-30",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

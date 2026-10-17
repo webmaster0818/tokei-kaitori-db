@@ -1,0 +1,33 @@
+{
+  "ref": "234.10.39.20.01.001",
+  "brand": "オメガ",
+  "model": "シーマスター300 コーアクシャル マスター クロノメーター 39mm",
+  "case_diameter_mm": 39,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Scratch‑resistant sapphire crystal with anti‑reflective treatment inside",
+  "caliber": "Omega 8806",
+  "power_reserve_h": 55,
+  "water_resistance_m": 300,
+  "bracelet": "Material",
+  "status": "2025-03-03時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-300-co-axial-master-chronometer-39-mm-23410392001001",
+      "archive": "http://web.archive.org/web/20250303195935/https://www.omegawatches.com/en-us/watch-omega-seamaster-300-co-axial-master-chronometer-39-mm-23410392001001",
+      "snapshot": "2025-03-03",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

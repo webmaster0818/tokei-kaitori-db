@@ -1,0 +1,35 @@
+{
+  "ref": "4500V.110A.B126",
+  "brand": "ヴァシュロン・コンスタンタン",
+  "model": "オーヴァーシーズ",
+  "case_diameter_mm": 41,
+  "case_material": "ステンレススティール",
+  "case_back": "シースルーケースバック、サファイアガラス",
+  "movement": "自動巻き",
+  "caliber": "5100",
+  "functions": "時, 分, カレンダー表示, 中央に秒表示",
+  "power_reserve_h": 60,
+  "bracelet": "ステンレススティール, ポリッシュ／サテン仕上げ, カーフ (ブラック), ラバー (ブラック)",
+  "certification": "ジュネーブ・シール",
+  "status": "2023-02-03時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.vacheron-constantin.com/jp/ja/collections/overseas/4500v-110a-b126.html",
+      "archive": "http://web.archive.org/web/20230203200343/https://www.vacheron-constantin.com/jp/ja/collections/overseas/4500v-110a-b126.html",
+      "snapshot": "2023-02-03",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "certification",
+        "functions",
+        "movement",
+        "power_reserve_h"
+      ]
+    }
+  ]
+}

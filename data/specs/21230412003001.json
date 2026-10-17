@@ -1,0 +1,28 @@
+{
+  "ref": "212.30.41.20.03.001",
+  "brand": "オメガ",
+  "model": "シーマスター プロフェッショナル300 コーアクシャル",
+  "case_diameter_mm": 41,
+  "case_material": "ステンレススティール",
+  "dial": "ブルー",
+  "crystal": "両面に無反射加工を施したドーム型強化無反射サファイアガラス",
+  "water_resistance_m": 300,
+  "bracelet": "ステンレススティール",
+  "status": "2021-08-02時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.jp/ja/watch-omega-seamaster-diver-300m-co-axial-chronometer-41-mm-21230412003001",
+      "archive": "http://web.archive.org/web/20210802195706/https://www.omegawatches.jp/ja/watch-omega-seamaster-diver-300m-co-axial-chronometer-41-mm-21230412003001",
+      "snapshot": "2021-08-02",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

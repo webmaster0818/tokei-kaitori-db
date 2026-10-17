@@ -1,0 +1,28 @@
+{
+  "ref": "311.32.40.30.01.001",
+  "brand": "オメガ",
+  "model": "スピードマスター クロノグラフ 39.7mm",
+  "case_diameter_mm": 39.7,
+  "case_material": "ステンレススティール",
+  "dial": "ブラック",
+  "crystal": "内側に無反射処理を施した、強化サファイアガラス",
+  "water_resistance_m": 50,
+  "bracelet": "レザーストラップ",
+  "status": "2020-09-27時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.jp/ja/watch-omega-speedmaster-moonwatch-chronograph-39-7-mm-31132403001001",
+      "archive": "http://web.archive.org/web/20200927075323/https://www.omegawatches.jp/ja/watch-omega-speedmaster-moonwatch-chronograph-39-7-mm-31132403001001",
+      "snapshot": "2020-09-27",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

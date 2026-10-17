@@ -1,0 +1,33 @@
+{
+  "ref": "233.30.41.21.01.001",
+  "brand": "オメガ",
+  "model": "シーマスター300 マスター コーアクシャル クロノメーター 41mm",
+  "case_diameter_mm": 41,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Domed, scratch‑resistant sapphire crystal with anti‑reflective treatment inside",
+  "caliber": "Omega 8400",
+  "power_reserve_h": 60,
+  "water_resistance_m": 300,
+  "bracelet": "Material",
+  "status": "2025-07-13時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-300-master-co-axial-chronometer-41-mm-23330412101001",
+      "archive": "http://web.archive.org/web/20250713085659/https://www.omegawatches.com/en-us/watch-omega-seamaster-300-master-co-axial-chronometer-41-mm-23330412101001",
+      "snapshot": "2025-07-13",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}
