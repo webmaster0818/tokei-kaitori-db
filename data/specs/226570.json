@@ -1,0 +1,50 @@
+{
+  "ref": "226570",
+  "brand": "ロレックス",
+  "model": "エクスプローラーII",
+  "case_diameter_mm": 42,
+  "case_material": "オイスタースチール",
+  "bezel": "固定式、24時間目盛り入り",
+  "crown": "直径 42 mm",
+  "crystal": "傷防止サファイア、日付表示部にサイクロップレンズ",
+  "dial": "ホワイト",
+  "movement": "パーペチュアル、機械式、自動巻、GMT機能",
+  "caliber": "3285",
+  "precision": "日差-2～+2秒（ケーシング後）",
+  "functions": "キャリバー 3285、ロレックスによる完全自社製造",
+  "oscillator": "常磁性ブルー パラクロム・ヘアスプリング。高性能パラフレックス ショック・アブソーバ",
+  "winding": "パーペチュアルローターによる両方向自動巻",
+  "power_reserve_h": 70,
+  "water_resistance_m": 100,
+  "bracelet": "オイスター（3列リンク）",
+  "clasp": "セーフティキャッチ付オイスターロック、イージーリンク（約5 mmのエクステンションリンク）",
+  "certification": "高精度クロノメーター (COSC、ケーシング後にロレックス認定)",
+  "status": "現行（公式サイトに掲載）",
+  "sources": [
+    {
+      "url": "https://www.rolex.com/ja/watches/explorer/m226570-0001",
+      "archive": "http://web.archive.org/web/20250803054754/https://www.rolex.com/ja/watches/explorer/m226570-0001",
+      "snapshot": "2025-08-03",
+      "checked": "2026-10-17",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "certification",
+        "clasp",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "oscillator",
+        "power_reserve_h",
+        "precision",
+        "water_resistance_m",
+        "winding"
+      ]
+    }
+  ]
+}

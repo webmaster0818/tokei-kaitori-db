@@ -1,0 +1,50 @@
+{
+  "ref": "124270",
+  "brand": "ロレックス",
+  "model": "エクスプローラー",
+  "case_diameter_mm": 36,
+  "case_material": "オイスタースチール",
+  "bezel": "スムース",
+  "crown": "直径 36 mm",
+  "crystal": "傷防止サファイア",
+  "dial": "ブラック",
+  "movement": "パーペチュアル、機械式、自動巻",
+  "caliber": "3230",
+  "precision": "日差-2～+2秒（ケーシング後）",
+  "functions": "時針、分針、秒針。秒針停止機能による正確な時刻設定",
+  "oscillator": "常磁性ブルー パラクロム・ヘアスプリング。高性能パラフレックス ショック・アブソーバ",
+  "winding": "パーペチュアルローターによる両方向自動巻",
+  "power_reserve_h": 70,
+  "water_resistance_m": 100,
+  "bracelet": "オイスター（3列リンク）",
+  "clasp": "セーフティキャッチ付オイスターロック、イージーリンク（約5 mmのエクステンションリンク）",
+  "certification": "高精度クロノメーター (COSC、ケーシング後にロレックス認定)",
+  "status": "現行（公式サイトに掲載）",
+  "sources": [
+    {
+      "url": "https://www.rolex.com/ja/watches/explorer/m124270-0001",
+      "archive": "http://web.archive.org/web/20260125131246/https://www.rolex.com/ja/watches/explorer/m124270-0001",
+      "snapshot": "2026-01-25",
+      "checked": "2026-10-17",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "certification",
+        "clasp",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "oscillator",
+        "power_reserve_h",
+        "precision",
+        "water_resistance_m",
+        "winding"
+      ]
+    }
+  ]
+}

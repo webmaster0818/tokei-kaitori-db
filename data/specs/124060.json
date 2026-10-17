@@ -1,0 +1,50 @@
+{
+  "ref": "124060",
+  "brand": "ロレックス",
+  "model": "サブマリーナー",
+  "case_diameter_mm": 41,
+  "case_material": "オイスタースチール",
+  "bezel": "60 分目盛り入り逆回転防止、耐傷性に優れたブラックのセラミック製セラクロムベゼルインサート、数字と目盛りはプラチナコーティング",
+  "crown": "直径 41 mm",
+  "crystal": "傷防止サファイア",
+  "dial": "ブラック",
+  "movement": "パーペチュアル、機械式、自動巻",
+  "caliber": "3230",
+  "precision": "日差-2～+2秒（ケーシング後）",
+  "functions": "時針、分針、秒針。秒針停止機能による正確な時刻設定",
+  "oscillator": "常磁性ブルー パラクロム・ヘアスプリング。高性能パラフレックス ショック・アブソーバ",
+  "winding": "パーペチュアルローターによる両方向自\u0000動巻",
+  "power_reserve_h": 70,
+  "water_resistance_m": 300,
+  "bracelet": "オイスター（3列リンク）",
+  "clasp": "セーフティキャッチ付オイスターロック、 ロレックスグライドロック エクステンション システム",
+  "certification": "Superlative Chronometer（公認クロノメーター認定、ケーシング後にロレックス認定）",
+  "status": "現行（公式サイトに掲載）",
+  "sources": [
+    {
+      "url": "https://www.rolex.com/ja/watches/submariner/m124060-0001",
+      "archive": "http://web.archive.org/web/20260609061546/https://www.rolex.com/ja/watches/submariner/m124060-0001",
+      "snapshot": "2026-06-09",
+      "checked": "2026-10-17",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "certification",
+        "clasp",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "oscillator",
+        "power_reserve_h",
+        "precision",
+        "water_resistance_m",
+        "winding"
+      ]
+    }
+  ]
+}
