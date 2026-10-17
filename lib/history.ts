@@ -6,7 +6,7 @@
 //    最新日の値が summarize() と一致しない型番は、比較値（7日前比など）を出さない。
 import fs from "node:fs";
 import path from "node:path";
-import { latestDate, summarize, type PriceRecord } from "./prices";
+import { collapseUndistinguished, latestDate, shopCeilings, summarize, type PriceRecord } from "./prices";
 
 type HistoryDay = { date: string; records: PriceRecord[] };
 
@@ -18,6 +18,9 @@ export function readHistory(ref: string): HistoryDay[] {
   if (hit) return hit;
   const p = path.join(HIST_DIR, `${ref}.json`);
   const days = fs.existsSync(p) ? ((JSON.parse(fs.readFileSync(p, "utf8")).days ?? []) as HistoryDay[]) : [];
+  // 外れ値として保留した値（held）は推移・前日比にも使わない（lib/prices.ts の readSnapshot と同じ扱い）
+  // 区別のつかない複数の価格は中央値1行にまとめる（型番ページ・集計と同じ規則）
+  for (const d of days) d.records = collapseUndistinguished(d.records.filter((r) => !r.held));
   days.sort((a, b) => a.date.localeCompare(b.date));
   cache.set(ref, days);
   return days;
@@ -42,10 +45,10 @@ export type CeilingPoint = { date: string; max: number; shop: string; shops: str
 
 /** 日ごとの上限額（最高）と、上限系の価格を出している店の一覧 */
 function ceilingOn(day: HistoryDay): CeilingPoint | null {
-  const rows = pickCurrent(day.records).filter((r) => r.price_type === "上限" || r.price_type === "相場");
-  if (!rows.length) return null;
-  const best = rows.reduce((a, b) => (b.price_jpy > a.price_jpy ? b : a));
-  return { date: day.date, max: best.price_jpy, shop: best.shop, shops: [...new Set(rows.map((r) => r.shop_id))].sort() };
+  // 型番ページの「上限額（最高）」と同じ定義（店ごとの代表値 shopCeilings の最大）
+  const reps = shopCeilings(pickCurrent(day.records));
+  if (!reps.length) return null;
+  return { date: day.date, max: reps[0].price, shop: reps[0].shop, shops: reps.map((r) => r.shop_id).sort() };
 }
 
 export type CeilingChange = {
@@ -118,12 +121,22 @@ export function priceSeries(ref: string): { series: Series[]; start: number; end
   //    日ごとに「その日に掲載されていた最新月の値」（型番ページと同じ採り方）を点として描く。
   const daily = new Map<string, { shopId: string; shop: string; priceType: string; monthly: boolean; byDate: Map<string, number> }>();
   for (const day of hist) {
+    // 店×区分×状態ごとに行をまとめ、文字盤・仕様違いの複数行は中央値、状態別の値の最大をその日の値とする
+    // （上限額（最高）の定義 shopCeilings と同じ考え方。文字盤違いの高い行だけを線にしない）
+    const groups = new Map<string, PriceRecord[]>();
     for (const r of pickCurrent(day.records)) {
+      const gk = `${r.shop_id}:${r.price_type}:${r.condition ?? ""}`;
+      groups.set(gk, [...(groups.get(gk) ?? []), r]);
+    }
+    for (const rows of groups.values()) {
+      const r = rows[0];
       const key = `${r.shop_id}:${r.price_type}`;
       const e = daily.get(key) ?? { shopId: r.shop_id, shop: r.shop, priceType: r.price_type, monthly: !!r.price_month, byDate: new Map() };
       const d = r.price_month ? day.date : r.fetched_at || day.date;
-      // 仕様違い（文字盤・状態）の行が複数ある場合は最大額を採る（上限額（最高）の定義に合わせる）
-      e.byDate.set(d, Math.max(e.byDate.get(d) ?? 0, r.price_jpy));
+      const vals = rows.map((x) => x.price_jpy).sort((x, y) => x - y);
+      const m = vals.length >> 1;
+      const med = vals.length % 2 ? vals[m] : Math.floor((vals[m - 1] + vals[m]) / 2);
+      e.byDate.set(d, Math.max(e.byDate.get(d) ?? 0, med));
       daily.set(key, e);
     }
   }

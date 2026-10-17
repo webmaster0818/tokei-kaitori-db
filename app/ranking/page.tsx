@@ -138,7 +138,7 @@ export default function RankingPage() {
 
           <section className="reveal" id="spread">
             <h2 className="block-title"><IconTable />店舗間の差額が大きい型番</h2>
-            <p className="subnote mb-4">上限額・相場として公開されている価格のうち、最も高い価格と最も低い価格の差が大きい順に{spread.length}型番を掲載しています。</p>
+            <p className="subnote mb-4">上限額・相場として公開されている価格（買取店ごとの代表値）のうち、最も高い価格と最も低い価格の差が大きい順に{spread.length}型番を掲載しています。</p>
             <RefTable rows={spread} kind="spread" />
           </section>
 
@@ -162,7 +162,7 @@ export default function RankingPage() {
 
           <section className="reveal">
             <p className="note">
-              ※各社が公開している買取価格を{date}までに取得したものです。「上限額（最高）」は、区分「上限」「相場」の価格のうち最も高いものです。7日前比は、上限額・相場を公開している買取店の顔ぶれが7日前と同じ型番だけを対象にしています（掲載店の入れ替わりによる増減は含めていません）。実際の査定額は、個体の状態・付属品・時期により変動します。
+              ※各社が公開している買取価格を{date}までに取得したものです。「上限額（最高）」は、区分「上限」「相場」の価格について買取店ごとの代表値（同じ買取店が文字盤・仕様の違いにより複数の価格を公開している場合は状態ごとの中央値）を求め、そのうち最も高いものです。7日前比は、上限額・相場を公開している買取店の顔ぶれが7日前と同じ型番だけを対象にしています（掲載店の入れ替わりによる増減は含めていません）。実際の査定額は、個体の状態・付属品・時期により変動します。
             </p>
           </section>
 

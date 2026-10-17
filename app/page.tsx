@@ -46,7 +46,9 @@ export default function Home() {
     }
   }
   const shops = [...shopMap.values()].sort((a, b) => b.refs.size - a.refs.size);
-  const brandOrder = BRANDS.map((b) => b.label);
+  // ブランドの並び: ハブのあるブランド → それ以外（一覧に無いブランドを先頭にしない）
+  const brandOrder = [...BRANDS.map((b) => b.label), "パテック フィリップ", "カルティエ", "チューダー", "IWC", "パネライ", "ウブロ", "グランドセイコー"];
+  const bi = (b: string) => (brandOrder.indexOf(b) < 0 ? 99 : brandOrder.indexOf(b));
   const searchItems = rows
     .map((r) => ({ ref: r.ref, model: r.models[0] ?? "" }))
     .sort((a, b) => a.ref.localeCompare(b.ref));
@@ -207,7 +209,7 @@ export default function Home() {
             <div className="shop-grid">
               {shops.map((sh, i) => {
                 const page = SHOP_PAGES[sh.id];
-                const brands = [...sh.brands].sort((a, b) => brandOrder.indexOf(a) - brandOrder.indexOf(b));
+                const brands = [...sh.brands].sort((a, b) => bi(a) - bi(b));
                 return (
                   <article key={sh.id} className="shop-card reveal" style={{ ["--d" as string]: `${(i % 3) * 0.08}s` }}>
                     {page?.image && (
@@ -289,6 +291,7 @@ export default function Home() {
               <p className="prose-jp max-w-3xl">
                 データの取得方法：当サイトでは、各買取店が自社サイトで公開している型番別の買取価格ページを定期的に取得し、型番・日付・買取店・価格の組み合わせで記録しています。
                 価格の推定や補完は行わず、公開されていない項目は掲載しておりません。出典は、各型番ページ内にリンクで明記しています。
+                また、同じ型番・同じ状態区分で他社の価格から極端に離れている価格（他社の中央値の4倍超または4分の1未満。桁の誤記と考えられるもの）は、各社への確認ができないため掲載・集計の対象から外しています。
               </p>
               <div className="flex items-start">
                 <a href="#search" className="btn">

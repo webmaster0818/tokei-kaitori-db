@@ -64,6 +64,19 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
   const shopLink = (id: string) => (SHOP_IDS as readonly string[]).includes(id) ? `/shop/${id}/` : null;
   const ceilingShopIds = new Set(s.records.filter((r) => r.price_type === "上限" || r.price_type === "相場").map((r) => r.shop_id));
   const regularOnly = [...new Set(s.records.filter((r) => !ceilingShopIds.has(r.shop_id)).map((r) => r.shop))];
+  // 文字盤・仕様違いで複数の価格を公開している店（代表値は中央値）
+  const splitShops = s.ceilings.filter((c) => c.splitRows).map((c) => c.shop);
+  // variant（店の行名）から、ブランド名・型番・モデル名と重なる語を除いた「区別の語」だけを表示する
+  const refKey = (t: string) => t.replace(/[./-]+/g, ".").toUpperCase();
+  const variantLabel = (r: (typeof s.records)[number]) => {
+    if (!r.variant) return null;
+    const modelWords = new Set((r.model ?? "").split(/\s+/));
+    const shown = new Set([r.dial, r.material].filter(Boolean));
+    const brandWords = new Set(["ロレックス", "オメガ", "オーデマ・ピゲ", "オーデマピゲ", "ヴァシュロン・コンスタンタン", "カルティエ", "IWC", "パネライ", "ウブロ", "パテック・フィリップ", "パテックフィリップ", "チューダー", "グランドセイコー"]);
+    const words = r.variant.split(/\s+/).filter((w) => w && w !== "/" && !brandWords.has(w)
+      && refKey(w) !== r.ref && !modelWords.has(w) && !shown.has(w));
+    return words.length ? words.join(" ") : null;
+  };
 
   const ld = graph(
     {
@@ -146,7 +159,7 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
           {s.topShop && (
             <p className="summary-text">
               {date}時点で最も高い上限額を公開しているのは、<strong>{s.topShop.shop}</strong>の{yen(s.topShop.price)}
-              {s.topShop.condition ? `（${s.topShop.condition}）` : ""}です。
+              {s.topShop.condition || s.topShop.isMedian ? `（${[s.topShop.condition, s.topShop.isMedian ? "文字盤等の違いによる複数価格の中央値" : null].filter(Boolean).join("・")}）` : ""}です。
               {s.spread != null && s.spread > 0 && <>同じ型番でも、買取店により最大{yen(s.spread)}の差があります。</>}
             </p>
           )}
@@ -179,7 +192,13 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
                       オイスターブレス/ジュビリーブレス）。モデルが複数ある型番では名前を出さないと
                       「同じ状態・同じ文字盤なのに価格が違う行」に見えてしまうため、そのときだけ併記する。 */}
                   <td>
-                    {[s.models.length > 1 ? r.model : null, r.condition, r.dial, r.material].filter(Boolean).join(" / ") || "—"}
+                    {[s.models.length > 1 ? r.model : null, r.condition, r.dial, r.material, variantLabel(r)].filter(Boolean).join(" / ") || "—"}
+                    {/* 区別のつかない複数の価格を中央値1行にまとめた行（lib/prices.ts collapseUndistinguished） */}
+                    {r.collapsed && (
+                      <small className="mt-1 block text-[var(--ink-3)]">
+                        文字盤等の違いにより複数の価格を掲載（{yen(r.collapsed.min)}〜{yen(r.collapsed.max)}）。当サイトでは中央値を表示しています。
+                      </small>
+                    )}
                   </td>
                   <td className="r strong">{yen(r.price_jpy)}</td>
                   {/* ⚠️ 店ごとに取得日を出す。取得元のサイトが落ちた日は直近の値を引き継ぐため、
@@ -204,6 +223,12 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
           ※価格は各社の公開ページから取得したもので、取得日は買取店ごとに上表に記載しています。
           取得元のサイトを一時的に閲覧できない日は、直近で取得できた日の価格を掲載し、その取得日を表示しています。「上限」は状態が良好な場合の最大額、「相場」は各社が相場として公開している値です。実際の査定額は、個体の状態・付属品・時期により変動します。ご利用前に、各社の公開ページにて最新の価格をご確認ください。
         </p>
+        {splitShops.length > 0 && (
+          <p className="note mt-2">
+            ※{splitShops.join("・")}は、文字盤・仕様の違いにより同じ型番に複数の価格を公開しており、価格は文字盤・仕様によって異なります。
+            文字盤の異なる価格どうしを比べないよう、上限額（最高）・上限額（最低）・店舗間の差額には、その買取店の価格の中央値（状態ごと）を用いています。
+          </p>
+        )}
       </section>
 
       {/* 店舗間の差額（横棒）。上限・相場の価格を出している店が2社以上ある場合のみ */}
@@ -212,7 +237,7 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
           <h2 className="block-title"><IconShop />店舗間の差額</h2>
           <ShopGapBars records={s.records} />
           <p className="note mt-4">
-            ※各社が公開している上限額・相場のうち、最も高い価格を1社1本で表示しています。棒の長さは、最も高い価格を100%とした割合です。
+            ※各社が公開している上限額・相場を1社1本で表示しています（文字盤・仕様違いで複数の価格がある買取店は、その中央値）。棒の長さは、最も高い価格を100%とした割合です。
             {regularOnly.length > 0 && <>{regularOnly.join("・")}は通常の買取価格のみを公開しているため、この図には含めていません（各社の価格は上表に記載しています）。</>}
           </p>
         </section>
@@ -242,7 +267,7 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
             </dl>
           )}
           <p className="note mt-4">
-            ※日次の値は、各社が取得日に公開していた価格のうち、区分ごとに最も高いものです。取得できなかった期間は線を途切れさせています。
+            ※日次の値は、各社が取得日に公開していた価格のうち区分ごとに最も高いものです（文字盤・仕様違いで複数の価格がある買取店は、状態ごとの中央値のうち最も高いもの）。取得できなかった期間は線を途切れさせています。
             {changes.some((c) => !c.sameShops) && "比較している期間に、上限額・相場を公開している買取店の顔ぶれが変わっているため、増減には掲載店の入れ替わりによる差が含まれます。"}
             {changes.length === 0 && "記録の期間が短いため、7日前比・30日前比は表示していません。"}
           </p>

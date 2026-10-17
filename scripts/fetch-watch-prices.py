@@ -14,9 +14,13 @@
   data/history/<ref>.json      … 型番別履歴(追記)
 """
 from __future__ import annotations
+import importlib
 import json
+import math
 import re
 import ssl
+import statistics
+import sys
 import time
 import urllib.error
 import urllib.request
@@ -36,6 +40,123 @@ SLEEP = 2.0
 NANBOYA_CAP = 320
 # 「前日公開していた型番」を何日さかのぼって拾うか（取得元の一時障害に耐えるため）
 KEEP_LOOKBACK_DAYS = 5
+
+# scripts/shops/<shop_id>.py のパーサで取得する店（2026-10-17 追加。ギャラリーレアは同日の第2弾で採用）。
+# 宝石広場（housekihiroba）は保留・ピアゾ（piazo）は不採用のため入れない。
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+EXTRA_SHOPS = ["rodeodrive", "ginzarasin", "galleryrare"]
+
+# 外れ値の保留（2026-10-17 追加）。他社の値の中央値に対する比がこの範囲外の値は公開・集計に使わない。
+# 根拠（2026-10-17 の8社分で実測。区別のつかない複数価格は中央値にまとめ、店の代表値は lib/prices.ts と同じ定義）:
+#   保留後、同じ型番・同じ状態区分で他社がある 2,932行の「行の額 ÷ 他社の代表値の中央値」は 2,930行が 0.5〜2.0 倍。
+#   残り2行は 124300 のターコイズ文字盤（ギャラリーレア 3,411,000円＝2.84 倍・GINZA RASIN 3,800,000円＝3.08 倍）で、
+#   文字盤違いによる正しい値。最も低い行は 0.53 倍。
+#   保留になったのは桁の誤記と見られる3件（0.10〜0.11 倍・10.18 倍）:
+#     ロデオドライブ 228235 中古 670,000円（同表の 228235A は 7,500,000円）
+#     15400OR.OO.D002CR.01 中古 ロデオドライブ 58,000,000円 / GINZA RASIN 5,700,000円（2社のみ・どちらか判断不能）
+#   誤記（0.1 倍・10 倍付近）と正しい開き（0.53〜3.08 倍）の間を取り、対数で対称な 0.25 倍・4 倍とする。
+#   0.4 / 2.5 倍だと 124300 のターコイズ文字盤（正しい値）が保留される。
+#   なお保留前は、誤記 670,000円が中央値に混ざって他社の 228235 が実際より外れて見えた（下の逐次判定で解消）。
+OUTLIER_LOW = 0.25
+OUTLIER_HIGH = 4.0
+
+
+TUDOR_LABELS = ("チューダー", "チュードル", "TUDOR", "Tudor")
+
+
+def brand_ref(ref: str, brand: str | None) -> str:
+    """ブランド固有の型番表記をそろえる（norm_ref の後に適用）。
+
+    チューダーだけ、先頭の「M」（M79230N-0001 の M）を外す（2026-10-17 指揮役決定）。店によって
+    M 付き・無しが混在し、同じ時計が別型番になるため。末尾の「-0001」（norm_ref 後は .0001）は残す。
+    他ブランドの型番には触らない（例: カルティエ W…、IWC IW…）。
+    """
+    if brand and any(t in brand for t in TUDOR_LABELS):
+        return re.sub(r"^M(?=\d)", "", ref)
+    return ref
+
+
+def _cond_class(cond: str | None) -> str:
+    """状態の比較区分。新品・未使用は同じ区分、それ以外（中古）は別の区分として比べる。"""
+    return "new" if cond in ("新品", "未使用") else "used"
+
+
+def _collapse_key(r: dict) -> tuple:
+    """lib/prices.ts の collapseUndistinguished と同じ単位（店・型番・区分・状態・月・モデル名・文字盤・素材・variant）。"""
+    return (r["shop_id"], r["ref"], r["price_type"], r.get("condition") or "", r.get("price_month") or "",
+            r.get("model") or "", r.get("dial") or "", r.get("material") or "", r.get("variant") or "")
+
+
+def _median_int(vals: list[int]) -> int:
+    """lib/prices.ts と同じ中央値（偶数個は中央2値の平均・円未満切り捨て）。"""
+    v = sorted(vals)
+    m = len(v) // 2
+    return v[m] if len(v) % 2 else (v[m - 1] + v[m]) // 2
+
+
+def hold_outliers(records: list[dict]) -> list[dict]:
+    """他社の中央値から極端に外れた値に held="outlier" を付ける（レコードは消さない）。
+
+    - 比べる単位は「型番 × 状態区分」。区別のつかない複数の価格は中央値1つにまとめ（掲載と同じ）、
+      店ごとに代表値（状態ごとに文字盤・仕様違いの中央値→その最大）を取り、各値を「自店以外の店の代表値の中央値」で割る。
+    - 月次公開の店（なんぼや）は型番×店ごとに最も新しい月だけを使う（lib/prices.ts の currentRecords と同じ）。
+    - 3社以上: 最も外れた1件ずつ保留にして計算し直す（外れ値が中央値を引っ張って、正しい店まで外れて見えるのを防ぐ。
+      実例: 228235 は誤記 670,000円が中央値に入ると GINZA RASIN の 8,300,000円が 2.76 倍に見える）。
+    - 2社だけ: どちらが正しいか判断できないので、外れていれば両方を保留にする（比較として出さない）。
+    返り値は保留にしたレコードの一覧。
+    """
+    newest: dict[tuple[str, str], str] = {}
+    for r in records:
+        if r.get("price_month"):
+            k = (r["ref"], r["shop"])
+            if r["price_month"] > newest.get(k, ""):
+                newest[k] = r["price_month"]
+    # 区別のつかない複数の価格（lib/prices.ts collapseUndistinguished と同じ単位）は中央値1つの「単位」として扱う。
+    # 単位を保留にするときは、その単位の行をすべて保留にする。
+    units: dict[tuple, list[dict]] = {}
+    for r in records:
+        if r.get("price_month") and newest.get((r["ref"], r["shop"])) != r["price_month"]:
+            continue
+        units.setdefault(_collapse_key(r), []).append(r)
+    groups: dict[tuple[str, str], list[tuple[str, str, int, list[dict]]]] = {}
+    for key, rows in units.items():
+        r0 = rows[0]
+        groups.setdefault((r0["ref"], _cond_class(r0.get("condition"))), []).append(
+            (r0["shop"], r0.get("condition") or "", _median_int([r["price_jpy"] for r in rows]), rows))
+
+    held: list[dict] = []
+    for us in groups.values():
+        out: set[int] = set()
+        while True:
+            live = [u for i, u in enumerate(us) if i not in out]
+            # 店の代表値（lib/prices.ts の shopCeilings と同じ考え方）: 状態ごとに文字盤・仕様違いの行の中央値、
+            # その状態別の値のうち最大。文字盤違いの高い行だけで他社と比べない。
+            per: dict[tuple[str, str], list[int]] = {}
+            for shop, cond, v, _ in live:
+                per.setdefault((shop, cond), []).append(v)
+            best: dict[str, int] = {}
+            for (shop, _c), vs in per.items():
+                best[shop] = max(best.get(shop, 0), _median_int(vs))
+            if len(best) < 2:
+                break
+            cands = []
+            for i, (shop, _cond, v, rows) in enumerate(us):
+                if i in out:
+                    continue
+                med = statistics.median([x for s, x in best.items() if s != shop])
+                ratio = v / med
+                if ratio < OUTLIER_LOW or ratio > OUTLIER_HIGH:
+                    cands.append((abs(math.log(ratio)), ratio, med, i))
+            if not cands:
+                break
+            pick = cands if len(best) == 2 else [max(cands, key=lambda c: c[0])]
+            for _, ratio, med, i in pick:
+                out.add(i)
+                for r in us[i][3]:
+                    r["held"] = "outlier"
+                    r["held_detail"] = f"他社中央値 {int(med):,}円 の {ratio:.2f}倍"
+                    held.append(r)
+    return held
 
 
 def _ssl_context(attempt: int):
@@ -340,12 +461,33 @@ def main() -> None:
                      f"https://watchnian.com/buy/categories/item_watch/brand_{_b}/",
                      "utf-8", parse_watchnian, _label))
 
+    # 6〜8社目（2026-10-17）。ロデオドライブ・GINZA RASIN・ギャラリーレア（ロレックスのみ）は
+    # ブランド別ページに型番別の定額買取価格を公表している。
+    # ⚠️ これらのパーサは表の行をすべて返す（文字盤・仕様違いの行を最大額にまとめない。区別は dial/material/variant）。
+    #    集計側（lib/prices.ts）が区別のない重複は中央値にまとめ、店ごとの代表値を決める。
+    # パーサは scripts/shops/<shop_id>.py（jiro-2 調査・robots と利用規約の確認結果は各ファイル冒頭）。
+    # ⚠️ 取り込みに失敗しても（import エラー等）他の店の取得は止めない。その日は2社とも0件として扱い、
+    #    下の引き継ぎ（CARRY_DAYS）が他の店と同じように効く。
+    # ⚠️ 両社とも先方の誤記らしき値がそのまま入る（例 ロデオドライブ 228235 中古 670,000円）。
+    #    保存前の hold_outliers() で他社の中央値から極端に外れた値を保留にする。
+    for _mod_name in EXTRA_SHOPS:
+        try:
+            _mod = importlib.import_module(f"shops.{_mod_name}")
+        except Exception as e:  # noqa: BLE001 — 何が起きても他の店は続ける
+            errors.append(f"{_mod_name}: パーサを読み込めない: {e}")
+            print(f"NG {_mod_name}: パーサを読み込めない: {e}")
+            continue
+        for _b, _url in _mod.URLS.items():
+            jobs.append((f"{_mod.SHOP_ID}:{_b}", _url, _mod.ENCODING, _mod.parse, _mod.BRANDS[_b]))
+
     for name, url, enc, parser, brand in jobs:
         try:
             html = fetch(url, enc)
             rows = parser(html, url)
             for _r in rows:
                 _r["brand"] = brand   # ブランドはレコードに持たせる（マスタで固定しない）
+                _r["fetched_at"] = TODAY  # scripts/shops/ のパーサは自前の TODAY を持つので本体の日付にそろえる
+                _r["ref"] = brand_ref(_r["ref"], brand)
             records.extend(rows)
             print(f"{name}: {len(rows)} records")
         except Exception as e:
@@ -380,7 +522,8 @@ def main() -> None:
         #    直近数日のどれかで2社そろっていれば維持する（union）。
         recs = []
         for f in prev[-KEEP_LOOKBACK_DAYS:]:
-            recs.extend(json.loads(f.read_text(encoding="utf-8")).get("records", []))
+            # 外れ値として保留にした値は公開に使っていないので数えない（lib/prices.ts と同じ）
+            recs.extend(r for r in json.loads(f.read_text(encoding="utf-8")).get("records", []) if not r.get("held"))
         # ⚠️ ここで「ファイル名の暦月」で絞ってはいけない（2026-10-02に判明）。
         #    月が変わった瞬間、月次公開のなんぼやは当月データが少ないため keep が縮み、
         #    NANBOYA_CAP の優先順位から外れた型番が今日は取得されず、公開中のページが消える。
@@ -476,11 +619,21 @@ def main() -> None:
     if carried:
         print(f"⚠️ 引き継いだ店: {carried}（先方サイトの復旧を確認すること）")
 
+    # 外れ値の保留。引き継いだ行は前日の判定（held）を持っているので、いったん外してから当日の顔ぶれで判定し直す。
+    for r in records:
+        r.pop("held", None)
+        r.pop("held_detail", None)
+    held = hold_outliers(records)
+    held_log = [f"{r['shop']} {r['ref']} {r.get('condition', '')} {r['price_jpy']:,}円（{r['held_detail']}）" for r in held]
+    for line in held_log:
+        print(f"⚠️ 外れ値として保留: {line}")
+    print(f"外れ値として保留: {len(held)}件")
+
     # 保存
     out_dir = ROOT / "data" / "prices"
     out_dir.mkdir(parents=True, exist_ok=True)
     json.dump({"fetched_at": TODAY, "records": records, "errors": errors,
-               "carried_over": carried},
+               "carried_over": carried, "held": held_log},
               open(out_dir / f"{TODAY}.json", "w"), ensure_ascii=False, indent=1)
 
     # 型番マスタ更新(観測ベース: どの社に載っているか=実需の証拠)

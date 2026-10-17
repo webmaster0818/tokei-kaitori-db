@@ -107,7 +107,9 @@ let shopCache: { date: string; stats: ShopStat[] } | null = null;
 export function shopStats(): ShopStat[] {
   const date = latestDate();
   if (shopCache?.date === date) return shopCache.stats;
-  const brandOrder = ["ロレックス", "オメガ", "オーデマ・ピゲ", "ヴァシュロン・コンスタンタン", "カルティエ"];
+  // ⚠️ 一覧に無いブランド（8社化で増えたパテック フィリップ・チューダー等）は末尾へ（indexOf の -1 で先頭に来ないように）
+  const brandOrder = ["ロレックス", "オメガ", "オーデマ・ピゲ", "ヴァシュロン・コンスタンタン", "パテック フィリップ", "カルティエ", "チューダー", "IWC", "パネライ", "ウブロ", "グランドセイコー"];
+  const bi = (b: string) => (brandOrder.indexOf(b) < 0 ? 99 : brandOrder.indexOf(b));
   const map = new Map<string, ShopStat>();
   for (const id of SHOP_IDS) {
     map.set(id, { id, name: "", refs: [], brands: [], types: [], topRefs: [], ceilingRefs: 0, sourceUrls: [], officialUrl: SHOP_PAGES[id]?.url, image: SHOP_PAGES[id]?.image });
@@ -128,13 +130,15 @@ export function shopStats(): ShopStat[] {
       const ceil = recs.filter((r) => r.price_type === "上限" || r.price_type === "相場");
       if (ceil.length) {
         st.ceilingRefs++;
-        if (row.s.ceilingMax != null && ceil.some((r) => r.price_jpy === row.s.ceilingMax)) st.topRefs.push(row);
+        // 上限額（最高）は店ごとの代表値（shopCeilings）の最大なので、比べるのも代表値
+        const rep = row.s.ceilings.find((c) => c.shop_id === id);
+        if (row.s.ceilingMax != null && rep && rep.price === row.s.ceilingMax) st.topRefs.push(row);
       }
     }
   }
   const stats = [...map.values()].filter((s) => s.refs.length > 0);
   for (const s of stats) {
-    s.brands.sort((a, b) => brandOrder.indexOf(a) - brandOrder.indexOf(b));
+    s.brands.sort((a, b) => bi(a) - bi(b));
     s.topRefs.sort((a, b) => (b.s.ceilingMax ?? 0) - (a.s.ceilingMax ?? 0));
     s.sourceUrls.sort();
   }
