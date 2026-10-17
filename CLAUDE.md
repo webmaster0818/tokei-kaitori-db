@@ -177,3 +177,6 @@
 - **botは `bot/<名>/<作業>` ブランチに push、main は tomomi-2 だけ**（main=即本番・11:25 日次更新と衝突させない）。
 - tomomi-2 フェーズ1（サブエージェント・worktree・ブランチ feat/phase1-seo-links-visuals）: 掲載終了型番の301（`data/ever-published-refs.json`）・価格推移SVG・差額バー・/ranking/・/shop/<id>/・同価格帯リンク・llms.txt＋/data/refs.json・sitemap lastmod。
 - 目標（4週間）: 公開型番 206→300以上／型番ページ本文 倍以上／登録サンプル 0/32→10/32。
+- ✅ **フェーズ1 本番反映**（merge `1ca7d604`→main、`bf0d8871`）: 233ページ・リンク切れ0・precheck OK。/ranking/・/shop/<id>/×5・価格推移SVG・差額バー・同価格帯リンク・llms.txt・/data/refs.json・sitemap lastmod。
+  🚨 **本番の CF ビルドでは out/_redirects が効かなかった**（301 にならず 404）。原因は未特定（CF側ビルドコマンドが package.json の build を通っていない可能性）。対処＝ローカルビルド時に `public/_redirects` にも書き出してコミット（`generate-redirects.mjs`）→ 本番 `/ref/116622/` 301→`/model/yacht-master/` を確認。**転送一覧の更新は日次ローカルビルドのコミット経由で届く。**
+- jiro-2 調査: 採用＝ロデオドライブ・GINZA RASIN（禁止規定なし）／保留＝宝石広場（フッター「外部リンクを禁じます」→MediaXAI に A載せない/B問い合わせ を質問 msg 1560960241074573365）／不採用＝ピアゾ（一括査定の参考値）。誤記値（例 ロデオ 228235BR 67万）→組み込み時に外れ値保留を入れる。
