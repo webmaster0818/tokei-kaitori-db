@@ -1,7 +1,7 @@
 {
   "ref": "231.13.39.21.03.001",
   "brand": "オメガ",
-  "model": "シーマスター アクアテラ",
+  "model": "Seamaster Aqua Terra 150M マスター コーアクシャル クロノメーター 38.5mm",
   "case_diameter_mm": 38.5,
   "case_material": "ステンレススティール",
   "dial": "ブルー",
@@ -22,7 +22,8 @@
         "crystal",
         "dial",
         "water_resistance_m"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ref": "311.30.44.51.01.002",
   "brand": "オメガ",
-  "model": "スピードマスター コーアクシャル",
+  "model": "Speedmaster Two Counters 44.25 mm, steel on steel",
   "case_diameter_mm": 44.25,
   "case_material": "Steel",
   "dial": "Black",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

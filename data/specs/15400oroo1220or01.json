@@ -1,7 +1,7 @@
 {
   "ref": "15400OR.OO.1220OR.01",
   "brand": "オーデマ・ピゲ",
-  "model": "ロイヤルオーク 41mm ブラック",
+  "model": "15400OR.OO.1220OR.01",
   "case_diameter_mm": 41,
   "dial": "「グランド・タペストリー」パターンのブラックダイヤル、ピンクゴールドのアプライドアワーマーカーとロイヤルオーク針、ルミネサント加工",
   "caliber": "3120",
@@ -25,7 +25,8 @@
         "functions",
         "power_reserve_h",
         "water_resistance_m"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

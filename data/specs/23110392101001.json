@@ -1,7 +1,7 @@
 {
   "ref": "231.10.39.21.01.001",
   "brand": "オメガ",
-  "model": "シーマスター アクアテラ",
+  "model": "Aqua Terra 150M Seamaster Steel Chronometer Watch 231.10.39.21.01.001",
   "case_diameter_mm": 38.5,
   "case_material": "Steel",
   "dial": "Black",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ref": "311.93.44.51.99.001",
   "brand": "オメガ",
-  "model": "スピードマスター ムーンウォッチ グレーサイド・オブ・ムーン",
+  "model": "Speedmaster Grey Side of the Moon Watch 311.93.44.51.99.001",
   "case_diameter_mm": 44.25,
   "case_material": "Grey ceramic",
   "dial": "Grey",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ref": "331.90.42.51.04.001",
   "brand": "オメガ",
-  "model": "スピードマスター 57 クロノグラフ チタン",
+  "model": "Speedmaster '57 Speedmaster Titanium Chronometer Watch 331.90.42.51.04.001",
   "case_diameter_mm": 41.5,
   "case_material": "Titanium",
   "dial": "White",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

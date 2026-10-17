@@ -1,7 +1,7 @@
 {
   "ref": "5500V.110A.B148",
   "brand": "ヴァシュロン・コンスタンタン",
-  "model": "オーヴァーシーズ クロノグラフ",
+  "model": "オーヴァーシーズ",
   "case_diameter_mm": 42.5,
   "case_material": "ステンレススティール",
   "case_back": "シースルーケースバック、サファイアガラス",
@@ -31,7 +31,8 @@
         "movement",
         "power_reserve_h",
         "water_resistance_atm"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

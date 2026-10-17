@@ -1,7 +1,7 @@
 {
   "ref": "231.10.39.21.01.002",
   "brand": "オメガ",
-  "model": "シーマスターアクアテラ",
+  "model": "Seamaster Aqua Terra 150M OMEGA Master Co-Axial 38.5 mm",
   "case_diameter_mm": 38.5,
   "case_material": "ステンレススティール",
   "dial": "ブラック",
@@ -22,7 +22,8 @@
         "crystal",
         "dial",
         "water_resistance_m"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

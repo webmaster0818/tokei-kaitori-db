@@ -31,7 +31,8 @@
         "movement",
         "power_reserve_h",
         "water_resistance_atm"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

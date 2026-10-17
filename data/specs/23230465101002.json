@@ -1,7 +1,7 @@
 {
   "ref": "232.30.46.51.01.002",
   "brand": "オメガ",
-  "model": "シーマスター プラネットオーシャン",
+  "model": "Seamaster Planet Ocean 600M コーアクシャル クロノメーター クロノグラフ 45.5mm",
   "case_diameter_mm": 45.5,
   "case_material": "ステンレススティール",
   "dial": "ブラック",
@@ -22,7 +22,8 @@
         "crystal",
         "dial",
         "water_resistance_m"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

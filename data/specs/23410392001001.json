@@ -1,7 +1,7 @@
 {
   "ref": "234.10.39.20.01.001",
   "brand": "オメガ",
-  "model": "シーマスター300 コーアクシャル マスター クロノメーター 39mm",
+  "model": "Seamaster The 1957 Trilogy Watch 234.10.39.20.01.001",
   "case_diameter_mm": 39,
   "case_material": "Steel",
   "dial": "Black",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

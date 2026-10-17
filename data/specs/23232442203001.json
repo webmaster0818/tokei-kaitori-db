@@ -1,0 +1,36 @@
+{
+  "ref": "232.32.44.22.03.001",
+  "brand": "オメガ",
+  "model": "Seamaster Planet Ocean 600M GoodPlanet",
+  "case_diameter_mm": 43.5,
+  "case_material": "Steel",
+  "dial": "Blue",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 8605",
+  "power_reserve_h": 60,
+  "water_resistance_m": 600,
+  "bracelet": "Rubber strap",
+  "status": "2024-04-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-co-axial-chronometer-gmt-43-5-mm-23232442203001",
+      "archive": "http://web.archive.org/web/20240417200422/https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-co-axial-chronometer-gmt-43-5-mm-23232442203001",
+      "snapshot": "2024-04-17",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

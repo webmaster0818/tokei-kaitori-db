@@ -1,7 +1,7 @@
 {
   "ref": "126334",
   "brand": "ロレックス",
-  "model": "デイトジャスト41 SS オイスターブレス",
+  "model": "デイトジャスト 41",
   "case_diameter_mm": 41,
   "case_material": "ホワイトロレゾール - オイスタースチール＆ホワイトゴールド",
   "bezel": "フルーテッド",
@@ -44,7 +44,8 @@
         "precision",
         "water_resistance_m",
         "winding"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

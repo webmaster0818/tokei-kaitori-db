@@ -1,7 +1,7 @@
 {
   "ref": "324.23.38.50.02.002",
   "brand": "オメガ",
-  "model": "スピードマスター",
+  "model": "Speedmaster 38 コーアクシャル クロノメーター クロノグラフ 38mm",
   "case_diameter_mm": 38,
   "case_material": "スティール ‑ セドナゴールド",
   "dial": "ブラウン",
@@ -22,7 +22,8 @@
         "crystal",
         "dial",
         "water_resistance_m"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

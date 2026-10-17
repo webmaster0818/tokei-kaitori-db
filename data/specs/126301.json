@@ -1,7 +1,7 @@
 {
   "ref": "126301",
   "brand": "ロレックス",
-  "model": "ロレックス デイトジャスト",
+  "model": "デイトジャスト 41",
   "case_diameter_mm": 41,
   "case_material": "エバーローズロレゾール - オイスタースチール＆エバーローズゴールド",
   "bezel": "スムース",
@@ -44,7 +44,8 @@
         "precision",
         "water_resistance_m",
         "winding"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

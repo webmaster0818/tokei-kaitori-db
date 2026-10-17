@@ -1,7 +1,7 @@
 {
   "ref": "123.10.38.21.02.001",
   "brand": "オメガ",
-  "model": "コンステレーション コーアクシャル クロノメーター 38mm",
+  "model": "Constellation 38 mm, steel on steel",
   "case_diameter_mm": 38,
   "case_material": "Steel",
   "dial": "Silver",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

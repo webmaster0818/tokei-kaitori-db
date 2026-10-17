@@ -1,7 +1,7 @@
 {
   "ref": "126719BLRO",
   "brand": "ロレックス",
-  "model": "GMTマスターⅡ 18K",
+  "model": "GMTマスター Ⅱ",
   "case_diameter_mm": 40,
   "case_material": "18 ct ホワイトゴールド",
   "bezel": "両方向回転式、24時間目盛り入り。レッド／ブルーのセラミック製セラクロムベゼルインサート、数字と目盛り入り",
@@ -44,7 +44,8 @@
         "precision",
         "water_resistance_m",
         "winding"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

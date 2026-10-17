@@ -1,7 +1,7 @@
 {
   "ref": "279160",
   "brand": "ロレックス",
-  "model": "デイトジャスト",
+  "model": "レディ デイトジャスト",
   "case_diameter_mm": 28,
   "case_material": "オイスタースチール",
   "bezel": "ドーム",
@@ -44,7 +44,8 @@
         "precision",
         "water_resistance_m",
         "winding"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

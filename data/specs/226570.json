@@ -1,7 +1,7 @@
 {
   "ref": "226570",
   "brand": "ロレックス",
-  "model": "エクスプローラーII",
+  "model": "エクスプローラー Ⅱ",
   "case_diameter_mm": 42,
   "case_material": "オイスタースチール",
   "bezel": "固定式、24時間目盛り入り",
@@ -44,7 +44,8 @@
         "precision",
         "water_resistance_m",
         "winding"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

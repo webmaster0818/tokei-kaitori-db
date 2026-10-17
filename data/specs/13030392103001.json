@@ -11,6 +11,7 @@
   "water_resistance_m": 100,
   "bracelet": "Steel",
   "status": "2026-02-08時点の公式サイトに掲載",
+  "model": "Globemaster Constellation Steel Master Chronometer Certified Watch 130.30.39.21.03.001",
   "sources": [
     {
       "url": "https://www.omegawatches.com/en-us/watch-omega-constellation-globemaster-co-axial-master-chronometer-39-mm-13030392103001",
@@ -28,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

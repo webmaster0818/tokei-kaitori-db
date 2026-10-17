@@ -1,7 +1,7 @@
 {
   "ref": "331.10.42.51.01.002",
   "brand": "オメガ",
-  "model": "スピードマスター",
+  "model": "Speedmaster '57 41.5 mm, steel on steel",
   "case_diameter_mm": 41.5,
   "case_material": "Steel",
   "dial": "Black",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

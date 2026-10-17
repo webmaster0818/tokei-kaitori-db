@@ -1,7 +1,7 @@
 {
   "ref": "220.10.41.21.01.001",
   "brand": "オメガ",
-  "model": "オメガ シーマスター",
+  "model": "Seamaster Aqua Terra 150M 41 mm, steel on steel",
   "case_diameter_mm": 41,
   "case_material": "Steel",
   "dial": "Black",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

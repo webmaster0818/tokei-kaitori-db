@@ -1,7 +1,7 @@
 {
   "ref": "311.92.44.51.01.003",
   "brand": "オメガ",
-  "model": "スピードマスター ムーンウォッチ ダークサイド・オブ・ムーン",
+  "model": "Speedmaster Dark Side of the Moon Dark Side of the Moon",
   "case_diameter_mm": 44.25,
   "case_material": "Black ceramic",
   "dial": "Black",
@@ -23,7 +23,8 @@
         "dial",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

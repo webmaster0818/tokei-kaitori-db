@@ -1,7 +1,7 @@
 {
   "ref": "126233",
   "brand": "ロレックス",
-  "model": "ロレックス デイトジャスト",
+  "model": "デイトジャスト 36",
   "case_diameter_mm": 36,
   "case_material": "イエローロレゾール - オイスタースチール＆イエローゴールド",
   "bezel": "フルーテッド",
@@ -44,7 +44,8 @@
         "precision",
         "water_resistance_m",
         "winding"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ref": "231.10.42.21.02.004",
   "brand": "オメガ",
-  "model": "シーマスター アクアテラ クロノメーター コーアクシャル ゴルフ",
+  "model": "Seamaster Aqua Terra 150M Golf Edition",
   "case_diameter_mm": 41.5,
   "case_material": "Steel",
   "dial": "Silver",
@@ -27,7 +27,8 @@
         "movement",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

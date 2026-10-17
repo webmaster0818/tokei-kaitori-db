@@ -1,7 +1,7 @@
 {
   "ref": "331.10.42.51.02.002",
   "brand": "オメガ",
-  "model": "スピードマスター 57 クロノグラフ",
+  "model": "Speedmaster '57 Co-Axial Chronometer Chronograph 41.5 mm",
   "case_diameter_mm": 41.5,
   "case_material": "Steel",
   "dial": "Silver",
@@ -27,7 +27,8 @@
         "movement",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

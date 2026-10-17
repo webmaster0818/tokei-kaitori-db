@@ -1,7 +1,7 @@
 {
   "ref": "7900V.110A.B334",
   "brand": "ヴァシュロン・コンスタンタン",
-  "model": "オーヴァーシーズ デュアルタイム",
+  "model": "オーヴァーシーズ",
   "case_diameter_mm": 41,
   "case_material": "ステンレススティール",
   "movement": "自動巻き",
@@ -29,7 +29,8 @@
         "movement",
         "power_reserve_h",
         "water_resistance_atm"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ref": "279174",
   "brand": "ロレックス",
-  "model": "デイトジャスト　28　ジュビリー",
+  "model": "レディ デイトジャスト",
   "case_diameter_mm": 28,
   "case_material": "ホワイトロレゾール - オイスタースチール＆ホワイトゴールド",
   "bezel": "フルーテッド",
@@ -44,7 +44,8 @@
         "precision",
         "water_resistance_m",
         "winding"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

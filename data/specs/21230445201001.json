@@ -1,7 +1,7 @@
 {
   "ref": "212.30.44.52.01.001",
   "brand": "オメガ",
-  "model": "シーマスター 300 コーアクシャル GMT クロノグラフ",
+  "model": "Diver 300M Seamaster Steel Chronograph Watch 212.30.44.52.01.001",
   "case_diameter_mm": 44,
   "case_material": "Steel",
   "dial": "Black",
@@ -25,7 +25,8 @@
         "movement",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

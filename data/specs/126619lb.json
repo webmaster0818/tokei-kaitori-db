@@ -1,7 +1,7 @@
 {
   "ref": "126619LB",
   "brand": "ロレックス",
-  "model": "サブマリーナー 18K",
+  "model": "サブマリーナー デイト",
   "case_diameter_mm": 41,
   "case_material": "18 ct ホワイトゴールド",
   "bezel": "60分目盛り入り逆回転防止、耐傷性に優れたブルーのセラミック製セラクロムベゼルインサート、数字と目盛りはプラチナコーティング",
@@ -44,7 +44,8 @@
         "precision",
         "water_resistance_m",
         "winding"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ref": "15450ST.OO.1256ST.01",
   "brand": "オーデマ・ピゲ",
-  "model": "ロイヤルオーク",
+  "model": "15450ST.OO.1256ST.01",
   "case_diameter_mm": 37,
   "dial": "「グランド・タペストリー」パターンのシルバーカラーダイヤル、ホワイトゴールドのアプライドアワーマーカーとロイヤルオーク針、ルミネサント加工",
   "caliber": "3120",
@@ -25,7 +25,8 @@
         "functions",
         "power_reserve_h",
         "water_resistance_m"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

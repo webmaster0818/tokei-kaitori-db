@@ -1,7 +1,7 @@
 {
   "ref": "326.30.40.50.06.001",
   "brand": "オメガ",
-  "model": "スピードマスター レーシング",
+  "model": "Speedmaster Racing 40 mm, steel on steel",
   "case_diameter_mm": 40,
   "case_material": "Steel",
   "dial": "Grey",
@@ -27,7 +27,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

@@ -11,6 +11,7 @@
   "water_resistance_m": 50,
   "bracelet": "ステンレススティールと18Kピンクゴールド製 ブレスレット、ステンレススティール製APフォ ールディングバックル。",
   "status": "2026-10-17時点の公式サイトに掲載",
+  "model": "ロイヤル オーク",
   "sources": [
     {
       "url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15450SR.OO.1256SR.01",
@@ -26,7 +27,8 @@
         "movement",
         "power_reserve_h",
         "water_resistance_m"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

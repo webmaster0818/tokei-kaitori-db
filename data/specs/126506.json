@@ -1,7 +1,7 @@
 {
   "ref": "126506",
   "brand": "ロレックス",
-  "model": "デイトナ　プラチナ　ブレス",
+  "model": "コスモグラフ デイトナ",
   "case_diameter_mm": 40,
   "case_material": "プラチナ",
   "bezel": "チェスナットブラウンのセラミック製モノブロック セラクロムベゼル、数字と目盛り入り",
@@ -44,7 +44,8 @@
         "precision",
         "water_resistance_m",
         "winding"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

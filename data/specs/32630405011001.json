@@ -1,7 +1,7 @@
 {
   "ref": "326.30.40.50.11.001",
   "brand": "オメガ",
-  "model": "スピードマスター レーシング",
+  "model": "Racing Speedmaster Steel Chronograph Watch 326.30.40.50.11.001",
   "case_diameter_mm": 40,
   "case_material": "Steel",
   "dial": "Red",
@@ -23,7 +23,8 @@
         "dial",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

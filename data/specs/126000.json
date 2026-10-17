@@ -1,7 +1,7 @@
 {
   "ref": "126000",
   "brand": "ロレックス",
-  "model": "オイスターパーペチュアル",
+  "model": "オイスター パーペチュアル 36",
   "case_diameter_mm": 36,
   "case_material": "オイスタースチール",
   "bezel": "ドーム",
@@ -44,7 +44,8 @@
         "precision",
         "water_resistance_m",
         "winding"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

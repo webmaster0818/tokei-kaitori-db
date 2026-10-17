@@ -1,7 +1,7 @@
 {
   "ref": "231.10.42.21.01.002",
   "brand": "オメガ",
-  "model": "シーマスター アクアテラ 15000ガウス",
+  "model": "Seamaster > 15,000 gauss Watch 231.10.42.21.01.002",
   "case_diameter_mm": 41.5,
   "case_material": "Steel",
   "dial": "Black",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ref": "231.10.44.52.04.001",
   "brand": "オメガ",
-  "model": "シーマスター アクアテラ クロノグラフ GMT",
+  "model": "Aqua Terra 150M Seamaster Steel Chronograph Watch 231.10.44.52.04.001",
   "case_diameter_mm": 44,
   "case_material": "Steel",
   "dial": "White",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ref": "212.30.42.50.03.001",
   "brand": "オメガ",
-  "model": "シーマスター ダイバー300 コーアクシャル クロノグラフ",
+  "model": "Seamaster Diver 300M コーアクシャル クロノメーター クロノグラフ 41.5mm",
   "case_diameter_mm": 41.5,
   "case_material": "ステンレススティール",
   "dial": "ブルー",
@@ -22,7 +22,8 @@
         "crystal",
         "dial",
         "water_resistance_m"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

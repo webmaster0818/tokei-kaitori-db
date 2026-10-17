@@ -1,7 +1,7 @@
 {
   "ref": "210.92.42.20.01.001",
   "brand": "オメガ",
-  "model": "シーマスター",
+  "model": "Seamaster Diver 300M 007 Edition",
   "case_diameter_mm": 42,
   "case_material": "Titanium",
   "dial": "Brown",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

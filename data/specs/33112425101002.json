@@ -1,7 +1,7 @@
 {
   "ref": "331.12.42.51.01.002",
   "brand": "オメガ",
-  "model": "スピードマスター 57 クロノグラフ 革ベルト",
+  "model": "Speedmaster '57 Speedmaster Steel Chronograph Watch 331.12.42.51.01.002",
   "case_diameter_mm": 41.5,
   "case_material": "Steel",
   "dial": "Black",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

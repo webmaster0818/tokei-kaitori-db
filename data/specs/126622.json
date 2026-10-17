@@ -1,7 +1,7 @@
 {
   "ref": "126622",
   "brand": "ロレックス",
-  "model": "ヨットマスター40",
+  "model": "ヨットマスター 40",
   "case_diameter_mm": 40,
   "case_material": "ロレジウム - オイスタースチール＆プラチナ",
   "bezel": "両方向回転式、60時間目盛り入り、レイズド仕上げの数字、プラチナ",
@@ -44,7 +44,8 @@
         "precision",
         "water_resistance_m",
         "winding"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

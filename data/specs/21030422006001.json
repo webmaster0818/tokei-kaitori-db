@@ -11,6 +11,7 @@
   "water_resistance_m": 300,
   "bracelet": "Steel",
   "status": "2025-06-28時点の公式サイトに掲載",
+  "model": "Seamaster Diver 300M Omega Co-Axial Master Chronometer 42 mm",
   "sources": [
     {
       "url": "https://www.omegawatches.com/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21030422006001",
@@ -28,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

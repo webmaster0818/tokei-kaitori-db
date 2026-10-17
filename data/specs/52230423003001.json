@@ -1,7 +1,7 @@
 {
   "ref": "522.30.42.30.03.001",
   "brand": "オメガ",
-  "model": "スピードマスター クロノグラフ 42mm ブルー",
+  "model": "Specialities Olympic Games Collection",
   "case_diameter_mm": 42,
   "case_material": "ステンレススティール",
   "dial": "ブルー",
@@ -22,7 +22,8 @@
         "crystal",
         "dial",
         "water_resistance_m"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

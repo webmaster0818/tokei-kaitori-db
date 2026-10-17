@@ -1,7 +1,7 @@
 {
   "ref": "311.32.40.30.01.001",
   "brand": "オメガ",
-  "model": "スピードマスター クロノグラフ 39.7mm",
+  "model": "Speedmaster Moonwatch ファースト オメガ イン スペース",
   "case_diameter_mm": 39.7,
   "case_material": "ステンレススティール",
   "dial": "ブラック",
@@ -22,7 +22,8 @@
         "crystal",
         "dial",
         "water_resistance_m"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ref": "212.30.41.20.01.003",
   "brand": "オメガ",
-  "model": "シーマスター プロフェッショナル300 コーアクシャル",
+  "model": "Seamaster Diver 300M Co-Axial Chronometer 41 mm",
   "case_diameter_mm": 41,
   "case_material": "Steel",
   "dial": "Black",
@@ -23,7 +23,8 @@
         "dial",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

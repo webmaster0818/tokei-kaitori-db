@@ -1,7 +1,7 @@
 {
   "ref": "15400SR.OO.1220SR.01",
   "brand": "オーデマ・ピゲ",
-  "model": "ロイヤルオーク 41mm シルバー",
+  "model": "15400SR.OO.1220SR.01",
   "case_diameter_mm": 41,
   "dial": "「グランド・タペストリー」模様のシルバートーンダイヤル、ピンクゴールドのアップライドアワーマーカー、 蓄光処理を施したロイヤル オーク針。",
   "caliber": "3120",
@@ -25,7 +25,8 @@
         "functions",
         "power_reserve_h",
         "water_resistance_m"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

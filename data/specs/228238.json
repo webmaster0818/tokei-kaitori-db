@@ -1,7 +1,7 @@
 {
   "ref": "228238",
   "brand": "ロレックス",
-  "model": "デイデイト",
+  "model": "デイデイト 40",
   "case_diameter_mm": 40,
   "case_material": "18 ct イエローゴールド",
   "bezel": "フルーテッド",
@@ -44,7 +44,8 @@
         "precision",
         "water_resistance_m",
         "winding"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

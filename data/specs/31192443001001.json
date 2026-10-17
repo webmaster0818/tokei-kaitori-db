@@ -1,7 +1,7 @@
 {
   "ref": "311.92.44.30.01.001",
   "brand": "オメガ",
-  "model": "スピードマスター ムーンウォッチ",
+  "model": "Speedmaster Apollo 8 Watch 311.92.44.30.01.001",
   "case_diameter_mm": 44.25,
   "case_material": "Black ceramic",
   "dial": "Black",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

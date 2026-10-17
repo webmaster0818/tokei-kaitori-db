@@ -1,7 +1,7 @@
 {
   "ref": "331.10.42.51.03.001",
   "brand": "オメガ",
-  "model": "スピードマスター 57 クロノグラフ",
+  "model": "Speedmaster '57 Speedmaster Steel Chronograph Watch 331.10.42.51.03.001",
   "case_diameter_mm": 41.5,
   "case_material": "Steel",
   "dial": "Blue",
@@ -23,7 +23,8 @@
         "dial",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

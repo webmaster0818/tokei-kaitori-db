@@ -1,7 +1,7 @@
 {
   "ref": "326.30.40.50.02.001",
   "brand": "オメガ",
-  "model": "スピードマスター レーシング",
+  "model": "Speedmaster Racing Co-Axial Chronograph 40 mm",
   "case_diameter_mm": 40,
   "case_material": "ステンレススティール",
   "dial": "シルバー",
@@ -22,7 +22,8 @@
         "crystal",
         "dial",
         "water_resistance_m"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }
