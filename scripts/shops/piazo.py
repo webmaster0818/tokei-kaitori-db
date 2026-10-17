@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""ピアゾ（時計専門9社一括査定）の「買取価格相場」表。調査 2026-10-17。
+"""不採用（tomomi-2 10/17：一括査定の参考値のため比較の対象外）
+
+ピアゾ（時計専門9社一括査定）の「買取価格相場」表。調査 2026-10-17。
 
 取得元: https://piazo.jp/<brand>/  （ブランド別ページ1枚に全型番の相場表がある）
 - robots.txt: User-agent: * は Disallow: /admin/ のみ（MJ12bot / baiduspider / BLEXBot / Yandex は全面拒否。当方は該当しない）。

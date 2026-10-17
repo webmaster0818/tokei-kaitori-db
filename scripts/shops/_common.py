@@ -59,12 +59,12 @@ def pick_ref(tokens: list[str]) -> tuple[int, str] | None:
     return None
 
 
-def run_test(shop_id: str, parse, urls: dict[str, str]) -> None:
+def run_test(shop_id: str, parse, urls: dict[str, str], sample_dir: str | None = None) -> None:
     """samples/<shop_id>/*.html を parse し、件数と先頭5件を表示する。
 
     サンプルのファイル名（拡張子なし）は URLS のキーと同じにしてあり、source_url はそこから引く。
     """
-    sdir = HERE / "samples" / shop_id
+    sdir = HERE / "samples" / (sample_dir or shop_id)
     files = sorted(sdir.glob("*.html"))
     if not files:
         sys.exit(f"サンプルがありません: {sdir}")

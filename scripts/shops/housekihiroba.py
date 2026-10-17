@@ -26,11 +26,10 @@
 - 更新日: 一覧には無い。詳細ページに状態ごとにある。
   ⚠️ 実測では 2026-02〜2026-08 の日付で、数か月更新されていない額がある（上記5件すべて 10月の更新ではない）。
 
-parse() は一覧ページと詳細ページの両方を受け付ける:
-  一覧（/watch_brand/<id>）  → 1型番1レコード・condition=None・page_updated=None
-  詳細（/watch_product/<id>）→ 状態ごとのレコード・condition=未使用/中古・page_updated=その額の更新日
-detail_urls(一覧HTML) で {型番: [詳細URL, …]} が取れる。日次で全件（ロレックスだけで766ページ）を巡回するのは
-重いので、他社と突合できる型番（公開中・1社だけの型番）に絞って詳細を取る想定。
+★ 2026-10-17 tomomi-2 判断: 宝石広場は保留（MediaXAI の判断待ち）。
+  採用する場合は一覧ではなく詳細ページ（housekihiroba_detail.py）で状態別に取る。
+このファイルの parse() は一覧（/watch_brand/<id>）用 → 1型番1レコード・condition=None・page_updated=None。
+detail_urls(一覧HTML) で {型番: [詳細URL, …]} が取れる（詳細URL一覧の生成に使う）。
 ⚠️ 同じ型番が文字盤色・素材ごとに複数カードある → 型番ごとに最大額を採る。
 ⚠️ 価格が「お問い合わせ」のカードは飛ばす（0円にしない）。
 """
@@ -48,7 +47,6 @@ SHOP = "宝石広場"
 SHOP_ID = "housekihiroba"
 BASE = "https://www.housekihiroba-kaitori.jp/watch_brand/"
 URLS = {
-    "detail_rx2950": "https://www.housekihiroba-kaitori.jp/watch_product/rx2950",  # 詳細ページのサンプル（126610LN）
     "rolex": BASE + "226",
     "omega": BASE + "170",
     "audemarspiguet": BASE + "201",
@@ -67,8 +65,6 @@ CARD = re.compile(r'<a href="(/watch_product/[^"]+)" class="product-link">([\s\S
 
 
 SITE = "https://www.housekihiroba-kaitori.jp"
-DETAIL_PRICE = re.compile(
-    r"<dt>買取価格（(未使用品|中古品)）：</dt>\s*<dd>([\s\S]*?)</dd>")
 
 
 def detail_urls(list_html: str) -> dict[str, list[str]]:
@@ -81,35 +77,9 @@ def detail_urls(list_html: str) -> dict[str, list[str]]:
     return out
 
 
-def parse_detail(html: str, url: str) -> list[dict]:
-    html = strip_comments(html)
-    spec = dict((text(k), text(v)) for k, v in re.findall(
-        r"<li>\s*<div>([^<]+)</div>\s*<div>([\s\S]*?)</div>\s*</li>",
-        (re.search(r'<ul id="model_spec">([\s\S]*?)</ul>', html) or re.match("", "")).group(0) or ""))
-    if not spec.get("型番"):
-        return []
-    ref = norm_ref(spec["型番"])
-    title = re.search(r"<h2 class=\"pph_main_title\">([^<]+?)\s*[A-Za-z0-9./-]+の買取金額推移</h2>", html)
-    model = text(title.group(1)) if title else ""
-    out = []
-    for cond, dd in DETAIL_PRICE.findall(html):
-        pm = re.search(r'<span class="red_text">([^<]*)</span>', dd)
-        if not pm:
-            continue
-        v = yen(pm.group(1))
-        if not v:
-            continue
-        um = re.search(r"更新日：(\d{4}-\d{2}-\d{2})", dd)
-        out.append({"shop": SHOP, "shop_id": SHOP_ID, "ref": ref, "model": model,
-                    "dial": spec.get("色", ""), "material": spec.get("材質名", ""),
-                    "price_type": "上限" if ("〜" in pm.group(1) or "～" in pm.group(1)) else "通常",
-                    "condition": "未使用" if cond == "未使用品" else "中古", "price_jpy": v,
-                    "source_url": url, "page_updated": um.group(1) if um else None, "fetched_at": TODAY})
-    return out
-
-
 def parse(html: str, url: str) -> list[dict]:
-    if "/watch_product/" in url:
+    if "/watch_product/" in url:  # 詳細ページは housekihiroba_detail.py が担当
+        from housekihiroba_detail import parse as parse_detail
         return parse_detail(html, url)
     html = strip_comments(html)
     rows: dict[str, dict] = {}
