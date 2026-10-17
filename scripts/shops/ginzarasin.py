@@ -27,6 +27,8 @@
    コメントを除いてから読む（読むと存在しない価格を拾う）。
 ⚠️ 行名に「116519LN NG ホワイトシェル」のように型番の後ろへ NG/G が離れて付く行がある。
    当サイトの型番は 116503NG のように連結しているので、直後の NG / G は連結する。
+- 第2弾（2026-10-17）: パテック フィリップ 109型番・チューダー 72型番・グランドセイコー 258型番を追加（既存の parse のまま読める）。
+  ⚠️ チューダーは「79363N」（M接頭・文字盤コードなし）。ロデオドライブ・宝石広場は「M79833MN-0003」。
 ⚠️ 同じ型番に複数行（文字盤違い）→ (型番, 状態) ごとに最大額を採る。
 """
 from __future__ import annotations
@@ -51,10 +53,15 @@ URLS = {
     "iwc": BASE + "iwc/",
     "panerai": BASE + "panerai/",
     "hublot": BASE + "hublot/",
+    # 第2弾（2026-10-17）で追加
+    "patekphilippe": BASE + "patekphilippe/",
+    "tudor": BASE + "tudor/",
+    "grandseiko": BASE + "grandseiko/",
 }
 BRANDS = {"rolex": "ロレックス", "omega": "オメガ", "audemarspiguet": "オーデマ・ピゲ",
           "vacheronconstantin": "ヴァシュロン・コンスタンタン", "cartier": "カルティエ",
-          "iwc": "IWC", "panerai": "パネライ", "hublot": "ウブロ"}
+          "iwc": "IWC", "panerai": "パネライ", "hublot": "ウブロ",
+          "patekphilippe": "パテック フィリップ", "tudor": "チューダー", "grandseiko": "グランドセイコー"}
 ENCODING = "utf-8"
 
 PRICE_COLS = (("souba_price2", "未使用"), ("souba_price3", "中古"))

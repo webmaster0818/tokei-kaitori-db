@@ -55,10 +55,15 @@ URLS = {
     "iwc": BASE + "209",
     "panerai": BASE + "223",
     "hublot": BASE + "208",
+    # 第2弾（2026-10-17）で追加
+    "patekphilippe": BASE + "224",
+    "tudor": BASE + "231",
+    "grandseiko": BASE + "271",
 }
 BRANDS = {"rolex": "ロレックス", "omega": "オメガ", "audemarspiguet": "オーデマ・ピゲ",
           "vacheronconstantin": "ヴァシュロン・コンスタンタン", "cartier": "カルティエ",
-          "iwc": "IWC", "panerai": "パネライ", "hublot": "ウブロ"}
+          "iwc": "IWC", "panerai": "パネライ", "hublot": "ウブロ",
+          "patekphilippe": "パテック フィリップ", "tudor": "チューダー", "grandseiko": "グランドセイコー"}
 ENCODING = "utf-8"
 
 CARD = re.compile(r'<a href="(/watch_product/[^"]+)" class="product-link">([\s\S]*?)</a>')

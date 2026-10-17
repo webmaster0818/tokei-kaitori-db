@@ -24,6 +24,9 @@
    670,000円（同じ表の 228235A は 7,500,000円、他社の 228235 中央値は約536万円）。組み込み時は
    他社中央値との比が極端な値（例: 0.3倍未満・3倍超）を保留にする等のガードを推奨。
 - ヴァシュロン・コンスタンタン（/brand/vacheronconstantin/）は価格表なし（0件）。URLS には残している。
+- 第2弾（2026-10-17）: パテック フィリップ 19型番・チューダー 87型番を追加（表の形は他ブランドと同じ1価格＝中古）。
+  ⚠️ チューダーの型番は「M79833MN-0003」（M接頭＋文字盤コード）。GINZA RASIN は「79363N」と書くので、
+     norm_ref のままでは同じ時計が一致しない（宝石広場はロデオと同じ書き方）。突合の規則は組み込み側で決めること。
 """
 from __future__ import annotations
 
@@ -47,10 +50,14 @@ URLS = {
     "iwc": BASE + "iwc/",
     "panerai": BASE + "panerai/",
     "hublot": BASE + "hublot/",
+    # 第2弾（2026-10-17）で追加。グランドセイコーは価格表なし（/brand/grandseiko/ は404、/brand/seiko/ は0件）
+    "patekphilippe": BASE + "patekphilippe/",
+    "tudor": BASE + "tudor/",
 }
 BRANDS = {"rolex": "ロレックス", "omega": "オメガ", "audemarspiguet": "オーデマ・ピゲ",
           "vacheronconstantin": "ヴァシュロン・コンスタンタン", "cartier": "カルティエ",
-          "iwc": "IWC", "panerai": "パネライ", "hublot": "ウブロ"}
+          "iwc": "IWC", "panerai": "パネライ", "hublot": "ウブロ",
+          "patekphilippe": "パテック フィリップ", "tudor": "チューダー"}
 ENCODING = "utf-8"
 
 COND = {"新品": "新品", "未使用品": "未使用", "中古品": "中古"}
