@@ -169,3 +169,11 @@
 - **変えていないもの（本番と突合して差分0）**: title・meta description・canonical・JSON-LD・OG メタ（6ページ）。価格データ・sitemap ロジック・文言。h1 は従来どおりサイト名（FV の小見出しとして表示）。
 - 検証: build OK・sitemap 227・precheck 全項目OK・絵文字0・ASP リンク0・1440/390 で横あふれ0。本番 TOP/型番/モデル/ブランド/画像/icon/favicon/og 200、sitemap 227。本番スクショ `design-proposals/prod-*.png`（リポ外・.gitignore）。
 - デプロイは daily-update.sh と同じ手順（push＋wrangler pages deploy）。⚠️ スマホ幅の確認は CDP の `Emulation.setDeviceMetricsOverride(width:390)` なら iframe 無しで撮れる（`--window-size` の 500px 下限は受けない）。
+
+### 2026-10-17 夕 「日本最大級の時計DBへ」拡張プロジェクト開始（MediaXAI：指揮官として各botに指示して進めて）
+- 4本柱＝テクニカルSEO／コンテンツ拡充／内部リンク／演出。計画 msg 1560954177532731493・bot指示 msg 1560954200144224306。
+- 現状（実測）: データ 506型番中 288 が1社のみ＝非公開（2社以上 218）。型番ページの可視テキスト約2,000字。登録サンプル 0/32。
+- 分担（指示書 `docs/bot-briefs/`）: jiro-2＝買取店追加のパーサ（`scripts/shops/`）／taro-2＝型番公式スペック（`data/specs/`）／saburo-2＝モデル解説15・店紹介5・売却ガイド5（`content/`）／tomomi-2＝テンプレ・技術・統合・本番反映。
+- **botは `bot/<名>/<作業>` ブランチに push、main は tomomi-2 だけ**（main=即本番・11:25 日次更新と衝突させない）。
+- tomomi-2 フェーズ1（サブエージェント・worktree・ブランチ feat/phase1-seo-links-visuals）: 掲載終了型番の301（`data/ever-published-refs.json`）・価格推移SVG・差額バー・/ranking/・/shop/<id>/・同価格帯リンク・llms.txt＋/data/refs.json・sitemap lastmod。
+- 目標（4週間）: 公開型番 206→300以上／型番ページ本文 倍以上／登録サンプル 0/32→10/32。
