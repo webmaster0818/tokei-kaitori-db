@@ -4,6 +4,11 @@ import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 import { latestDate, publishableRefs, summarize, yen } from "@/lib/prices";
 import { BRANDS, FAMILIES, refsByBrand, refsByFamily } from "@/lib/models";
 import { graph, itemList, organization } from "@/lib/jsonld";
+import { masterRefs } from "@/lib/prices";
+import { CAPTURED_ON, SHOP_PAGES } from "@/lib/shops";
+import { RefSearch } from "@/components/RefSearch";
+import { SectionHead } from "@/components/SectionHead";
+import { Arrow, IconBrand, IconDocument, IconFigures, IconSearch, IconShop, IconTable, IconWatch } from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: `${SITE_NAME} — ${SITE_TAGLINE}`,
@@ -27,6 +32,25 @@ export default function Home() {
   const famLinks = FAMILIES.filter((f) => (byFam[f.slug]?.length ?? 0) >= 2);
   const brandLinks = BRANDS.filter((b) => (byBrand[b.slug]?.length ?? 0) >= 2);
 
+  // ファーストビューの数字は、ページ・sitemap と同じ publishableRefs() 由来の実データから数える（手で書かない）。
+  const master = masterRefs();
+  const shopMap = new Map<string, { id: string; name: string; refs: Set<string>; types: Set<string>; brands: Set<string> }>();
+  for (const s of rows) {
+    for (const r of s.records) {
+      const e = shopMap.get(r.shop_id) ?? { id: r.shop_id, name: r.shop, refs: new Set(), types: new Set(), brands: new Set() };
+      e.refs.add(s.ref);
+      e.types.add(r.price_type);
+      if (master[s.ref]?.brand) e.brands.add(master[s.ref].brand);
+      shopMap.set(r.shop_id, e);
+    }
+  }
+  const shops = [...shopMap.values()].sort((a, b) => b.refs.size - a.refs.size);
+  const brandOrder = BRANDS.map((b) => b.label);
+  const searchItems = rows
+    .map((r) => ({ ref: r.ref, model: r.models[0] ?? "" }))
+    .sort((a, b) => a.ref.localeCompare(b.ref));
+  const example = searchItems.find((x) => x.ref === "126610LN")?.ref ?? rows[0]?.ref ?? "";
+
   const ld = graph(
     {
       "@type": "WebSite",
@@ -46,95 +70,193 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
-    <main className="mx-auto max-w-3xl px-5 py-12">
-      <h1 className="text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl">{SITE_NAME}</h1>
-
-      <section className="mt-8">
-        <h2 className="text-lg font-semibold text-neutral-900">ブランドから探す</h2>
-        <div className="mt-3 flex flex-wrap gap-2">
-          {brandLinks.map((b) => (
-            <Link key={b.slug} href={`/brand/${b.slug}/`}
-                  className="rounded border border-neutral-200 px-3 py-1.5 text-sm hover:border-neutral-400">
-              {b.label}（{byBrand[b.slug]?.length ?? 0}型番）
-            </Link>
-          ))}
-        </div>
-
-        <h2 className="mt-6 text-lg font-semibold text-neutral-900">モデルから探す</h2>
-        <div className="mt-3 flex flex-wrap gap-2">
-          {famLinks.map((f) => (
-            <Link key={f.slug} href={`/model/${f.slug}/`}
-                  className="rounded border border-neutral-200 px-3 py-1.5 text-sm hover:border-neutral-400">
-              {f.label}（{byFam[f.slug]?.length ?? 0}型番）
-            </Link>
-          ))}
-        </div>
-      </section>
-      <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-        当サイトでは、買取店が公開している腕時計の「型番別の買取価格」を毎日収集し、比較しています。
-        価格は各社の公開ページを出典とし、取得日を併記して掲載しています。
-      </p>
-
-      <section className="mt-8 rounded-xl border border-neutral-200 bg-white p-6">
-        <p className="text-xs font-medium uppercase tracking-widest text-neutral-400">掲載データの概要</p>
-        <div className="mt-4 grid grid-cols-3 gap-4 text-center">
-          <div>
-            <p className="text-xl font-semibold text-neutral-900">{rows.length}</p>
-            <p className="mt-1 text-xs text-neutral-500">掲載型番</p>
+      <main>
+        {/* ---------- ファーストビュー ---------- */}
+        <section className="hero on-navy" id="search" aria-labelledby="site-h1">
+          <picture className="hero__photo">
+            <source media="(max-width: 768px)" srcSet="/images/hero-watch-sm.webp" />
+            <img src="/images/hero-watch.webp" alt="" width={2400} height={1340} fetchPriority="high" decoding="async" />
+          </picture>
+          <div className="hero__body">
+            <h1 id="site-h1" className="hero__eyebrow">{SITE_NAME}</h1>
+            <p className="hero__title"><span className="nobr">その時計の、</span><span className="nobr">いまの価値を。</span></p>
+            <p className="hero__lead"><span className="nobr">型番ごとの買取価格を、</span><span className="nobr">主要買取店{shops.length}社で毎日比較。</span></p>
+            <div className="hero__actions">
+              <RefSearch items={searchItems} example={example} />
+              <div className="hero__buttons">
+                <a href="#brands" className="btn">ブランドから探す</a>
+                <a href="#models" className="btn">モデルから探す</a>
+              </div>
+            </div>
           </div>
-          <div>
-            <p className="text-xl font-semibold text-neutral-900">{maxSpread != null ? yen(maxSpread) : "—"}</p>
-            <p className="mt-1 text-xs text-neutral-500">店舗間の差額（最大）</p>
+          <div className="stat-strip" aria-label="掲載状況">
+            <div>掲載<b className="num">{rows.length}</b>型番</div>
+            <div>比較<b className="num">{shops.length}</b>社</div>
+            <div><b className="num">{brandLinks.length}</b>ブランド</div>
+            <div>毎日更新</div>
           </div>
-          <div>
-            <p className="text-xl font-semibold text-neutral-900">{date}</p>
-            <p className="mt-1 text-xs text-neutral-500">最終取得日</p>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="mt-10">
-        <h2 className="border-b border-neutral-200 pb-2 text-lg font-semibold text-neutral-900">型番別の買取価格</h2>
-        <div className="mt-4 overflow-x-auto rounded-lg border border-neutral-200 bg-white">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-neutral-200 text-left text-xs uppercase tracking-wider text-neutral-500">
-                <th className="px-4 py-3">型番</th>
-                <th className="px-4 py-3">モデル</th>
-                <th className="px-4 py-3 text-right">上限額（最高）</th>
-                <th className="px-4 py-3 text-right">店舗間の差額</th>
-                <th className="px-4 py-3 text-right">比較社数</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((s) => (
-                <tr key={s.ref} className="border-b border-neutral-100 last:border-0">
-                  <td className="px-4 py-3">
-                    <a href={`/ref/${s.ref.toLowerCase()}/`} className="font-medium text-neutral-900 underline decoration-neutral-300 hover:decoration-neutral-800">
-                      {s.ref}
-                    </a>
-                  </td>
-                  <td className="px-4 py-3 text-neutral-600">{s.models[0] ?? "—"}</td>
-                  <td className="px-4 py-3 text-right text-neutral-900">{s.ceilingMax != null ? yen(s.ceilingMax) : "—"}</td>
-                  <td className="px-4 py-3 text-right text-neutral-600">{s.spread != null ? yen(s.spread) : "—"}</td>
-                  <td className="px-4 py-3 text-right text-neutral-500">{s.shops.length}社</td>
-                </tr>
+        {/* ---------- ブランド ---------- */}
+        <section className="section section--white" id="brands">
+          <div className="wrap">
+            <SectionHead en="Brands" title="ブランドから探す" icon={<IconBrand />} />
+            <div className="link-grid link-grid--fit reveal">
+              {brandLinks.map((b) => (
+                <Link key={b.slug} href={`/brand/${b.slug}/`} className="link-card">
+                  <span className="link-card__label">{b.label}</span>
+                  <span className="link-card__meta">
+                    <span className="num">{byBrand[b.slug]?.length ?? 0}型番</span>
+                    <Arrow className="link-card__arrow" />
+                  </span>
+                </Link>
               ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="mt-3 text-xs leading-relaxed text-neutral-400">
-          ※各社が公開している買取価格を{date}に取得したものです。実際の査定額は、個体の状態・付属品・時期により変動します。
-        </p>
-      </section>
+            </div>
+          </div>
+        </section>
 
-      <section className="mt-10 border-t border-neutral-200 pt-8 text-xs leading-relaxed text-neutral-500">
-        <p>
-          データの取得方法：当サイトでは、各買取店が自社サイトで公開している型番別の買取価格ページを定期的に取得し、型番・日付・買取店・価格の組み合わせで記録しています。
-          価格の推定や補完は行わず、公開されていない項目は掲載しておりません。出典は、各型番ページ内にリンクで明記しています。
-        </p>
-      </section>
-    </main>
+        {/* ---------- モデル ---------- */}
+        <section className="section" id="models">
+          <div className="wrap">
+            <SectionHead en="Models" title="モデルから探す" icon={<IconWatch />} />
+            <div className="link-grid reveal">
+              {famLinks.map((f) => (
+                <Link key={f.slug} href={`/model/${f.slug}/`} className="link-card">
+                  <span className="link-card__label">{f.label}</span>
+                  <span className="link-card__meta">
+                    <span><span className="num">{byFam[f.slug]?.length ?? 0}型番</span>
+                      <span className="ml-2 text-[11px] tracking-wide opacity-80">{f.brand}</span></span>
+                    <Arrow className="link-card__arrow" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+            <p className="prose-jp reveal mt-10 max-w-3xl">
+              当サイトでは、買取店が公開している腕時計の「型番別の買取価格」を毎日収集し、比較しています。
+              価格は各社の公開ページを出典とし、取得日を併記して掲載しています。
+            </p>
+          </div>
+        </section>
+
+        {/* ---------- 掲載データの概要 ---------- */}
+        <section className="section section--white">
+          <div className="wrap">
+            <SectionHead en="Overview" title="掲載データの概要" icon={<IconFigures />} />
+            <div className="panel figures figures--3 reveal" style={{ ["--cols" as string]: 3 }}>
+              <div>
+                <p className="figures__value">{rows.length}</p>
+                <p className="figures__label">掲載型番</p>
+              </div>
+              <div>
+                <p className="figures__value">{maxSpread != null ? yen(maxSpread) : "—"}</p>
+                <p className="figures__label">店舗間の差額（最大）</p>
+              </div>
+              <div>
+                <p className="figures__value">{date}</p>
+                <p className="figures__label">最終取得日</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ---------- 比較している買取店 ---------- */}
+        <section className="section" id="shops">
+          <div className="wrap">
+            <SectionHead en="Buyback shops" title="比較している買取店" icon={<IconShop />} />
+            <p className="prose-jp reveal mb-10 max-w-3xl">
+              当サイトでは、型番別の買取価格を自社サイトで公開している買取店{shops.length}社の情報を掲載しています。
+              掲載型番数・ブランドは、{date}時点で当サイトに掲載している型番について集計したものです。
+            </p>
+            <div className="shop-grid">
+              {shops.map((sh, i) => {
+                const page = SHOP_PAGES[sh.id];
+                const brands = [...sh.brands].sort((a, b) => brandOrder.indexOf(a) - brandOrder.indexOf(b));
+                return (
+                  <article key={sh.id} className="shop-card reveal" style={{ ["--d" as string]: `${(i % 3) * 0.08}s` }}>
+                    {page?.image && (
+                      <figure>
+                        <img src={page.image} alt={`${sh.name}の公式サイト（買取価格のページ）`} width={1280} height={800} loading="lazy" decoding="async" />
+                        <figcaption>出典：{sh.name} 公式サイト（{CAPTURED_ON}時点）</figcaption>
+                      </figure>
+                    )}
+                    <div className="shop-card__body">
+                      <h3 className="shop-card__name">{sh.name}</h3>
+                      <dl>
+                        <dt>掲載型番</dt>
+                        <dd className="num">{sh.refs.size}型番</dd>
+                        <dt>ブランド</dt>
+                        <dd>{brands.join("・")}</dd>
+                        <dt>価格の区分</dt>
+                        <dd>{[...sh.types].join("・")}</dd>
+                      </dl>
+                      {page && (
+                        <a href={page.url} target="_blank" rel="noopener noreferrer" className="btn btn-sm">
+                          公式サイトを見る<Arrow />
+                        </a>
+                      )}
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* ---------- 型番別の買取価格 ---------- */}
+        <section className="section section--white" id="refs">
+          <div className="wrap">
+            <SectionHead en="Price list" title="型番別の買取価格" icon={<IconTable />} />
+            <div className="table-frame reveal">
+              <table className="data-table">
+                <thead>
+                  <tr>
+                    <th>型番</th>
+                    <th>モデル</th>
+                    <th className="r">上限額（最高）</th>
+                    <th className="r">店舗間の差額</th>
+                    <th className="r">比較社数</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {rows.map((s) => (
+                    <tr key={s.ref}>
+                      <td className="whitespace-nowrap">
+                        <a href={`/ref/${s.ref.toLowerCase()}/`}>{s.ref}</a>
+                      </td>
+                      <td>{s.models[0] ?? "—"}</td>
+                      <td className="r strong">{s.ceilingMax != null ? yen(s.ceilingMax) : "—"}</td>
+                      <td className="r">{s.spread != null ? yen(s.spread) : "—"}</td>
+                      <td className="r">{s.shops.length}社</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="table-scroll-hint">表は横にスクロールしてご覧いただけます。</p>
+            <p className="note mt-4">
+              ※各社が公開している買取価格を{date}に取得したものです。実際の査定額は、個体の状態・付属品・時期により変動します。
+            </p>
+          </div>
+        </section>
+
+        {/* ---------- 掲載ポリシー ---------- */}
+        <section className="section section--navy" id="policy">
+          <div className="wrap">
+            <SectionHead en="Policy" title="データの取得方法と掲載方針" icon={<IconDocument />} />
+            <div className="reveal grid gap-10 md:grid-cols-[1fr_auto]">
+              <p className="prose-jp max-w-3xl">
+                データの取得方法：当サイトでは、各買取店が自社サイトで公開している型番別の買取価格ページを定期的に取得し、型番・日付・買取店・価格の組み合わせで記録しています。
+                価格の推定や補完は行わず、公開されていない項目は掲載しておりません。出典は、各型番ページ内にリンクで明記しています。
+              </p>
+              <div className="flex items-start">
+                <a href="#search" className="btn">
+                  <IconSearch size={20} />型番から探す
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </>
   );
 }

@@ -1,0 +1,25 @@
+import Link from "next/link";
+import { LogoMark } from "./Logo";
+import { SITE_NAME } from "@/lib/site";
+
+export function SiteHeader() {
+  return (
+    <header className="site-header">
+      <div className="wrap site-header__inner">
+        <Link href="/" className="site-brand" aria-label={`${SITE_NAME} ホーム`}>
+          <LogoMark size={36} strokeWidth={1.5} />
+          <span>
+            <span className="site-brand__name">{SITE_NAME}</span>
+            <span className="site-brand__sub">BRAND WATCH BANK</span>
+          </span>
+        </Link>
+        <nav className="site-nav" aria-label="サイト内メニュー">
+          <a href="/#brands">ブランド</a>
+          <a href="/#models">モデル</a>
+          <a href="/#search">型番から探す</a>
+          <a href="/#policy">掲載ポリシー</a>
+        </nav>
+      </div>
+    </header>
+  );
+}

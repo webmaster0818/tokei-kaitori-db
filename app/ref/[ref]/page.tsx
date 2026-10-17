@@ -5,6 +5,7 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { latestDate, masterRefs, monthlyHistory, publishableRefs, summarize, yen } from "@/lib/prices";
 import { publishedBrandOf, publishedFamilyOf } from "@/lib/models";
 import { breadcrumb, graph, organization } from "@/lib/jsonld";
+import { IconDocument, IconFigures, IconLink, IconTable, IconTrend } from "@/components/Icons";
 
 export function generateStaticParams() {
   return publishableRefs().map((ref) => ({ ref: ref.toLowerCase() }));
@@ -77,98 +78,105 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
   );
 
   return (
-    <main className="mx-auto max-w-3xl px-5 py-10">
+    <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
 
-      <nav className="mb-6 text-xs text-neutral-500">
-        <Link href="/" className="hover:underline">ホーム</Link>
-        {brand ? (
-          <>
-            <span className="mx-2">/</span>
-            <Link href={`/brand/${brand.slug}/`} className="hover:underline">{brand.label}</Link>
-          </>
-        ) : null}
-        {fam ? (
-          <>
-            <span className="mx-2">/</span>
-            <Link href={`/model/${fam.slug}/`} className="hover:underline">{fam.label}</Link>
-          </>
-        ) : null}
-        <span className="mx-2">/</span>
-        <span className="text-neutral-800">Ref.{ref}</span>
-      </nav>
+      <div className="page-head">
+        <div className="wrap-narrow page-head__inner">
+          <nav className="crumbs" aria-label="パンくずリスト">
+            <Link href="/">ホーム</Link>
+            {brand ? (
+              <>
+                <span className="sep">/</span>
+                <Link href={`/brand/${brand.slug}/`}>{brand.label}</Link>
+              </>
+            ) : null}
+            {fam ? (
+              <>
+                <span className="sep">/</span>
+                <Link href={`/model/${fam.slug}/`}>{fam.label}</Link>
+              </>
+            ) : null}
+            <span className="sep">/</span>
+            <span className="here">Ref.{ref}</span>
+          </nav>
 
-      <h1 className="text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl">
-        {s.models[0] ?? "腕時計"} Ref.{ref} の買取価格
-      </h1>
-      <p className="mt-2 text-sm text-neutral-500">{date}時点 / 買取店{s.shops.length}社の公開情報を比較</p>
-
-      {/* 結論ボックス */}
-      <section className="mt-8 rounded-xl border border-neutral-200 bg-white p-6">
-        <p className="text-xs font-medium uppercase tracking-widest text-neutral-400">買取価格の概要</p>
-        <div className="mt-4 grid grid-cols-2 gap-4 text-center md:grid-cols-4">
-          <div>
-            <p className="text-xl font-semibold text-neutral-900">{s.ceilingMax != null ? yen(s.ceilingMax) : "—"}</p>
-            <p className="mt-1 text-xs text-neutral-500">上限額（最高）</p>
-          </div>
-          <div>
-            <p className="text-xl font-semibold text-neutral-900">{s.ceilingMin != null ? yen(s.ceilingMin) : "—"}</p>
-            <p className="mt-1 text-xs text-neutral-500">上限額（最低）</p>
-          </div>
-          <div>
-            <p className="text-xl font-semibold text-neutral-900">{s.spread != null ? yen(s.spread) : "—"}</p>
-            <p className="mt-1 text-xs text-neutral-500">店舗間の差額</p>
-          </div>
-          <div>
-            <p className="text-xl font-semibold text-neutral-900">{s.shops.length}社</p>
-            <p className="mt-1 text-xs text-neutral-500">比較社数</p>
-          </div>
+          <h1 className="page-title">
+            {s.models[0] ?? "腕時計"} Ref.{ref} の買取価格
+          </h1>
+          <p className="page-meta">{date}時点 / 買取店{s.shops.length}社の公開情報を比較</p>
         </div>
-        {s.topShop && (
-          <p className="mt-4 text-sm leading-relaxed text-neutral-700">
-            {date}時点で最も高い上限額を公開しているのは、<strong>{s.topShop.shop}</strong>の{yen(s.topShop.price)}
-            {s.topShop.condition ? `（${s.topShop.condition}）` : ""}です。
-            {s.spread != null && s.spread > 0 && <>同じ型番でも、買取店により最大{yen(s.spread)}の差があります。</>}
-          </p>
-        )}
+      </div>
+
+      <div className="wrap-narrow page-body">
+      {/* 結論ボックス */}
+      <section className="reveal">
+        <h2 className="block-title"><IconFigures />買取価格の概要</h2>
+        <div className="panel">
+          <div className="figures figures--4" style={{ ["--cols" as string]: 4 }}>
+            <div>
+              <p className="figures__value">{s.ceilingMax != null ? yen(s.ceilingMax) : "—"}</p>
+              <p className="figures__label">上限額（最高）</p>
+            </div>
+            <div>
+              <p className="figures__value">{s.ceilingMin != null ? yen(s.ceilingMin) : "—"}</p>
+              <p className="figures__label">上限額（最低）</p>
+            </div>
+            <div>
+              <p className="figures__value">{s.spread != null ? yen(s.spread) : "—"}</p>
+              <p className="figures__label">店舗間の差額</p>
+            </div>
+            <div>
+              <p className="figures__value">{s.shops.length}社</p>
+              <p className="figures__label">比較社数</p>
+            </div>
+          </div>
+          {s.topShop && (
+            <p className="summary-text">
+              {date}時点で最も高い上限額を公開しているのは、<strong>{s.topShop.shop}</strong>の{yen(s.topShop.price)}
+              {s.topShop.condition ? `（${s.topShop.condition}）` : ""}です。
+              {s.spread != null && s.spread > 0 && <>同じ型番でも、買取店により最大{yen(s.spread)}の差があります。</>}
+            </p>
+          )}
+        </div>
       </section>
 
       {/* 各社比較表 */}
-      <section className="mt-10">
-        <h2 className="border-b border-neutral-200 pb-2 text-lg font-semibold text-neutral-900">各社の買取価格</h2>
-        <div className="mt-4 overflow-x-auto rounded-lg border border-neutral-200 bg-white">
-          <table className="w-full text-sm">
+      <section className="reveal">
+        <h2 className="block-title"><IconTable />各社の買取価格</h2>
+        <div className="table-frame">
+          <table className="data-table">
             <thead>
-              <tr className="border-b border-neutral-200 text-left text-xs uppercase tracking-wider text-neutral-500">
-                <th className="px-4 py-3">買取店</th>
-                <th className="px-4 py-3">区分</th>
-                <th className="px-4 py-3">状態・仕様</th>
-                <th className="px-4 py-3 text-right">価格</th>
-                <th className="px-4 py-3">取得日</th>
-                <th className="px-4 py-3">出典</th>
+              <tr>
+                <th>買取店</th>
+                <th>区分</th>
+                <th>状態・仕様</th>
+                <th className="r">価格</th>
+                <th>取得日</th>
+                <th>出典</th>
               </tr>
             </thead>
             <tbody>
               {s.records.map((r, i) => (
-                <tr key={i} className="border-b border-neutral-100 last:border-0">
-                  <td className="px-4 py-3 text-neutral-800">{r.shop}</td>
-                  <td className="px-4 py-3 text-neutral-500">{r.price_type}</td>
+                <tr key={i}>
+                  <td className="strong whitespace-nowrap">{r.shop}</td>
+                  <td className="whitespace-nowrap">{r.price_type}</td>
                   {/* 同じ型番でもブレス違い等でモデル名が分かれることがある（例: 126300 の
                       オイスターブレス/ジュビリーブレス）。モデルが複数ある型番では名前を出さないと
                       「同じ状態・同じ文字盤なのに価格が違う行」に見えてしまうため、そのときだけ併記する。 */}
-                  <td className="px-4 py-3 text-neutral-500">
+                  <td>
                     {[s.models.length > 1 ? r.model : null, r.condition, r.dial, r.material].filter(Boolean).join(" / ") || "—"}
                   </td>
-                  <td className="px-4 py-3 text-right font-medium text-neutral-900">{yen(r.price_jpy)}</td>
+                  <td className="r strong">{yen(r.price_jpy)}</td>
                   {/* ⚠️ 店ごとに取得日を出す。取得元のサイトが落ちた日は直近の値を引き継ぐため、
                       全部を「今日時点」と書くと嘘になる（2026-10-02のウォッチニアン停止で発生）。 */}
-                  <td className="px-4 py-3 text-xs text-neutral-500 whitespace-nowrap">
+                  <td className="whitespace-nowrap text-xs">
                     {!r.fetched_at ? "—"
                       : r.fetched_at === date ? r.fetched_at
-                      : <strong className="text-neutral-700">{r.fetched_at}</strong>}
+                      : <strong className="text-[var(--ink)]">{r.fetched_at}</strong>}
                   </td>
-                  <td className="px-4 py-3">
-                    <a href={r.source_url} target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 underline decoration-neutral-300 hover:text-neutral-800">
+                  <td className="whitespace-nowrap">
+                    <a href={r.source_url} target="_blank" rel="noopener noreferrer" className="text-xs">
                       公開ページ
                     </a>
                   </td>
@@ -177,7 +185,8 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
             </tbody>
           </table>
         </div>
-        <p className="mt-3 text-xs leading-relaxed text-neutral-400">
+        <p className="table-scroll-hint">表は横にスクロールしてご覧いただけます。</p>
+        <p className="note mt-4">
           ※価格は各社の公開ページから取得したもので、取得日は買取店ごとに上表に記載しています。
           取得元のサイトを一時的に閲覧できない日は、直近で取得できた日の価格を掲載し、その取得日を表示しています。「上限」は状態が良好な場合の最大額、「相場」は各社が相場として公開している値です。実際の査定額は、個体の状態・付属品・時期により変動します。ご利用前に、各社の公開ページにて最新の価格をご確認ください。
         </p>
@@ -185,15 +194,15 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
 
       {/* 月次推移(データがある場合のみ) */}
       {history.length >= 2 && (
-        <section className="mt-10">
-          <h2 className="border-b border-neutral-200 pb-2 text-lg font-semibold text-neutral-900">買取相場の推移（月次）</h2>
-          <div className="mt-4 overflow-x-auto rounded-lg border border-neutral-200 bg-white">
-            <table className="w-full text-sm">
+        <section className="reveal">
+          <h2 className="block-title"><IconTrend />買取相場の推移（月次）</h2>
+          <div className="table-frame">
+            <table className="data-table">
               <thead>
-                <tr className="border-b border-neutral-200 text-left text-xs uppercase tracking-wider text-neutral-500">
-                  <th className="px-4 py-3">年月</th>
-                  <th className="px-4 py-3 text-right">相場</th>
-                  <th className="px-4 py-3 text-right">前月比</th>
+                <tr>
+                  <th>年月</th>
+                  <th className="r">相場</th>
+                  <th className="r">前月比</th>
                 </tr>
               </thead>
               <tbody>
@@ -201,10 +210,10 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
                   const prev = i > 0 ? arr[i - 1].price : null;
                   const diff = prev != null ? h.price - prev : null;
                   return (
-                    <tr key={h.month} className="border-b border-neutral-100 last:border-0">
-                      <td className="px-4 py-3 text-neutral-800">{h.month}</td>
-                      <td className="px-4 py-3 text-right text-neutral-900">{yen(h.price)}</td>
-                      <td className={`px-4 py-3 text-right ${diff == null ? "text-neutral-400" : diff > 0 ? "text-emerald-700" : diff < 0 ? "text-red-700" : "text-neutral-500"}`}>
+                    <tr key={h.month}>
+                      <td>{h.month}</td>
+                      <td className="r strong">{yen(h.price)}</td>
+                      <td className={`r ${diff == null ? "" : diff > 0 ? "up" : diff < 0 ? "down" : ""}`}>
                         {diff == null ? "—" : `${diff > 0 ? "+" : ""}${diff.toLocaleString("ja-JP")}円`}
                       </td>
                     </tr>
@@ -213,39 +222,40 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
               </tbody>
             </table>
           </div>
-          <p className="mt-3 text-xs text-neutral-400">
+          <p className="note mt-4">
             ※月次の相場推移は、
-            <a href={history[0].source_url} target="_blank" rel="noopener noreferrer" className="underline decoration-neutral-300">出典元</a>
+            <a href={history[0].source_url} target="_blank" rel="noopener noreferrer" className="underline decoration-[var(--silver-2)] underline-offset-2">出典元</a>
             が公開している履歴データにもとづいています。
           </p>
         </section>
       )}
 
       {/* 高く売るための実務ポイント(データから導ける事実のみ) */}
-      <section className="mt-10">
-        <h2 className="border-b border-neutral-200 pb-2 text-lg font-semibold text-neutral-900">掲載データについて</h2>
-        <ul className="mt-4 space-y-2 text-sm leading-relaxed text-neutral-700">
-          <li>・掲載額は、各社が公開している「買取価格」です。実際の査定額は、個体差（傷・付属品・保証書の有無）により上下します。</li>
+      <section className="reveal">
+        <h2 className="block-title"><IconDocument />掲載データについて</h2>
+        <ul className="plain-list">
+          <li>掲載額は、各社が公開している「買取価格」です。実際の査定額は、個体差（傷・付属品・保証書の有無）により上下します。</li>
           {s.spread != null && s.spread > 0 && (
-            <li>・同じ型番でも公開額に{yen(s.spread)}の差があるため、売却の際は複数社の査定額を比較されることをおすすめします。</li>
+            <li>同じ型番でも公開額に{yen(s.spread)}の差があるため、売却の際は複数社の査定額を比較されることをおすすめします。</li>
           )}
-          <li>・文字盤の色や素材により価格が分かれる型番があります。上表で仕様を明記している行は、その条件での価格です。</li>
-          <li>・価格を毎日更新する買取店もあるため、当サイトでも日次で取得し直しています（最終取得日：{date}）。</li>
+          <li>文字盤の色や素材により価格が分かれる型番があります。上表で仕様を明記している行は、その条件での価格です。</li>
+          <li>価格を毎日更新する買取店もあるため、当サイトでも日次で取得し直しています（最終取得日：{date}）。</li>
         </ul>
       </section>
 
       {others.length > 0 && (
-        <section className="mt-10 border-t border-neutral-200 pt-8">
-          <h2 className="text-sm font-semibold text-neutral-900">他の型番の買取価格</h2>
-          <div className="mt-3 flex flex-wrap gap-2">
+        <section className="reveal">
+          <h2 className="block-title"><IconLink />他の型番の買取価格</h2>
+          <div className="chip-row">
             {others.map((r) => (
-              <a key={r} href={`/ref/${r.toLowerCase()}/`} className="rounded-full border border-neutral-300 px-3 py-1.5 text-xs text-neutral-700 hover:border-neutral-500">
+              <a key={r} href={`/ref/${r.toLowerCase()}/`} className="btn btn-sm num">
                 Ref.{r}
               </a>
             ))}
           </div>
         </section>
       )}
+      </div>
     </main>
   );
 }

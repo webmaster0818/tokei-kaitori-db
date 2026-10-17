@@ -1,0 +1,48 @@
+import Link from "next/link";
+import { LogoMark } from "./Logo";
+import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
+import { BRANDS, FAMILIES, MIN_REFS, refsByBrand, refsByFamily } from "@/lib/models";
+
+// フッターのリンクは、実在するハブ（ブランド・モデル）だけに張る（存在しないページへのリンクを作らない）。
+export function SiteFooter() {
+  const byBrand = refsByBrand();
+  const byFam = refsByFamily();
+  const brands = BRANDS.filter((b) => (byBrand[b.slug]?.length ?? 0) >= 2);
+  const fams = FAMILIES.filter((f) => (byFam[f.slug]?.length ?? 0) >= MIN_REFS);
+  return (
+    <footer className="site-footer">
+      <div className="wrap site-footer__grid">
+        <div>
+          <Link href="/" className="site-brand" style={{ padding: 0 }}>
+            <LogoMark size={40} strokeWidth={1.4} />
+            <span className="site-brand__name">{SITE_NAME}</span>
+          </Link>
+          <p className="mt-5 text-[13px] leading-[1.9] tracking-wider text-[#c9ccd1]">
+            {SITE_TAGLINE}。
+            <br />
+            当サイトでは、各買取店が公開している価格を出典・取得日とあわせて掲載しています。
+          </p>
+        </div>
+        <div>
+          <h3>BRANDS</h3>
+          <ul>
+            {brands.map((b) => (
+              <li key={b.slug}><Link href={`/brand/${b.slug}/`}>{b.label}</Link></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3>MODELS</h3>
+          <ul className="!grid-cols-1 sm:!grid-cols-2 !gap-x-5">
+            {fams.map((f) => (
+              <li key={f.slug}><Link href={`/model/${f.slug}/`}>{f.label}</Link></li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div className="wrap">
+        <div className="site-footer__bottom">&copy; {SITE_NAME}（brandwatchbank.com）</div>
+      </div>
+    </footer>
+  );
+}

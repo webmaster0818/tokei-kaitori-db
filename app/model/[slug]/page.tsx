@@ -5,6 +5,7 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { latestDate, masterRefs, summarize, yen } from "@/lib/prices";
 import { FAMILIES, MIN_REFS, refsByFamily } from "@/lib/models";
 import { breadcrumb, graph, itemList, organization } from "@/lib/jsonld";
+import { IconFigures, IconLink, IconTable } from "@/components/Icons";
 
 /*
   モデル別ハブ（/model/daytona/ など）。
@@ -89,88 +90,92 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
-      <main className="mx-auto max-w-3xl px-5 py-10">
-        <nav className="text-xs text-neutral-500">
-          <Link href="/" className="hover:underline">ホーム</Link>
-          <span> / </span>
-          <span>{f.label}</span>
-        </nav>
-
-        <h1 className="mt-3 text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl">
-          {f.brand} {f.label}の買取相場
-        </h1>
-        <p className="mt-2 text-sm text-neutral-500">
-          {date} 時点 / {r.length}型番を比較
-        </p>
-
-        {/* 結論を先に出す。数値はすべて型番ページと同じ実データ */}
-        <div className="mt-6 rounded-lg border border-neutral-200 bg-neutral-50 p-5">
-          <p className="text-sm font-semibold text-neutral-900">買取価格の概要</p>
-          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-neutral-700">
-            {top?.max && (
-              <li>
-                上限額が最も高いのは、<a className="underline" href={`/ref/${top.ref.toLowerCase()}/`}>{top.ref}</a>
-                （{top.model}）の<strong>{yen(top.max)}</strong>です。
-              </li>
-            )}
-            {widest?.spread ? (
-              <li>
-                同じ型番でも、買取店により価格に差があります。差額が最も大きいのは
-                <a className="underline" href={`/ref/${widest.ref.toLowerCase()}/`}>{widest.ref}</a>で、
-                <strong>{yen(widest.spread)}</strong>の差があります。
-              </li>
-            ) : null}
-            <li>売却の際は、複数社の買取価格を比較されることをおすすめします。</li>
-          </ul>
+      <main>
+        <div className="page-head">
+          <div className="wrap-narrow page-head__inner">
+            <nav className="crumbs" aria-label="パンくずリスト">
+              <Link href="/">ホーム</Link>
+              <span className="sep">/</span>
+              <span className="here">{f.label}</span>
+            </nav>
+            <h1 className="page-title">
+              {f.brand} {f.label}の買取相場
+            </h1>
+            <p className="page-meta">
+              {date} 時点 / {r.length}型番を比較
+            </p>
+          </div>
         </div>
 
-        <h2 className="mt-10 text-lg font-semibold text-neutral-900">型番ごとの買取価格（{date} 時点）</h2>
-        <div className="mt-4 overflow-x-auto">
-          <table className="w-full border-collapse text-sm">
-            <thead>
-              <tr className="bg-neutral-900 text-white">
-                <th className="px-3 py-2 text-left">型番</th>
-                <th className="px-3 py-2 text-left">モデル</th>
-                <th className="px-3 py-2 text-right whitespace-nowrap">上限額（最高）</th>
-                <th className="px-3 py-2 text-right whitespace-nowrap">店舗間の差額</th>
-                <th className="px-3 py-2 text-right whitespace-nowrap">比較社数</th>
-              </tr>
-            </thead>
-            <tbody>
-              {r.map((x, i) => (
-                <tr key={x.ref} className={i % 2 ? "bg-neutral-50" : "bg-white"}>
-                  <td className="border-t border-neutral-200 px-3 py-2 font-medium">
-                    <a className="underline" href={`/ref/${x.ref.toLowerCase()}/`}>{x.ref}</a>
-                  </td>
-                  <td className="border-t border-neutral-200 px-3 py-2 text-neutral-600">{x.model}</td>
-                  <td className="border-t border-neutral-200 px-3 py-2 text-right whitespace-nowrap">
-                    {x.max ? yen(x.max) : "—"}
-                  </td>
-                  <td className="border-t border-neutral-200 px-3 py-2 text-right whitespace-nowrap">
-                    {x.spread ? yen(x.spread) : "—"}
-                  </td>
-                  <td className="border-t border-neutral-200 px-3 py-2 text-right">{x.shops}</td>
-                </tr>
+        <div className="wrap-narrow page-body">
+          {/* 結論を先に出す。数値はすべて型番ページと同じ実データ */}
+          <section className="reveal">
+            <h2 className="block-title"><IconFigures />買取価格の概要</h2>
+            <div className="panel px-6 py-5 md:px-8 md:py-7">
+              <ul className="plain-list summary-list">
+                {top?.max && (
+                  <li>
+                    上限額が最も高いのは、<a className="underline decoration-[var(--silver-2)] underline-offset-2" href={`/ref/${top.ref.toLowerCase()}/`}>{top.ref}</a>
+                    （{top.model}）の<strong>{yen(top.max)}</strong>です。
+                  </li>
+                )}
+                {widest?.spread ? (
+                  <li>
+                    同じ型番でも、買取店により価格に差があります。差額が最も大きいのは
+                    <a className="underline decoration-[var(--silver-2)] underline-offset-2" href={`/ref/${widest.ref.toLowerCase()}/`}>{widest.ref}</a>で、
+                    <strong>{yen(widest.spread)}</strong>の差があります。
+                  </li>
+                ) : null}
+                <li>売却の際は、複数社の買取価格を比較されることをおすすめします。</li>
+              </ul>
+            </div>
+          </section>
+
+          <section className="reveal">
+            <h2 className="block-title"><IconTable />型番ごとの買取価格（{date} 時点）</h2>
+            <div className="table-frame">
+              <table className="data-table">
+                <thead>
+                  <tr>
+                    <th>型番</th>
+                    <th>モデル</th>
+                    <th className="r">上限額（最高）</th>
+                    <th className="r">店舗間の差額</th>
+                    <th className="r">比較社数</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {r.map((x) => (
+                    <tr key={x.ref}>
+                      <td className="whitespace-nowrap">
+                        <a href={`/ref/${x.ref.toLowerCase()}/`}>{x.ref}</a>
+                      </td>
+                      <td>{x.model}</td>
+                      <td className="r strong">{x.max ? yen(x.max) : "—"}</td>
+                      <td className="r">{x.spread ? yen(x.spread) : "—"}</td>
+                      <td className="r">{x.shops}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="table-scroll-hint">表は横にスクロールしてご覧いただけます。</p>
+            <p className="note mt-4">
+              ※ 各社が公開している買取価格を {date} に取得して掲載しています。「店舗間の差額」は、
+              その型番における最も高い提示額と最も低い提示額の差です。実際の査定額は、個体の状態・付属品・時期により変動します。
+            </p>
+          </section>
+
+          <section className="reveal">
+            <h2 className="block-title"><IconLink />他のモデル</h2>
+            <div className="chip-row">
+              {others.map((o) => (
+                <Link key={o.slug} href={`/model/${o.slug}/`} className="btn btn-sm">
+                  {o.label}
+                </Link>
               ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="mt-3 text-xs leading-relaxed text-neutral-500">
-          ※ 各社が公開している買取価格を {date} に取得して掲載しています。「店舗間の差額」は、
-          その型番における最も高い提示額と最も低い提示額の差です。実際の査定額は、個体の状態・付属品・時期により変動します。
-        </p>
-
-        <h2 className="mt-10 text-lg font-semibold text-neutral-900">他のモデル</h2>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {others.map((o) => (
-            <Link
-              key={o.slug}
-              href={`/model/${o.slug}/`}
-              className="rounded border border-neutral-200 px-3 py-1.5 text-sm hover:border-neutral-400"
-            >
-              {o.label}
-            </Link>
-          ))}
+            </div>
+          </section>
         </div>
       </main>
     </>

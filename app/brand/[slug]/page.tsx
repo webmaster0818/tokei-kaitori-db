@@ -5,6 +5,7 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { latestDate, masterRefs, summarize, yen } from "@/lib/prices";
 import { BRANDS, FAMILIES, familyOf, refsByBrand, refsByFamily } from "@/lib/models";
 import { breadcrumb, graph, itemList, organization } from "@/lib/jsonld";
+import { IconLink, IconTable } from "@/components/Icons";
 
 /*
   ブランド別ハブ（/brand/rolex/ など）。モデルハブへの入口。
@@ -78,66 +79,72 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
-    <main className="mx-auto max-w-3xl px-5 py-10">
-      <nav className="text-xs text-neutral-500">
-        <Link href="/" className="hover:underline">ホーム</Link>
-        <span> / </span>
-        <span>{b.label}</span>
-      </nav>
-
-      <h1 className="mt-3 text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl">
-        {b.label}の買取相場
-      </h1>
-      <p className="mt-2 text-sm text-neutral-500">
-        {date} 時点 / {refs.length}型番 / モデル {summary.length}種
-      </p>
-
-      <h2 className="mt-8 text-lg font-semibold text-neutral-900">モデル別の買取価格</h2>
-      <div className="mt-4 overflow-x-auto">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr className="bg-neutral-900 text-white">
-              <th className="px-3 py-2 text-left">モデル</th>
-              <th className="px-3 py-2 text-right whitespace-nowrap">型番数</th>
-              <th className="px-3 py-2 text-right whitespace-nowrap">上限額（最高）</th>
-              <th className="px-3 py-2 text-right whitespace-nowrap">店舗間の差額（最大）</th>
-            </tr>
-          </thead>
-          <tbody>
-            {summary
-              .slice()
-              .sort((x, y) => y.max - x.max)
-              .map((f, i) => (
-                <tr key={f.slug} className={i % 2 ? "bg-neutral-50" : "bg-white"}>
-                  <td className="border-t border-neutral-200 px-3 py-2 font-medium">
-                    <Link className="underline" href={`/model/${f.slug}/`}>{f.label}</Link>
-                  </td>
-                  <td className="border-t border-neutral-200 px-3 py-2 text-right">{f.count}</td>
-                  <td className="border-t border-neutral-200 px-3 py-2 text-right whitespace-nowrap">
-                    {f.max ? yen(f.max) : "—"}
-                  </td>
-                  <td className="border-t border-neutral-200 px-3 py-2 text-right whitespace-nowrap">
-                    {f.spread ? yen(f.spread) : "—"}
-                  </td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
+    <main>
+      <div className="page-head">
+        <div className="wrap-narrow page-head__inner">
+          <nav className="crumbs" aria-label="パンくずリスト">
+            <Link href="/">ホーム</Link>
+            <span className="sep">/</span>
+            <span className="here">{b.label}</span>
+          </nav>
+          <h1 className="page-title">
+            {b.label}の買取相場
+          </h1>
+          <p className="page-meta">
+            {date} 時点 / {refs.length}型番 / モデル {summary.length}種
+          </p>
+        </div>
       </div>
-      <p className="mt-3 text-xs leading-relaxed text-neutral-500">
-        ※ 各社が公開している買取価格を {date} に取得して掲載しています。
-        型番ごとに年式や仕様が異なるため、ブランド全体の平均額は掲載しておりません。
-      </p>
 
-      <h2 className="mt-10 text-lg font-semibold text-neutral-900">他のブランド</h2>
-      <div className="mt-4 flex flex-wrap gap-2">
-        {brands()
-          .filter((x) => x.slug !== slug)
-          .map((x) => (
-            <Link key={x.slug} href={`/brand/${x.slug}/`} className="rounded border border-neutral-200 px-3 py-1.5 text-sm hover:border-neutral-400">
-              {x.label}
-            </Link>
-          ))}
+      <div className="wrap-narrow page-body">
+        <section className="reveal">
+          <h2 className="block-title"><IconTable />モデル別の買取価格</h2>
+          <div className="table-frame">
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th>モデル</th>
+                  <th className="r">型番数</th>
+                  <th className="r">上限額（最高）</th>
+                  <th className="r">店舗間の差額（最大）</th>
+                </tr>
+              </thead>
+              <tbody>
+                {summary
+                  .slice()
+                  .sort((x, y) => y.max - x.max)
+                  .map((f) => (
+                    <tr key={f.slug}>
+                      <td className="whitespace-nowrap">
+                        <Link href={`/model/${f.slug}/`}>{f.label}</Link>
+                      </td>
+                      <td className="r">{f.count}</td>
+                      <td className="r strong">{f.max ? yen(f.max) : "—"}</td>
+                      <td className="r">{f.spread ? yen(f.spread) : "—"}</td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="table-scroll-hint">表は横にスクロールしてご覧いただけます。</p>
+          <p className="note mt-4">
+            ※ 各社が公開している買取価格を {date} に取得して掲載しています。
+            型番ごとに年式や仕様が異なるため、ブランド全体の平均額は掲載しておりません。
+          </p>
+        </section>
+
+        <section className="reveal">
+          <h2 className="block-title"><IconLink />他のブランド</h2>
+          <div className="chip-row">
+            {brands()
+              .filter((x) => x.slug !== slug)
+              .map((x) => (
+                <Link key={x.slug} href={`/brand/${x.slug}/`} className="btn btn-sm">
+                  {x.label}
+                </Link>
+              ))}
+          </div>
+        </section>
       </div>
     </main>
     </>
