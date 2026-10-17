@@ -8,6 +8,7 @@
   "caliber": "5110 DT",
   "functions": "時, デイ/ナイト, 分, 中央に秒表示, セカンドタイムゾーン, 手組み活字のカレンダー",
   "power_reserve_h": 60,
+  "water_resistance_atm": 15,
   "bracelet": "Elasto NBR (ブルー), Veau (ブルー), Acier inox passivé, ポリッシュ／サテン仕上げ",
   "certification": "ジュネーブ・シール",
   "status": "2023-03-28時点の公式サイトに掲載",
@@ -26,7 +27,8 @@
         "certification",
         "functions",
         "movement",
-        "power_reserve_h"
+        "power_reserve_h",
+        "water_resistance_atm"
       ]
     }
   ]

@@ -8,6 +8,7 @@
   "movement": "自動巻き",
   "caliber": "5200",
   "functions": "時表示, 分, スモールセコンド, カレンダー表示用小窓, クロノグラフ, 12-hour counter, 30-minute counter",
+  "water_resistance_atm": 15,
   "bracelet": "ステンレススティール, ポリッシュ／サテン仕上げ, ミシシッピアリゲーター (ブラック), ラバー (ブラック)",
   "certification": "ジュネーブ・シール",
   "status": "2022-07-07時点の公式サイトに掲載",
@@ -26,7 +27,8 @@
         "case_material",
         "certification",
         "functions",
-        "movement"
+        "movement",
+        "water_resistance_atm"
       ]
     }
   ]

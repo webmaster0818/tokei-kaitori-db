@@ -9,6 +9,7 @@
   "caliber": "5100",
   "functions": "時間, 窓による日付表示, センターセコンド , 分",
   "power_reserve_h": 60,
+  "water_resistance_atm": 15,
   "water_resistance_m": 150,
   "bracelet": "ステンレススティール (ポリッシュ／サテン仕上げ)",
   "certification": "ジュネーブ・シール",
@@ -30,6 +31,7 @@
         "functions",
         "movement",
         "power_reserve_h",
+        "water_resistance_atm",
         "water_resistance_m"
       ]
     }

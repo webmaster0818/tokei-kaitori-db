@@ -9,6 +9,7 @@
   "caliber": "5100",
   "functions": "分, カレンダー表示, 中央に秒表示, 時",
   "power_reserve_h": 60,
+  "water_resistance_atm": 15,
   "bracelet": "カーフ (ダークブルー), ステンレススティール, ポリッシュ／サテン仕上げ, Elasto NBR (ダークブルー)",
   "certification": "ジュネーブ・シール",
   "status": "2023-10-03時点の公式サイトに掲載",
@@ -28,7 +29,8 @@
         "certification",
         "functions",
         "movement",
-        "power_reserve_h"
+        "power_reserve_h",
+        "water_resistance_atm"
       ]
     }
   ]

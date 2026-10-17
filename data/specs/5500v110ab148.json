@@ -9,6 +9,7 @@
   "caliber": "5200",
   "functions": "時, 30-minute counter, スモールセコンド, 分, カレンダー表示, クロノグラフ, 12-hour counter",
   "power_reserve_h": 52,
+  "water_resistance_atm": 15,
   "bracelet": "カーフ (ダークブルー), ステンレススティール, ポリッシュ／サテン仕上げ, Elasto NBR (ダークブルー)",
   "certification": "ジュネーブ・シール",
   "status": "2023-10-01時点の公式サイトに掲載",
@@ -28,7 +29,8 @@
         "certification",
         "functions",
         "movement",
-        "power_reserve_h"
+        "power_reserve_h",
+        "water_resistance_atm"
       ]
     }
   ]

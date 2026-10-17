@@ -8,6 +8,7 @@
   "caliber": "5110 DT",
   "functions": "時, 分, 中央に秒表示, セカンドタイムゾーン, デイ/ナイト, 手組み活字のカレンダー",
   "power_reserve_h": 60,
+  "water_resistance_atm": 15,
   "bracelet": "ステンレススティール, ポリッシュ／サテン仕上げ, カーフ (ブラック), ラバー (ブラック)",
   "certification": "ジュネーブ・シール",
   "status": "2022-09-30時点の公式サイトに掲載",
@@ -26,7 +27,8 @@
         "certification",
         "functions",
         "movement",
-        "power_reserve_h"
+        "power_reserve_h",
+        "water_resistance_atm"
       ]
     }
   ]
