@@ -176,13 +176,19 @@ export function prototypeRefs(): string[] {
  *    中身の無いページを量産すると Scaled Content と判定されるため
  *    （takushoku-biyori でスパム扱いを受けた前例あり）。
  */
+const publishableCache = new Map<string, string[]>();
 export function publishableRefs(): string[] {
+  // 全ページから何度も呼ばれるため、取得日ごとに1回だけ計算する（判定条件は従来どおり）
+  const hit = publishableCache.get(latestDate());
+  if (hit) return hit;
   const refs = Object.keys(masterRefs());
-  return refs.filter((ref) => {
+  const out = refs.filter((ref) => {
     const s = summarize(ref);
     // 複数店舗の価格が取れているものだけを公開する（比較サイトとして成立する最低条件）
     return !!s && s.records.length > 0 && s.shops.length >= 2;
   });
+  publishableCache.set(latestDate(), out);
+  return out;
 }
 
 export const yen = (n: number) => `${n.toLocaleString("ja-JP")}円`;

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { LogoMark } from "./Logo";
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
 import { BRANDS, FAMILIES, MIN_REFS, refsByBrand, refsByFamily } from "@/lib/models";
+import { shopStats } from "@/lib/insights";
 
 // フッターのリンクは、実在するハブ（ブランド・モデル）だけに張る（存在しないページへのリンクを作らない）。
 export function SiteFooter() {
@@ -9,6 +10,7 @@ export function SiteFooter() {
   const byFam = refsByFamily();
   const brands = BRANDS.filter((b) => (byBrand[b.slug]?.length ?? 0) >= 2);
   const fams = FAMILIES.filter((f) => (byFam[f.slug]?.length ?? 0) >= MIN_REFS);
+  const shops = shopStats();
   return (
     <footer className="site-footer">
       <div className="wrap site-footer__grid">
@@ -22,6 +24,13 @@ export function SiteFooter() {
             <br />
             当サイトでは、各買取店が公開している価格を出典・取得日とあわせて掲載しています。
           </p>
+          <ul className="mt-5 !flex flex-wrap !gap-x-5 !gap-y-2">
+            <li><a href="/ranking/">買取価格ランキング</a></li>
+            {shops.map((s) => (
+              <li key={s.id}><a href={`/shop/${s.id}/`}>{s.name}</a></li>
+            ))}
+            <li><a href="/#policy">掲載ポリシー</a></li>
+          </ul>
         </div>
         <div>
           <h3>BRANDS</h3>

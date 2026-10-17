@@ -3,7 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { latestDate, masterRefs, summarize, yen } from "@/lib/prices";
-import { FAMILIES, MIN_REFS, refsByFamily } from "@/lib/models";
+import { FAMILIES, MIN_REFS, publishedBrandOf, refsByFamily } from "@/lib/models";
+import { loadEditorial } from "@/lib/content";
+import { EditorialSection } from "@/components/EditorialSection";
+import { Arrow } from "@/components/Icons";
 import { breadcrumb, graph, itemList, organization } from "@/lib/jsonld";
 import { IconFigures, IconLink, IconTable } from "@/components/Icons";
 
@@ -70,7 +73,15 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
   const date = latestDate();
   const top = r[0];
   const widest = r.reduce<Row | null>((a, b) => (!a || (b.spread ?? 0) > (a.spread ?? 0) ? b : a), null);
-  const others = families().filter((x) => x.slug !== slug);
+  // 同じブランドの他モデル（兄弟ハブ）を先に、それ以外を「他のブランドのモデル」として分ける
+  const siblings = families().filter((x) => x.slug !== slug && x.brand === f.brand);
+  const others = families().filter((x) => x.slug !== slug && x.brand !== f.brand);
+  const brandHub = publishedBrandOf(f.brand);
+  const editorial = loadEditorial("models", slug);
+  const siblingStats = siblings.map((sb) => {
+    const rr = rows(sb.slug);
+    return { ...sb, count: rr.length, max: rr[0]?.max ?? null };
+  });
 
   const ld = graph(
     {
@@ -166,16 +177,45 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
             </p>
           </section>
 
+          <EditorialSection data={editorial} heading={editorial?.title ? undefined : `${f.label}について`} />
+
+          {siblingStats.length > 0 && (
+            <section className="reveal">
+              <h2 className="block-title"><IconLink />{f.brand}の他のモデル</h2>
+              <div className="link-grid">
+                {siblingStats.map((o) => (
+                  <Link key={o.slug} href={`/model/${o.slug}/`} className="link-card">
+                    <span className="link-card__label">{o.label}</span>
+                    <span className="link-card__meta">
+                      <span className="num">{o.count}型番{o.max ? ` / 最高${yen(o.max)}` : ""}</span>
+                      <Arrow className="link-card__arrow" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
           <section className="reveal">
-            <h2 className="block-title"><IconLink />他のモデル</h2>
+            <h2 className="block-title"><IconLink />関連ページ</h2>
             <div className="chip-row">
-              {others.map((o) => (
-                <Link key={o.slug} href={`/model/${o.slug}/`} className="btn btn-sm">
-                  {o.label}
-                </Link>
-              ))}
+              {brandHub && <Link href={`/brand/${brandHub.slug}/`} className="btn btn-sm">{brandHub.label}の買取相場</Link>}
+              <a href="/ranking/" className="btn btn-sm">買取価格ランキング</a>
             </div>
           </section>
+
+          {others.length > 0 && (
+            <section className="reveal">
+              <h2 className="block-title"><IconLink />他のブランドのモデル</h2>
+              <div className="chip-row">
+                {others.map((o) => (
+                  <Link key={o.slug} href={`/model/${o.slug}/`} className="btn btn-sm">
+                    {o.label}
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       </main>
     </>

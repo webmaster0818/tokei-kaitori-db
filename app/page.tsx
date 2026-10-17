@@ -8,7 +8,8 @@ import { masterRefs } from "@/lib/prices";
 import { CAPTURED_ON, SHOP_PAGES } from "@/lib/shops";
 import { RefSearch } from "@/components/RefSearch";
 import { SectionHead } from "@/components/SectionHead";
-import { Arrow, IconBrand, IconDocument, IconFigures, IconSearch, IconShop, IconTable, IconWatch } from "@/components/Icons";
+import { Arrow, IconBrand, IconDocument, IconFigures, IconSearch, IconShop, IconTable, IconTrend, IconWatch } from "@/components/Icons";
+import { topSpread } from "@/lib/insights";
 
 export const metadata: Metadata = {
   title: `${SITE_NAME} — ${SITE_TAGLINE}`,
@@ -159,6 +160,42 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ---------- ランキング（抜粋） ---------- */}
+        <section className="section" id="ranking">
+          <div className="wrap">
+            <SectionHead en="Ranking" title="店舗間の差額が大きい型番" icon={<IconTrend />} />
+            <p className="prose-jp reveal mb-8 max-w-3xl">
+              同じ型番でも、買取店により公開している上限額に差があります。{date}時点で差額が大きい上位5型番です。
+            </p>
+            <div className="table-frame reveal">
+              <table className="data-table">
+                <thead>
+                  <tr>
+                    <th>型番</th>
+                    <th className="hide-sm">モデル</th>
+                    <th className="r">店舗間の差額</th>
+                    <th className="r">上限額（最高）</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {topSpread(5).map((r) => (
+                    <tr key={r.ref}>
+                      <td className="whitespace-nowrap"><a href={`/ref/${r.ref.toLowerCase()}/`}>{r.ref}</a><span className="sub-sm">{r.model}</span></td>
+                      <td className="hide-sm">{r.model || "—"}</td>
+                      <td className="r strong">{yen(r.s.spread ?? 0)}</td>
+                      <td className="r">{r.s.ceilingMax != null ? yen(r.s.ceilingMax) : "—"}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="table-scroll-hint">表は横にスクロールしてご覧いただけます。</p>
+            <div className="reveal mt-8">
+              <a href="/ranking/" className="btn">買取価格ランキングを見る<Arrow /></a>
+            </div>
+          </div>
+        </section>
+
         {/* ---------- 比較している買取店 ---------- */}
         <section className="section" id="shops">
           <div className="wrap">
@@ -180,7 +217,7 @@ export default function Home() {
                       </figure>
                     )}
                     <div className="shop-card__body">
-                      <h3 className="shop-card__name">{sh.name}</h3>
+                      <h3 className="shop-card__name"><a href={`/shop/${sh.id}/`}>{sh.name}</a></h3>
                       <dl>
                         <dt>掲載型番</dt>
                         <dd className="num">{sh.refs.size}型番</dd>
@@ -189,11 +226,16 @@ export default function Home() {
                         <dt>価格の区分</dt>
                         <dd>{[...sh.types].join("・")}</dd>
                       </dl>
-                      {page && (
-                        <a href={page.url} target="_blank" rel="noopener noreferrer" className="btn btn-sm">
-                          公式サイトを見る<Arrow />
+                      <div className="shop-card__links">
+                        <a href={`/shop/${sh.id}/`} className="btn btn-sm">
+                          掲載データを見る<Arrow />
                         </a>
-                      )}
+                        {page && (
+                          <a href={page.url} target="_blank" rel="noopener noreferrer" className="btn btn-sm">
+                            公式サイトを見る<Arrow />
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </article>
                 );

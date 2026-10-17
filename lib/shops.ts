@@ -10,3 +10,15 @@ export const SHOP_PAGES: Record<string, { image?: string; url: string }> = {
   nanboya: { image: "/images/shops/nanboya.webp", url: "https://nanboya.com/tokei-kaitori/" },
   watchnian: { image: "/images/shops/watchnian.webp", url: "https://watchnian.com/buy/categories/item_watch/brand_rolex/" },
 };
+
+// 比較している5社の並び順と、グラフで使う識別色（店ごとに固定。順位や件数で色を変えない）。
+// ⚠️ 色は dataviz の検証スクリプトで隣接系列の色覚多様性チェックを通した5色。
+//    水色・黄・桃は白背景で3:1未満のため、グラフには必ず凡例（店名と価格の文字）を併記する。
+export const SHOP_IDS = ["nanboya", "daikokuya", "quark", "jackroad", "watchnian"] as const;
+export const SHOP_COLORS: Record<string, string> = {
+  nanboya: "#2a78d6",
+  daikokuya: "#eb6834",
+  quark: "#1baf7a",
+  jackroad: "#eda100",
+  watchnian: "#e87ba4",
+};
