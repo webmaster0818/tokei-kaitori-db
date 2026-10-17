@@ -1,0 +1,35 @@
+{
+  "ref": "231.10.44.52.04.001",
+  "brand": "オメガ",
+  "model": "シーマスター アクアテラ クロノグラフ GMT",
+  "case_diameter_mm": 44,
+  "case_material": "Steel",
+  "dial": "White",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 3603",
+  "power_reserve_h": 52,
+  "water_resistance_m": 150,
+  "bracelet": "Steel",
+  "status": "2024-11-28時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-gmt-chronograph-44-mm-23110445204001",
+      "archive": "http://web.archive.org/web/20241128211441/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-gmt-chronograph-44-mm-23110445204001",
+      "snapshot": "2024-11-28",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "ref": "15400OR.OO.D002CR.01",
+  "brand": "オーデマ・ピゲ",
+  "model": "ロイヤルオーク 41mm ブラック",
+  "case_diameter_mm": 41,
+  "dial": "「グランド・タペストリー」パターンのブラックダイヤル、ピンクゴールドのアプライドアワーマーカーとロイヤルオーク針、ルミネサント加工",
+  "caliber": "3120",
+  "functions": "時、分、センターセコンド、デイト表示。",
+  "power_reserve_h": 60,
+  "water_resistance_m": 50,
+  "bracelet": "ハンドステッチの「大きな竹班入り」黒アリゲーターストラップ、18KピンクゴールドAPフォールディングバックル",
+  "status": "2019-12-08時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15400OR.OO.D002CR.01",
+      "archive": "http://web.archive.org/web/20191208003643/https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15400OR.OO.D002CR.01",
+      "snapshot": "2019-12-08",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "dial",
+        "functions",
+        "power_reserve_h",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

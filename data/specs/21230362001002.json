@@ -1,0 +1,31 @@
+{
+  "ref": "212.30.36.20.01.002",
+  "brand": "オメガ",
+  "model": "シーマスター",
+  "case_diameter_mm": 36.25,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "caliber": "OMEGA 2500",
+  "water_resistance_m": 300,
+  "bracelet": "steel",
+  "status": "2021-01-28時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-seamaster-diver-300m-co-axial-chronometer-36-25-mm-21230362001002",
+      "archive": "http://web.archive.org/web/20210128084927/https://www.omegawatches.com/watch-omega-seamaster-diver-300m-co-axial-chronometer-36-25-mm-21230362001002",
+      "snapshot": "2021-01-28",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "ref": "332.10.41.51.01.001",
+  "brand": "オメガ",
+  "model": "スピードマスター",
+  "case_diameter_mm": 40.5,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Manual‑winding",
+  "caliber": "OMEGA 9906",
+  "power_reserve_h": 60,
+  "water_resistance_m": 50,
+  "bracelet": "Steel",
+  "status": "2026-10-12時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-57-co-axial-master-chronometer-chronograph-40-5-mm-33210415101001",
+      "archive": "http://web.archive.org/web/20261012050735/https://www.omegawatches.com/en-us/watch-omega-speedmaster-57-co-axial-master-chronometer-chronograph-40-5-mm-33210415101001",
+      "snapshot": "2026-10-12",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

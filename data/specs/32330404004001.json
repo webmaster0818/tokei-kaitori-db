@@ -1,0 +1,35 @@
+{
+  "ref": "323.30.40.40.04.001",
+  "brand": "オメガ",
+  "model": "スピードマスター デイト",
+  "case_diameter_mm": 40,
+  "case_material": "Steel",
+  "dial": "White",
+  "crystal": "Domed, scratch‑resistant sapphire crystal with anti‑reflective treatment inside",
+  "movement": "Self winding",
+  "caliber": "OMEGA 3304",
+  "power_reserve_h": 48,
+  "water_resistance_m": 100,
+  "bracelet": "steel",
+  "status": "2022-04-12時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-speedmaster-date-day-date-chronograph-40-mm-date-32330404004001",
+      "archive": "http://web.archive.org/web/20220412011644/https://www.omegawatches.com/watch-omega-speedmaster-date-day-date-chronograph-40-mm-date-32330404004001",
+      "snapshot": "2022-04-12",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

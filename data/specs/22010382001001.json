@@ -1,0 +1,35 @@
+{
+  "ref": "220.10.38.20.01.001",
+  "brand": "オメガ",
+  "model": "シーマスター アクアテラ 150m コーアクシャル マスタークロノメーター",
+  "case_diameter_mm": 38,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 8800",
+  "power_reserve_h": 55,
+  "water_resistance_m": 150,
+  "bracelet": "Steel",
+  "status": "2025-12-05時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-38-mm-22010382001001",
+      "archive": "http://web.archive.org/web/20251205085905/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-38-mm-22010382001001",
+      "snapshot": "2025-12-05",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

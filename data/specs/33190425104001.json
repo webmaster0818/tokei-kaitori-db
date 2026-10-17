@@ -1,0 +1,35 @@
+{
+  "ref": "331.90.42.51.04.001",
+  "brand": "オメガ",
+  "model": "スピードマスター 57 クロノグラフ チタン",
+  "case_diameter_mm": 41.5,
+  "case_material": "Titanium",
+  "dial": "White",
+  "crystal": "Scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 9300",
+  "power_reserve_h": 60,
+  "water_resistance_m": 100,
+  "bracelet": "Titanium",
+  "status": "2025-08-30時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-57-co-axial-chronometer-chronograph-41-5-mm-33190425104001",
+      "archive": "http://web.archive.org/web/20250830113104/https://www.omegawatches.com/en-us/watch-omega-speedmaster-57-co-axial-chronometer-chronograph-41-5-mm-33190425104001",
+      "snapshot": "2025-08-30",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "ref": "311.30.44.51.01.002",
+  "brand": "オメガ",
+  "model": "スピードマスター コーアクシャル",
+  "case_diameter_mm": 44.25,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 9300",
+  "power_reserve_h": 60,
+  "water_resistance_m": 100,
+  "bracelet": "Steel",
+  "status": "2025-03-25時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-speedmaster-two-counters-co-axial-chronometer-chronograph-44-25-mm-31130445101002",
+      "archive": "http://web.archive.org/web/20250325054424/https://www.omegawatches.com/watch-omega-speedmaster-two-counters-co-axial-chronometer-chronograph-44-25-mm-31130445101002",
+      "snapshot": "2025-03-25",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

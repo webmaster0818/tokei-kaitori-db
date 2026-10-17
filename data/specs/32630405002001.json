@@ -1,0 +1,28 @@
+{
+  "ref": "326.30.40.50.02.001",
+  "brand": "オメガ",
+  "model": "スピードマスター レーシング",
+  "case_diameter_mm": 40,
+  "case_material": "ステンレススティール",
+  "dial": "シルバー",
+  "crystal": "両面に無反射加工を施したドーム型強化無反射サファイアガラス",
+  "water_resistance_m": 100,
+  "bracelet": "ステンレススティール",
+  "status": "2020-06-11時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.jp/ja/watch-omega-speedmaster-racing-co-axial-chronograph-40-mm-32630405002001",
+      "archive": "http://web.archive.org/web/20200611205934/https://www.omegawatches.jp/ja/watch-omega-speedmaster-racing-co-axial-chronograph-40-mm-32630405002001",
+      "snapshot": "2020-06-11",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "ref": "331.10.42.51.02.002",
+  "brand": "オメガ",
+  "model": "スピードマスター 57 クロノグラフ",
+  "case_diameter_mm": 41.5,
+  "case_material": "Steel",
+  "dial": "Silver",
+  "crystal": "Scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "OMEGA 9300",
+  "water_resistance_m": 100,
+  "bracelet": "Steel",
+  "status": "2022-07-18時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-speedmaster-57-co-axial-chronometer-chronograph-41-5-mm-33110425102002",
+      "archive": "http://web.archive.org/web/20220718032602/https://www.omegawatches.com/watch-omega-speedmaster-57-co-axial-chronometer-chronograph-41-5-mm-33110425102002",
+      "snapshot": "2022-07-18",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}
