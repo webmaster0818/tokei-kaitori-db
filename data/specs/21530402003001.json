@@ -1,0 +1,36 @@
+{
+  "ref": "215.30.40.20.03.001",
+  "brand": "オメガ",
+  "model": "Planet Ocean 600M Seamaster Steel Master Chronometer Certified Watch 215.30.40.20.03.001",
+  "case_diameter_mm": 39.5,
+  "case_material": "Steel",
+  "dial": "Blue",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 8800",
+  "power_reserve_h": 55,
+  "water_resistance_m": 600,
+  "bracelet": "Steel",
+  "status": "2025-08-01時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-39-5-mm-21530402003001",
+      "archive": "http://web.archive.org/web/20250801083821/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-39-5-mm-21530402003001",
+      "snapshot": "2025-08-01",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

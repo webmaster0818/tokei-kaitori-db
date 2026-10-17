@@ -30,192 +30,24 @@
     "ヴァシュロン・コンスタンタンの「文字盤」は色ではなく素材（ブラス等）のため dial には入れていない"
   ],
   "pending": {
-    "オメガ": {
-      "count": 112,
-      "refs": [
-        "3570.50",
-        "3573.50",
-        "3576.50",
-        "310.30.42.50.04.001",
-        "332.10.41.51.01.001",
-        "323.30.40.40.04.001",
-        "3539.50",
-        "3590.50",
-        "3560.50",
-        "3510.50",
-        "3220.50",
-        "3523.30",
-        "3210.50",
-        "3211.30",
-        "3513.50",
-        "3221.30",
-        "232.30.42.21.01.003",
-        "232.30.46.21.01.002",
-        "232.30.46.21.01.003",
-        "231.10.39.21.06.001",
-        "212.30.36.20.01.002",
-        "326.30.40.50.06.001",
-        "326.30.40.50.03.001",
-        "326.30.40.50.04.001",
-        "326.30.40.50.11.001",
-        "326.30.40.50.02.001",
-        "311.63.44.51.06.001",
-        "311.93.44.51.04.002",
-        "311.92.44.51.01.004",
-        "311.93.44.51.99.001",
-        "311.92.44.51.01.003",
-        "331.12.42.51.01.002",
-        "331.90.42.51.04.001",
-        "331.10.42.51.03.001",
-        "331.10.42.51.02.002",
-        "321.10.44.50.02.001",
-        "321.10.44.50.01.001",
-        "311.30.44.51.01.002",
-        "311.30.44.50.01.002",
-        "231.10.42.21.01.002",
-        "231.10.44.52.04.001",
-        "231.10.43.22.01.002",
-        "231.10.43.22.02.001",
-        "231.10.43.22.01.001",
-        "231.10.42.21.02.004",
-        "231.10.39.21.03.002",
-        "231.10.42.21.02.002",
-        "231.10.42.22.03.001",
-        "231.10.42.22.02.001",
-        "231.13.42.21.03.001",
-        "231.10.42.22.01.001",
-        "231.13.39.21.03.001",
-        "231.10.42.21.03.001",
-        "231.10.42.21.01.001",
-        "231.10.39.21.01.001",
-        "231.10.39.21.02.001",
-        "231.10.42.21.02.001",
-        "231.10.42.21.06.001",
-        "231.10.39.60.02.001",
-        "224.30.55.21.01.001",
-        "231.10.39.60.06.001",
-        "212.30.44.52.03.001",
-        "212.30.44.52.01.001",
-        "212.30.42.50.01.001",
-        "212.30.44.50.01.002",
-        "212.30.44.50.03.001",
-        "212.30.44.50.01.001",
-        "232.32.44.22.03.001",
-        "232.30.44.22.01.002",
-        "232.90.46.51.03.001",
-        "222.32.38.50.01.003",
-        "222.32.38.50.01.001",
-        "232.32.46.51.01.001",
-        "232.90.42.21.03.001",
-        "232.30.46.51.01.003",
-        "232.90.46.21.03.001",
-        "232.32.42.21.01.003",
-        "232.32.42.21.01.001",
-        "233.20.41.21.01.001",
-        "424.13.40.21.03.001",
-        "424.13.40.21.01.001",
-        "424.13.40.21.02.001",
-        "424.13.40.20.03.001",
-        "424.13.40.20.01.001",
-        "424.13.40.20.02.001",
-        "311.30.42.30.01.004",
-        "220.10.38.20.03.001",
-        "220.10.38.20.01.001",
-        "220.10.38.20.02.001",
-        "220.10.41.21.03.002",
-        "220.10.41.21.02.001",
-        "232.30.38.20.01.002",
-        "215.30.40.20.03.001",
-        "215.30.40.20.04.001",
-        "215.33.40.20.01.001",
-        "215.33.40.20.03.001",
-        "215.33.40.20.04.001",
-        "215.33.44.21.01.001",
-        "215.33.44.21.03.001",
-        "215.30.46.51.01.001",
-        "215.90.46.51.99.001",
-        "227.90.55.21.01.001",
-        "231.13.42.21.02.001",
-        "231.13.42.21.06.001",
-        "231.10.39.22.01.001",
-        "231.10.39.22.02.001",
-        "231.10.44.50.01.001",
-        "231.10.44.50.04.001",
-        "231.10.44.50.09.001",
-        "231.13.44.50.01.001",
-        "231.13.44.50.02.001",
-        "329.30.43.51.02.001"
-      ]
-    },
-    "オーデマ・ピゲ": {
-      "count": 39,
-      "refs": [
-        "15450ST.OO.1256ST.01",
-        "15400ST.OO.1220ST.01",
-        "15400ST.OO.1220ST.02",
-        "15400ST.OO.1220ST.03",
-        "15400ST.OO.1220ST.04",
-        "15300ST.OO.1220ST.01",
-        "15300ST.OO.1220ST.02",
-        "15300ST.OO.1220ST.03",
-        "26401RO.OO.A002CA.02",
-        "15710ST.OO.A002CA.02",
-        "15450SR.OO.1256SR.01",
-        "15202ST.OO.1240ST.01",
-        "15400SR.OO.1220SR.01",
-        "15400OR.OO.D002CR.01",
-        "15400OR.OO.D088CR.01",
-        "15400OR.OO.1220OR.01",
-        "15400OR.OO.1220OR.02",
-        "15400OR.OO.1220OR.03",
-        "15300OR.OO.D002CR.01",
-        "15300OR.OO.D088CR.02",
-        "26320ST.OO.1220ST.01",
-        "26320ST.OO.1220ST.02",
-        "26320ST.OO.1220ST.03",
-        "26400IO.OO.A004CA.01",
-        "15710ST.OO.A010CA.01",
-        "15703ST.OO.A002CA.01",
-        "26470SO.OO.A002CA.01",
-        "26470IO.OO.A006CA.01",
-        "26470ST.OO.A027CA.01",
-        "26470ST.OO.A028CR.01",
-        "26470ST.OO.A030CA.01",
-        "26470ST.OO.A101CR.01",
-        "26470ST.OO.A104CR.01",
-        "26470ST.OO.A801CR.01",
-        "26170ST.OO.D101CR.03",
-        "26405CE.OO.A002CA.02",
-        "26480TI.OO.A027CA.01",
-        "15210BC.OO.A002CR.01",
-        "26393BC.OO.A321CR.01"
-      ]
-    },
-    "ヴァシュロン・コンスタンタン": {
-      "count": 4,
-      "refs": [
-        "49150.B01A.9097",
-        "47450.B01A.9227",
-        "47040.B01A.9094",
-        "47040.B01A.9093"
-      ]
-    },
-    "_note": "公開対象だがスペック未作成。買取店追加で公開型番が増えた分。これから同じ手順で作る"
+    "_note": "なし（公開対象はすべて作成済みか、作成不可として not_created に記録）"
   },
   "counts": {
-    "created": 229,
-    "not_created": 186,
+    "created": 300,
+    "not_created": 203,
     "by_brand": {
-      "オメガ": 137,
-      "オーデマ・ピゲ": 37,
+      "オメガ": 185,
+      "オーデマ・ピゲ": 60,
       "ロレックス": 43,
       "ヴァシュロン・コンスタンタン": 12
     },
     "not_created_by_brand": {
-      "ロレックス": 186
+      "ロレックス": 186,
+      "オメガ": 13,
+      "ヴァシュロン・コンスタンタン": 4
     },
-    "fields_total": 2245,
-    "snapshot_2025_or_earlier": 159
+    "fields_total": 2767,
+    "snapshot_2025_or_earlier": 230
   },
   "created": [
     {
@@ -394,6 +226,18 @@
       "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "212.30.42.50.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/21230425001001.json",
+      "model": "Seamaster Diver 300M Co-Axial Chronograph 41.5 mm",
+      "fields": 6,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-diver-300m-co-axial-chronograph-41-5-mm-21230425001001",
+      "snapshot": "2020-09-26",
+      "archive": "http://web.archive.org/web/20200926160004/https://www.omegawatches.com/watch-omega-seamaster-diver-300m-co-axial-chronograph-41-5-mm-21230425001001",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "212.30.42.50.03.001",
       "brand": "オメガ",
       "file": "data/specs/21230425003001.json",
@@ -404,6 +248,18 @@
       "snapshot": "2021-05-11",
       "archive": "http://web.archive.org/web/20210511080601/https://www.omegawatches.jp/ja/watch-omega-seamaster-diver-300m-co-axial-chronometer-chronograph-41-5-mm-21230425003001",
       "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "212.30.44.50.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/21230445001001.json",
+      "model": "Diver 300M Seamaster Steel Chronograph Watch 212.30.44.50.01.001",
+      "fields": 6,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-diver-300m-co-axial-chronograph-44-mm-21230445001001",
+      "snapshot": "2020-07-07",
+      "archive": "http://web.archive.org/web/20200707222240/https://www.omegawatches.com/en-us/watch-omega-seamaster-diver-300m-co-axial-chronograph-44-mm-21230445001001",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
     },
     {
       "ref": "212.30.44.50.01.002",
@@ -466,6 +322,30 @@
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "215.30.40.20.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/21530402003001.json",
+      "model": "Planet Ocean 600M Seamaster Steel Master Chronometer Certified Watch 215.30.40.20.03.001",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-39-5-mm-21530402003001",
+      "snapshot": "2025-08-01",
+      "archive": "http://web.archive.org/web/20250801083821/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-39-5-mm-21530402003001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "215.30.40.20.04.001",
+      "brand": "オメガ",
+      "file": "data/specs/21530402004001.json",
+      "model": "Planet Ocean 600M Seamaster Steel Master Chronometer Certified Watch 215.30.40.20.04.001",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-39-5-mm-21530402004001",
+      "snapshot": "2025-08-01",
+      "archive": "http://web.archive.org/web/20250801083821/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-39-5-mm-21530402004001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "215.30.44.21.01.001",
       "brand": "オメガ",
       "file": "data/specs/21530442101001.json",
@@ -487,6 +367,18 @@
       "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21530442103001",
       "snapshot": "2025-08-01",
       "archive": "http://web.archive.org/web/20250801083821/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21530442103001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "215.30.46.51.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/21530465101001.json",
+      "model": "Planet Ocean 600M Seamaster Steel Master Chronometer Certified Watch 215.30.46.51.01.001",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-chronograph-45-5-mm-21530465101001",
+      "snapshot": "2025-07-31",
+      "archive": "http://web.archive.org/web/20250731143213/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-chronograph-45-5-mm-21530465101001",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
     },
     {
@@ -514,6 +406,66 @@
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "215.33.40.20.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/21533402001001.json",
+      "model": "Seamaster Planet Ocean 600M OMEGA Co-Axial Master Chronometer 39.5 mm",
+      "fields": 6,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-master-chronometer-39-5-mm-21533402001001",
+      "snapshot": "2020-09-19",
+      "archive": "http://web.archive.org/web/20200919083100/https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-master-chronometer-39-5-mm-21533402001001",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "215.33.40.20.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/21533402003001.json",
+      "model": "Seamaster Planet Ocean 600M コーアクシャル マスター クロノメーター 39.5mm",
+      "fields": 6,
+      "lang": "ja",
+      "source_url": "https://www.omegawatches.jp/ja/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-39-5-mm-21533402003001",
+      "snapshot": "2021-05-16",
+      "archive": "http://web.archive.org/web/20210516183515/https://www.omegawatches.jp/ja/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-39-5-mm-21533402003001",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "215.33.40.20.04.001",
+      "brand": "オメガ",
+      "file": "data/specs/21533402004001.json",
+      "model": "Planet Ocean 600M Seamaster Steel Master Chronometer Certified Watch 215.33.40.20.04.001",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-39-5-mm-21533402004001",
+      "snapshot": "2025-08-01",
+      "archive": "http://web.archive.org/web/20250801083821/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-39-5-mm-21533402004001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "215.33.44.21.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/21533442101001.json",
+      "model": "Seamaster Planet Ocean 600M 43.5 mm, steel on leather strap with rubber lining",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21533442101001",
+      "snapshot": "2024-09-19",
+      "archive": "http://web.archive.org/web/20240919012707/https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21533442101001",
+      "note": "公式ページのアーカイブが2024年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "215.33.44.21.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/21533442103001.json",
+      "model": "Planet Ocean 600M Seamaster Steel Master Chronometer Certified Watch 215.33.44.21.03.001",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21533442103001",
+      "snapshot": "2025-11-07",
+      "archive": "http://web.archive.org/web/20251107140007/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21533442103001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "215.33.46.51.01.001",
       "brand": "オメガ",
       "file": "data/specs/21533465101001.json",
@@ -535,6 +487,18 @@
       "source_url": "https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21590442199001",
       "snapshot": "2025-08-10",
       "archive": "http://web.archive.org/web/20250810195302/https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21590442199001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "215.90.46.51.99.001",
+      "brand": "オメガ",
+      "file": "data/specs/21590465199001.json",
+      "model": "Planet Ocean 600M Seamaster Titanium Master Chronometer Certified Watch 215.90.46.51.99.001",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-chronograph-45-5-mm-21590465199001",
+      "snapshot": "2025-11-15",
+      "archive": "http://web.archive.org/web/20251115124153/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-chronograph-45-5-mm-21590465199001",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
     },
     {
@@ -565,13 +529,13 @@
       "ref": "220.10.38.20.01.001",
       "brand": "オメガ",
       "file": "data/specs/22010382001001.json",
-      "model": "Aqua Terra 150M Seamaster Steel Master Chronometer Certified Watch 220.10.38.20.01.001",
-      "fields": 9,
-      "lang": "en",
-      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-38-mm-22010382001001",
-      "snapshot": "2025-12-05",
-      "archive": "http://web.archive.org/web/20251205085905/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-38-mm-22010382001001",
-      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+      "model": "Seamaster Aqua Terra 150M OMEGA Co-Axial Master Chronometer 38 mm",
+      "fields": 6,
+      "lang": "ja",
+      "source_url": "https://www.omegawatches.jp/ja/watch-omega-seamaster-aqua-terra-150m-omega-co-axial-master-chronometer-38-mm-22010382001001",
+      "snapshot": "2020-09-23",
+      "archive": "http://web.archive.org/web/20200923221249/https://www.omegawatches.jp/ja/watch-omega-seamaster-aqua-terra-150m-omega-co-axial-master-chronometer-38-mm-22010382001001",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
     },
     {
       "ref": "220.10.38.20.01.002",
@@ -584,6 +548,30 @@
       "snapshot": "2025-09-16",
       "archive": "http://web.archive.org/web/20250916030729/https://www.omegawatches.com/en-us/watch-omega-seamaster-railmaster-co-axial-master-chronometer-38-mm-22010382001002",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "220.10.38.20.02.001",
+      "brand": "オメガ",
+      "file": "data/specs/22010382002001.json",
+      "model": "Aqua Terra 150M Seamaster Steel Master Chronometer Certified Watch 220.10.38.20.02.001",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-38-mm-22010382002001",
+      "snapshot": "2025-12-06",
+      "archive": "http://web.archive.org/web/20251206124453/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-38-mm-22010382002001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "220.10.38.20.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/22010382003001.json",
+      "model": "Seamaster Aqua Terra 150M OMEGA Co-Axial Master Chronometer 38 mm",
+      "fields": 6,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-omega-co-axial-master-chronometer-38-mm-22010382003001",
+      "snapshot": "2020-11-11",
+      "archive": "http://web.archive.org/web/20201111192204/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-omega-co-axial-master-chronometer-38-mm-22010382003001",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
     },
     {
       "ref": "220.10.40.20.01.001",
@@ -610,6 +598,18 @@
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "220.10.41.21.02.001",
+      "brand": "オメガ",
+      "file": "data/specs/22010412102001.json",
+      "model": "Aqua Terra 150M Seamaster Steel Master Chronometer Certified Watch 220.10.41.21.02.001",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-41-mm-22010412102001",
+      "snapshot": "2025-12-29",
+      "archive": "http://web.archive.org/web/20251229172301/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-41-mm-22010412102001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "220.10.41.21.02.002",
       "brand": "オメガ",
       "file": "data/specs/22010412102002.json",
@@ -619,6 +619,18 @@
       "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-small-seconds-41-mm-22010412102002",
       "snapshot": "2025-12-23",
       "archive": "http://web.archive.org/web/20251223060624/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-small-seconds-41-mm-22010412102002",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "220.10.41.21.03.002",
+      "brand": "オメガ",
+      "file": "data/specs/22010412103002.json",
+      "model": "Aqua Terra 150M Seamaster Steel Master Chronometer Certified Watch 220.10.41.21.03.002",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-41-mm-22010412103002",
+      "snapshot": "2025-11-15",
+      "archive": "http://web.archive.org/web/20251115193916/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-41-mm-22010412103002",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
     },
     {
@@ -646,6 +658,18 @@
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "222.32.38.50.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/22232385001001.json",
+      "model": "Seamaster Planet Ocean 600M Co-Axial Chronograph 37.5 mm",
+      "fields": 8,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-co-axial-chronograph-37-5-mm-22232385001001",
+      "snapshot": "2022-11-30",
+      "archive": "http://web.archive.org/web/20221130194450/https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-co-axial-chronograph-37-5-mm-22232385001001",
+      "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "222.32.38.50.01.003",
       "brand": "オメガ",
       "file": "data/specs/22232385001003.json",
@@ -655,6 +679,30 @@
       "source_url": "https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-co-axial-chronograph-37-5-mm-22232385001003",
       "snapshot": "2020-11-11",
       "archive": "http://web.archive.org/web/20201111201746/https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-co-axial-chronograph-37-5-mm-22232385001003",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "224.30.55.21.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/22430552101001.json",
+      "model": "Seamaster Ploprof 1200M Co-Axial Chronometer 55 x 48 mm",
+      "fields": 6,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-ploprof-1200m-co-axial-chronometer-55-x-48-mm-22430552101001",
+      "snapshot": "2021-10-25",
+      "archive": "http://web.archive.org/web/20211025044621/https://www.omegawatches.com/watch-omega-seamaster-ploprof-1200m-co-axial-chronometer-55-x-48-mm-22430552101001",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "227.90.55.21.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/22790552101001.json",
+      "model": "Seamaster Ploprof 1200M OMEGA Co-Axial Master Chronometer 55 x 48 mm",
+      "fields": 5,
+      "lang": "ja",
+      "source_url": "https://www.omegawatches.jp/ja/watch-omega-seamaster-ploprof-1200m-omega-co-axial-master-chronometer-55-x-48-mm-22790552101001",
+      "snapshot": "2020-05-09",
+      "archive": "http://web.archive.org/web/20200509194111/https://www.omegawatches.jp/ja/watch-omega-seamaster-ploprof-1200m-omega-co-axial-master-chronometer-55-x-48-mm-22790552101001",
       "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
     },
     {
@@ -754,6 +802,30 @@
       "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "231.10.39.22.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/23110392201001.json",
+      "model": "Aqua Terra 150M Seamaster Steel Chronometer Watch 231.10.39.22.01.001",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-annual-calendar-38-5-mm-23110392201001",
+      "snapshot": "2025-08-24",
+      "archive": "http://web.archive.org/web/20250824064147/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-annual-calendar-38-5-mm-23110392201001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.10.39.22.02.001",
+      "brand": "オメガ",
+      "file": "data/specs/23110392202001.json",
+      "model": "Seamaster Aqua Terra 150M OMEGA Co-Axial Annual Calendar 38.5 mm",
+      "fields": 6,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-omega-co-axial-annual-calendar-38-5-mm-23110392202001",
+      "snapshot": "2020-09-28",
+      "archive": "http://web.archive.org/web/20200928150108/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-omega-co-axial-annual-calendar-38-5-mm-23110392202001",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "231.10.39.60.02.001",
       "brand": "オメガ",
       "file": "data/specs/23110396002001.json",
@@ -814,6 +886,30 @@
       "note": "公式ページのアーカイブが2024年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "231.10.42.21.02.001",
+      "brand": "オメガ",
+      "file": "data/specs/23110422102001.json",
+      "model": "Aqua Terra 150M Seamaster Steel Chronometer Watch 231.10.42.21.02.001",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-41-5-mm-23110422102001",
+      "snapshot": "2025-02-16",
+      "archive": "http://web.archive.org/web/20250216220420/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-41-5-mm-23110422102001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.10.42.21.02.002",
+      "brand": "オメガ",
+      "file": "data/specs/23110422102002.json",
+      "model": "Seamaster Aqua Terra 150M Co-Axial Chronometer 41.5 mm",
+      "fields": 7,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-41-5-mm-23110422102002",
+      "snapshot": "2022-11-30",
+      "archive": "http://web.archive.org/web/20221130194625/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-41-5-mm-23110422102002",
+      "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "231.10.42.21.02.004",
       "brand": "オメガ",
       "file": "data/specs/23110422102004.json",
@@ -823,6 +919,18 @@
       "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-master-co-axial-chronometer-41-5-mm-23110422102004",
       "snapshot": "2022-05-31",
       "archive": "http://web.archive.org/web/20220531040925/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-master-co-axial-chronometer-41-5-mm-23110422102004",
+      "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.10.42.21.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/23110422103001.json",
+      "model": "Seamaster Aqua Terra 150M Co-Axial Chronometer 41.5 mm",
+      "fields": 8,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-41-5-mm-23110422103001",
+      "snapshot": "2022-04-12",
+      "archive": "http://web.archive.org/web/20220412003815/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-41-5-mm-23110422103001",
       "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
     },
     {
@@ -873,6 +981,42 @@
       "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "231.10.42.22.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/23110422203001.json",
+      "model": "Aqua Terra 150M Seamaster Steel Chronometer Watch 231.10.42.22.03.001",
+      "fields": 6,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-day-date-41-5-mm-23110422203001",
+      "snapshot": "2023-09-29",
+      "archive": "http://web.archive.org/web/20230929194120/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-day-date-41-5-mm-23110422203001",
+      "note": "公式ページのアーカイブが2023年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.10.43.22.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/23110432201001.json",
+      "model": "Aqua Terra 150M Seamaster Steel Chronometer Watch 231.10.43.22.01.001",
+      "fields": 6,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-gmt-43-mm-23110432201001",
+      "snapshot": "2021-03-26",
+      "archive": "http://web.archive.org/web/20210326225749/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-gmt-43-mm-23110432201001",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.10.43.22.01.002",
+      "brand": "オメガ",
+      "file": "data/specs/23110432201002.json",
+      "model": "Seamaster Aqua Terra 150M Co-Axial Chronometer Annual Calendar 43 mm",
+      "fields": 7,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-annual-calendar-43-mm-23110432201002",
+      "snapshot": "2022-11-30",
+      "archive": "http://web.archive.org/web/20221130194638/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-annual-calendar-43-mm-23110432201002",
+      "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "231.10.43.22.02.001",
       "brand": "オメガ",
       "file": "data/specs/23110432202001.json",
@@ -921,6 +1065,30 @@
       "note": "公式ページのアーカイブが2024年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "231.10.44.50.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/23110445001001.json",
+      "model": "Seamaster Aqua Terra 150M Co-Axial Chronometer Chronograph 44 mm",
+      "fields": 8,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-chronograph-44-mm-23110445001001",
+      "snapshot": "2022-11-30",
+      "archive": "http://web.archive.org/web/20221130194645/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-chronograph-44-mm-23110445001001",
+      "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.10.44.50.04.001",
+      "brand": "オメガ",
+      "file": "data/specs/23110445004001.json",
+      "model": "Aqua Terra 150M Seamaster Steel Chronometer Watch 231.10.44.50.04.001",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-chronograph-44-mm-23110445004001",
+      "snapshot": "2025-08-26",
+      "archive": "http://web.archive.org/web/20250826012255/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-chronograph-44-mm-23110445004001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "231.10.44.50.06.001",
       "brand": "オメガ",
       "file": "data/specs/23110445006001.json",
@@ -931,6 +1099,18 @@
       "snapshot": "2021-04-21",
       "archive": "http://web.archive.org/web/20210421020423/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-chronograph-44-mm-23110445006001",
       "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.10.44.50.09.001",
+      "brand": "オメガ",
+      "file": "data/specs/23110445009001.json",
+      "model": "Seamaster Aqua Terra 150M 44 mm, steel on steel",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-chronograph-44-mm-23110445009001",
+      "snapshot": "2025-07-09",
+      "archive": "http://web.archive.org/web/20250709053144/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-chronograph-44-mm-23110445009001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
     },
     {
       "ref": "231.10.44.52.04.001",
@@ -955,6 +1135,78 @@
       "snapshot": "2021-07-25",
       "archive": "http://web.archive.org/web/20210725040231/https://www.omegawatches.jp/ja/watch-omega-seamaster-aqua-terra-150m-master-co-axial-chronometer-38-5-mm-23113392103001",
       "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.13.42.21.02.001",
+      "brand": "オメガ",
+      "file": "data/specs/23113422102001.json",
+      "model": "Seamaster Aqua Terra 150M Co-Axial Chronometer 41.5 mm",
+      "fields": 8,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-41-5-mm-23113422102001",
+      "snapshot": "2022-04-12",
+      "archive": "http://web.archive.org/web/20220412005545/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-41-5-mm-23113422102001",
+      "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.13.42.21.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/23113422103001.json",
+      "model": "Seamaster Aqua Terra 150M 41.5 mm, steel on leather strap",
+      "fields": 8,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-master-co-axial-chronometer-41-5-mm-23113422103001",
+      "snapshot": "2023-12-06",
+      "archive": "http://web.archive.org/web/20231206134724/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-master-co-axial-chronometer-41-5-mm-23113422103001",
+      "note": "公式ページのアーカイブが2023年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.13.42.21.06.001",
+      "brand": "オメガ",
+      "file": "data/specs/23113422106001.json",
+      "model": "Seamaster Aqua Terra 150M Co-Axial Chronometer 41.5 mm",
+      "fields": 8,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-41-5-mm-23113422106001",
+      "snapshot": "2022-04-12",
+      "archive": "http://web.archive.org/web/20220412004716/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-41-5-mm-23113422106001",
+      "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.13.44.50.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/23113445001001.json",
+      "model": "Seamaster Aqua Terra 150M Co-Axial Chronometer Chronograph 44 mm",
+      "fields": 8,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-chronograph-44-mm-23113445001001",
+      "snapshot": "2022-11-30",
+      "archive": "http://web.archive.org/web/20221130194740/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-chronograph-44-mm-23113445001001",
+      "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.13.44.50.02.001",
+      "brand": "オメガ",
+      "file": "data/specs/23113445002001.json",
+      "model": "Seamaster Aqua Terra 150M Co-Axial Chronograph 44 mm",
+      "fields": 8,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronograph-44-mm-23113445002001",
+      "snapshot": "2020-08-15",
+      "archive": "http://web.archive.org/web/20200815111439/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronograph-44-mm-23113445002001",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "232.30.38.20.01.002",
+      "brand": "オメガ",
+      "file": "data/specs/23230382001002.json",
+      "model": "Seamaster Planet Ocean 600M OMEGA Co-Axial 37.5 mm",
+      "fields": 7,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-37-5-mm-23230382001002",
+      "snapshot": "2019-09-23",
+      "archive": "http://web.archive.org/web/20190923121952/https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-37-5-mm-23230382001002",
+      "note": "公式ページのアーカイブが2019年のものしか取得できず、その時点の内容を採用"
     },
     {
       "ref": "232.30.42.21.01.001",
@@ -993,6 +1245,18 @@
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "232.30.44.22.01.002",
+      "brand": "オメガ",
+      "file": "data/specs/23230442201002.json",
+      "model": "Seamaster Planet Ocean 600M Co-Axial Chronometer GMT 43.5 mm",
+      "fields": 7,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-chronometer-gmt-43-5-mm-23230442201002",
+      "snapshot": "2023-07-06",
+      "archive": "http://web.archive.org/web/20230706010809/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-chronometer-gmt-43-5-mm-23230442201002",
+      "note": "公式ページのアーカイブが2023年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "232.30.46.21.01.001",
       "brand": "オメガ",
       "file": "data/specs/23230462101001.json",
@@ -1014,6 +1278,18 @@
       "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-chronometer-45-5-mm-23230462101002",
       "snapshot": "2022-07-31",
       "archive": "http://web.archive.org/web/20220731221144/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-chronometer-45-5-mm-23230462101002",
+      "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "232.30.46.21.01.003",
+      "brand": "オメガ",
+      "file": "data/specs/23230462101003.json",
+      "model": "Seamaster Planet Ocean 600M Co-Axial Chronometer 45.5 mm",
+      "fields": 8,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-co-axial-chronometer-45-5-mm-23230462101003",
+      "snapshot": "2022-04-12",
+      "archive": "http://web.archive.org/web/20220412003534/https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-co-axial-chronometer-45-5-mm-23230462101003",
       "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
     },
     {
@@ -1056,7 +1332,7 @@
       "ref": "232.32.42.21.01.001",
       "brand": "オメガ",
       "file": "data/specs/23232422101001.json",
-      "model": "シーマスター 600 プラネットオーシャン",
+      "model": "Seamaster Steel Chronometer Watch 232.32.42.21.01.001",
       "fields": 6,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-42-mm-23232422101001",
@@ -1113,6 +1389,18 @@
       "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "232.90.42.21.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/23290422103001.json",
+      "model": "Planet Ocean 600M Seamaster Titanium Chronometer Watch 232.90.42.21.03.001",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-42-mm-23290422103001",
+      "snapshot": "2025-03-30",
+      "archive": "http://web.archive.org/web/20250330054612/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-42-mm-23290422103001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "232.90.46.21.03.001",
       "brand": "オメガ",
       "file": "data/specs/23290462103001.json",
@@ -1135,6 +1423,18 @@
       "snapshot": "2022-05-24",
       "archive": "http://web.archive.org/web/20220524123147/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-chronometer-chronograph-45-5-mm-23290465103001",
       "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "233.20.41.21.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/23320412101001.json",
+      "model": "Seamaster 300 Seamaster Steel",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-300-master-co-axial-chronometer-41-mm-23320412101001",
+      "snapshot": "2024-08-03",
+      "archive": "http://web.archive.org/web/20240803172638/https://www.omegawatches.com/en-us/watch-omega-seamaster-300-master-co-axial-chronometer-41-mm-23320412101001",
+      "note": "公式ページのアーカイブが2024年のものしか取得できず、その時点の内容を採用"
     },
     {
       "ref": "233.30.41.21.01.001",
@@ -1294,6 +1594,18 @@
       "source_url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-calibre-321-chronograph-39-7-mm-31130403001001",
       "snapshot": "2026-09-18",
       "archive": "http://web.archive.org/web/20260918191811/https://www.omegawatches.com/en-us/watch-omega-speedmaster-calibre-321-chronograph-39-7-mm-31130403001001"
+    },
+    {
+      "ref": "311.30.42.30.01.004",
+      "brand": "オメガ",
+      "file": "data/specs/31130423001004.json",
+      "model": "Speedmaster Moonwatch Professional Chronograph 42 mm",
+      "fields": 7,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-speedmaster-moonwatch-professional-chronograph-42-mm-31130423001004",
+      "snapshot": "2019-10-14",
+      "archive": "http://web.archive.org/web/20191014143437/https://www.omegawatches.com/watch-omega-speedmaster-moonwatch-professional-chronograph-42-mm-31130423001004",
+      "note": "公式ページのアーカイブが2019年のものしか取得できず、その時点の内容を採用"
     },
     {
       "ref": "311.30.42.30.01.005",
@@ -1510,6 +1822,18 @@
       "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "321.10.44.50.02.001",
+      "brand": "オメガ",
+      "file": "data/specs/32110445002001.json",
+      "model": "Broad Arrow Speedmaster Steel Chronograph Watch 321.10.44.50.02.001",
+      "fields": 8,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-broad-arrow-co-axial-chronograph-44-25-mm-32110445002001",
+      "snapshot": "2021-09-18",
+      "archive": "http://web.archive.org/web/20210918164149/https://www.omegawatches.com/en-us/watch-omega-speedmaster-broad-arrow-co-axial-chronograph-44-25-mm-32110445002001",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "323.30.40.40.04.001",
       "brand": "オメガ",
       "file": "data/specs/32330404004001.json",
@@ -1678,6 +2002,18 @@
       "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "329.30.43.51.02.001",
+      "brand": "オメガ",
+      "file": "data/specs/32930435102001.json",
+      "model": "Chronoscope Speedmaster Steel Master Chronometer Certified Watch 329.30.43.51.02.001",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-chronoscope-co-axial-master-chronometer-chronograph-43-mm-32930435102001",
+      "snapshot": "2025-10-16",
+      "archive": "http://web.archive.org/web/20251016192151/https://www.omegawatches.com/en-us/watch-omega-speedmaster-chronoscope-co-axial-master-chronometer-chronograph-43-mm-32930435102001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "329.30.44.51.01.001",
       "brand": "オメガ",
       "file": "data/specs/32930445101001.json",
@@ -1772,6 +2108,78 @@
       "archive": "http://web.archive.org/web/20261012050735/https://www.omegawatches.com/en-us/watch-omega-speedmaster-57-co-axial-master-chronometer-chronograph-40-5-mm-33210415101001"
     },
     {
+      "ref": "424.13.40.20.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/42413402001001.json",
+      "model": "De Ville Prestige 39.5 mm, steel on leather strap",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-de-ville-prestige-co-axial-chronometer-39-5-mm-42413402001001",
+      "snapshot": "2024-04-23",
+      "archive": "http://web.archive.org/web/20240423182308/https://www.omegawatches.com/watch-omega-de-ville-prestige-co-axial-chronometer-39-5-mm-42413402001001",
+      "note": "公式ページのアーカイブが2024年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "424.13.40.20.02.001",
+      "brand": "オメガ",
+      "file": "data/specs/42413402002001.json",
+      "model": "Prestige De Ville Steel Chronometer Watch 424.13.40.20.02.001",
+      "fields": 6,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-de-ville-prestige-co-axial-39-5-mm-42413402002001",
+      "snapshot": "2020-11-11",
+      "archive": "http://web.archive.org/web/20201111194104/https://www.omegawatches.com/en-us/watch-omega-de-ville-prestige-co-axial-39-5-mm-42413402002001",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "424.13.40.20.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/42413402003001.json",
+      "model": "De Ville Prestige Co-Axial 39.5 mm",
+      "fields": 6,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-de-ville-prestige-co-axial-39-5-mm-42413402003001",
+      "snapshot": "2020-09-25",
+      "archive": "http://web.archive.org/web/20200925023916/https://www.omegawatches.com/watch-omega-de-ville-prestige-co-axial-39-5-mm-42413402003001",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "424.13.40.21.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/42413402101001.json",
+      "model": "De Ville Prestige 39.5 mm, steel on leather strap",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-de-ville-prestige-co-axial-chronometer-power-reserve-39-5-mm-42413402101001",
+      "snapshot": "2024-05-23",
+      "archive": "http://web.archive.org/web/20240523054004/https://www.omegawatches.com/watch-omega-de-ville-prestige-co-axial-chronometer-power-reserve-39-5-mm-42413402101001",
+      "note": "公式ページのアーカイブが2024年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "424.13.40.21.02.001",
+      "brand": "オメガ",
+      "file": "data/specs/42413402102001.json",
+      "model": "De Ville Prestige 39.5 mm, steel on leather strap",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-de-ville-prestige-co-axial-chronometer-power-reserve-39-5-mm-42413402102001",
+      "snapshot": "2025-04-30",
+      "archive": "http://web.archive.org/web/20250430143447/https://www.omegawatches.com/watch-omega-de-ville-prestige-co-axial-chronometer-power-reserve-39-5-mm-42413402102001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "424.13.40.21.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/42413402103001.json",
+      "model": "Prestige De Ville Steel Chronometer Watch 424.13.40.21.03.001",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-de-ville-prestige-co-axial-chronometer-power-reserve-39-5-mm-42413402103001",
+      "snapshot": "2024-05-18",
+      "archive": "http://web.archive.org/web/20240518001820/https://www.omegawatches.com/en-us/watch-omega-de-ville-prestige-co-axial-chronometer-power-reserve-39-5-mm-42413402103001",
+      "note": "公式ページのアーカイブが2024年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "522.12.41.21.03.001",
       "brand": "オメガ",
       "file": "data/specs/52212412103001.json",
@@ -1847,7 +2255,7 @@
       "ref": "15202ST.OO.1240ST.01",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/15202stoo1240st01.json",
-      "model": "15202ST.OO.1240ST.01",
+      "model": "ロイヤル オーク コレクション",
       "fields": 6,
       "lang": "ja",
       "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15202ST.OO.1240ST.01",
@@ -1856,10 +2264,46 @@
       "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "15210BC.OO.A002CR.01",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/15210bcooa002cr01.json",
+      "model": "CODE 11.59 バイ オーデマ ピゲ コレクション",
+      "fields": 4,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/code1159byap/15210BC.OO.A002CR.01",
+      "snapshot": "2020-08-09",
+      "archive": "http://web.archive.org/web/20200809022559/https://www.audemarspiguet.com/ja/watch-collection/code1159byap/15210BC.OO.A002CR.01",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "15300OR.OO.D002CR.01",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/15300orood002cr01.json",
+      "model": "ロイヤル オーク コレクション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15300OR.OO.D002CR.01",
+      "snapshot": "2020-12-05",
+      "archive": "http://web.archive.org/web/20201205023917/https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15300OR.OO.D002CR.01",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "15300OR.OO.D088CR.02",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/15300orood088cr02.json",
+      "model": "ロイヤル オーク コレクション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15300OR.OO.D088CR.02",
+      "snapshot": "2020-11-26",
+      "archive": "http://web.archive.org/web/20201126065747/https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15300OR.OO.D088CR.02",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "15300ST.OO.1220ST.01",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/15300stoo1220st01.json",
-      "model": "15300ST.OO.1220ST.01",
+      "model": "ロイヤル オーク コレクション",
       "fields": 7,
       "lang": "ja",
       "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15300ST.OO.1220ST.01",
@@ -1871,7 +2315,7 @@
       "ref": "15300ST.OO.1220ST.02",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/15300stoo1220st02.json",
-      "model": "15300ST.OO.1220ST.02",
+      "model": "ロイヤル オーク コレクション",
       "fields": 7,
       "lang": "ja",
       "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15300ST.OO.1220ST.02",
@@ -1883,7 +2327,7 @@
       "ref": "15300ST.OO.1220ST.03",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/15300stoo1220st03.json",
-      "model": "15300ST.OO.1220ST.03",
+      "model": "ロイヤル オーク コレクション",
       "fields": 7,
       "lang": "ja",
       "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15300ST.OO.1220ST.03",
@@ -1895,7 +2339,7 @@
       "ref": "15400OR.OO.1220OR.01",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/15400oroo1220or01.json",
-      "model": "15400OR.OO.1220OR.01",
+      "model": "ロイヤル オーク コレクション",
       "fields": 7,
       "lang": "ja",
       "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15400OR.OO.1220OR.01",
@@ -1904,10 +2348,34 @@
       "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "15400OR.OO.1220OR.02",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/15400oroo1220or02.json",
+      "model": "ロイヤル オーク コレクション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15400OR.OO.1220OR.02",
+      "snapshot": "2020-10-30",
+      "archive": "http://web.archive.org/web/20201030040733/https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15400OR.OO.1220OR.02",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "15400OR.OO.1220OR.03",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/15400oroo1220or03.json",
+      "model": "ロイヤル オーク コレクション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15400OR.OO.1220OR.03",
+      "snapshot": "2020-10-30",
+      "archive": "http://web.archive.org/web/20201030035106/https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15400OR.OO.1220OR.03",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "15400OR.OO.D002CR.01",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/15400orood002cr01.json",
-      "model": "15400OR.OO.D002CR.01",
+      "model": "ロイヤル オーク コレクション",
       "fields": 7,
       "lang": "ja",
       "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15400OR.OO.D002CR.01",
@@ -1919,7 +2387,7 @@
       "ref": "15400OR.OO.D088CR.01",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/15400orood088cr01.json",
-      "model": "15400OR.OO.D088CR.01",
+      "model": "ロイヤル オーク コレクション",
       "fields": 7,
       "lang": "ja",
       "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15400OR.OO.D088CR.01",
@@ -1931,7 +2399,7 @@
       "ref": "15400SR.OO.1220SR.01",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/15400sroo1220sr01.json",
-      "model": "15400SR.OO.1220SR.01",
+      "model": "ロイヤル オーク コレクション",
       "fields": 7,
       "lang": "ja",
       "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15400SR.OO.1220SR.01",
@@ -1943,7 +2411,7 @@
       "ref": "15400ST.OO.1220ST.01",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/15400stoo1220st01.json",
-      "model": "15400ST.OO.1220ST.01",
+      "model": "ロイヤル オーク コレクション",
       "fields": 6,
       "lang": "ja",
       "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15400ST.OO.1220ST.01",
@@ -1955,7 +2423,7 @@
       "ref": "15400ST.OO.1220ST.02",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/15400stoo1220st02.json",
-      "model": "15400ST.OO.1220ST.02",
+      "model": "ロイヤル オーク コレクション",
       "fields": 7,
       "lang": "ja",
       "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15400ST.OO.1220ST.02",
@@ -1967,7 +2435,7 @@
       "ref": "15400ST.OO.1220ST.03",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/15400stoo1220st03.json",
-      "model": "15400ST.OO.1220ST.03",
+      "model": "ロイヤル オーク コレクション",
       "fields": 7,
       "lang": "ja",
       "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15400ST.OO.1220ST.03",
@@ -1979,7 +2447,7 @@
       "ref": "15400ST.OO.1220ST.04",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/15400stoo1220st04.json",
-      "model": "15400ST.OO.1220ST.04",
+      "model": "ロイヤル オーク コレクション",
       "fields": 7,
       "lang": "ja",
       "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15400ST.OO.1220ST.04",
@@ -2001,7 +2469,7 @@
       "ref": "15450ST.OO.1256ST.01",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/15450stoo1256st01.json",
-      "model": "15450ST.OO.1256ST.01",
+      "model": "ロイヤル オーク コレクション",
       "fields": 7,
       "lang": "ja",
       "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15450ST.OO.1256ST.01",
@@ -2120,6 +2588,18 @@
       "source": "公式サイトを直接取得（アーカイブではない）"
     },
     {
+      "ref": "15703ST.OO.A002CA.01",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/15703stooa002ca01.json",
+      "model": "ロイヤル オーク オフショア コレクション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/15703ST.OO.A002CA.01",
+      "snapshot": "2020-12-05",
+      "archive": "http://web.archive.org/web/20201205023344/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/15703ST.OO.A002CA.01",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "15710ST.OO.A002CA.01",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/15710stooa002ca01.json",
@@ -2133,12 +2613,36 @@
       "ref": "15710ST.OO.A002CA.02",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/15710stooa002ca02.json",
-      "model": "15710ST.OO.A002CA.02",
+      "model": "ロイヤル オーク オフショア コレクション",
       "fields": 6,
       "lang": "ja",
       "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/15710ST.OO.A002CA.02",
       "snapshot": "2020-10-29",
       "archive": "http://web.archive.org/web/20201029071618/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/15710ST.OO.A002CA.02",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "15710ST.OO.A010CA.01",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/15710stooa010ca01.json",
+      "model": "ロイヤル オーク オフショア コレクション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/15710ST.OO.A010CA.01",
+      "snapshot": "2020-10-27",
+      "archive": "http://web.archive.org/web/20201027212628/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/15710ST.OO.A010CA.01",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "26170ST.OO.D101CR.03",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/26170stood101cr03.json",
+      "model": "ロイヤル オーク オフショア コレクション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26170ST.OO.D101CR.03",
+      "snapshot": "2020-10-30",
+      "archive": "http://web.archive.org/web/20201030042651/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26170ST.OO.D101CR.03",
       "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
     },
     {
@@ -2202,6 +2706,42 @@
       "source": "公式サイトを直接取得（アーカイブではない）"
     },
     {
+      "ref": "26320ST.OO.1220ST.01",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/26320stoo1220st01.json",
+      "model": "ロイヤル オーク コレクション",
+      "fields": 6,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/26320ST.OO.1220ST.01",
+      "snapshot": "2020-11-26",
+      "archive": "http://web.archive.org/web/20201126015408/https://www.audemarspiguet.com/ja/watch-collection/royal-oak/26320ST.OO.1220ST.01",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "26320ST.OO.1220ST.02",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/26320stoo1220st02.json",
+      "model": "ロイヤル オーク コレクション",
+      "fields": 6,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/26320ST.OO.1220ST.02",
+      "snapshot": "2019-10-17",
+      "archive": "http://web.archive.org/web/20191017133013/https://www.audemarspiguet.com/ja/watch-collection/royal-oak/26320ST.OO.1220ST.02",
+      "note": "公式ページのアーカイブが2019年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "26320ST.OO.1220ST.03",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/26320stoo1220st03.json",
+      "model": "ロイヤル オーク コレクション",
+      "fields": 6,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/26320ST.OO.1220ST.03",
+      "snapshot": "2020-10-27",
+      "archive": "http://web.archive.org/web/20201027211230/https://www.audemarspiguet.com/ja/watch-collection/royal-oak/26320ST.OO.1220ST.03",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "26331ST.OO.1220ST.01",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/26331stoo1220st01.json",
@@ -2232,15 +2772,159 @@
       "source": "公式サイトを直接取得（アーカイブではない）"
     },
     {
+      "ref": "26393BC.OO.A321CR.01",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/26393bcooa321cr01.json",
+      "model": "CODE 11.59 バイ オーデマ ピゲ コレクション",
+      "fields": 4,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/code1159byap/26393BC.OO.A321CR.01",
+      "snapshot": "2021-01-26",
+      "archive": "http://web.archive.org/web/20210126183602/https://www.audemarspiguet.com/ja/watch-collection/code1159byap/26393BC.OO.A321CR.01",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "26400IO.OO.A004CA.01",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/26400ioooa004ca01.json",
+      "model": "ロイヤル オーク オフショア コレクション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26400IO.OO.A004CA.01",
+      "snapshot": "2020-10-21",
+      "archive": "http://web.archive.org/web/20201021045609/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26400IO.OO.A004CA.01",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "26401RO.OO.A002CA.02",
       "brand": "オーデマ・ピゲ",
       "file": "data/specs/26401roooa002ca02.json",
-      "model": "26401RO.OO.A002CA.02",
+      "model": "ロイヤル オーク オフショア コレクション",
       "fields": 7,
       "lang": "ja",
       "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26401RO.OO.A002CA.02",
       "snapshot": "2020-08-04",
       "archive": "http://web.archive.org/web/20200804024212/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26401RO.OO.A002CA.02",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "26405CE.OO.A002CA.02",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/26405ceooa002ca02.json",
+      "model": "ロイヤル オーク オフショア コレクション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26405CE.OO.A002CA.02",
+      "snapshot": "2019-11-13",
+      "archive": "http://web.archive.org/web/20191113161225/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26405CE.OO.A002CA.02",
+      "note": "公式ページのアーカイブが2019年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "26470IO.OO.A006CA.01",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/26470ioooa006ca01.json",
+      "model": "ロイヤル オーク オフショア コレクション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470IO.OO.A006CA.01",
+      "snapshot": "2019-12-09",
+      "archive": "http://web.archive.org/web/20191209000838/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470IO.OO.A006CA.01",
+      "note": "公式ページのアーカイブが2019年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "26470SO.OO.A002CA.01",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/26470soooa002ca01.json",
+      "model": "ロイヤル オーク オフショア コレクション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470SO.OO.A002CA.01",
+      "snapshot": "2019-07-15",
+      "archive": "http://web.archive.org/web/20190715201741/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470SO.OO.A002CA.01",
+      "note": "公式ページのアーカイブが2019年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "26470ST.OO.A027CA.01",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/26470stooa027ca01.json",
+      "model": "ロイヤル オーク オフショア コレクション",
+      "fields": 6,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470ST.OO.A027CA.01",
+      "snapshot": "2020-10-29",
+      "archive": "http://web.archive.org/web/20201029081851/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470ST.OO.A027CA.01",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "26470ST.OO.A028CR.01",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/26470stooa028cr01.json",
+      "model": "ロイヤル オーク オフショア コレクション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470ST.OO.A028CR.01",
+      "snapshot": "2020-10-29",
+      "archive": "http://web.archive.org/web/20201029082608/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470ST.OO.A028CR.01",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "26470ST.OO.A030CA.01",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/26470stooa030ca01.json",
+      "model": "ロイヤル オーク オフショア コレクション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470ST.OO.A030CA.01",
+      "snapshot": "2020-10-30",
+      "archive": "http://web.archive.org/web/20201030051731/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470ST.OO.A030CA.01",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "26470ST.OO.A101CR.01",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/26470stooa101cr01.json",
+      "model": "ロイヤル オーク オフショア コレクション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470ST.OO.A101CR.01",
+      "snapshot": "2020-10-30",
+      "archive": "http://web.archive.org/web/20201030050237/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470ST.OO.A101CR.01",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "26470ST.OO.A104CR.01",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/26470stooa104cr01.json",
+      "model": "ロイヤル オーク オフショア コレクション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470ST.OO.A104CR.01",
+      "snapshot": "2020-11-26",
+      "archive": "http://web.archive.org/web/20201126021009/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470ST.OO.A104CR.01",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "26470ST.OO.A801CR.01",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/26470stooa801cr01.json",
+      "model": "ロイヤル オーク オフショア コレクション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470ST.OO.A801CR.01",
+      "snapshot": "2020-10-30",
+      "archive": "http://web.archive.org/web/20201030042340/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470ST.OO.A801CR.01",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "26480TI.OO.A027CA.01",
+      "brand": "オーデマ・ピゲ",
+      "file": "data/specs/26480tiooa027ca01.json",
+      "model": "ロイヤル オーク オフショア コレクション",
+      "fields": 6,
+      "lang": "ja",
+      "source_url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26480TI.OO.A027CA.01",
+      "snapshot": "2020-10-30",
+      "archive": "http://web.archive.org/web/20201030034303/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26480TI.OO.A027CA.01",
       "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
     },
     {
@@ -3991,6 +4675,108 @@
       "brand": "ロレックス",
       "model": "ロレックス デイデイト 18038A",
       "reason": "公式サイト（rolex.com/ja）に製品ページが無く、アーカイブにも見つからない＝生産終了"
+    },
+    {
+      "ref": "3570.50",
+      "brand": "オメガ",
+      "model": "スピードマスター プロフェッショナル クロノグラフ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（日本語・英語ともアーカイブのURL一覧に無し）＝生産終了により削除されているとみられる"
+    },
+    {
+      "ref": "3573.50",
+      "brand": "オメガ",
+      "model": "スピードマスター プロフェッショナル クロノグラフ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（日本語・英語ともアーカイブのURL一覧に無し）＝生産終了により削除されているとみられる"
+    },
+    {
+      "ref": "3576.50",
+      "brand": "オメガ",
+      "model": "スピードマスター プロフェッショナル クロノグラフ ムーンフェイズ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（日本語・英語ともアーカイブのURL一覧に無し）＝生産終了により削除されているとみられる"
+    },
+    {
+      "ref": "3539.50",
+      "brand": "オメガ",
+      "model": "スピードマスター オートマティック",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（日本語・英語ともアーカイブのURL一覧に無し）＝生産終了により削除されているとみられる"
+    },
+    {
+      "ref": "3590.50",
+      "brand": "オメガ",
+      "model": "スピードマスター プロフェッショナル",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（日本語・英語ともアーカイブのURL一覧に無し）＝生産終了により削除されているとみられる"
+    },
+    {
+      "ref": "3560.50",
+      "brand": "オメガ",
+      "model": "スピードマスター プロフェッショナル アポロ11号",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（日本語・英語ともアーカイブのURL一覧に無し）＝生産終了により削除されているとみられる"
+    },
+    {
+      "ref": "3510.50",
+      "brand": "オメガ",
+      "model": "スピードマスター オートマチック",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（日本語・英語ともアーカイブのURL一覧に無し）＝生産終了により削除されているとみられる"
+    },
+    {
+      "ref": "3220.50",
+      "brand": "オメガ",
+      "model": "スピードマスター デイデイト",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（日本語・英語ともアーカイブのURL一覧に無し）＝生産終了により削除されているとみられる"
+    },
+    {
+      "ref": "3523.30",
+      "brand": "オメガ",
+      "model": "スピードマスター デイデイト",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（日本語・英語ともアーカイブのURL一覧に無し）＝生産終了により削除されているとみられる"
+    },
+    {
+      "ref": "3210.50",
+      "brand": "オメガ",
+      "model": "スピードマスター デイト",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（日本語・英語ともアーカイブのURL一覧に無し）＝生産終了により削除されているとみられる"
+    },
+    {
+      "ref": "3211.30",
+      "brand": "オメガ",
+      "model": "スピードマスター デイト",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（日本語・英語ともアーカイブのURL一覧に無し）＝生産終了により削除されているとみられる"
+    },
+    {
+      "ref": "3513.50",
+      "brand": "オメガ",
+      "model": "スピードマスター デイト",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（日本語・英語ともアーカイブのURL一覧に無し）＝生産終了により削除されているとみられる"
+    },
+    {
+      "ref": "3221.30",
+      "brand": "オメガ",
+      "model": "スピードマスター デイデイト",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（日本語・英語ともアーカイブのURL一覧に無し）＝生産終了により削除されているとみられる"
+    },
+    {
+      "ref": "49150.B01A.9097",
+      "brand": "ヴァシュロン・コンスタンタン",
+      "model": "オーヴァーシーズ クロノグラフ",
+      "reason": "公式サイトの日本語ページがアーカイブのURL一覧にも、URLの形を変えた探索にも見つからない。2016年の現行オーヴァーシーズより前の世代で、削除後アーカイブにも残っていない"
+    },
+    {
+      "ref": "47450.B01A.9227",
+      "brand": "ヴァシュロン・コンスタンタン",
+      "model": "オーヴァーシーズ デュアルタイム",
+      "reason": "公式サイトの日本語ページがアーカイブのURL一覧にも、URLの形を変えた探索にも見つからない。2016年の現行オーヴァーシーズより前の世代で、削除後アーカイブにも残っていない"
+    },
+    {
+      "ref": "47040.B01A.9094",
+      "brand": "ヴァシュロン・コンスタンタン",
+      "model": "オーヴァーシーズ",
+      "reason": "公式サイトの日本語ページがアーカイブのURL一覧にも、URLの形を変えた探索にも見つからない。2016年の現行オーヴァーシーズより前の世代で、削除後アーカイブにも残っていない"
+    },
+    {
+      "ref": "47040.B01A.9093",
+      "brand": "ヴァシュロン・コンスタンタン",
+      "model": "オーヴァーシーズ",
+      "reason": "公式サイトの日本語ページがアーカイブのURL一覧にも、URLの形を変えた探索にも見つからない。2016年の現行オーヴァーシーズより前の世代で、削除後アーカイブにも残っていない"
     }
   ]
 }

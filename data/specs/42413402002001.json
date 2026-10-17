@@ -1,0 +1,30 @@
+{
+  "ref": "424.13.40.20.02.001",
+  "brand": "オメガ",
+  "model": "Prestige De Ville Steel Chronometer Watch 424.13.40.20.02.001",
+  "case_diameter_mm": 39.5,
+  "case_material": "Steel",
+  "dial": "Silver",
+  "crystal": "Domed, scratch‑resistant sapphire crystal with anti‑reflective treatment inside",
+  "water_resistance_m": 30,
+  "bracelet": "leather strap",
+  "status": "2020-11-11時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-de-ville-prestige-co-axial-39-5-mm-42413402002001",
+      "archive": "http://web.archive.org/web/20201111194104/https://www.omegawatches.com/en-us/watch-omega-de-ville-prestige-co-axial-39-5-mm-42413402002001",
+      "snapshot": "2020-11-11",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

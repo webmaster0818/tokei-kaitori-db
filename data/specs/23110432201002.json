@@ -1,0 +1,32 @@
+{
+  "ref": "231.10.43.22.01.002",
+  "brand": "オメガ",
+  "model": "Seamaster Aqua Terra 150M Co-Axial Chronometer Annual Calendar 43 mm",
+  "case_diameter_mm": 43,
+  "case_material": "Total product weight (approx.):",
+  "dial": "Black",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "caliber": "OMEGA 8601",
+  "water_resistance_m": 150,
+  "bracelet": "Material:",
+  "status": "2022-11-30時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-annual-calendar-43-mm-23110432201002",
+      "archive": "http://web.archive.org/web/20221130194638/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-annual-calendar-43-mm-23110432201002",
+      "snapshot": "2022-11-30",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

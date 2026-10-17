@@ -1,0 +1,32 @@
+{
+  "ref": "26470ST.OO.A028CR.01",
+  "brand": "オーデマ・ピゲ",
+  "model": "ロイヤル オーク オフショア コレクション",
+  "case_diameter_mm": 42,
+  "dial": "「メガ・タペストリー」模様のブラックダイヤル、ブルーカウンター、蓄光処理を施したアラビア数字、ブルーインナーベゼル。",
+  "caliber": "3126",
+  "functions": "クロノグラフ、時、分、スモールセコンド、日付",
+  "power_reserve_h": 50,
+  "water_resistance_m": 100,
+  "bracelet": "ハンドステッチの「大きな竹斑入り」のブルーアリゲーターストラップ、ステンレススティール製ピンバックル。",
+  "status": "2020-10-29時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470ST.OO.A028CR.01",
+      "archive": "http://web.archive.org/web/20201029082608/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26470ST.OO.A028CR.01",
+      "snapshot": "2020-10-29",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "dial",
+        "functions",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

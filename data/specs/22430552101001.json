@@ -1,0 +1,30 @@
+{
+  "ref": "224.30.55.21.01.001",
+  "brand": "オメガ",
+  "model": "Seamaster Ploprof 1200M Co-Axial Chronometer 55 x 48 mm",
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "caliber": "OMEGA 8500",
+  "water_resistance_m": 1200,
+  "bracelet": "steel",
+  "status": "2021-10-25時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-seamaster-ploprof-1200m-co-axial-chronometer-55-x-48-mm-22430552101001",
+      "archive": "http://web.archive.org/web/20211025044621/https://www.omegawatches.com/watch-omega-seamaster-ploprof-1200m-co-axial-chronometer-55-x-48-mm-22430552101001",
+      "snapshot": "2021-10-25",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

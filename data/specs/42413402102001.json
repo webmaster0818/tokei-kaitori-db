@@ -1,0 +1,36 @@
+{
+  "ref": "424.13.40.21.02.001",
+  "brand": "オメガ",
+  "model": "De Ville Prestige 39.5 mm, steel on leather strap",
+  "case_diameter_mm": 39.5,
+  "case_material": "Steel",
+  "dial": "Silver",
+  "crystal": "Domed, scratch‑resistant sapphire crystal with anti‑reflective treatment inside",
+  "movement": "Self winding",
+  "caliber": "Omega 2627",
+  "power_reserve_h": 48,
+  "water_resistance_m": 30,
+  "bracelet": "Leather strap",
+  "status": "2025-04-30時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-de-ville-prestige-co-axial-chronometer-power-reserve-39-5-mm-42413402102001",
+      "archive": "http://web.archive.org/web/20250430143447/https://www.omegawatches.com/watch-omega-de-ville-prestige-co-axial-chronometer-power-reserve-39-5-mm-42413402102001",
+      "snapshot": "2025-04-30",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

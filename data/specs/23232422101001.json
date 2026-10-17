@@ -1,7 +1,7 @@
 {
   "ref": "232.32.42.21.01.001",
   "brand": "オメガ",
-  "model": "シーマスター 600 プラネットオーシャン",
+  "model": "Seamaster Steel Chronometer Watch 232.32.42.21.01.001",
   "case_diameter_mm": 42,
   "case_material": "Steel",
   "dial": "Black",
@@ -23,7 +23,8 @@
         "dial",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

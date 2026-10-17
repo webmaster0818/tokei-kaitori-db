@@ -1,0 +1,36 @@
+{
+  "ref": "329.30.43.51.02.001",
+  "brand": "オメガ",
+  "model": "Chronoscope Speedmaster Steel Master Chronometer Certified Watch 329.30.43.51.02.001",
+  "case_diameter_mm": 43,
+  "case_material": "Steel",
+  "dial": "Silver",
+  "crystal": "Scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Manual‑winding",
+  "caliber": "OMEGA 9908",
+  "power_reserve_h": 60,
+  "water_resistance_m": 50,
+  "bracelet": "Steel",
+  "status": "2025-10-16時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-chronoscope-co-axial-master-chronometer-chronograph-43-mm-32930435102001",
+      "archive": "http://web.archive.org/web/20251016192151/https://www.omegawatches.com/en-us/watch-omega-speedmaster-chronoscope-co-axial-master-chronometer-chronograph-43-mm-32930435102001",
+      "snapshot": "2025-10-16",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

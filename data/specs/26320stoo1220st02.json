@@ -1,0 +1,30 @@
+{
+  "ref": "26320ST.OO.1220ST.02",
+  "brand": "オーデマ・ピゲ",
+  "model": "ロイヤル オーク コレクション",
+  "case_diameter_mm": 41,
+  "dial": "「グランド・タペストリー」パターンのシルバーカラーダイヤル、ホワイトゴールドのアプライドアワーマーカーとロイヤルオーク針、ルミネサント加工。",
+  "functions": "クロノグラフ、時、分、スモールセコンド、デイト表示 。",
+  "power_reserve_h": 40,
+  "water_resistance_m": 50,
+  "bracelet": "ステンレススチールブレスレット、APフォールディングバックル",
+  "status": "2019-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/26320ST.OO.1220ST.02",
+      "archive": "http://web.archive.org/web/20191017133013/https://www.audemarspiguet.com/ja/watch-collection/royal-oak/26320ST.OO.1220ST.02",
+      "snapshot": "2019-10-17",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "dial",
+        "functions",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}
