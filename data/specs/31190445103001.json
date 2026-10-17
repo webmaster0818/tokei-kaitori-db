@@ -1,7 +1,7 @@
 {
   "ref": "311.90.44.51.03.001",
   "brand": "オメガ",
-  "model": "スピードマスター ムーンウォッチ",
+  "model": "Speedmaster 2カウンター コーアクシャル クロノメーター クロノグラフ 44.25mm",
   "case_diameter_mm": 44.25,
   "case_material": "チタン",
   "dial": "ブルー",
@@ -22,7 +22,8 @@
         "crystal",
         "dial",
         "water_resistance_m"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

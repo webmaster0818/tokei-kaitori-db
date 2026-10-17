@@ -1,0 +1,26 @@
+{
+  "ref": "26393BC.OO.A321CR.01",
+  "brand": "オーデマ・ピゲ",
+  "model": "CODE 11.59 バイ オーデマ ピゲ コレクション",
+  "case_diameter_mm": 41,
+  "dial": "ブルーラッカーダイヤルとカウンター、18Kホワイトゴールドアプライドアワーマーカーと針、電解加工による24Kホワイトゴールドのアプライドロゴ、ブルーラッカーインナーベゼル。",
+  "water_resistance_m": 30,
+  "bracelet": "ハンドステッチ、「大きな竹班入り」ブルーアリゲーターストラップ、18Kホワイトゴールドピンバックル。",
+  "status": "2021-01-26時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.audemarspiguet.com/ja/watch-collection/code1159byap/26393BC.OO.A321CR.01",
+      "archive": "http://web.archive.org/web/20210126183602/https://www.audemarspiguet.com/ja/watch-collection/code1159byap/26393BC.OO.A321CR.01",
+      "snapshot": "2021-01-26",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "dial",
+        "water_resistance_m"
+      ],
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

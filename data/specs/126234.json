@@ -1,0 +1,51 @@
+{
+  "ref": "126234",
+  "brand": "ロレックス",
+  "model": "デイトジャスト 36",
+  "case_diameter_mm": 36,
+  "case_material": "ホワイトロレゾール - オイスタースチール＆ホワイトゴールド",
+  "bezel": "フルーテッド",
+  "crown": "スクリュー式、トゥインロック（二重防水システム）",
+  "crystal": "傷防止サファイア、日付表示部にサイクロップレンズ",
+  "dial": "ミントグリーン",
+  "movement": "パーペチュアル、機械式、自動巻",
+  "caliber": "3235",
+  "precision": "日差-2～+2秒（ケーシング後）",
+  "functions": "時針、分針、秒針。早送り機能付瞬時に変わる日付。秒針停止機能による正確な時刻設定",
+  "oscillator": "常磁性ブルー パラクロム・ヘアスプリング。高性能パラフレックス ショック・アブソーバ",
+  "winding": "パーペチュアルローターによる両方向自動巻",
+  "power_reserve_h": 70,
+  "water_resistance_m": 100,
+  "bracelet": "オイスター（3列リンク）",
+  "clasp": "オイスタークラスプ、 イージーリンク（約5 mmのエクステンションリンク）",
+  "certification": "Superlative Chronometer（公認クロノメーター認定、ケーシング後にロレックス認定）",
+  "status": "2026-07-12時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.rolex.com/ja/watches/datejust/m126234-0052",
+      "archive": "http://web.archive.org/web/20260712055652/https://www.rolex.com/ja/watches/datejust/m126234-0052",
+      "snapshot": "2026-07-12",
+      "checked": "2026-10-17",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "certification",
+        "clasp",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "oscillator",
+        "power_reserve_h",
+        "precision",
+        "water_resistance_m",
+        "winding"
+      ],
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

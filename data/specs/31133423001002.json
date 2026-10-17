@@ -1,7 +1,7 @@
 {
   "ref": "311.33.42.30.01.002",
   "brand": "オメガ",
-  "model": "スピードマスター ムーンウォッチ プロフェッショナル クロノグラフ 42mm",
+  "model": "Speedmaster Moonwatch Professional 42 mm, steel on leather strap",
   "case_diameter_mm": 42,
   "case_material": "Steel",
   "dial": "Black",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

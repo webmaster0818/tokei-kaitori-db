@@ -1,0 +1,36 @@
+{
+  "ref": "311.93.44.51.04.002",
+  "brand": "オメガ",
+  "model": "Speedmaster Dark Side of the Moon White Side of the Moon",
+  "case_diameter_mm": 44.25,
+  "case_material": "White ceramic",
+  "dial": "White",
+  "crystal": "Scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 9300",
+  "power_reserve_h": 60,
+  "water_resistance_m": 50,
+  "bracelet": "Leather strap",
+  "status": "2025-02-26時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-speedmaster-dark-side-of-the-moon-co-axial-chronometer-chronograph-44-25-mm-31193445104002",
+      "archive": "http://web.archive.org/web/20250226183646/https://www.omegawatches.com/watch-omega-speedmaster-dark-side-of-the-moon-co-axial-chronometer-chronograph-44-25-mm-31193445104002",
+      "snapshot": "2025-02-26",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

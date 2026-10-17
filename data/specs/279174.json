@@ -1,0 +1,51 @@
+{
+  "ref": "279174",
+  "brand": "ロレックス",
+  "model": "レディ デイトジャスト",
+  "case_diameter_mm": 28,
+  "case_material": "ホワイトロレゾール - オイスタースチール＆ホワイトゴールド",
+  "bezel": "フルーテッド",
+  "crown": "スクリュー式、トゥインロック（二重防水システム）",
+  "crystal": "傷防止サファイア、日付表示部にサイクロップレンズ",
+  "dial": "シルバー",
+  "movement": "パーペチュアル、機械式、自動巻",
+  "caliber": "2236",
+  "precision": "日差-2～+2秒（ケーシング後）",
+  "functions": "時針、分針、秒針。早送り機能付瞬時に変わる日付。秒針停止機能による正確な時刻設定",
+  "oscillator": "特許形状のシリコン製シロキシ・ヘアスプリング。高性能パラフレックス ショック・アブソーバ",
+  "winding": "パーペチュアルローターによる両方向自動巻",
+  "power_reserve_h": 55,
+  "water_resistance_m": 100,
+  "bracelet": "ジュビリー、5列リンク",
+  "clasp": "クラウンクラスプ（コンシールドタイプ）",
+  "certification": "Superlative Chronometer（公認クロノメーター認定、ケーシング後にロレックス認定）",
+  "status": "2026-10-12時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.rolex.com/ja/watches/lady-datejust/m279174-0007",
+      "archive": "http://web.archive.org/web/20261012005730/https://www.rolex.com/ja/watches/lady-datejust/m279174-0007",
+      "snapshot": "2026-10-12",
+      "checked": "2026-10-17",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "certification",
+        "clasp",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "oscillator",
+        "power_reserve_h",
+        "precision",
+        "water_resistance_m",
+        "winding"
+      ],
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "ref": "5146J.001",
+  "brand": "パテック フィリップ",
+  "model": "コンプリケーション",
+  "case_diameter_mm": 39,
+  "case_material": "イエローゴールド仕様",
+  "case_note": "イエローゴールド仕様。 サファイヤクリスタル・バック。 3気圧防水。 ケース径：39 mm。 厚さ：11.23 mm。",
+  "dial": "クリーム文字盤、ゴールド植字数字インデックス。",
+  "movement": "自動巻ムーブメント",
+  "caliber": "324 S IRM QA LU",
+  "functions": "曜日、月を指針表示、日付を窓表示、センターセコンド",
+  "movement_note": "年次カレンダー。 パワーリザーブ表示。 ムーンフェイズ。 外径: 30 mm。 厚さ: 5.32 mm。 受けの枚数: 11枚。 石数: 36石。 連続駆動可能時間: 最小35時間、最大45時間。 自動巻ローター: 21金ゴールド中央ローター。 テンプ: ジャイロマックス。 毎時振動数: 28 800 (4 Hz)。 Spiromax®。 認定刻印: パテック フィリップ・シール。",
+  "water_resistance_atm": 3,
+  "bracelet": "バンド：マット・ギャバジンブラウン・アリゲーター。 折り畳み式バックル。",
+  "status": "2021-05-14時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/5146J-001",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式URLのコレクション名",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "dial",
+        "functions",
+        "movement",
+        "movement_note",
+        "water_resistance_atm"
+      ],
+      "archive": "http://web.archive.org/web/20210514110703/https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/5146J-001",
+      "snapshot": "2021-05-14"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "ref": "7939G1A0NRU.0002",
+  "brand": "チューダー",
+  "model": "チューダー Black Bay 58 GMTウォッチ - 39 mm スチール製ケース, ラバーストラップ",
+  "case_diameter_mm": 39,
+  "case_material": "ステンレススチール",
+  "case_note": "39 mm ステンレススチール製ケース、ポリッシュ＆サテン仕上げ",
+  "bezel": "ステンレススチール製24時間両方向回転ベゼル、ブラックとバーガンディのアルマイト加工インサート",
+  "dial": "ブラック、ドーム型、ゴールドプレートが施されたアプライドアワーマーカー",
+  "crystal": "ドーム型サファイアクリスタル",
+  "crown": "ステンレススチール製スクリュー式リューズにチューダーローズのレリーフ",
+  "movement": "GMT機能を内蔵した両方向回転ローターシステム搭載の",
+  "caliber": "MT5450-U",
+  "movement_note": "マニュファクチュール キャリバー MT5450-U（COSC、METAS認定 ）",
+  "power_reserve_h": 65,
+  "water_resistance_m": 200,
+  "bracelet": "ラバーストラップ、チューダー独自の“T-fit”クイックアジャストクラスプ",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.tudorwatch.com/ja/watches/black-bay-58/m7939g1a0nru-0002",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "movement",
+        "movement_note",
+        "power_reserve_h",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

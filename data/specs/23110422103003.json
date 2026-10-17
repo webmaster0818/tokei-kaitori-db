@@ -1,7 +1,7 @@
 {
   "ref": "231.10.42.21.03.003",
   "brand": "オメガ",
-  "model": "シーマスターアクアテラ",
+  "model": "OMEGA Seamaster Aqua Terra James Bond 41.5 mm",
   "case_diameter_mm": 41.5,
   "case_material": "Steel",
   "dial": "Blue",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

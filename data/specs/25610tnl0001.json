@@ -1,0 +1,42 @@
+{
+  "ref": "25610TNL.0001",
+  "brand": "チューダー",
+  "model": "チューダー Pelagos LHDウォッチ - セラミック製マットブラックディスク, チタニウム製ブレスレット",
+  "case_diameter_mm": 42,
+  "case_material": "のチタニウム＆スチール",
+  "case_note": "42 mmのチタニウム＆スチール製ケース、サテン仕上げ",
+  "bezel": "60分目盛り入りチタニウム製逆回転防止ベゼルにセラミック製のマットブラックディスク、目盛りにベージュの夜光塗料",
+  "dial": "ブラック",
+  "crystal": "サファイアクリスタル",
+  "crown": "チタニウム製スクリュー式リューズ（9時位置）、チューダーロゴの刻印",
+  "movement": "両方向回転ローターシステム搭載の機械式自動巻ムーブメント",
+  "caliber": "MT5612-LHD",
+  "movement_note": "マニュファクチュール キャリバー MT5612-LHD（COSC）",
+  "power_reserve_h": 70,
+  "water_resistance_m": 500,
+  "bracelet": "チタニウム製ブレスレットにスチール製フォールディングクラスプ＆セーフティキャッチ、チューダーが独自開発し特許を取得したブレスレット延長システム",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.tudorwatch.com/ja/watches/pelagos/m25610tnl-0001",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "movement",
+        "movement_note",
+        "power_reserve_h",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

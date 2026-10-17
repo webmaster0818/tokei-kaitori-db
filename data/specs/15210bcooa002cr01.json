@@ -1,0 +1,26 @@
+{
+  "ref": "15210BC.OO.A002CR.01",
+  "brand": "オーデマ・ピゲ",
+  "model": "CODE 11.59 バイ オーデマ ピゲ コレクション",
+  "case_diameter_mm": 41,
+  "dial": "ブラックラッカーダイヤル、18Kホワイトゴールドアプライドアワーマーカーと針、電解加工による24Kホワイトゴールドのアプライドロゴ、ブラックラッカーインナーベゼル。",
+  "water_resistance_m": 30,
+  "bracelet": "ハンドステッチ、「大きな竹班入り」ブラックアリゲーターストラップ、18Kホワイトゴールドピンバックル。",
+  "status": "2020-08-09時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.audemarspiguet.com/ja/watch-collection/code1159byap/15210BC.OO.A002CR.01",
+      "archive": "http://web.archive.org/web/20200809022559/https://www.audemarspiguet.com/ja/watch-collection/code1159byap/15210BC.OO.A002CR.01",
+      "snapshot": "2020-08-09",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "dial",
+        "water_resistance_m"
+      ],
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

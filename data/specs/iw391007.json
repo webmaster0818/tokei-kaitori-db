@@ -1,0 +1,36 @@
+{
+  "ref": "IW391007",
+  "brand": "IWC",
+  "model": "ポートフィノ・クロノグラフ - ステンレススティール",
+  "case_diameter_mm": 42,
+  "case_material": "ステンレススティール",
+  "dial": "シルバーメッキ",
+  "case_back": "スタンダード",
+  "movement": "自動巻き",
+  "caliber": "75320",
+  "functions": "秒針停止機能付きスモールセコンド、両面反射防止加工を施したドーム型サファイアガラス、日付・曜日表示、ストップウォッチ機能（時・分・秒）",
+  "power_reserve_h": 44,
+  "water_resistance_atm": 3,
+  "bracelet": "ダークブラウンのアリゲーター・ストラップ",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.iwc.com/jp-ja/past-collections/portofino/iw391007-portofino-chronograph",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "dial",
+        "functions",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_atm"
+      ]
+    }
+  ]
+}

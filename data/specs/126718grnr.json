@@ -1,0 +1,51 @@
+{
+  "ref": "126718GRNR",
+  "brand": "ロレックス",
+  "model": "GMTマスター Ⅱ",
+  "case_diameter_mm": 40,
+  "case_material": "18 ct イエローゴールド",
+  "bezel": "両方向回転式、24時間目盛り入り。グレー／ブラックのセラミック製セラクロムベゼルインサート、数字と目盛り入り",
+  "crown": "スクリュー式、トリプロック（三重防水システム）",
+  "crystal": "傷防止サファイア",
+  "dial": "タイガーアイアン",
+  "movement": "パーペチュアル、機械式、自動巻、GMT機能",
+  "caliber": "3285",
+  "precision": "日差-2～+2秒（ケーシング後）",
+  "functions": "時針、分針、秒針。24時間表示。第2タイムゾーン時刻表示。時針の独立操作による素早い時刻設定。瞬時に変わる日付表示。秒針停止機能による正確な時刻設定",
+  "oscillator": "常磁性ブルー パラクロム・ヘアスプリング。高性能パラフレックス ショック・アブソーバ",
+  "winding": "パーペチュアルローターによる両方向自動巻",
+  "power_reserve_h": 70,
+  "water_resistance_m": 100,
+  "bracelet": "ジュビリー、5列リンク",
+  "clasp": "セーフティキャッチ付オイスターロック、イージーリンク（約5 mmのエクステンションリンク）",
+  "certification": "Superlative Chronometer（公認クロノメーター認定、ケーシング後にロレックス認定）",
+  "status": "2026-07-12時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.rolex.com/ja/watches/gmt-master-ii/m126718grnr-0002",
+      "archive": "http://web.archive.org/web/20260712002147/https://www.rolex.com/ja/watches/gmt-master-ii/m126718grnr-0002",
+      "snapshot": "2026-07-12",
+      "checked": "2026-10-17",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "certification",
+        "clasp",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "oscillator",
+        "power_reserve_h",
+        "precision",
+        "water_resistance_m",
+        "winding"
+      ],
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

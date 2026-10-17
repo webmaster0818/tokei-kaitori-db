@@ -1,0 +1,32 @@
+{
+  "ref": "212.30.44.50.03.001",
+  "brand": "オメガ",
+  "model": "Seamaster Diver 300M Co-Axial Chronometer Chronograph 44 mm",
+  "case_diameter_mm": 44,
+  "case_material": "Steel",
+  "dial": "Blue",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "caliber": "OMEGA 3330",
+  "water_resistance_m": 300,
+  "bracelet": "steel",
+  "status": "2022-01-21時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-seamaster-diver-300m-co-axial-chronometer-chronograph-44-mm-21230445003001",
+      "archive": "http://web.archive.org/web/20220121170721/https://www.omegawatches.com/watch-omega-seamaster-diver-300m-co-axial-chronometer-chronograph-44-mm-21230445003001",
+      "snapshot": "2022-01-21",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

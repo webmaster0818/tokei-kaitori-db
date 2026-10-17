@@ -1,4 +1,5 @@
 // 型番ごとの日次履歴（data/history/<REF>.json）の読み込みと集計。
+import { isHeldRow } from "./prices";
 //
 // ⚠️ 捏造しない: 返す値はすべて履歴ファイルの実レコード由来。補間・推定はしない。
 // ⚠️ 「上限額（最高）」の定義は lib/prices.ts の summarize() と同じ
@@ -20,7 +21,7 @@ export function readHistory(ref: string): HistoryDay[] {
   const days = fs.existsSync(p) ? ((JSON.parse(fs.readFileSync(p, "utf8")).days ?? []) as HistoryDay[]) : [];
   // 外れ値として保留した値（held）は推移・前日比にも使わない（lib/prices.ts の readSnapshot と同じ扱い）
   // 区別のつかない複数の価格は中央値1行にまとめる（型番ページ・集計と同じ規則）
-  for (const d of days) d.records = collapseUndistinguished(d.records.filter((r) => !r.held));
+  for (const d of days) d.records = collapseUndistinguished(d.records.filter((r) => !r.held && !isHeldRow(r)));
   days.sort((a, b) => a.date.localeCompare(b.date));
   cache.set(ref, days);
   return days;

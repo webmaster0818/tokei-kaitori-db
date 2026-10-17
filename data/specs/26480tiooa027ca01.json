@@ -1,0 +1,30 @@
+{
+  "ref": "26480TI.OO.A027CA.01",
+  "brand": "オーデマ・ピゲ",
+  "model": "ロイヤル オーク オフショア コレクション",
+  "case_diameter_mm": 42,
+  "dial": "「メガ・タペストリー」模様のブルーダイヤル、グレーのカウンター、蓄光処理を施したホワイトゴールド製のアプライドアワーマーカーとロイヤルオーク針、ブルーのインナーベゼル。",
+  "functions": "クロノグラフ、時、分、スモールセコンド、デイト表示 。",
+  "power_reserve_h": 40,
+  "water_resistance_m": 100,
+  "bracelet": "ブルーラバーストラップ、チタン製ピンバックル。付属ホワイトラバーストラップ。",
+  "status": "2020-10-30時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26480TI.OO.A027CA.01",
+      "archive": "http://web.archive.org/web/20201030034303/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26480TI.OO.A027CA.01",
+      "snapshot": "2020-10-30",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "dial",
+        "functions",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

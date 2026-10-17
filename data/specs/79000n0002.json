@@ -1,0 +1,42 @@
+{
+  "ref": "79000N.0002",
+  "brand": "チューダー",
+  "model": "チューダー Black Bay 54ウォッチ - 37 mm スチール製ケース, ブラック ラバーストラップ",
+  "case_diameter_mm": 37,
+  "case_material": "スチール",
+  "case_note": "37 mm スチール製ケース、ポリッシュ＆サテン仕上げ",
+  "bezel": "ライン目盛りのないステンレススチール製60分逆回転防止ベゼル、アルマイト加工ディスク",
+  "dial": "ブラック、ドーム型",
+  "crystal": "ドーム型サファイアクリスタル",
+  "crown": "ステンレススチール製スクリュー式リューズにチューダーローズのレリーフ",
+  "movement": "両方向回転ローターシステム搭載の機械式自動巻ムーブメント",
+  "caliber": "MT5400",
+  "movement_note": "マニュファクチュール キャリバー MT5400 (COSC)",
+  "power_reserve_h": 70,
+  "water_resistance_m": 200,
+  "bracelet": "ラバーストラップ、チューダー独自の“T-fit”クイックアジャストクラスプ",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.tudorwatch.com/ja/watches/black-bay-54/m79000n-0002",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "movement",
+        "movement_note",
+        "power_reserve_h",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

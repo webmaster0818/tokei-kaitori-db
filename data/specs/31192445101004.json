@@ -1,0 +1,36 @@
+{
+  "ref": "311.92.44.51.01.004",
+  "brand": "オメガ",
+  "model": "Speedmaster Pitch Black Watch 311.92.44.51.01.004",
+  "case_diameter_mm": 44.25,
+  "case_material": "Black ceramic",
+  "dial": "Black",
+  "crystal": "Scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 9300",
+  "power_reserve_h": 60,
+  "water_resistance_m": 50,
+  "bracelet": "Leather strap",
+  "status": "2025-04-27時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-dark-side-of-the-moon-co-axial-chronometer-chronograph-44-25-mm-31192445101004",
+      "archive": "http://web.archive.org/web/20250427044841/https://www.omegawatches.com/en-us/watch-omega-speedmaster-dark-side-of-the-moon-co-axial-chronometer-chronograph-44-25-mm-31192445101004",
+      "snapshot": "2025-04-27",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

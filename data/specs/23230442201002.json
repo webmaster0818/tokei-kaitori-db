@@ -1,0 +1,32 @@
+{
+  "ref": "232.30.44.22.01.002",
+  "brand": "オメガ",
+  "model": "Seamaster Planet Ocean 600M Co-Axial Chronometer GMT 43.5 mm",
+  "case_diameter_mm": 43.5,
+  "case_material": "Total product weight (approx.):",
+  "dial": "Black",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "caliber": "OMEGA 8605",
+  "water_resistance_m": 600,
+  "bracelet": "Material:",
+  "status": "2023-07-06時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-chronometer-gmt-43-5-mm-23230442201002",
+      "archive": "http://web.archive.org/web/20230706010809/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-chronometer-gmt-43-5-mm-23230442201002",
+      "snapshot": "2023-07-06",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

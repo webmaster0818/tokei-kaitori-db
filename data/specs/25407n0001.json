@@ -1,0 +1,42 @@
+{
+  "ref": "25407N.0001",
+  "brand": "チューダー",
+  "model": "チューダー Pelagos 39ウォッチ - 逆回転防止ベゼル, チタニウム製ブレスレット, ブラック ラバーストラップ",
+  "case_diameter_mm": 39,
+  "case_material": "グレード2 チタニウム",
+  "case_note": "39 mm グレード2 チタニウム製ケース、サテン仕上げ",
+  "bezel": "グレード2 チタニウム製逆回転防止ベゼルに発光塗料を施したサンレイサテン仕上げのセラミック製インサート",
+  "dial": "ブラック、サンレイサテン仕上げ、フランジはサンドブラスト仕上げ、発光性セラミック混合物を用いたモノブロックのアワーマーカー",
+  "crystal": "サファイアクリスタル",
+  "crown": "グレード2 チタニウム製リューズ、チューダーのシールドロゴの刻印",
+  "movement": "両方向回転ローターシステム搭載の機械式自動巻ムーブメント",
+  "caliber": "MT5400",
+  "movement_note": "マニュファクチュール キャリバー MT5400 (COSC)",
+  "power_reserve_h": 70,
+  "water_resistance_m": 200,
+  "bracelet": "“T-fit”セーフティキャッチ付きフォールディングクラスプとダイバー向けエクステンションが付属のチタニウム製ブレスレット",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.tudorwatch.com/ja/watches/pelagos/m25407n-0001",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "movement",
+        "movement_note",
+        "power_reserve_h",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

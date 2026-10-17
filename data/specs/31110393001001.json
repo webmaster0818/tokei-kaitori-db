@@ -1,7 +1,7 @@
 {
   "ref": "311.10.39.30.01.001",
   "brand": "オメガ",
-  "model": "スピードマスター Speedmaster '57 クロノグラフ 38.6MM",
+  "model": "Speedmaster '57 The 1957 Trilogy",
   "case_diameter_mm": 38.6,
   "case_material": "Steel",
   "dial": "Black",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

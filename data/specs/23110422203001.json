@@ -1,0 +1,30 @@
+{
+  "ref": "231.10.42.22.03.001",
+  "brand": "オメガ",
+  "model": "Aqua Terra 150M Seamaster Steel Chronometer Watch 231.10.42.22.03.001",
+  "case_diameter_mm": 41.5,
+  "case_material": "Between lugs:",
+  "dial": "Blue",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "water_resistance_m": 150,
+  "bracelet": "Material:",
+  "status": "2023-09-29時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-day-date-41-5-mm-23110422203001",
+      "archive": "http://web.archive.org/web/20230929194120/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-day-date-41-5-mm-23110422203001",
+      "snapshot": "2023-09-29",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

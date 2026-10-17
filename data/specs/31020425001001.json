@@ -1,7 +1,7 @@
 {
   "ref": "310.20.42.50.01.001",
   "brand": "オメガ",
-  "model": "スピードマスター ムーンウォッチ",
+  "model": "Speedmaster Moonwatch Apollo 11 50th anniversary",
   "case_diameter_mm": 42,
   "case_material": "Steel",
   "dial": "Black",
@@ -25,7 +25,8 @@
         "dial",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

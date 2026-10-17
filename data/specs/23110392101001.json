@@ -1,0 +1,36 @@
+{
+  "ref": "231.10.39.21.01.001",
+  "brand": "オメガ",
+  "model": "Aqua Terra 150M Seamaster Steel Chronometer Watch 231.10.39.21.01.001",
+  "case_diameter_mm": 38.5,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 8500",
+  "power_reserve_h": 60,
+  "water_resistance_m": 150,
+  "bracelet": "Steel",
+  "status": "2025-08-25時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-omega-co-axial-38-5-mm-23110392101001",
+      "archive": "http://web.archive.org/web/20250825060126/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-omega-co-axial-38-5-mm-23110392101001",
+      "snapshot": "2025-08-25",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

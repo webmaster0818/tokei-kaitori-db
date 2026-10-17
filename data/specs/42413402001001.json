@@ -1,0 +1,36 @@
+{
+  "ref": "424.13.40.20.01.001",
+  "brand": "オメガ",
+  "model": "De Ville Prestige 39.5 mm, steel on leather strap",
+  "case_diameter_mm": 39.5,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Domed, scratch‑resistant sapphire crystal with anti‑reflective treatment inside",
+  "movement": "Self winding",
+  "caliber": "Omega 2500",
+  "power_reserve_h": 48,
+  "water_resistance_m": 30,
+  "bracelet": "Leather strap",
+  "status": "2024-04-23時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-de-ville-prestige-co-axial-chronometer-39-5-mm-42413402001001",
+      "archive": "http://web.archive.org/web/20240423182308/https://www.omegawatches.com/watch-omega-de-ville-prestige-co-axial-chronometer-39-5-mm-42413402001001",
+      "snapshot": "2024-04-23",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

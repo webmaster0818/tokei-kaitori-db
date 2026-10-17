@@ -1,0 +1,32 @@
+{
+  "ref": "15710ST.OO.A010CA.01",
+  "brand": "オーデマ・ピゲ",
+  "model": "ロイヤル オーク オフショア コレクション",
+  "case_diameter_mm": 42,
+  "dial": "「メガ・タペストリー」模様のホワイトダイヤル、ホワイトゴールド製アプライドアワーマーカーと蓄光処理を施したブルーのロイヤルオーク針、ホワイトの回転インナーベゼル、60分から15分までのゾーンにブルーのダイビングスケール。",
+  "caliber": "3120",
+  "functions": "時、分、センターセコンド、デイト表示。",
+  "power_reserve_h": 60,
+  "water_resistance_m": 300,
+  "bracelet": "ホワイトラバーストラップ、ステンレススティール製ピンバックル。ブルーラバーのスペアストラップ付き。",
+  "status": "2020-10-27時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/15710ST.OO.A010CA.01",
+      "archive": "http://web.archive.org/web/20201027212628/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/15710ST.OO.A010CA.01",
+      "snapshot": "2020-10-27",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "dial",
+        "functions",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

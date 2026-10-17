@@ -1,0 +1,34 @@
+{
+  "ref": "326.30.40.50.03.001",
+  "brand": "オメガ",
+  "model": "Speedmaster Racing 40 mm, steel on steel",
+  "case_diameter_mm": 40,
+  "case_material": "Steel",
+  "dial": "Blue",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "caliber": "Omega 3330",
+  "power_reserve_h": 52,
+  "water_resistance_m": 100,
+  "bracelet": "Steel",
+  "status": "2024-01-10時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-speedmaster-racing-co-axial-chronometer-chronograph-40-mm-32630405003001",
+      "archive": "http://web.archive.org/web/20240110221718/https://www.omegawatches.com/watch-omega-speedmaster-racing-co-axial-chronometer-chronograph-40-mm-32630405003001",
+      "snapshot": "2024-01-10",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

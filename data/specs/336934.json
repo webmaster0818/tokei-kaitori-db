@@ -1,0 +1,51 @@
+{
+  "ref": "336934",
+  "brand": "ロレックス",
+  "model": "スカイドゥエラー",
+  "case_diameter_mm": 42,
+  "case_material": "ホワイトロレゾール - オイスタースチール＆ホワイトゴールド",
+  "bezel": "フルーテッド、双方向回転リングコマンド",
+  "crown": "スクリュー式、トゥインロック（二重防水システム）",
+  "crystal": "傷防止サファイア、日付表示部にサイクロップレンズ",
+  "dial": "ミントグリーン",
+  "movement": "パーペチュアル、機械式、自動巻、第2タイムゾーン表示、年次カレンダー",
+  "caliber": "9002",
+  "precision": "日差-2～+2秒（ケーシング後）",
+  "functions": "時針、分針、秒針。オフ・センターディスクによる24時間表示。第2タイムゾーン時刻表示。瞬時に変わる年次カレンダー（3時位置）、早送り機能付日付設定。ダイアル外周の12個の小窓による月表示。秒針停止機能による正確な時刻設定",
+  "oscillator": "常磁性ブルー パラクロム・ヘアスプリング。高性能パラフレックス ショック・アブソーバ",
+  "winding": "パーペチュアルローターによる両方向自動巻",
+  "power_reserve_h": 72,
+  "water_resistance_m": 100,
+  "bracelet": "オイスター（3列リンク）",
+  "clasp": "オイスタークラスプ、 イージーリンク（約5 mmのエクステンションリンク）",
+  "certification": "高精度クロノメーター (COSC、ケーシング後にロレックス認定)",
+  "status": "2025-07-10時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.rolex.com/ja/watches/sky-dweller/m336934-0001",
+      "archive": "http://web.archive.org/web/20250710083516/https://www.rolex.com/ja/watches/sky-dweller/m336934-0001",
+      "snapshot": "2025-07-10",
+      "checked": "2026-10-17",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "certification",
+        "clasp",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "oscillator",
+        "power_reserve_h",
+        "precision",
+        "water_resistance_m",
+        "winding"
+      ],
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

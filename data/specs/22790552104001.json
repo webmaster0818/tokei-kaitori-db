@@ -1,7 +1,7 @@
 {
   "ref": "227.90.55.21.04.001",
   "brand": "オメガ",
-  "model": "シーマスター",
+  "model": "Ploprof 1200M Seamaster Titanium Chronometer Watch 227.90.55.21.04.001",
   "case_material": "Titanium",
   "dial": "White",
   "crystal": "Flat scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
@@ -27,7 +27,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

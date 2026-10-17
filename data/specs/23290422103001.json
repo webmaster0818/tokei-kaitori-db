@@ -1,0 +1,36 @@
+{
+  "ref": "232.90.42.21.03.001",
+  "brand": "オメガ",
+  "model": "Planet Ocean 600M Seamaster Titanium Chronometer Watch 232.90.42.21.03.001",
+  "case_diameter_mm": 42,
+  "case_material": "Titanium",
+  "dial": "Blue",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 8500",
+  "power_reserve_h": 60,
+  "water_resistance_m": 600,
+  "bracelet": "Titanium",
+  "status": "2025-03-30時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-42-mm-23290422103001",
+      "archive": "http://web.archive.org/web/20250330054612/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-42-mm-23290422103001",
+      "snapshot": "2025-03-30",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

@@ -91,7 +91,7 @@ function readSnapshot(date: string): PriceRecord[] {
   //    すべてこの関数を通るので、保留した値がページ・ランキング・公開型番数に混ざらない。
   //    区別のつかない複数の価格は中央値1行にまとめる（collapseUndistinguished）。
   const rows = fs.existsSync(p)
-    ? collapseUndistinguished(((JSON.parse(fs.readFileSync(p, "utf8")).records ?? []) as PriceRecord[]).filter((r) => !r.held))
+    ? collapseUndistinguished(((JSON.parse(fs.readFileSync(p, "utf8")).records ?? []) as PriceRecord[]).filter((r) => !r.held && !isHeldRow(r)))
     : [];
   snapshotCache.set(date, rows);
   return rows;
@@ -285,6 +285,16 @@ export function prototypeRefs(): string[] {
  *    （takushoku-biyori でスパム扱いを受けた前例あり）。
  */
 const publishableCache = new Map<string, string[]>();
+// 行単位の保留（店の行名と公式が食い違い、別の時計の価格のおそれがある行）
+let heldRowsCache: { ref: string; shop_id: string; model_contains?: string }[] | null = null;
+export function isHeldRow(r: PriceRecord): boolean {
+  if (!heldRowsCache) {
+    const p = path.join(process.cwd(), "data", "ref-overrides.json");
+    heldRowsCache = fs.existsSync(p) ? (JSON.parse(fs.readFileSync(p, "utf8")).hold_rows ?? []) : [];
+  }
+  return heldRowsCache!.some((h) => h.ref === r.ref && h.shop_id === r.shop_id && (!h.model_contains || (r.model ?? "").includes(h.model_contains)));
+}
+
 // 型番マスタの取り違えの手当て（data/ref-overrides.json）
 let overridesCache: { name: Record<string, string>; hold: Record<string, string> } | null = null;
 export function refOverrides() {

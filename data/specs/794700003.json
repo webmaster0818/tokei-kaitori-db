@@ -1,0 +1,42 @@
+{
+  "ref": "79470.0003",
+  "brand": "チューダー",
+  "model": "チューダー Black Bay Proウォッチ - 39 mm スチール製ケース, レザーとラバーライニングによるハイブリッドストラップ",
+  "case_diameter_mm": 39,
+  "case_material": "スチール",
+  "case_note": "39 mm スチール製ケース、ポリッシュ＆サテン仕上げ",
+  "bezel": "スチール製固定ベゼル、サテン仕上げ、24時間目盛り",
+  "dial": "ブラック、ドーム型",
+  "crystal": "ドーム型サファイアクリスタル",
+  "crown": "スチール製スクリュー式リューズにチューダーローズの刻印",
+  "movement": "両方向回転ローターシステム搭載の機械式自動巻ムーブメント",
+  "caliber": "MT5652",
+  "movement_note": "マニュファクチュール キャリバー MT5652 (COSC)",
+  "power_reserve_h": 70,
+  "water_resistance_m": 200,
+  "bracelet": "レザーとラバーライニングによるハイブリッドストラップ/スチール製フォールディングクラスプ＆セーフティキャッチ",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.tudorwatch.com/ja/watches/black-bay-pro/m79470-0003",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "movement",
+        "movement_note",
+        "power_reserve_h",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

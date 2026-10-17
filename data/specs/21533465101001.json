@@ -1,7 +1,7 @@
 {
   "ref": "215.33.46.51.01.001",
   "brand": "オメガ",
-  "model": "シーマスター プラネットオーシャン",
+  "model": "Planet Ocean 600M Seamaster Steel Chronograph Watch 215.33.46.51.01.001",
   "case_diameter_mm": 45.5,
   "case_material": "Steel",
   "dial": "Black",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

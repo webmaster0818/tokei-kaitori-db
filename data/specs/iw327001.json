@@ -1,0 +1,38 @@
+{
+  "ref": "IW327001",
+  "brand": "IWC",
+  "model": "パイロット・ウォッチ・マーク XVIII - ステンレススティール",
+  "case_diameter_mm": 40,
+  "case_material": "ステンレススティール",
+  "dial": "ブラック",
+  "crown": "ねじ込み式",
+  "case_back": "スタンダード",
+  "movement": "自動巻き",
+  "caliber": "30110",
+  "functions": "両面反射防止加工を施したドーム型サファイアガラス、秒針停止機能付きセンターセコンド、日付表示、ガラスで急激な気圧変化にも対応、耐磁性軟鉄製インナーケース",
+  "power_reserve_h": 42,
+  "water_resistance_atm": 6,
+  "bracelet": "サントーニ社製ブラックのカーフスキン・ストラップ",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.iwc.com/jp-ja/past-collections/pilot-watches/iw327001-pilots-watch-mark-xviii",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "crown",
+        "dial",
+        "functions",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_atm"
+      ]
+    }
+  ]
+}

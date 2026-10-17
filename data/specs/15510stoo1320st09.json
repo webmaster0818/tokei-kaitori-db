@@ -1,7 +1,7 @@
 {
   "ref": "15510ST.OO.1320ST.09",
   "brand": "オーデマ・ピゲ",
-  "model": "ロイヤルオーク",
+  "model": "ロイヤル オーク",
   "case_diameter_mm": 41,
   "case_material": "ステンレススティール",
   "dial": "「グランドタペストリー」模様のカーキ＝＞カーキグリーン ダイヤル、蓄光処理を施したホワイトゴールドのアプライドアワーマーカーとロイヤルオーク針。",
@@ -27,7 +27,8 @@
         "movement",
         "power_reserve_h",
         "water_resistance_m"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

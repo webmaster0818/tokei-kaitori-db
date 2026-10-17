@@ -1,7 +1,7 @@
 {
   "ref": "323.30.40.40.06.001",
   "brand": "オメガ",
-  "model": "スピードマスター デイト",
+  "model": "Speedmaster Date / Day-Date Chronograph 40 mm Date",
   "case_diameter_mm": 40,
   "case_material": "Steel",
   "dial": "Grey",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

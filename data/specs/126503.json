@@ -1,7 +1,7 @@
 {
   "ref": "126503",
   "brand": "ロレックス",
-  "model": "デイトナ ステンレススチール",
+  "model": "コスモグラフ デイトナ",
   "case_diameter_mm": 40,
   "case_material": "イエローロレゾール - オイスタースチール＆イエローゴールド",
   "bezel": "固定式、刻印されたタキメーター、イエローゴールド",
@@ -44,7 +44,8 @@
         "precision",
         "water_resistance_m",
         "winding"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

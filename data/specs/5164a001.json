@@ -1,0 +1,38 @@
+{
+  "ref": "5164A.001",
+  "brand": "パテック フィリップ",
+  "model": "アクアノート",
+  "case_diameter_mm": 40.8,
+  "case_material": "ステンレススチール仕様",
+  "case_note": "ステンレススチール仕様。 ねじ込み式リュウズ。 サファイヤクリスタル・バック。 12気圧防水。 ケース径（10-4時方向）：40.8 mm。 厚さ：10.2 mm。",
+  "dial": "文字盤：ブラック・エンボス。",
+  "movement": "自動巻ムーブメント",
+  "caliber": "324 S C FUS",
+  "functions": "出発地と現地の時刻を表示するデュアルタイムゾーン機構、出発地と現地の昼夜を窓表示、現地の日付を指針表示、センターセコンド",
+  "movement_note": "外径: 31 mm。 厚さ: 4.9 mm。 部品総数: 294個。 石数: 29石。 連続駆動可能時間: 最小35時間、最大45時間。 自動巻ローター: 21金ゴールド中央ローター。 テンプ: ジャイロマックス。 毎時振動数: 28 800 (4 Hz)。 Spiromax®。 認定刻印: パテック フィリップ・シール。",
+  "water_resistance_atm": 12,
+  "bracelet": "ブラック・ポリマー。 アクアノート折り畳み式バックル。",
+  "status": "2021-05-11時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A2%E3%82%AF%E3%82%A2%E3%83%8E%E3%83%BC%E3%83%88/5164A-001",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式URLのコレクション名",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "dial",
+        "functions",
+        "movement",
+        "movement_note",
+        "water_resistance_atm"
+      ],
+      "archive": "http://web.archive.org/web/20210511071039/https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A2%E3%82%AF%E3%82%A2%E3%83%8E%E3%83%BC%E3%83%88/5164A-001",
+      "snapshot": "2021-05-11"
+    }
+  ]
+}

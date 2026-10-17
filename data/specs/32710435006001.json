@@ -1,7 +1,7 @@
 {
   "ref": "327.10.43.50.06.001",
   "brand": "オメガ",
-  "model": "オメガ スピードマスター マークII",
+  "model": "Speedmaster Mark II コーアクシャル クロノメーター クロノグラフ 42.4 x 46.2mm",
   "case_material": "ステンレススティール",
   "dial": "グレー",
   "crystal": "両面に無反射加工を施したフラット強化無反射サファイアガラス",
@@ -20,7 +20,8 @@
         "crystal",
         "dial",
         "water_resistance_m"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ref": "210.30.42.20.04.001",
   "brand": "オメガ",
-  "model": "オメガ シーマスター コーアクシャル マスター クロノメーター",
+  "model": "Diver 300M Seamaster Steel Master Chronometer Certified Watch 210.30.42.20.04.001",
   "case_diameter_mm": 42,
   "case_material": "Steel",
   "dial": "White",
@@ -29,7 +29,8 @@
         "power_reserve_h",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

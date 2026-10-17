@@ -1,0 +1,36 @@
+{
+  "ref": "331.12.42.51.01.002",
+  "brand": "オメガ",
+  "model": "Speedmaster '57 Speedmaster Steel Chronograph Watch 331.12.42.51.01.002",
+  "case_diameter_mm": 41.5,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 9300",
+  "power_reserve_h": 60,
+  "water_resistance_m": 100,
+  "bracelet": "Leather strap",
+  "status": "2024-04-04時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-57-co-axial-chronometer-chronograph-41-5-mm-33112425101002",
+      "archive": "http://web.archive.org/web/20240404064516/https://www.omegawatches.com/en-us/watch-omega-speedmaster-57-co-axial-chronometer-chronograph-41-5-mm-33112425101002",
+      "snapshot": "2024-04-04",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

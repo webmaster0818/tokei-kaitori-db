@@ -1,0 +1,42 @@
+{
+  "ref": "79830RB.0010",
+  "brand": "チューダー",
+  "model": "チューダー Black Bay GMTウォッチ - 41 mm スチール製ケース, リベット スチール製ブレスレット",
+  "case_diameter_mm": 41,
+  "case_material": "スチール",
+  "case_note": "41 mm スチール製ケース、ポリッシュ＆サテン仕上げ",
+  "bezel": "48のノッチ入りスチール製両方向回転ベゼルに、24時間目盛り入りマットバーガンディ＆ブルーのアルマイト加工ディスク",
+  "dial": "ガルバニック仕上げのオパラインダイアル、ドーム型",
+  "crystal": "ドーム型サファイアクリスタル",
+  "crown": "スチール製スクリュー式リューズ、チューダーローズの刻印、円形サテン仕上げのスチール製リューズチューブ",
+  "movement": "両方向回転ローターシステム搭載の機械式自動巻ムーブメント",
+  "caliber": "MT5652",
+  "movement_note": "マニュファクチュール キャリバー MT5652 (COSC)",
+  "power_reserve_h": 70,
+  "water_resistance_m": 200,
+  "bracelet": "リベット付きスチール製ブレスレット、ポリッシュ＆サテン仕上げ、フォールディングクラスプ＆セーフティキャッチ",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.tudorwatch.com/ja/watches/black-bay-gmt/m79830rb-0010",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "movement",
+        "movement_note",
+        "power_reserve_h",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

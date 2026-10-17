@@ -1,0 +1,32 @@
+{
+  "ref": "231.10.42.21.02.002",
+  "brand": "オメガ",
+  "model": "Seamaster Aqua Terra 150M Co-Axial Chronometer 41.5 mm",
+  "case_diameter_mm": 41.5,
+  "case_material": "Total product weight (approx.):",
+  "dial": "Silver",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "caliber": "OMEGA 8500",
+  "water_resistance_m": 150,
+  "bracelet": "Material:",
+  "status": "2022-11-30時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-41-5-mm-23110422102002",
+      "archive": "http://web.archive.org/web/20221130194625/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-41-5-mm-23110422102002",
+      "snapshot": "2022-11-30",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

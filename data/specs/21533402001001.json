@@ -1,0 +1,30 @@
+{
+  "ref": "215.33.40.20.01.001",
+  "brand": "オメガ",
+  "model": "Seamaster Planet Ocean 600M OMEGA Co-Axial Master Chronometer 39.5 mm",
+  "case_diameter_mm": 39.5,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "water_resistance_m": 600,
+  "bracelet": "leather strap with rubber lining",
+  "status": "2020-09-19時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-master-chronometer-39-5-mm-21533402001001",
+      "archive": "http://web.archive.org/web/20200919083100/https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-master-chronometer-39-5-mm-21533402001001",
+      "snapshot": "2020-09-19",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

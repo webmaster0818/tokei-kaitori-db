@@ -1,0 +1,42 @@
+{
+  "ref": "79360N.0019",
+  "brand": "チューダー",
+  "model": "Black Bay Chrono",
+  "case_diameter_mm": 41,
+  "case_material": "ステンレススチール",
+  "case_note": "41 mm ステンレススチール製ケース、ポリッシュ＆サテン仕上げ",
+  "bezel": "ステンレススチール製固定ベゼル、マットブラックのアルマイト加工ディスク、シルバーカラーのマーカー付きタキメーター",
+  "dial": "ブラックカウンター付きピンク、ドーム型",
+  "crystal": "ドーム型サファイアクリスタル",
+  "crown": "ステンレススチール製スクリュー式リューズにチューダーローズのレリーフ",
+  "movement": "両方向回転ローター搭載の機械式自動巻クロノグラフムーブメント",
+  "caliber": "MT5813",
+  "movement_note": "クロノグラフ機能を搭載したマニュファクチュール キャリバー MT5813（COSC）",
+  "power_reserve_h": 70,
+  "water_resistance_m": 200,
+  "bracelet": "ステンレススチール製5列ブレスレット、ポリッシュ＆サテン仕上げ、チューダー独自の“T-fit”クイックアジャストクラスプ",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.tudorwatch.com/ja/watch-family/daring-watches/m79360n-0019",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "movement",
+        "movement_note",
+        "power_reserve_h",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "ref": "126500LN",
   "brand": "ロレックス",
-  "model": "デイトナ ステンレススチール",
+  "model": "コスモグラフ デイトナ",
   "case_diameter_mm": 40,
   "case_material": "オイスタースチール",
   "bezel": "ブラックのセラミック製モノブロック セラクロムベゼル、タキメーター",
@@ -44,7 +44,8 @@
         "precision",
         "water_resistance_m",
         "winding"
-      ]
+      ],
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "ref": "123.10.35.60.01.001",
   "brand": "オメガ",
-  "model": "コンステレーション オートマチック",
+  "model": "Constellation Quartz 35 mm",
   "case_diameter_mm": 35,
   "case_material": "Steel",
   "dial": "Black",
@@ -25,7 +25,8 @@
         "dial",
         "water_resistance_m"
       ],
-      "lang": "en"
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
     }
   ]
 }

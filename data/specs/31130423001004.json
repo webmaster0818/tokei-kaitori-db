@@ -1,0 +1,32 @@
+{
+  "ref": "311.30.42.30.01.004",
+  "brand": "オメガ",
+  "model": "Speedmaster Moonwatch Professional Chronograph 42 mm",
+  "case_diameter_mm": 42,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Hesalite crystal with OMEGA logo in the centre",
+  "power_reserve_h": 48,
+  "water_resistance_m": 50,
+  "bracelet": "steel",
+  "status": "2019-10-14時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-speedmaster-moonwatch-professional-chronograph-42-mm-31130423001004",
+      "archive": "http://web.archive.org/web/20191014143437/https://www.omegawatches.com/watch-omega-speedmaster-moonwatch-professional-chronograph-42-mm-31130423001004",
+      "snapshot": "2019-10-14",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

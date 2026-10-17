@@ -1,0 +1,30 @@
+{
+  "ref": "424.13.40.20.03.001",
+  "brand": "オメガ",
+  "model": "De Ville Prestige Co-Axial 39.5 mm",
+  "case_diameter_mm": 39.5,
+  "case_material": "Steel",
+  "dial": "Blue",
+  "crystal": "Domed, scratch‑resistant sapphire crystal with anti‑reflective treatment inside",
+  "water_resistance_m": 30,
+  "bracelet": "leather strap",
+  "status": "2020-09-25時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-de-ville-prestige-co-axial-39-5-mm-42413402003001",
+      "archive": "http://web.archive.org/web/20200925023916/https://www.omegawatches.com/watch-omega-de-ville-prestige-co-axial-39-5-mm-42413402003001",
+      "snapshot": "2020-09-25",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}

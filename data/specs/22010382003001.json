@@ -1,0 +1,30 @@
+{
+  "ref": "220.10.38.20.03.001",
+  "brand": "オメガ",
+  "model": "Seamaster Aqua Terra 150M OMEGA Co-Axial Master Chronometer 38 mm",
+  "case_diameter_mm": 38,
+  "case_material": "Steel",
+  "dial": "Blue",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "water_resistance_m": 150,
+  "bracelet": "steel",
+  "status": "2020-11-11時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-omega-co-axial-master-chronometer-38-mm-22010382003001",
+      "archive": "http://web.archive.org/web/20201111192204/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-omega-co-axial-master-chronometer-38-mm-22010382003001",
+      "snapshot": "2020-11-11",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ],
+      "lang": "en",
+      "model_source": "公式ページのタイトル"
+    }
+  ]
+}
