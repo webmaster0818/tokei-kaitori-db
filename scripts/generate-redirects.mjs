@@ -101,6 +101,10 @@ const header = [
   `# 生成: ${new Date().toISOString()} / 過去に公開した型番 ${ever.size} / 公開中 ${published.size} / 転送 ${lines.length / 2}`,
 ];
 fs.writeFileSync(path.join(outDir, "_redirects"), [...header, ...lines, ""].join("\n"));
+// ⚠️ 2026-10-17: 本番（Cloudflare の Git 連携ビルド）で out/_redirects が効かなかった。
+//    ビルドコマンドがこのスクリプトを通らない場合に備え、ローカルビルドでは public/_redirects にも書き、
+//    next build が out/ へコピーする形でも届くようにする（日次の git add -A でコミットされる）。
+if (!isCi) fs.writeFileSync(path.join(root, "public", "_redirects"), [...header, ...lines, ""].join("\n"));
 console.log(
   `_redirects: 転送 ${lines.length / 2}型番（モデル ${counts.model} / ブランド ${counts.brand} / TOP ${counts.top}）` +
     ` / 過去に公開 ${ever.size}（記録 ${seedBefore}・git 追加 ${fromGit}）/ 公開中 ${published.size}`,
