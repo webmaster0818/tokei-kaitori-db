@@ -1,0 +1,42 @@
+{
+  "ref": "79010SG.0002",
+  "brand": "チューダー",
+  "model": "チューダー Black Bay 58 925ウォッチ - 39 mm シルバーケース, トープダイアル",
+  "case_diameter_mm": 39,
+  "case_material": "シルバー925",
+  "case_note": "39 mmシルバー925製ケース、サテン仕上げ",
+  "bezel": "シルバー925製逆回転防止ベゼルに60分目盛り入りマットトープのアルマイト加工のディスク、シルバーメッキのマーカーと数字",
+  "dial": "トープ、ドーム型",
+  "crystal": "ドーム型サファイアクリスタル",
+  "crown": "シルバー925製スクリュー式リューズ、チューダーローズの刻印、円形サテン仕上げのシルバー925製リューズチューブ",
+  "movement": "両方向回転ローターシステム搭載の機械式自動巻ムーブメント",
+  "caliber": "MT5400",
+  "movement_note": "マニュファクチュール キャリバー MT5400 (COSC)",
+  "power_reserve_h": 70,
+  "water_resistance_m": 200,
+  "bracelet": "トープ ファブリックストラップ、シルバー925製バックル",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.tudorwatch.com/ja/watches/black-bay-58/m79010sg-0002",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "movement",
+        "movement_note",
+        "power_reserve_h",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

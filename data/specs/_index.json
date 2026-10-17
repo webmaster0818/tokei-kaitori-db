@@ -13,7 +13,9 @@
     "ロレックス": "rolex.com は直接取得すると403。Waybackアーカイブ（日本語ページ）を使用",
     "オメガ": "omegawatches.jp/.com は直接取得すると接続を切られる。アーカイブを使用。日本語ページのアーカイブは2020〜2021年が最新で技術仕様にキャリバー等が無いため、英語ページ（2024〜2026年）がある型番はそちらを使い lang=en と記録",
     "オーデマ・ピゲ": "audemarspiguet.com は直接取得できる（robots も製品ページを禁じていない）。日本語サイトマップ（/ja/sitemap.xml）の製品ページを現在の内容で取得。Crawl-delay 5 を遵守",
-    "ヴァシュロン・コンスタンタン": "vacheron-constantin.com は直接取得すると403。Waybackアーカイブ（日本語ページ）を使用"
+    "ヴァシュロン・コンスタンタン": "vacheron-constantin.com は直接取得すると403。Waybackアーカイブ（日本語ページ）を使用",
+    "パテック フィリップ": "patek.com は直接取得できる。現行モデルは現在の日本語ページ、生産終了品は同じURLのアーカイブ",
+    "チューダー": "tudorwatch.com は curl だと Access Denied。ブラウザと同じ条件のヘッドレスChrome（UA・言語・ウィンドウサイズ指定）で現在の日本語ページを取得"
   },
   "verification": "書き込んだ全項目について、値が公式ページの該当ラベルの直下にあるかを機械照合した（ブランドごとに実施）",
   "known_issues_fixed": [
@@ -33,11 +35,13 @@
     "_note": "なし（公開対象はすべて作成済みか、作成不可として not_created に記録）"
   },
   "counts": {
-    "created": 300,
+    "created": 338,
     "not_created": 203,
     "by_brand": {
       "オメガ": 185,
       "オーデマ・ピゲ": 60,
+      "チューダー": 26,
+      "パテック フィリップ": 12,
       "ロレックス": 43,
       "ヴァシュロン・コンスタンタン": 12
     },
@@ -46,8 +50,8 @@
       "オメガ": 13,
       "ヴァシュロン・コンスタンタン": 4
     },
-    "fields_total": 2767,
-    "snapshot_2025_or_earlier": 230
+    "fields_total": 3220,
+    "snapshot_2025_or_earlier": 239
   },
   "created": [
     {
@@ -2926,6 +2930,404 @@
       "snapshot": "2020-10-30",
       "archive": "http://web.archive.org/web/20201030034303/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26480TI.OO.A027CA.01",
       "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "25407N.0001",
+      "brand": "チューダー",
+      "file": "data/specs/25407n0001.json",
+      "model": "チューダー Pelagos 39ウォッチ - 逆回転防止ベゼル, チタニウム製ブレスレット, ブラック ラバーストラップ",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/pelagos/m25407n-0001",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "25610TNL.0001",
+      "brand": "チューダー",
+      "file": "data/specs/25610tnl0001.json",
+      "model": "チューダー Pelagos LHDウォッチ - セラミック製マットブラックディスク, チタニウム製ブレスレット",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/pelagos/m25610tnl-0001",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79000N.0001",
+      "brand": "チューダー",
+      "file": "data/specs/79000n0001.json",
+      "model": "チューダー Black Bay 54ウォッチ - 37 mm スチール製ケース, スチール製ブレスレット",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay-54/m79000n-0001",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79000N.0002",
+      "brand": "チューダー",
+      "file": "data/specs/79000n0002.json",
+      "model": "チューダー Black Bay 54ウォッチ - 37 mm スチール製ケース, ブラック ラバーストラップ",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay-54/m79000n-0002",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79010SG.0001",
+      "brand": "チューダー",
+      "file": "data/specs/79010sg0001.json",
+      "model": "チューダー Black Bay 58 925ウォッチ - 39 mm シルバーケース, トープダイアル",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay-58/m79010sg-0001",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79010SG.0002",
+      "brand": "チューダー",
+      "file": "data/specs/79010sg0002.json",
+      "model": "チューダー Black Bay 58 925ウォッチ - 39 mm シルバーケース, トープダイアル",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay-58/m79010sg-0002",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79012M.0001",
+      "brand": "チューダー",
+      "file": "data/specs/79012m0001.json",
+      "model": "チューダー Black Bay 58 Bronzeウォッチ - 39 mm ブロンズ製ケース, マット仕上げのグラデーション“ブロンズブラウン”ダイアル",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay-58/m79012m-0001",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79210CNU.0001",
+      "brand": "チューダー",
+      "file": "data/specs/79210cnu0001.json",
+      "model": "チューダー Black Bay Ceramicウォッチ - 41 mm セラミック製ケース, レザーとラバーライニングによるハイブリッドストラップ, ブラック ファブリックストラップ",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay/m79210cnu-0001",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79360N.0019",
+      "brand": "チューダー",
+      "file": "data/specs/79360n0019.json",
+      "model": "Black Bay Chrono",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watch-family/daring-watches/m79360n-0019",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "7939G1A0NRU.0001",
+      "brand": "チューダー",
+      "file": "data/specs/7939g1a0nru0001.json",
+      "model": "チューダー Black Bay 58 GMTウォッチ - 39 mm スチール製ケース, ブラックとバーガンディベゼル",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay-58/m7939g1a0nru-0001",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "7939G1A0NRU.0002",
+      "brand": "チューダー",
+      "file": "data/specs/7939g1a0nru0002.json",
+      "model": "チューダー Black Bay 58 GMTウォッチ - 39 mm スチール製ケース, ラバーストラップ",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay-58/m7939g1a0nru-0002",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "7941A1A0NU.0001",
+      "brand": "チューダー",
+      "file": "data/specs/7941a1a0nu0001.json",
+      "model": "チューダー Black Bayウォッチ - 41 mm スチール製ケース, スチール製ブレスレット",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay/m7941a1a0nu-0001",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "7941A1A0NU.0003",
+      "brand": "チューダー",
+      "file": "data/specs/7941a1a0nu0003.json",
+      "model": "チューダー Black Bayウォッチ - 41 mm スチール製ケース, スチール製ブレスレット",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay/m7941a1a0nu-0003",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "7941A1A0RU.0001",
+      "brand": "チューダー",
+      "file": "data/specs/7941a1a0ru0001.json",
+      "model": "チューダー Black Bayウォッチ - 41 mm スチール製ケース, スチール製ブレスレット",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay/m7941a1a0ru-0001",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "7941A1A0RU.0003",
+      "brand": "チューダー",
+      "file": "data/specs/7941a1a0ru0003.json",
+      "model": "チューダー Black Bayウォッチ - 41 mm スチール製ケース, スチール製ブレスレット",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay/m7941a1a0ru-0003",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79470.0001",
+      "brand": "チューダー",
+      "file": "data/specs/794700001.json",
+      "model": "チューダー Black Bay Proウォッチ - 39 mm スチール製ケース, スチール製リベットブレスレット",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay-pro/m79470-0001",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79470.0002",
+      "brand": "チューダー",
+      "file": "data/specs/794700002.json",
+      "model": "チューダー Black Bay Proウォッチ - 39 mm スチール製ケース, イエローのライン入りブラックファブリックストラップ",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay-pro/m79470-0002",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79470.0003",
+      "brand": "チューダー",
+      "file": "data/specs/794700003.json",
+      "model": "チューダー Black Bay Proウォッチ - 39 mm スチール製ケース, レザーとラバーライニングによるハイブリッドストラップ",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay-pro/m79470-0003",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79830RB.0001",
+      "brand": "チューダー",
+      "file": "data/specs/79830rb0001.json",
+      "model": "チューダー Black Bay GMTウォッチ - 41 mm スチール製ケース, リベット スチール製ブレスレット",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay-gmt/m79830rb-0001",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79830RB.0003",
+      "brand": "チューダー",
+      "file": "data/specs/79830rb0003.json",
+      "model": "チューダー Black Bay GMTウォッチ - 41 mm スチール製ケース, ファブリックストラップ",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay-gmt/m79830rb-0003",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79830RB.0010",
+      "brand": "チューダー",
+      "file": "data/specs/79830rb0010.json",
+      "model": "チューダー Black Bay GMTウォッチ - 41 mm スチール製ケース, リベット スチール製ブレスレット",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay-gmt/m79830rb-0010",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79833MN.0001",
+      "brand": "チューダー",
+      "file": "data/specs/79833mn0001.json",
+      "model": "チューダー Black Bay GMT S&Gウォッチ - 41 mm スチール製ケース, スチール＆イエローゴールド製ブレスレット",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay-gmt/m79833mn-0001",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79833MN.0003",
+      "brand": "チューダー",
+      "file": "data/specs/79833mn0003.json",
+      "model": "チューダー Black Bay GMT S&Gウォッチ - 41 mm スチール製ケース, ブラックダイアル",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay-gmt/m79833mn-0003",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79833MN.0004",
+      "brand": "チューダー",
+      "file": "data/specs/79833mn0004.json",
+      "model": "チューダー Black Bay GMT S&Gウォッチ - 41 mm スチール製ケース, ブラックダイアル",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/black-bay-gmt/m79833mn-0004",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79950.0001",
+      "brand": "チューダー",
+      "file": "data/specs/799500001.json",
+      "model": "チューダー Rangerウォッチ - 39 mm スチール製ケース, スチール製ブレスレット",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/ranger/m79950-0001",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "79950.0003",
+      "brand": "チューダー",
+      "file": "data/specs/799500003.json",
+      "model": "チューダー Rangerウォッチ - 39 mm スチール製ケース, グリーン、レッド＆ベージュ ファブリックストラップ",
+      "fields": 13,
+      "lang": "ja",
+      "source_url": "https://www.tudorwatch.com/ja/watches/ranger/m79950-0003",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "5146J.001",
+      "brand": "パテック フィリップ",
+      "file": "data/specs/5146j001.json",
+      "model": "コンプリケーション",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/5146J-001",
+      "snapshot": "2021-05-14",
+      "archive": "http://web.archive.org/web/20210514110703/https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/5146J-001",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "5164A.001",
+      "brand": "パテック フィリップ",
+      "file": "data/specs/5164a001.json",
+      "model": "アクアノート",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A2%E3%82%AF%E3%82%A2%E3%83%8E%E3%83%BC%E3%83%88/5164A-001",
+      "snapshot": "2021-05-11",
+      "archive": "http://web.archive.org/web/20210511071039/https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A2%E3%82%AF%E3%82%A2%E3%83%8E%E3%83%BC%E3%83%88/5164A-001",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "5167A.001",
+      "brand": "パテック フィリップ",
+      "file": "data/specs/5167a001.json",
+      "model": "アクアノート",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.patek.com/ja/コレクション/アクアノート/5167a-001",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "5167R.001",
+      "brand": "パテック フィリップ",
+      "file": "data/specs/5167r001.json",
+      "model": "アクアノート",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.patek.com/ja/コレクション/アクアノート/5167r-001",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "5196G.001",
+      "brand": "パテック フィリップ",
+      "file": "data/specs/5196g001.json",
+      "model": "カラトラバ",
+      "fields": 9,
+      "lang": "ja",
+      "source_url": "https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%AB%E3%83%A9%E3%83%88%E3%83%A9%E3%83%90/5196G-001",
+      "snapshot": "2022-01-19",
+      "archive": "http://web.archive.org/web/20220119045127/https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%AB%E3%83%A9%E3%83%88%E3%83%A9%E3%83%90/5196G-001",
+      "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "5196R.001",
+      "brand": "パテック フィリップ",
+      "file": "data/specs/5196r001.json",
+      "model": "カラトラバ",
+      "fields": 9,
+      "lang": "ja",
+      "source_url": "https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%AB%E3%83%A9%E3%83%88%E3%83%A9%E3%83%90/5196R-001",
+      "snapshot": "2021-07-28",
+      "archive": "http://web.archive.org/web/20210728111813/https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%AB%E3%83%A9%E3%83%88%E3%83%A9%E3%83%90/5196R-001",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "5396G.011",
+      "brand": "パテック フィリップ",
+      "file": "data/specs/5396g011.json",
+      "model": "コンプリケーション",
+      "fields": 7,
+      "lang": "ja",
+      "source_url": "https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/5396G-011",
+      "snapshot": "2021-10-01",
+      "archive": "http://web.archive.org/web/20211001041602/https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/5396G-011",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "5711.1A.010",
+      "brand": "パテック フィリップ",
+      "file": "data/specs/57111a010.json",
+      "model": "ノーチラス",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%83%8E%E3%83%BC%E3%83%81%E3%83%A9%E3%82%B9/5711-1A-010",
+      "snapshot": "2021-01-24",
+      "archive": "http://web.archive.org/web/20210124052547/https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%83%8E%E3%83%BC%E3%83%81%E3%83%A9%E3%82%B9/5711-1A-010",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "5711.1A.011",
+      "brand": "パテック フィリップ",
+      "file": "data/specs/57111a011.json",
+      "model": "ノーチラス",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%83%8E%E3%83%BC%E3%83%81%E3%83%A9%E3%82%B9/5711-1A-011",
+      "snapshot": "2019-11-17",
+      "archive": "http://web.archive.org/web/20191117171156/https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%83%8E%E3%83%BC%E3%83%81%E3%83%A9%E3%82%B9/5711-1A-011",
+      "note": "公式ページのアーカイブが2019年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "5712.1A.001",
+      "brand": "パテック フィリップ",
+      "file": "data/specs/57121a001.json",
+      "model": "ノーチラス",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%83%8E%E3%83%BC%E3%83%81%E3%83%A9%E3%82%B9/5712-1A-001",
+      "snapshot": "2021-05-14",
+      "archive": "http://web.archive.org/web/20210514160137/https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%83%8E%E3%83%BC%E3%83%81%E3%83%A9%E3%82%B9/5712-1A-001",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "5712G.001",
+      "brand": "パテック フィリップ",
+      "file": "data/specs/5712g001.json",
+      "model": "ノーチラス",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%83%8E%E3%83%BC%E3%83%81%E3%83%A9%E3%82%B9/5712G-001",
+      "snapshot": "2021-05-13",
+      "archive": "http://web.archive.org/web/20210513035803/https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%83%8E%E3%83%BC%E3%83%81%E3%83%A9%E3%82%B9/5712G-001",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "5726A.001",
+      "brand": "パテック フィリップ",
+      "file": "data/specs/5726a001.json",
+      "model": "ノーチラス",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.patek.com/ja/コレクション/ノーチラス/5726a-001",
+      "source": "公式サイトを直接取得（アーカイブではない）"
     },
     {
       "ref": "124060",

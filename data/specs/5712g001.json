@@ -1,0 +1,38 @@
+{
+  "ref": "5712G.001",
+  "brand": "パテック フィリップ",
+  "model": "ノーチラス",
+  "case_diameter_mm": 40,
+  "case_material": "ホワイトゴールド仕様",
+  "case_note": "ホワイトゴールド仕様。 ねじ込み式リュウズ。 サファイヤクリスタル・バック。 6気圧防水。 ケース径（10-4時方向）：40 mm。 厚さ：8.52 mm。",
+  "dial": "スレート文字盤、夜光ゴールド植字インデックス。",
+  "movement": "自動巻ムーブメント",
+  "caliber": "240 PS IRM C LU",
+  "functions": "パワーリザーブ表示、スモールセコンド",
+  "movement_note": "日付表示。 ムーンフェイズ。 外径: 31 mm。 厚さ: 3.98 mm。 部品総数: 265個。 受けの枚数: 11枚。 石数: 29石。 連続駆動可能時間: 最小38時間、最大48時間。 22金偏心マイクロローター。 テンプ: ジャイロマックス。 毎時振動数: 21 600 (3 Hz)。 Spiromax®。 認定刻印: パテック フィリップ・シール。 技術特許: CH 595 653。",
+  "water_resistance_atm": 6,
+  "bracelet": "バンド：マット・ブラック・アリゲーター。 折り畳み式バックル。",
+  "status": "2021-05-13時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%83%8E%E3%83%BC%E3%83%81%E3%83%A9%E3%82%B9/5712G-001",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式URLのコレクション名",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "dial",
+        "functions",
+        "movement",
+        "movement_note",
+        "water_resistance_atm"
+      ],
+      "archive": "http://web.archive.org/web/20210513035803/https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%83%8E%E3%83%BC%E3%83%81%E3%83%A9%E3%82%B9/5712G-001",
+      "snapshot": "2021-05-13"
+    }
+  ]
+}

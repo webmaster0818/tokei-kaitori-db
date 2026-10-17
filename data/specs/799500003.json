@@ -1,0 +1,42 @@
+{
+  "ref": "79950.0003",
+  "brand": "チューダー",
+  "model": "チューダー Rangerウォッチ - 39 mm スチール製ケース, グリーン、レッド＆ベージュ ファブリックストラップ",
+  "case_diameter_mm": 39,
+  "case_material": "のスチール",
+  "case_note": "39 mmのスチール製ケース、サテン仕上げ",
+  "bezel": "スチール製スムースベゼル、サテン仕上げ",
+  "dial": "ブラック、ドーム型",
+  "crystal": "ドーム型サファイアクリスタル",
+  "crown": "スチール製スクリュー式リューズにチューダーローズの刻印",
+  "movement": "両方向回転ローターシステム搭載の機械式自動巻ムーブメント",
+  "caliber": "MT5402",
+  "movement_note": "マニュファクチュール キャリバー MT5402 (COSC)",
+  "power_reserve_h": 70,
+  "water_resistance_m": 100,
+  "bracelet": "レッド＆ベージュのストライプ入りグリーンファブリックストラップ/バックル",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.tudorwatch.com/ja/watches/ranger/m79950-0003",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "movement",
+        "movement_note",
+        "power_reserve_h",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

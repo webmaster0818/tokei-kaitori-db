@@ -1,0 +1,32 @@
+{
+  "ref": "5396G.011",
+  "brand": "パテック フィリップ",
+  "model": "コンプリケーション",
+  "case_diameter_mm": 38.5,
+  "case_material": "ホワイトゴールド仕様",
+  "case_note": "ホワイトゴールド仕様。 サファイヤクリスタル・バック。 3気圧防水。 ケース径：38.5 mm。 厚さ：11.2 mm。",
+  "dial": "シルバー・オパーリン文字盤、ゴールド植字インデックス。",
+  "movement_note": "年次カレンダー。 24時間表示。 ムーンフェイズ。 外径: 33.3 mm。 厚さ: 5.78 mm。 部品総数: 347個。 受けの枚数: 10枚。 石数: 34石。 連続駆動可能時間: 最小35時間、最大45時間。 自動巻ローター: 21金ゴールド中央ローター。 テンプ: ジャイロマックス。 毎時振動数: 28 800 (4 Hz)。 Spiromax®。 認定刻印: パテック フィリップ・シール。",
+  "water_resistance_atm": 3,
+  "bracelet": "バンド：ブリリアント・ブラック・アリゲーター。 折り畳み式バックル。",
+  "status": "2021-10-01時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/5396G-011",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式URLのコレクション名",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "dial",
+        "movement_note",
+        "water_resistance_atm"
+      ],
+      "archive": "http://web.archive.org/web/20211001041602/https://www.patek.com/ja/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/5396G-011",
+      "snapshot": "2021-10-01"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "ref": "79012M.0001",
+  "brand": "チューダー",
+  "model": "チューダー Black Bay 58 Bronzeウォッチ - 39 mm ブロンズ製ケース, マット仕上げのグラデーション“ブロンズブラウン”ダイアル",
+  "case_diameter_mm": 39,
+  "case_material": "、着用者のライフスタイルに合わせて色が変化するブロンズ",
+  "case_note": "39 mm、着用者のライフスタイルに合わせて色が変化するブロンズ製ケース、サテン仕上げ",
+  "bezel": "ブロンズ製逆回転防止ベゼル、60分目盛り入りマット“ブロンズブラウン”のアルマイト加工ディスク",
+  "dial": "マット仕上げのグラデーション «ブロンズブラウン» ドーム型ダイアル、アプライド アワーマーカーとアラビア数字（3、6、9時位置）",
+  "crystal": "ドーム型サファイアクリスタル",
+  "crown": "ブロンズ製スクリュー式リューズ、チューダーローズのレリーフ",
+  "movement": "両方向回転ローターシステム搭載の機械式自動巻ムーブメント",
+  "caliber": "MT5400",
+  "movement_note": "マニュファクチュール キャリバー MT5400 (COSC)",
+  "power_reserve_h": 70,
+  "water_resistance_m": 200,
+  "bracelet": "チューダー独自の“T-fit”アジャスティングシステム付きクラスプを備えるブロンズ製ブレスレット",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.tudorwatch.com/ja/watches/black-bay-58/m79012m-0001",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "movement",
+        "movement_note",
+        "power_reserve_h",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

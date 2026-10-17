@@ -1,0 +1,42 @@
+{
+  "ref": "79210CNU.0001",
+  "brand": "チューダー",
+  "model": "チューダー Black Bay Ceramicウォッチ - 41 mm セラミック製ケース, レザーとラバーライニングによるハイブリッドストラップ, ブラック ファブリックストラップ",
+  "case_diameter_mm": 41,
+  "case_material": "マットブラックのセラミック",
+  "case_note": "41 mm マットブラックのセラミック製ケース、マイクロブラスト仕上げ、モノブロック構造ミドルケース",
+  "bezel": "ブラックPVDコーティングのスチール製逆回転防止ベゼル、60分目盛り付きブラックセラミック製ディスク、サンレイサテン仕上げにエングレービングのマーカーと数字",
+  "dial": "ブラック、ドーム型",
+  "crystal": "ドーム型サファイアクリスタル",
+  "crown": "ブラックPVDコーティングのスチール製スクリュー式リューズ、チューダーローズのレリーフ、サテン仕上げのスチール製リューズチューブ",
+  "movement": "両方向回転ローターシステム搭載の機械式自動巻ムーブメント",
+  "caliber": "MT5602-1U",
+  "movement_note": "マニュファクチュール キャリバー MT5602-1U",
+  "power_reserve_h": 70,
+  "water_resistance_m": 200,
+  "bracelet": "レザーとラバーライニングによるハイブリッドストラップ/スチール製フォールディングクラスプ＆ブラックPVDコーティングのスチール製セーフティキャッチ",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.tudorwatch.com/ja/watches/black-bay/m79210cnu-0001",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "movement",
+        "movement_note",
+        "power_reserve_h",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

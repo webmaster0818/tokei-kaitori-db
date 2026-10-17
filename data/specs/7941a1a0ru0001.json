@@ -1,0 +1,42 @@
+{
+  "ref": "7941A1A0RU.0001",
+  "brand": "チューダー",
+  "model": "チューダー Black Bayウォッチ - 41 mm スチール製ケース, スチール製ブレスレット",
+  "case_diameter_mm": 41,
+  "case_material": "スチール",
+  "case_note": "41 mm スチール製ケース、ポリッシュ＆サテン仕上げ",
+  "bezel": "ステンレススチール製60分逆回転防止ベゼル、バーガンディのアルマイト加工ディスク",
+  "dial": "ブラック、ドーム型",
+  "crystal": "ドーム型サファイアクリスタル",
+  "crown": "ステンレススチール製スクリュー式リューズにチューダーローズのレリーフ",
+  "movement": "両方向回転ローターシステム搭載の機械式自動巻ムーブメント",
+  "caliber": "MT5602-U",
+  "movement_note": "マニュファクチュール キャリバー MT5602-U（COSC、METAS認定）",
+  "power_reserve_h": 70,
+  "water_resistance_m": 200,
+  "bracelet": "ステンレススチール製3列ブレスレット（ポリッシュ＆サテン仕上げ）、チューダー独自の“T-fit”クイックアジャストクラスプ",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.tudorwatch.com/ja/watches/black-bay/m7941a1a0ru-0001",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "movement",
+        "movement_note",
+        "power_reserve_h",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

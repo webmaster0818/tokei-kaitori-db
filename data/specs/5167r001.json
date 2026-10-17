@@ -1,0 +1,36 @@
+{
+  "ref": "5167R.001",
+  "brand": "パテック フィリップ",
+  "model": "アクアノート",
+  "case_diameter_mm": 40.8,
+  "case_material": "ローズゴールド",
+  "case_note": "ローズゴールド。 直径（10〜4時位置）：40.8 mm。 厚さ：8.1 mm。 3気圧防水。 ねじ込み式リューズ。 サファイヤクリスタル・バック。",
+  "dial": "外周に向かって濃くなるブラック・グラデーションのブラウン・ソレイユ、アクアノート・エンボス・パターン、ホワイト夜光付ローズゴールド植字数字。 ホワイト夜光付ローズゴールドのバトン型時・分針。",
+  "movement": "自動巻き",
+  "caliber": "26-330 S C",
+  "functions": "日付を窓表示、センターセコンド",
+  "movement_note": "直径：27 mm。 厚さ：3.32 mm。 部品数：207。 石数：30。 パワーリザーブ：最小35時間、最大45時間。 巻き上げローター：21金ゴールド中央ローター。 テンプ：Gyromax®。 周波数：28,800振動（片道）／時（4 Hz）。 髭ぜんまい：Spiromax®。 刻印： パテック フィリップ・シール。",
+  "water_resistance_atm": 3,
+  "bracelet": "コンポジット素材、ダークブラウン。 特許取得のローズゴールド折り畳み式バックル。",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.patek.com/ja/コレクション/アクアノート/5167r-001",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式URLのコレクション名",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "dial",
+        "functions",
+        "movement",
+        "movement_note",
+        "water_resistance_atm"
+      ]
+    }
+  ]
+}
