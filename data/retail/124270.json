@@ -1,0 +1,16 @@
+{
+  "ref": "124270",
+  "brand": "ロレックス",
+  "model": "エクスプローラー 36",
+  "prices": [
+    {
+      "price_jpy": 1177000,
+      "tax_included": null,
+      "as_of": "2026-01-25",
+      "url": "https://www.rolex.com/ja/watches/explorer/m124270-0001",
+      "archive": "http://web.archive.org/web/20260125131246/https://www.rolex.com/ja/watches/explorer/m124270-0001",
+      "snapshot": "2026-01-25"
+    }
+  ],
+  "checked": "2026-10-17"
+}

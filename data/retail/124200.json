@@ -1,0 +1,16 @@
+{
+  "ref": "124200",
+  "brand": "ロレックス",
+  "model": "オイスター パーペチュアル 34",
+  "prices": [
+    {
+      "price_jpy": 886600,
+      "tax_included": null,
+      "as_of": "2025-10-07",
+      "url": "https://www.rolex.com/ja/watches/oyster-perpetual/m124200-0006",
+      "archive": "http://web.archive.org/web/20251007204504/https://www.rolex.com/ja/watches/oyster-perpetual/m124200-0006",
+      "snapshot": "2025-10-07"
+    }
+  ],
+  "checked": "2026-10-17"
+}

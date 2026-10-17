@@ -1,0 +1,16 @@
+{
+  "ref": "126503",
+  "brand": "ロレックス",
+  "model": "コスモグラフ デイトナ",
+  "prices": [
+    {
+      "price_jpy": 3267000,
+      "tax_included": null,
+      "as_of": "2025-10-01",
+      "url": "https://www.rolex.com/ja/watches/cosmograph-daytona/m126503-0001",
+      "archive": "http://web.archive.org/web/20251001174924/https://www.rolex.com/ja/watches/cosmograph-daytona/m126503-0001",
+      "snapshot": "2025-10-01"
+    }
+  ],
+  "checked": "2026-10-17"
+}

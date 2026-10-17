@@ -1,0 +1,16 @@
+{
+  "ref": "126603",
+  "brand": "ロレックス",
+  "model": "シードゥエラー",
+  "prices": [
+    {
+      "price_jpy": 2986500,
+      "tax_included": null,
+      "as_of": "2025-09-14",
+      "url": "https://www.rolex.com/ja/watches/sea-dweller/m126603-0001",
+      "archive": "http://web.archive.org/web/20250914175714/https://www.rolex.com/ja/watches/sea-dweller/m126603-0001",
+      "snapshot": "2025-09-14"
+    }
+  ],
+  "checked": "2026-10-17"
+}

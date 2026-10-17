@@ -1,0 +1,16 @@
+{
+  "ref": "126500LN",
+  "brand": "ロレックス",
+  "model": "コスモグラフ デイトナ",
+  "prices": [
+    {
+      "price_jpy": 2349600,
+      "tax_included": null,
+      "as_of": "2025-12-28",
+      "url": "https://www.rolex.com/ja/watches/cosmograph-daytona/m126500ln-0001",
+      "archive": "http://web.archive.org/web/20251228085305/https://www.rolex.com/ja/watches/cosmograph-daytona/m126500ln-0001",
+      "snapshot": "2025-12-28"
+    }
+  ],
+  "checked": "2026-10-17"
+}
