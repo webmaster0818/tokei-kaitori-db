@@ -1,0 +1,46 @@
+{
+  "ref": "PAM00312",
+  "brand": "パネライ",
+  "model": "Luminor Marina 1950 3 Days Automatic",
+  "case_diameter_mm": 44,
+  "case_material": "AISI 316L brushed steel",
+  "case_note": "Diameter 44 mm, AISI 316L brushed steel.",
+  "bezel": "Polished steel.",
+  "case_back": "See-through sapphire crystal.",
+  "crown": "(protected as a trademark) Brushed steel.",
+  "dial": "Black with luminous Arabic numerals and hour markers. Date at 3 o’clock, seconds at 9 o’clock.",
+  "crystal": "Sapphire, formed of corundum, 2.6 mm thick. Anti-reflective coating.",
+  "movement": "Automatic",
+  "movement_note": "Automatic mechanical, Panerai P.9000 calibre, executed entirely by Panerai, 13¾ lignes, 7.9 mm thick, 28 jewels, Glucydur® balance, 28,800 alternations/hour. Incabloc® anti-shock device. Power reserve 3 days, two barrels. 197 components.",
+  "functions": "Hours, minutes, small seconds, date.",
+  "water_resistance_atm": 30,
+  "water_resistance_m": 300,
+  "bracelet": "PANERAI personalised alligator strap and large-size brushed steel buckle. Supplied with a second interchangeable strap, a tool for changing the strap and a steel screwdriver.",
+  "status": "2014-06-01時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/en/collections/watch-collection/luminor-1950/58-luminor-marina-1950-3-days-automatic-pam00312",
+      "archive": "http://web.archive.org/web/20140601133642/https://www.panerai.com/en/collections/watch-collection/luminor-1950/58-luminor-marina-1950-3-days-automatic-pam00312",
+      "snapshot": "2014-06-01",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "movement_note",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "ref": "PAM00320",
+  "brand": "パネライ",
+  "model": "Luminor 1950 3 Days GMT Automatic Acciaio",
+  "case_diameter_mm": 44,
+  "case_material": "AISI 316L brushed steel",
+  "case_note": "Diameter 44 mm, AISI 316L brushed steel.",
+  "bezel": "Polished steel.",
+  "case_back": "See-through sapphire crystal.",
+  "crown": "(protected as a trademark) Brushed steel.",
+  "dial": "Black with luminous Arabic numerals and hour markers. Date at 3 o’clock, seconds at 9 o’clock.",
+  "crystal": "Sapphire, formed of corundum, 2.6 mm thick. Anti-reflective coating.",
+  "movement": "Automatic",
+  "movement_note": "Automatic mechanical, Panerai P.9001 calibre, executed entirely by Panerai, 13¾ lignes, 7.9 mm thick, 29 jewels, Glucydur® balance, 28,800 alternations/hour. Incabloc® anti-shock device. Power reserve 3 days with indicator on the back, two barrels, seconds reset device. 229 components.",
+  "functions": "Hours, minutes, small seconds, date, second time zone, power reserve indicator on the back, seconds reset.",
+  "water_resistance_atm": 30,
+  "water_resistance_m": 300,
+  "bracelet": "PANERAI personalised brown alligator strap and large-size brushed steel buckle. Supplied with a second interchangeable strap, a tool for changing the strap and a steel screwdriver.",
+  "status": "2015-02-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/en/collections/watch-collection/luminor-1950/64-luminor-1950-3-days-gmt-automatic-pam00320",
+      "archive": "http://web.archive.org/web/20150217041834/https://www.panerai.com/en/collections/watch-collection/luminor-1950/64-luminor-1950-3-days-gmt-automatic-pam00320",
+      "snapshot": "2015-02-17",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "movement_note",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

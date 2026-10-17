@@ -1,0 +1,42 @@
+{
+  "ref": "PAM00424",
+  "brand": "パネライ",
+  "model": "Radiomir California",
+  "case_diameter_mm": 47,
+  "case_material": "AISI 316L Polished Steel",
+  "case_note": "Diameter 47mm, AISI 316L Polished Steel",
+  "bezel": "Polished Steel",
+  "case_back": "See - through sapphire crystal",
+  "dial": "Black with luminous Arabic and Roman numerals and hour markers.",
+  "movement": "Hand-wound",
+  "movement_note": "Hand-wound mechanical, P.3000 calibre, created by Panerai, 16½ lignes, 5.3 mm thick, 21 jewels, Glucydur® balance, 21,600 alternations/hour. Incabloc® anti-shock device. Power reserve 3 days, two barrels. 161 components.",
+  "functions": "Hours, minutes",
+  "water_resistance_atm": 10,
+  "water_resistance_m": 100,
+  "bracelet": "Scamosciato Dark brown,",
+  "status": "2022-06-24時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/ae/en/collections/watch-collection/radiomir/pam00424-radiomir-california---47mm.html",
+      "archive": "http://web.archive.org/web/20220624075609/https://www.panerai.com/ae/en/collections/watch-collection/radiomir/pam00424-radiomir-california---47mm.html",
+      "snapshot": "2022-06-24",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "dial",
+        "functions",
+        "movement",
+        "movement_note",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

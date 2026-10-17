@@ -1,0 +1,46 @@
+{
+  "ref": "PAM00305",
+  "brand": "パネライ",
+  "model": "Luminor Submersible 1950 3 Days Automatic Titanio",
+  "case_diameter_mm": 47,
+  "case_material": "brushed titanium",
+  "case_note": "Diameter 47 mm, brushed titanium.",
+  "bezel": "Brushed titanium with polished edges, anti-clockwise unidirectional rotating bezel with graduated scale for calculating the time of immersion and ratchet click at minute intervals.",
+  "case_back": "See-through sapphire crystal.",
+  "crown": "(protected as a trademark) Brushed titanium.",
+  "dial": "Black with luminous hour markers. Date at 3 o’clock, seconds at 9 o’clock.",
+  "crystal": "Sapphire, formed of corundum, 4 mm thick. Anti-reflective coating.",
+  "movement": "Automatic",
+  "movement_note": "Automatic mechanical, Panerai P.9000 calibre, executed entirely by Panerai, 13¾ lignes, 7.9 mm thick, 28 jewels, Glucydur® balance, 28,800 alternations/hour. Incabloc® anti-shock device. Power reserve 3 days, two barrels. 197 components.",
+  "functions": "Hours, minutes, small seconds, date, calculation of immersion time.",
+  "water_resistance_atm": 30,
+  "water_resistance_m": 300,
+  "bracelet": "PANERAI personalised rubber strap and large-size brushed titanium buckle. Supplied with a second interchangeable strap, a tool for changing the strap and a steel screwdriver.",
+  "status": "2014-08-16時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/en/collections/watch-collection/luminor-1950/57-luminor-submersible-1950-3-days-automatic-titanio-pam00305",
+      "archive": "http://web.archive.org/web/20140816203726/https://www.panerai.com/en/collections/watch-collection/luminor-1950/57-luminor-submersible-1950-3-days-automatic-titanio-pam00305",
+      "snapshot": "2014-08-16",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "movement_note",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

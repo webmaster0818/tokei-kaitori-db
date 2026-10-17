@@ -1,0 +1,48 @@
+{
+  "ref": "PAM00024",
+  "brand": "パネライ",
+  "model": "Luminor Submersible Automatic Acciaio",
+  "case_diameter_mm": 44,
+  "case_material": "AISI 316L polished steel or brushed titanium",
+  "case_note": "Diameter 44 mm, AISI 316L polished steel or brushed titanium.",
+  "bezel": "Brushed steel anti-clockwise unidirectional rotating bezel with scale graduated for measuring the duration of immersions and ratchet click at minute intervals.",
+  "case_back": "Screw, steel.",
+  "crown": "(protected as a trademark) Polished steel.",
+  "dial": "Black with applied luminous dots and Arabic numerals. Date at 3 o’clock, seconds at 9 o’clock.",
+  "crystal": "Sapphire, formed of corundum, 3.5 mm thick, magnifying lens over the date at 3 o’clock. Anti-reflective coating.",
+  "movement": "Automatic",
+  "caliber": "OP III",
+  "movement_note": "Automatic mechanical, exclusive Panerai OP III calibre, 13¼ lignes, 21 jewels, PANERAI personalised oscillating weight. Glucydur® balance, 28,800 alternations/hour. Incabloc® anti-shock device. Power reserve 42 hours. Côtes de Genève decoration on the bridges. It is tested and certified by C.O.S.C.",
+  "functions": "Hours, minutes, small seconds, date, calculation of immersion times.",
+  "water_resistance_atm": 30,
+  "water_resistance_m": 300,
+  "bracelet": "PANERAI personalised rubber strap and steel adjustable buckle. Supplied with a second interchangeable strap fit for diving and a steel screwdriver.",
+  "status": "2015-02-10時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/en/collections/watch-collection/luminor/45-luminor-submersible-pam00024",
+      "archive": "http://web.archive.org/web/20150210033322/https://www.panerai.com/en/collections/watch-collection/luminor/45-luminor-submersible-pam00024",
+      "snapshot": "2015-02-10",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "movement_note",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

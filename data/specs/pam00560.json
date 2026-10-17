@@ -1,0 +1,36 @@
+{
+  "ref": "PAM00560",
+  "brand": "パネライ",
+  "model": "Luminor Base 8 Days",
+  "case_diameter_mm": 44,
+  "case_material": "AISI 316L Polished Steel",
+  "case_note": "Diameter 44 mm, AISI 316L Polished Steel",
+  "bezel": "Polished steel",
+  "case_back": "See - through sapphire crystal",
+  "dial": "Black with luminous Arabic numerals and hour markers.",
+  "water_resistance_atm": 30,
+  "water_resistance_m": 300,
+  "bracelet": "Calf Rugby Black,",
+  "status": "2020-11-16時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/be/en/collections/watch-collection/luminor/pam00560-luminor-base-8-days---44mm.html",
+      "archive": "http://web.archive.org/web/20201116040419/https://www.panerai.com/be/en/collections/watch-collection/luminor/pam00560-luminor-base-8-days---44mm.html",
+      "snapshot": "2020-11-16",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "dial",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

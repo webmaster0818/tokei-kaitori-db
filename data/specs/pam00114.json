@@ -1,0 +1,48 @@
+{
+  "ref": "PAM00114",
+  "brand": "パネライ",
+  "model": "Luminor Base Acciaio",
+  "case_diameter_mm": 44,
+  "case_material": "AISI 316L Polished steel",
+  "case_note": "Diameter 44 mm, AISI 316L Polished steel.",
+  "bezel": "Polished steel.",
+  "case_back": "See-through sapphire crystal.",
+  "crown": "(protected as a trademark) Brushed steel.",
+  "dial": "White with luminous Arabic numerals and markers.",
+  "crystal": "Sapphire, formed of corundum, 3.5 mm thick. Anti-reflective coating.",
+  "movement": "Hand-wound",
+  "caliber": "OP X",
+  "movement_note": "Hand-wound mechanical, exclusive Panerai OP X calibre, 16½ lignes, 17 jewels, Glucydur® balance, 21,600 alternations/hour. Incabloc® anti-shock device. Swan's neck regulator. Power reserve 56 hours. Côtes de Genève decoration on the bridges.",
+  "functions": "Hours, minutes.",
+  "water_resistance_atm": 30,
+  "water_resistance_m": 300,
+  "bracelet": "PANERAI personalised leather strap and large size steel buckle. Supplied with a second interchangeable strap and a steel screwdriver.",
+  "status": "2015-02-12時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/en/collections/watch-collection/luminor/37-luminor-base-pam00114",
+      "archive": "http://web.archive.org/web/20150212014339/https://www.panerai.com/en/collections/watch-collection/luminor/37-luminor-base-pam00114",
+      "snapshot": "2015-02-12",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "movement_note",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "ref": "PAM00000",
+  "brand": "パネライ",
+  "model": "Luminor Base Logo Acciaio",
+  "case_diameter_mm": 44,
+  "case_material": "AISI 316L Polished steel",
+  "case_note": "Diameter 44 mm, AISI 316L Polished steel.",
+  "bezel": "Polished steel.",
+  "case_back": "Screw, steel.",
+  "crown": "(protected as a trademark) Brushed steel.",
+  "dial": "Black with luminous Arabic numerals and markers.",
+  "crystal": "Sapphire, formed of corundum, 3.5 mm thick. Anti-reflective coating.",
+  "movement": "Hand-wound",
+  "caliber": "OP I",
+  "movement_note": "Hand-wound mechanical , exclusive Panerai OP I calibre, 16½ lignes, 17 jewels, Glucydur® balance, 21,600 alternations/hour. Incabloc® anti-shock device. Power reserve 56 hours.",
+  "functions": "Hours, minutes.",
+  "water_resistance_atm": 30,
+  "water_resistance_m": 300,
+  "bracelet": "PANERAI personalised leather strap and large-size steel buckle. Supplied with a second interchangeable strap and a steel screwdriver.",
+  "status": "2015-03-03時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/en/collections/watch-collection/luminor/35-luminor-base-logo-pam00000",
+      "archive": "http://web.archive.org/web/20150303215109/https://www.panerai.com/en/collections/watch-collection/luminor/35-luminor-base-logo-pam00000",
+      "snapshot": "2015-03-03",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "movement_note",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "ref": "PAM00514",
+  "brand": "パネライ",
+  "model": "Radiomir",
+  "case_diameter_mm": 47,
+  "case_material": "AISI 316L Polished Steel",
+  "case_note": "Diameter 47 mm, AISI 316L Polished Steel",
+  "bezel": "Polished Steel",
+  "case_back": "See - through sapphire crystal",
+  "dial": "Black with luminous Arabic numerals and hour markers. Date at 3 o’clock, seconds at 9 o’clock.",
+  "functions": "Hours, minutes, small seconds, date",
+  "water_resistance_atm": 10,
+  "water_resistance_m": 100,
+  "bracelet": "Alligator Antique brown,",
+  "status": "2019-12-11時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/at/en/collections/watch-collection/radiomir/pam00514-radiomir---47mm.html",
+      "archive": "http://web.archive.org/web/20191211203230/https://www.panerai.com/at/en/collections/watch-collection/radiomir/pam00514-radiomir---47mm.html",
+      "snapshot": "2019-12-11",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "dial",
+        "functions",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

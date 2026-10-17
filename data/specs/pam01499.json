@@ -1,0 +1,38 @@
+{
+  "ref": "PAM01499",
+  "brand": "パネライ",
+  "model": "Luminor Marina",
+  "case_diameter_mm": 44,
+  "case_material": "AISI 316L polished steel",
+  "case_note": "Diameter 44mm, AISI 316L polished steel",
+  "bezel": "Polished steel",
+  "case_back": "See-through sapphire crystal",
+  "dial": "White with Arabic numerals and luminous dot markers. Date at 3 o’clock, seconds at 9 o’clock.",
+  "functions": "Hours, minutes, small seconds, date",
+  "water_resistance_atm": 30,
+  "water_resistance_m": 300,
+  "bracelet": "Scamosciato Dark brown,",
+  "status": "2020-08-14時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/at/en/collections/watch-collection/luminor/pam01499-luminor-marina---44mm.html",
+      "archive": "http://web.archive.org/web/20200814085937/https://www.panerai.com/at/en/collections/watch-collection/luminor/pam01499-luminor-marina---44mm.html",
+      "snapshot": "2020-08-14",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "dial",
+        "functions",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

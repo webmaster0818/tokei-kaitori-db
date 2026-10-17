@@ -1,0 +1,36 @@
+{
+  "ref": "PAM00562",
+  "brand": "パネライ",
+  "model": "Panerai Luminor Base 8 Days",
+  "case_diameter_mm": 44,
+  "case_material": "Brushed Titanium",
+  "case_note": "Diameter 44 mm, Brushed Titanium",
+  "bezel": "Brushed Titanium",
+  "case_back": "See - through sapphire crystal",
+  "dial": "Brown with luminous Arabic numerals and hour markers.",
+  "water_resistance_atm": 30,
+  "water_resistance_m": 300,
+  "bracelet": "Alligator Dark brown,",
+  "status": "2023-01-27時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/au/en/collections/watch-collection/luminor/pam00562-luminor-base-8-days---44mm.html",
+      "archive": "http://web.archive.org/web/20230127022253/https://www.panerai.com/au/en/collections/watch-collection/luminor/pam00562-luminor-base-8-days---44mm.html",
+      "snapshot": "2023-01-27",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "dial",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

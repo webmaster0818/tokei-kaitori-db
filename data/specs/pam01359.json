@@ -1,0 +1,42 @@
+{
+  "ref": "PAM01359",
+  "brand": "パネライ",
+  "model": "Luminor Marina",
+  "case_diameter_mm": 44,
+  "case_material": "AISI 316L polished steel",
+  "case_note": "Diameter 44mm, AISI 316L polished steel",
+  "bezel": "Polished steel",
+  "case_back": "See-through sapphire crystal",
+  "dial": "black with luminous Arabic numerals. Date at 3 o'clock, small seconds at 9 o'clock.",
+  "movement": "Automatic",
+  "movement_note": "Automatic mechanical, P.9010 calibre, executed entirely by Panerai, 13¾ lignes, 6.0 mm thick, 31 jewels, Glucydur® balance, 28,800 alternations/hour. Incabloc® anti-shock device. Power reserve 3 days, two barrels. 200 components.",
+  "functions": "Hours, minutes, small seconds, date",
+  "water_resistance_atm": 30,
+  "water_resistance_m": 300,
+  "bracelet": "Calf Rugby Black,",
+  "status": "2020-09-25時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/at/en/collections/watch-collection/luminor/pam01359-luminor-marina---44mm.html",
+      "archive": "http://web.archive.org/web/20200925171031/https://www.panerai.com/at/en/collections/watch-collection/luminor/pam01359-luminor-marina---44mm.html",
+      "snapshot": "2020-09-25",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "dial",
+        "functions",
+        "movement",
+        "movement_note",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

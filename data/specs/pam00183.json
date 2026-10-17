@@ -1,0 +1,44 @@
+{
+  "ref": "PAM00183",
+  "brand": "パネライ",
+  "model": "Radiomir Black Seal Acciaio",
+  "case_diameter_mm": 45,
+  "case_note": "Diameter 45 mm, AISI 316L polished steel, with removable wire loop strap attachments (patented). Winding crown personalized OP.",
+  "bezel": "Polished steel.",
+  "case_back": "See-through sapphire crystal.",
+  "dial": "Black with luminous Arabic numerals and markers. Seconds at 9 o'clock.",
+  "crystal": "Sapphire, formed of corundum, 1.9 mm thick. Anti-reflective coating.",
+  "movement": "Hand-wound",
+  "caliber": "OP XI",
+  "movement_note": "Hand-wound mechanical, exclusive Panerai OP XI calibre, 16½ lignes, 17 jewels, Glucydur® Balance, 21,600 alternations/hour. Incabloc® anti-shock device. Swan’s neck regulator. Power reserve 56 hours. Côtes de Genève decoration on the bridges.",
+  "functions": "Hours, minutes, small seconds.",
+  "water_resistance_atm": 10,
+  "water_resistance_m": 100,
+  "bracelet": "PANERAI personalised leather strap and large-size polished steel buckle.",
+  "status": "2015-03-07時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/en/collections/watch-collection/radiomir/29-radiomir-black-seal-pam00183",
+      "archive": "http://web.archive.org/web/20150307015739/https://www.panerai.com/en/collections/watch-collection/radiomir/29-radiomir-black-seal-pam00183",
+      "snapshot": "2015-03-07",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_back",
+        "case_diameter_mm",
+        "case_note",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "movement_note",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

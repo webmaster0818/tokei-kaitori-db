@@ -1,0 +1,34 @@
+{
+  "ref": "PAM00610",
+  "brand": "パネライ",
+  "model": "Radiomir 8 Days",
+  "case_diameter_mm": 45,
+  "case_note": "Diameter 45 mm, AISI 316L Polished Steel with removable wire loop strap attachments (patented)",
+  "bezel": "Polished Steel",
+  "case_back": "See-through sapphire crystal",
+  "dial": "Black with luminous Arabic numerals and hour markers.",
+  "water_resistance_atm": 10,
+  "water_resistance_m": 100,
+  "bracelet": "Calf Monte Carlo Black,",
+  "status": "2020-10-03時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/at/en/collections/watch-collection/radiomir/pam00610-radiomir-8-days---45mm.html",
+      "archive": "http://web.archive.org/web/20201003200022/https://www.panerai.com/at/en/collections/watch-collection/radiomir/pam00610-radiomir-8-days---45mm.html",
+      "snapshot": "2020-10-03",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "case_back",
+        "case_diameter_mm",
+        "case_note",
+        "dial",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

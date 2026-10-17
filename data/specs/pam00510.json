@@ -1,0 +1,40 @@
+{
+  "ref": "PAM00510",
+  "brand": "パネライ",
+  "model": "Panerai Luminor 8 Days",
+  "case_diameter_mm": 44,
+  "case_material": "AISI 316L Polished Steel",
+  "case_note": "Diameter 44 mm, AISI 316L Polished Steel",
+  "bezel": "Polished steel",
+  "case_back": "See - through sapphire crystal",
+  "movement": "Hand-wound",
+  "movement_note": "Hand-wound mechanical, P.5000 calibre, created by Panerai, 15 ½ lignes, 4.5 mm thick, 21 jewels, Glucydur® balance, 21,600 alternations/hour. Incabloc Parechoc® anti-shock device. Power reserve 8 days, two barrels. 146 components.",
+  "functions": "Small seconds",
+  "water_resistance_atm": 0,
+  "water_resistance_m": 0,
+  "bracelet": "Calf Rugby ,",
+  "status": "2023-03-24時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/au/en/collections/watch-collection/luminor/pam00510-luminor-8-days---44mm.html",
+      "archive": "http://web.archive.org/web/20230324213220/https://www.panerai.com/au/en/collections/watch-collection/luminor/pam00510-luminor-8-days---44mm.html",
+      "snapshot": "2023-03-24",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "functions",
+        "movement",
+        "movement_note",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

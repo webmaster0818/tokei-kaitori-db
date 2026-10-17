@@ -1,0 +1,48 @@
+{
+  "ref": "PAM00088",
+  "brand": "パネライ",
+  "model": "LUMINOR GMT AUTOMATIC ACCIAIO",
+  "case_diameter_mm": 44,
+  "case_material": "AISI 316L polished steel",
+  "case_note": "Diameter 44 mm, AISI 316L polished steel.",
+  "bezel": "Polished steel.",
+  "case_back": "Screw, steel.",
+  "crown": "(protected as a trademark) Polished steel.",
+  "dial": "Black with luminous Arabic numerals and markets. 24h indication on the edge. Date at 3 o’clock, seconds at 9 o’clock.",
+  "crystal": "Sapphire, formed of corundum, 3.5 mm thick, magnifying lens over the date at 3 o’clock. Anti-reflective coating.",
+  "movement": "Automatic",
+  "caliber": "OP VIII",
+  "movement_note": "Automatic mechanical, exclusive Panerai OP VIII calibre, 13¼ lignes, 21 jewels, PANERAI personalised oscillating weight. Glucydur® balance, 28,800 alternations/hour. Incabloc® anti-shock device. Power reserve 42 hours. Côtes de Genève decoration on the bridges. It is tested and certified by C.O.S.C.",
+  "functions": "Hours, minutes, small seconds, date, second time zone.",
+  "water_resistance_atm": 30,
+  "water_resistance_m": 300,
+  "bracelet": "PANERAI personalised alligator strap and polished steel adjustable buckle. Supplied with a second interchangeable strap and a steel screwdriver.",
+  "status": "2015-03-01時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/en/collections/watch-collection/luminor/50-luminor-gmt-pam00088",
+      "archive": "http://web.archive.org/web/20150301055334/https://www.panerai.com/en/collections/watch-collection/luminor/50-luminor-gmt-pam00088",
+      "snapshot": "2015-03-01",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "movement_note",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

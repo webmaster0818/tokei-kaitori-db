@@ -1,0 +1,36 @@
+{
+  "ref": "PAM01312",
+  "brand": "パネライ",
+  "model": "Panerai Luminor Marina PAM 1312 44mm Automatic",
+  "case_diameter_mm": 44,
+  "case_material": "brushed steel",
+  "case_note": "Diameter 44mm, brushed steel",
+  "bezel": "Polished steel",
+  "case_back": "Screwed, brushed steel",
+  "crown": "Protected as trademark",
+  "dial": "Black with luminous Arabic numerals and hour markers Date at 3 o'clock and small seconds at 9 o'clock.",
+  "water_resistance_atm": 0,
+  "water_resistance_m": 0,
+  "status": "2025-01-19時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.panerai.com/ae/en/collections/watch-collection/luminor/pam01312-luminor-marina.html",
+      "archive": "http://web.archive.org/web/20250119062746/https://www.panerai.com/ae/en/collections/watch-collection/luminor/pam01312-luminor-marina.html",
+      "snapshot": "2025-01-19",
+      "checked": "2026-10-17",
+      "lang": "en",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bezel",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "case_note",
+        "crown",
+        "dial",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}
