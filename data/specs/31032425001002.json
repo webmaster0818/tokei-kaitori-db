@@ -1,0 +1,35 @@
+{
+  "ref": "310.32.42.50.01.002",
+  "brand": "オメガ",
+  "model": "スピードマスター ムーンウォッチ プロフェッショナル クロノグラフ 42mm",
+  "case_diameter_mm": 42,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Domed, scratch‑resistant sapphire crystal with anti‑reflective treatment inside",
+  "movement": "Manual‑winding",
+  "caliber": "Omega 3861",
+  "power_reserve_h": 50,
+  "water_resistance_m": 50,
+  "bracelet": "Leather strap",
+  "status": "2026-10-01時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-speedmaster-moonwatch-professional-co-axial-master-chronometer-chronograph-42-mm-31032425001002",
+      "archive": "http://web.archive.org/web/20261001144215/https://www.omegawatches.com/watch-omega-speedmaster-moonwatch-professional-co-axial-master-chronometer-chronograph-42-mm-31032425001002",
+      "snapshot": "2026-10-01",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "ref": "325.92.43.79.01.001",
+  "brand": "オメガ",
+  "model": "スピードマスター",
+  "case_diameter_mm": 43,
+  "case_material": "Titanium",
+  "dial": "Black",
+  "crystal": "Scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Quartz",
+  "caliber": "Omega 5666",
+  "water_resistance_m": 30,
+  "bracelet": "Rubber strap",
+  "status": "2024-04-04時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-spacemaster-z-33-chronograph-43-x-53-mm-32592437901001",
+      "archive": "http://web.archive.org/web/20240404064500/https://www.omegawatches.com/en-us/watch-omega-speedmaster-spacemaster-z-33-chronograph-43-x-53-mm-32592437901001",
+      "snapshot": "2024-04-04",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

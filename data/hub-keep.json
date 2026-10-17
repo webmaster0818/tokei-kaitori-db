@@ -1,0 +1,5 @@
+{
+  "_note": "公開済みのハブ（2026-10-17 時点の main の public/sitemap.xml に載っていたモデル／ブランドのページ）。lib/models.ts は型番が1件でもあればページを残し、0件なら scripts/generate-redirects.mjs がブランドのハブ（無ければ TOP）へ 301 で転送する。既存 URL を消さないための記録なので、手で削除しない。",
+  "models": ["air-king", "datejust", "day-date", "daytona", "explorer", "gmt-master-2", "milgauss", "overseas", "oyster-perpetual", "royal-oak", "sea-dweller", "seamaster", "sky-dweller", "speedmaster", "submariner", "yacht-master"],
+  "brands": ["audemars-piguet", "omega", "rolex", "vacheron-constantin"]
+}

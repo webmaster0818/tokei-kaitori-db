@@ -1,0 +1,35 @@
+{
+  "ref": "215.92.46.22.01.002",
+  "brand": "オメガ",
+  "model": "シーマスター プラネットオーシャン",
+  "case_diameter_mm": 45.5,
+  "case_material": "Black ceramic",
+  "dial": "Black",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 8906",
+  "power_reserve_h": 60,
+  "water_resistance_m": 600,
+  "bracelet": "Rubber strap",
+  "status": "2024-04-04時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-gmt-45-5-mm-21592462201002",
+      "archive": "http://web.archive.org/web/20240404064524/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-gmt-45-5-mm-21592462201002",
+      "snapshot": "2024-04-04",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

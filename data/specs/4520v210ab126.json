@@ -1,0 +1,39 @@
+{
+  "ref": "4520V.210A.B126",
+  "brand": "ヴァシュロン・コンスタンタン",
+  "model": "オーヴァーシーズ",
+  "case_diameter_mm": 41,
+  "case_back": "サファイアクリスタルのシースルーケースバック",
+  "dial": "ベース部にサンバーストサテン仕上げ、外側のミニッツトラックにベルベット仕上げを施したシルバートーンラッカー仕上げの文字盤。3時位置に日付表示。ブルーのスーパールミノヴァ®でコーティングした18Kゴールド製アプライド・インデックスと時分針。",
+  "movement": "自動巻き",
+  "caliber": "5100",
+  "functions": "時間, 窓による日付表示, センターセコンド , 分",
+  "power_reserve_h": 60,
+  "water_resistance_atm": 15,
+  "water_resistance_m": 150,
+  "bracelet": "グレイン仕上げのカーフレザー (ブラック), ステンレススティール (ポリッシュ／サテン仕上げ), ラバー (ブラック)",
+  "certification": "ジュネーブ・シール",
+  "status": "2026-01-22時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.vacheron-constantin.com/jp/ja/collections/overseas/4520v-210a-b126.html",
+      "archive": "http://web.archive.org/web/20260122195437/https://www.vacheron-constantin.com/jp/ja/collections/overseas/4520v-210a-b126.html",
+      "snapshot": "2026-01-22",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_back",
+        "case_diameter_mm",
+        "certification",
+        "dial",
+        "functions",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_atm",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

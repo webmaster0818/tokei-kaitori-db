@@ -18,6 +18,8 @@ export function SiteHeader() {
           <a href="/#models">モデル</a>
           <a href="/ranking/">ランキング</a>
           <a href="/#shops">買取店</a>
+          <a href="/guide/">売却ガイド</a>
+          <a href="/faq/">よくある質問</a>
           <a href="/#search">型番検索</a>
         </nav>
       </div>

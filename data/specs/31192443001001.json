@@ -1,0 +1,35 @@
+{
+  "ref": "311.92.44.30.01.001",
+  "brand": "オメガ",
+  "model": "スピードマスター ムーンウォッチ",
+  "case_diameter_mm": 44.25,
+  "case_material": "Black ceramic",
+  "dial": "Black",
+  "crystal": "Scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Manual‑winding",
+  "caliber": "Omega 1869",
+  "power_reserve_h": 48,
+  "water_resistance_m": 50,
+  "bracelet": "Leather strap",
+  "status": "2025-12-27時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-dark-side-of-the-moon-chronograph-44-25-mm-31192443001001",
+      "archive": "http://web.archive.org/web/20251227165233/https://www.omegawatches.com/en-us/watch-omega-speedmaster-dark-side-of-the-moon-chronograph-44-25-mm-31192443001001",
+      "snapshot": "2025-12-27",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

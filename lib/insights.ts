@@ -2,7 +2,7 @@
 // ⚠️ 対象は「いま公開している型番」（publishableRefs）だけ。数値はすべて summarize() と
 //    data/history の実レコード由来で、型番ページに出している値と同じものしか使わない。
 import { latestDate, masterRefs, publishableRefs, summarize, type RefSummary } from "./prices";
-import { familyOf, publishedBrandOf, publishedFamilyOf } from "./models";
+import { familyOfRef, publishedBrandOf, publishedFamilyOfRef } from "./models";
 import { ceilingChange, type CeilingChange } from "./history";
 import { SHOP_IDS, SHOP_PAGES } from "./shops";
 
@@ -74,12 +74,11 @@ export function similarPriced(ref: string, n = 6, band = 0.15): RefRow[] {
   const me = rows.find((r) => r.ref === ref);
   const base = me?.s.ceilingMax;
   if (!me || base == null) return [];
-  const master = masterRefs();
-  const myFam = familyOf(master[ref]?.models ?? [])?.slug ?? null;
+  const myFam = familyOfRef(ref)?.slug ?? null;
   return rows
     .filter((r) => r.ref !== ref && r.s.ceilingMax != null)
     .filter((r) => {
-      const fam = familyOf(master[r.ref]?.models ?? [])?.slug ?? null;
+      const fam = familyOfRef(r.ref)?.slug ?? null;
       return myFam ? fam !== myFam : r.model !== me.model;
     })
     .filter((r) => Math.abs((r.s.ceilingMax as number) - base) <= base * band)
@@ -148,7 +147,7 @@ export function shopStats(): ShopStat[] {
 
 export function hubsFor(ref: string) {
   const master = masterRefs();
-  return { fam: publishedFamilyOf(master[ref]?.models ?? []), brand: publishedBrandOf(master[ref]?.brand) };
+  return { fam: publishedFamilyOfRef(ref), brand: publishedBrandOf(master[ref]?.brand) };
 }
 
 /** 円 → 「123.4万円」 */

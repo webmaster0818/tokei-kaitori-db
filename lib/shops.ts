@@ -29,3 +29,23 @@ export const SHOP_COLORS: Record<string, string> = {
   ginzarasin: "#4a3aa7",
   galleryrare: "#e34948",
 };
+
+/**
+ * キャンペーンの加算を含む「上限」を公開している店（2026-10-17 フェーズ2・saburo-2 指摘・同日に先方ページで確認）。
+ * ⚠️ ジャックロードの買取価格表は「通常買取価格／上限買取価格／査定10%UP＋10000円上乗せ適用」の3列で、
+ *    パーサ（scripts/fetch-watch-prices.py parse_jackroad）が「上限」として取っているのは3列目＝キャンペーン加算後の額
+ *    （例 126500LN ブラック: 4,220,000円 → 4,652,000円＝×1.1＋1万円）。
+ *    集計（上限額（最高）・店舗間の差額・ランキング）には他社の上限と同じく含め、表・差額バー・注記で明示する。
+ * ⚠️ 先方が列の構成を変えた場合はここを見直す（パーサは列見出しを見ていない）。
+ */
+export const CAMPAIGN_CEILING: Record<string, { label: string; note: string }> = {
+  jackroad: {
+    label: "上限（キャンペーン加算後）",
+    note: "ジャックロードの「上限」は、同社の買取価格表のうち「査定10%UP＋10000円上乗せ適用」の欄の金額（キャンペーンによる加算後の額）です。当サイトでは他社の上限額と同じく集計に含めています。加算の条件は同社の公開ページでご確認ください。",
+  },
+};
+
+/** 表・凡例に出す区分名（キャンペーン加算後の上限はそれと分かる名前にする） */
+export function priceTypeLabel(shopId: string, priceType: string): string {
+  return priceType === "上限" && CAMPAIGN_CEILING[shopId] ? CAMPAIGN_CEILING[shopId].label : priceType;
+}

@@ -1,0 +1,33 @@
+{
+  "ref": "15450ST.OO.1256ST.03",
+  "brand": "オーデマ・ピゲ",
+  "model": "ロイヤルオーク",
+  "case_diameter_mm": 37,
+  "case_material": "ステンレススティール",
+  "dial": "「グランド・タペストリー」模様のブルーダイヤル、ホワイトゴールド製アプライドアワーマーカーと蓄光処理を施したロイヤルオーク針。",
+  "movement": "自動巻き",
+  "caliber": "3120",
+  "functions": "時、分、センターセコンド、デイト表示。",
+  "power_reserve_h": 60,
+  "water_resistance_m": 50,
+  "bracelet": "ステンレススティールブレスレット、APフォールディングバックル。",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.audemarspiguet.com/ja/watch-collection/royal-oak/15450ST.OO.1256ST.03",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "dial",
+        "functions",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "ref": "220.10.41.21.01.001",
+  "brand": "オメガ",
+  "model": "オメガ シーマスター",
+  "case_diameter_mm": 41,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 8900",
+  "power_reserve_h": 60,
+  "water_resistance_m": 150,
+  "bracelet": "Steel",
+  "status": "2025-10-12時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-41-mm-22010412101001",
+      "archive": "http://web.archive.org/web/20251012101552/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-41-mm-22010412101001",
+      "snapshot": "2025-10-12",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "ref": "324.23.38.50.02.002",
+  "brand": "オメガ",
+  "model": "スピードマスター",
+  "case_diameter_mm": 38,
+  "case_material": "スティール ‑ セドナゴールド",
+  "dial": "ブラウン",
+  "crystal": "両面に無反射処理を施した、ボックス型強化サファイアガラス",
+  "water_resistance_m": 100,
+  "bracelet": "レザーストラップ",
+  "status": "2021-07-29時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.jp/ja/watch-omega-speedmaster-38-co-axial-chronometer-chronograph-38-mm-32423385002002",
+      "archive": "http://web.archive.org/web/20210729113823/https://www.omegawatches.jp/ja/watch-omega-speedmaster-38-co-axial-chronometer-chronograph-38-mm-32423385002002",
+      "snapshot": "2021-07-29",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

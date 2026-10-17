@@ -1,6 +1,6 @@
 import type { Series } from "@/lib/history";
 import { fromMs } from "@/lib/history";
-import { SHOP_COLORS, SHOP_IDS } from "@/lib/shops";
+import { SHOP_COLORS, SHOP_IDS, priceTypeLabel } from "@/lib/shops";
 
 // 価格推移グラフ（サーバー側で描く静的 SVG。グラフ用ライブラリは使わない）。
 // ⚠️ 値は lib/history.ts の priceSeries() の実レコードのみ。点と点の間が4日以上空いた所は線をつながない
@@ -11,7 +11,7 @@ const DAY = 86400000;
 const GAP = 4 * DAY;
 
 export function seriesLabel(s: Series) {
-  return `${s.shop}（${s.priceType}）`;
+  return `${s.shop}（${priceTypeLabel(s.shopId, s.priceType)}）`;
 }
 
 function niceStep(range: number, target: number) {

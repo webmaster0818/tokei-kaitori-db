@@ -1,0 +1,35 @@
+{
+  "ref": "215.90.44.21.99.001",
+  "brand": "オメガ",
+  "model": "シーマスター プラネットオーシャン",
+  "case_diameter_mm": 43.5,
+  "case_material": "Titanium",
+  "dial": "Grey",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 8900",
+  "power_reserve_h": 60,
+  "water_resistance_m": 600,
+  "bracelet": "Titanium",
+  "status": "2025-08-10時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21590442199001",
+      "archive": "http://web.archive.org/web/20250810195302/https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21590442199001",
+      "snapshot": "2025-08-10",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

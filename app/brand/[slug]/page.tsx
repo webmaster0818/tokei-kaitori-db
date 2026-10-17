@@ -3,7 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { latestDate, masterRefs, summarize, yen } from "@/lib/prices";
-import { BRANDS, FAMILIES, familyOf, refsByBrand, refsByFamily } from "@/lib/models";
+import { BRANDS, publishedBrands, publishedFamilies, refsByBrand, refsByFamily } from "@/lib/models";
+import { loadEditorial } from "@/lib/content";
+import { EditorialSection } from "@/components/EditorialSection";
 import { breadcrumb, graph, itemList, organization } from "@/lib/jsonld";
 import { IconLink, IconTable } from "@/components/Icons";
 
@@ -13,9 +15,9 @@ import { IconLink, IconTable } from "@/components/Icons";
      （型番ごとに状態も年式も違うので、平均に意味が無い）。
 */
 
+// ⚠️ 段階公開（data/publish-gate.json）のブランドのうち、型番が2件以上（既存のハブは1件以上）のブランドだけ
 function brands() {
-  const byBrand = refsByBrand();
-  return BRANDS.filter((b) => (byBrand[b.slug]?.length ?? 0) >= 2);
+  return publishedBrands();
 }
 
 export function generateStaticParams() {
@@ -25,7 +27,7 @@ export function generateStaticParams() {
 function familiesOfBrand(slug: string) {
   const label = BRANDS.find((b) => b.slug === slug)?.label;
   const byFam = refsByFamily();
-  return FAMILIES.filter((f) => f.brand === label && (byFam[f.slug]?.length ?? 0) >= 2).map((f) => ({
+  return publishedFamilies().filter((f) => f.brand === label).map((f) => ({
     ...f,
     refs: byFam[f.slug] ?? [],
   }));
@@ -51,6 +53,7 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
   const fams = familiesOfBrand(slug);
   const refs = refsByBrand()[slug] ?? [];
   const date = latestDate();
+  const editorial = loadEditorial("brands", slug);
 
   // モデルごとに「最高の上限」と「最大の差」を出す（型番ページと同じ実データ）
   const summary = fams.map((f) => {
@@ -131,6 +134,19 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
             ※ 各社が公開している買取価格を {date} に取得して掲載しています。
             型番ごとに年式や仕様が異なるため、ブランド全体の平均額は掲載しておりません。
           </p>
+        </section>
+
+        <EditorialSection data={editorial} heading={editorial?.title ? undefined : `${b.label}について`} />
+
+        <section className="reveal">
+          <h2 className="block-title"><IconLink />関連ページ</h2>
+          <div className="chip-row">
+            <a href="/ranking/" className="btn btn-sm">買取価格ランキング</a>
+            <a href="/guide/how-to-read-prices/" className="btn btn-sm">売却ガイド：相場の見方</a>
+            {b.label === "ロレックス" && <a href="/guide/rolex-reference-numbers/" className="btn btn-sm">売却ガイド：ロレックスの型番の読み方</a>}
+            <a href="/guide/" className="btn btn-sm">売却ガイド一覧</a>
+            <a href="/faq/" className="btn btn-sm">よくある質問</a>
+          </div>
         </section>
 
         <section className="reveal">

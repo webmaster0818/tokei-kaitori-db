@@ -20,6 +20,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
+import { matchFamily } from "../lib/family-match.mjs";
 
 const root = process.cwd();
 const outDir = path.join(root, "out");
@@ -65,18 +66,30 @@ const master = JSON.parse(fs.readFileSync(path.join(root, "data", "watch-master.
 const { families, brands } = JSON.parse(fs.readFileSync(path.join(root, "lib", "families.json"), "utf8"));
 const bySlug = new Map(Object.keys(master).map((k) => [k.toLowerCase(), k]));
 
-function familyOf(models) {
-  const s = models.join(" ");
-  let best = null, bestLen = 0;
-  for (const f of families) for (const k of f.keys) if (s.includes(k) && k.length > bestLen) { best = f; bestLen = k.length; }
-  return best;
+// ⚠️ 判定は lib/models.ts と同じ lib/family-match.mjs（ブランド一致必須）。書き写さない。
+const familyOf = (ref, m) => matchFamily(families, m.brand, m.models ?? [], ref);
+
+// 段階公開（data/publish-gate.json）。公開対象外のブランドの型番は「過去に公開した型番」に数えず、転送もしない
+// （⚠️ 未公開ブランドの型番が一時的な sitemap 経由で記録に混ざると、存在しなかったページを転送することになる）。
+const gatePath = path.join(root, "data", "publish-gate.json");
+const gateBrands = fs.existsSync(gatePath) ? JSON.parse(fs.readFileSync(gatePath, "utf8")).brands : null;
+const gate = Array.isArray(gateBrands) ? new Set(gateBrands) : null;
+const gatedOut = (slug) => {
+  if (!gate) return false;
+  const ref = bySlug.get(slug);
+  const b = ref ? master[ref]?.brand : null;
+  return !!b && !gate.has(b);
+};
+let skippedGated = 0;
+for (const slug of [...ever]) {
+  if (!published.has(slug) && gatedOut(slug)) { ever.delete(slug); skippedGated++; }
 }
 
 function target(slug) {
   const ref = bySlug.get(slug);
   const m = ref ? master[ref] : null;
   if (m) {
-    const f = familyOf(m.models ?? []);
+    const f = familyOf(ref, m);
     if (f && exists(`model/${f.slug}`)) return `/model/${f.slug}/`;
     const b = brands.find((x) => x.label === m.brand);
     if (b && exists(`brand/${b.slug}`)) return `/brand/${b.slug}/`;
@@ -96,9 +109,26 @@ for (const slug of [...ever].sort()) {
   lines.push(`/ref/${slug} ${to} 301`);
 }
 
+// 公開済みのハブ（data/hub-keep.json）が型番0件でページを作らなかった場合は、ブランドのハブ（無ければ TOP）へ転送する
+const keepPath = path.join(root, "data", "hub-keep.json");
+const keep = fs.existsSync(keepPath) ? JSON.parse(fs.readFileSync(keepPath, "utf8")) : { models: [], brands: [] };
+const hubLines = [];
+for (const slug of keep.models ?? []) {
+  if (exists(`model/${slug}`)) continue;
+  const f = families.find((x) => x.slug === slug);
+  const b = f ? brands.find((x) => x.label === f.brand) : null;
+  const to = b && exists(`brand/${b.slug}`) ? `/brand/${b.slug}/` : "/";
+  hubLines.push(`/model/${slug}/ ${to} 301`, `/model/${slug} ${to} 301`);
+}
+for (const slug of keep.brands ?? []) {
+  if (exists(`brand/${slug}`)) continue;
+  hubLines.push(`/brand/${slug}/ / 301`, `/brand/${slug} / 301`);
+}
+lines.push(...hubLines);
+
 const header = [
   "# 掲載を終えた型番ページの転送（scripts/generate-redirects.mjs がビルドごとに生成。手で編集しない）",
-  `# 生成: ${new Date().toISOString()} / 過去に公開した型番 ${ever.size} / 公開中 ${published.size} / 転送 ${lines.length / 2}`,
+  `# 生成: ${new Date().toISOString()} / 過去に公開した型番 ${ever.size} / 公開中 ${published.size} / 転送 ${(lines.length - hubLines.length) / 2}型番・ハブ ${hubLines.length / 2}`,
 ];
 fs.writeFileSync(path.join(outDir, "_redirects"), [...header, ...lines, ""].join("\n"));
 // ⚠️ 2026-10-17: 本番（Cloudflare の Git 連携ビルド）で out/_redirects が効かなかった。
@@ -106,7 +136,8 @@ fs.writeFileSync(path.join(outDir, "_redirects"), [...header, ...lines, ""].join
 //    next build が out/ へコピーする形でも届くようにする（日次の git add -A でコミットされる）。
 if (!isCi) fs.writeFileSync(path.join(root, "public", "_redirects"), [...header, ...lines, ""].join("\n"));
 console.log(
-  `_redirects: 転送 ${lines.length / 2}型番（モデル ${counts.model} / ブランド ${counts.brand} / TOP ${counts.top}）` +
+  `_redirects: 転送 ${(lines.length - hubLines.length) / 2}型番（モデル ${counts.model} / ブランド ${counts.brand} / TOP ${counts.top}）・ハブ ${hubLines.length / 2}` +
+    ` / 公開対象外ブランドとして除外 ${skippedGated}` +
     ` / 過去に公開 ${ever.size}（記録 ${seedBefore}・git 追加 ${fromGit}）/ 公開中 ${published.size}`,
 );
 

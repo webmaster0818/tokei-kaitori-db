@@ -1,5 +1,5 @@
 import { shopCeilings, type PriceRecord } from "@/lib/prices";
-import { SHOP_COLORS } from "@/lib/shops";
+import { SHOP_COLORS, priceTypeLabel } from "@/lib/shops";
 
 // 店舗間の差額の横棒。各社の上限系（上限・相場）の掲載額のうち最も高い行を1本ずつ、最も高い店に対する割合で描く。
 // ⚠️ 対象は summarize() の「店舗間の差額」と同じ区分（上限・相場）。最下段の差額＝ページ上部の「店舗間の差額」になる。
@@ -10,7 +10,7 @@ export function ShopGapBars({ records }: { records: PriceRecord[] }) {
   const rows = shopCeilings(records);
   if (rows.length < 2) return null;
   const max = rows[0].price;
-  const label = rows.map((r) => `${r.shop} ${r.price.toLocaleString("ja-JP")}円（${r.price_type}${r.isMedian ? "・文字盤等の違いによる複数価格の中央値" : ""}）`).join("、");
+  const label = rows.map((r) => `${r.shop} ${r.price.toLocaleString("ja-JP")}円（${priceTypeLabel(r.shop_id, r.price_type)}${r.isMedian ? "・文字盤等の違いによる複数価格の中央値" : ""}）`).join("、");
   return (
     <div className="gapbars" role="img" aria-label={`各社の上限額・相場（買取店ごとの代表値）の比較: ${label}`}>
       {rows.map((r, i) => {
@@ -22,7 +22,7 @@ export function ShopGapBars({ records }: { records: PriceRecord[] }) {
               <span className="gapbars__name">
                 <i style={{ background: SHOP_COLORS[r.shop_id] ?? "var(--ink-2)" }} />
                 {r.shop}
-                <small>{r.price_type}{r.condition ? `・${r.condition}` : ""}{r.splitRows ? `・${r.splitRows}件の中央値` : r.isMedian ? "・複数価格の中央値" : ""}</small>
+                <small>{priceTypeLabel(r.shop_id, r.price_type)}{r.condition ? `・${r.condition}` : ""}{r.splitRows ? `・${r.splitRows}件の中央値` : r.isMedian ? "・複数価格の中央値" : ""}</small>
               </span>
               <span className="gapbars__val num">
                 {r.price.toLocaleString("ja-JP")}円

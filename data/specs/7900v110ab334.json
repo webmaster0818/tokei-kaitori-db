@@ -1,0 +1,35 @@
+{
+  "ref": "7900V.110A.B334",
+  "brand": "ヴァシュロン・コンスタンタン",
+  "model": "オーヴァーシーズ デュアルタイム",
+  "case_diameter_mm": 41,
+  "case_material": "ステンレススティール",
+  "movement": "自動巻き",
+  "caliber": "5110 DT",
+  "functions": "時, デイ/ナイト, 分, 中央に秒表示, セカンドタイムゾーン, 手組み活字のカレンダー",
+  "power_reserve_h": 60,
+  "water_resistance_atm": 15,
+  "bracelet": "Elasto NBR (ブルー), Veau (ブルー), Acier inox passivé, ポリッシュ／サテン仕上げ",
+  "certification": "ジュネーブ・シール",
+  "status": "2023-03-28時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.vacheron-constantin.com/jp/ja/collections/overseas/7900v-110a-b334.html",
+      "archive": "http://web.archive.org/web/20230328002106/https://www.vacheron-constantin.com/jp/ja/collections/overseas/7900v-110a-b334.html",
+      "snapshot": "2023-03-28",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "certification",
+        "functions",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_atm"
+      ]
+    }
+  ]
+}

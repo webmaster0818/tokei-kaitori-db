@@ -5,7 +5,7 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { latestDate, yen } from "@/lib/prices";
 import { publishedRows, refPath, shopStats } from "@/lib/insights";
 import { loadEditorial } from "@/lib/content";
-import { CAPTURED_ON } from "@/lib/shops";
+import { CAMPAIGN_CEILING, CAPTURED_ON, priceTypeLabel } from "@/lib/shops";
 import { breadcrumb, graph, itemList, organization } from "@/lib/jsonld";
 import { EditorialSection } from "@/components/EditorialSection";
 import { IconFigures, IconLink, IconShop, IconTable } from "@/components/Icons";
@@ -48,6 +48,22 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
   const others = shopStats().filter((s) => s.id !== id);
   const rate = st.ceilingRefs ? Math.round((st.topRefs.length / st.ceilingRefs) * 1000) / 10 : null;
   const refsSorted = [...st.refs].sort((a, b) => a.ref.localeCompare(b.ref));
+  // 買取店が自社ページに表示している価格表の更新日（取得日とは別）。型番ごとに違う店もあるので、新しい順に件数つきで出す
+  const upd = new Map<string, number>();
+  const fetched = new Set<string>();
+  for (const row of st.refs) {
+    for (const r of row.s.records) {
+      if (r.shop_id !== id) continue;
+      if (r.fetched_at) fetched.add(r.fetched_at);
+      const m = (r.page_updated ?? "").match(/(\d{4})[.\-/](\d{1,2})[.\-/](\d{1,2})/);
+      if (m) {
+        const d = `${m[1]}-${m[2].padStart(2, "0")}-${m[3].padStart(2, "0")}`;
+        upd.set(d, (upd.get(d) ?? 0) + 1);
+      }
+    }
+  }
+  const updList = [...upd.entries()].sort((a, b) => b[0].localeCompare(a[0]));
+  const fetchedList = [...fetched].sort().reverse();
 
   const ld = graph(
     {
@@ -115,7 +131,15 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
               <dt>掲載ブランド</dt>
               <dd>{st.brands.join("・") || "—"}</dd>
               <dt>価格の区分</dt>
-              <dd>{st.types.join("・")}</dd>
+              <dd>{st.types.map((t) => priceTypeLabel(id, t)).join("・")}</dd>
+              <dt>取得日</dt>
+              <dd>{fetchedList.length ? fetchedList.slice(0, 3).join("・") : "—"}{fetchedList.length > 3 ? " ほか" : ""}</dd>
+              <dt>買取店の更新日</dt>
+              <dd>
+                {updList.length
+                  ? updList.slice(0, 4).map(([d, n]) => `${d}（${n}件）`).join("・") + (updList.length > 4 ? " ほか" : "")
+                  : "公開ページに更新日の表示はありません"}
+              </dd>
               <dt>取得元のページ</dt>
               <dd>
                 {st.sourceUrls.map((u, i) => (
@@ -131,7 +155,9 @@ export default async function ShopPage({ params }: { params: Promise<{ id: strin
             </dl>
             <p className="note mt-4">
               ※「上限」は状態が良好な場合の最大額、「通常」は通常の買取価格、「相場」は各社が相場として公開している値です。区分は各社の公開ページの表記にもとづいています。
+              「取得日」は当サイトが価格を取得した日、「買取店の更新日」は{st.name}が自社のページに表示している価格表の更新日（件数は当サイト掲載の価格の行数）です。
             </p>
+            {CAMPAIGN_CEILING[id] && <p className="note mt-2">※{CAMPAIGN_CEILING[id].note}</p>}
             {st.image && (
               <figure className="shop-shot mt-8">
                 <img src={st.image} alt={`${st.name}の公式サイト（買取価格のページ）`} width={1280} height={800} loading="lazy" decoding="async" />

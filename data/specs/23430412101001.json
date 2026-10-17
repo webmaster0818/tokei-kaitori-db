@@ -1,0 +1,35 @@
+{
+  "ref": "234.30.41.21.01.001",
+  "brand": "オメガ",
+  "model": "シーマスター",
+  "case_diameter_mm": 41,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Domed, scratch‑resistant sapphire crystal with anti‑reflective treatment inside",
+  "movement": "Self winding",
+  "caliber": "Omega 8912",
+  "power_reserve_h": 60,
+  "water_resistance_m": 300,
+  "bracelet": "Steel",
+  "status": "2026-10-03時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-300-co-axial-master-chronometer-41-mm-23430412101001",
+      "archive": "http://web.archive.org/web/20261003082738/https://www.omegawatches.com/en-us/watch-omega-seamaster-300-co-axial-master-chronometer-41-mm-23430412101001",
+      "snapshot": "2026-10-03",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

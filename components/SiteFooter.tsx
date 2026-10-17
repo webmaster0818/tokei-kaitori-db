@@ -1,15 +1,13 @@
 import Link from "next/link";
 import { LogoMark } from "./Logo";
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
-import { BRANDS, FAMILIES, MIN_REFS, refsByBrand, refsByFamily } from "@/lib/models";
+import { publishedBrands, publishedFamilies } from "@/lib/models";
 import { shopStats } from "@/lib/insights";
 
 // フッターのリンクは、実在するハブ（ブランド・モデル）だけに張る（存在しないページへのリンクを作らない）。
 export function SiteFooter() {
-  const byBrand = refsByBrand();
-  const byFam = refsByFamily();
-  const brands = BRANDS.filter((b) => (byBrand[b.slug]?.length ?? 0) >= 2);
-  const fams = FAMILIES.filter((f) => (byFam[f.slug]?.length ?? 0) >= MIN_REFS);
+  const brands = publishedBrands();
+  const fams = publishedFamilies();
   const shops = shopStats();
   return (
     <footer className="site-footer">
@@ -29,6 +27,8 @@ export function SiteFooter() {
             {shops.map((s) => (
               <li key={s.id}><a href={`/shop/${s.id}/`}>{s.name}</a></li>
             ))}
+            <li><a href="/guide/">売却ガイド</a></li>
+            <li><a href="/faq/">よくある質問</a></li>
             <li><a href="/#policy">掲載ポリシー</a></li>
           </ul>
         </div>

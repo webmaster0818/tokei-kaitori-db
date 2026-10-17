@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 import { latestDate, publishableRefs, summarize, yen } from "@/lib/prices";
-import { BRANDS, FAMILIES, refsByBrand, refsByFamily } from "@/lib/models";
+import { BRANDS, publishedBrands, publishedFamilies, refsByBrand, refsByFamily } from "@/lib/models";
 import { graph, itemList, organization } from "@/lib/jsonld";
 import { masterRefs } from "@/lib/prices";
 import { CAPTURED_ON, SHOP_PAGES } from "@/lib/shops";
@@ -10,6 +10,7 @@ import { RefSearch } from "@/components/RefSearch";
 import { SectionHead } from "@/components/SectionHead";
 import { Arrow, IconBrand, IconDocument, IconFigures, IconSearch, IconShop, IconTable, IconTrend, IconWatch } from "@/components/Icons";
 import { topSpread } from "@/lib/insights";
+import { guides } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: `${SITE_NAME} — ${SITE_TAGLINE}`,
@@ -30,8 +31,9 @@ export default function Home() {
   // ⚠️ ハブは作るだけでなくTOPから繋ぐ。繋がないと孤立して評価が集まらない。
   const byFam = refsByFamily();
   const byBrand = refsByBrand();
-  const famLinks = FAMILIES.filter((f) => (byFam[f.slug]?.length ?? 0) >= 2);
-  const brandLinks = BRANDS.filter((b) => (byBrand[b.slug]?.length ?? 0) >= 2);
+  const famLinks = publishedFamilies();
+  const guideList = guides();
+  const brandLinks = publishedBrands();
 
   // ファーストビューの数字は、ページ・sitemap と同じ publishableRefs() 由来の実データから数える（手で書かない）。
   const master = masterRefs();
@@ -280,6 +282,31 @@ export default function Home() {
             <p className="note mt-4">
               ※各社が公開している買取価格を{date}に取得したものです。実際の査定額は、個体の状態・付属品・時期により変動します。
             </p>
+          </div>
+        </section>
+
+        {/* ---------- 売却ガイド・よくある質問 ---------- */}
+        <section className="section section--white" id="guide">
+          <div className="wrap">
+            <SectionHead en="Guide" title="売却ガイド・よくある質問" icon={<IconDocument />} />
+            <div className="link-grid reveal">
+              {guideList.map((g) => (
+                <Link key={g.slug} href={`/guide/${g.slug}/`} className="link-card">
+                  <span className="link-card__label">{g.title}</span>
+                  <span className="link-card__meta">
+                    <span>売却ガイド</span>
+                    <Arrow className="link-card__arrow" />
+                  </span>
+                </Link>
+              ))}
+              <Link href="/faq/" className="link-card">
+                <span className="link-card__label">よくある質問</span>
+                <span className="link-card__meta">
+                  <span>掲載している価格の意味と掲載方針</span>
+                  <Arrow className="link-card__arrow" />
+                </span>
+              </Link>
+            </div>
           </div>
         </section>
 

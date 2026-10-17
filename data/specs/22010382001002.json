@@ -1,0 +1,35 @@
+{
+  "ref": "220.10.38.20.01.002",
+  "brand": "オメガ",
+  "model": "シーマスター レイルマスター コーアクシャル マスター クロノメーター 38mm",
+  "case_diameter_mm": 38,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Scratch‑resistant sapphire crystal with anti‑reflective treatment inside",
+  "movement": "Self winding",
+  "caliber": "Omega 8806",
+  "power_reserve_h": 55,
+  "water_resistance_m": 60,
+  "bracelet": "Steel",
+  "status": "2025-09-16時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-railmaster-co-axial-master-chronometer-38-mm-22010382001002",
+      "archive": "http://web.archive.org/web/20250916030729/https://www.omegawatches.com/en-us/watch-omega-seamaster-railmaster-co-axial-master-chronometer-38-mm-22010382001002",
+      "snapshot": "2025-09-16",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

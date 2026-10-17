@@ -1,0 +1,31 @@
+{
+  "ref": "231.10.43.52.02.001",
+  "brand": "オメガ",
+  "model": "シーマスターアクアテラ",
+  "case_diameter_mm": 43,
+  "case_material": "Steel",
+  "dial": "Silver",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "caliber": "OMEGA 9605",
+  "water_resistance_m": 150,
+  "bracelet": "steel",
+  "status": "2021-12-06時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-gmt-chronograph-43-mm-23110435202001",
+      "archive": "http://web.archive.org/web/20211206115301/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-gmt-chronograph-43-mm-23110435202001",
+      "snapshot": "2021-12-06",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

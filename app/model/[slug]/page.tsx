@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { latestDate, masterRefs, summarize, yen } from "@/lib/prices";
-import { FAMILIES, MIN_REFS, publishedBrandOf, refsByFamily } from "@/lib/models";
+import { publishedBrandOf, publishedFamilies, refsByFamily } from "@/lib/models";
 import { loadEditorial } from "@/lib/content";
 import { EditorialSection } from "@/components/EditorialSection";
 import { Arrow } from "@/components/Icons";
@@ -18,9 +18,9 @@ import { IconFigures, IconLink, IconTable } from "@/components/Icons";
   ⚠️ 型番が1件しか無い家族はページを作らない（比較にならないページを増やさない）。
 */
 
+// ⚠️ 型番が2件以上の家族＋既に公開しているハブ（data/hub-keep.json・1件以上）。lib/models.ts publishedFamilies()
 function families() {
-  const byFam = refsByFamily();
-  return FAMILIES.filter((f) => (byFam[f.slug]?.length ?? 0) >= MIN_REFS);
+  return publishedFamilies();
 }
 
 export function generateStaticParams() {
@@ -55,10 +55,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const top = r[0];
   const widest = r.reduce<Row | null>((a, b) => (!a || (b.spread ?? 0) > (a.spread ?? 0) ? b : a), null);
   const d = latestDate();
+  // ⚠️ label を公式表記に改めた家族（例: デイトナ→コスモグラフ デイトナ）も、既存ページの title / description は変えない（seoLabel）
+  const name = f.seoLabel ?? f.label;
   return {
-    title: `${f.brand} ${f.label}の買取相場｜${r.length}型番を買取店で比較【${d.slice(0, 7).replace("-", "年")}月】`,
+    title: `${f.brand} ${name}の買取相場｜${r.length}型番を買取店で比較【${d.slice(0, 7).replace("-", "年")}月】`,
     description:
-      `${f.brand} ${f.label}の買取価格を型番ごとに比較しています。${d}時点で上限額が最も高いのは、${top?.ref ?? ""}の${top?.max ? yen(top.max) : "—"}です。` +
+      `${f.brand} ${name}の買取価格を型番ごとに比較しています。${d}時点で上限額が最も高いのは、${top?.ref ?? ""}の${top?.max ? yen(top.max) : "—"}です。` +
       (widest?.spread ? `同じ型番でも、買取店により最大${yen(widest.spread)}の差があります。` : "") +
       `各社の公開情報を、出典とあわせて掲載しています。`,
     alternates: { canonical: `${SITE_URL}/model/${slug}/` },
@@ -201,6 +203,10 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
             <div className="chip-row">
               {brandHub && <Link href={`/brand/${brandHub.slug}/`} className="btn btn-sm">{brandHub.label}の買取相場</Link>}
               <a href="/ranking/" className="btn btn-sm">買取価格ランキング</a>
+              <a href="/guide/how-to-read-prices/" className="btn btn-sm">売却ガイド：相場の見方</a>
+              {f.brand === "ロレックス" && <a href="/guide/rolex-reference-numbers/" className="btn btn-sm">売却ガイド：ロレックスの型番の読み方</a>}
+              <a href="/guide/" className="btn btn-sm">売却ガイド一覧</a>
+              <a href="/faq/" className="btn btn-sm">よくある質問</a>
             </div>
           </section>
 

@@ -1,14 +1,17 @@
+import { Fragment } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { latestDate, masterRefs, monthlyHistory, publishableRefs, summarize, yen } from "@/lib/prices";
-import { publishedBrandOf, publishedFamilyOf } from "@/lib/models";
+import { publishedBrandOf, publishedFamilyOfRef } from "@/lib/models";
 import { breadcrumb, graph, organization } from "@/lib/jsonld";
 import { IconDocument, IconFigures, IconLink, IconShop, IconTable, IconTrend } from "@/components/Icons";
 import { ceilingChange, fromMs, priceSeries } from "@/lib/history";
 import { man, refPath, signedPct, signedYen, similarPriced } from "@/lib/insights";
-import { SHOP_IDS } from "@/lib/shops";
+import { CAMPAIGN_CEILING, SHOP_IDS, priceTypeLabel } from "@/lib/shops";
+import { specFor } from "@/lib/specs";
+import { dialComparison } from "@/lib/dials";
 import { PriceHistoryChart } from "@/components/PriceHistoryChart";
 import { ShopGapBars } from "@/components/ShopGapBars";
 
@@ -49,7 +52,7 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
   // ⚠️ この型番が属するモデル／ブランドのハブへ必ず繋ぐ。
   //    繋がないとハブが孤立し、作っても評価が集まらない（pilatesの店舗ページで同じ失敗をした）。
   const master = masterRefs();
-  const fam = publishedFamilyOf(master[ref]?.models ?? []);
+  const fam = publishedFamilyOfRef(ref);
   const brand = publishedBrandOf(master[ref]?.brand);
   // ⚠️ 先頭6件を固定で出していたため、その6ページにしかリンクが集まらず、
   //    73型番がTOPからの1本だけで孤立していた（2026-09-29に判明）。
@@ -66,6 +69,17 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
   const regularOnly = [...new Set(s.records.filter((r) => !ceilingShopIds.has(r.shop_id)).map((r) => r.shop))];
   // 文字盤・仕様違いで複数の価格を公開している店（代表値は中央値）
   const splitShops = s.ceilings.filter((c) => c.splitRows).map((c) => c.shop);
+  // キャンペーン加算後の「上限」を出している店（lib/shops.ts CAMPAIGN_CEILING）
+  const campaignShops = [...new Set(s.records.filter((r) => r.price_type === "上限" && CAMPAIGN_CEILING[r.shop_id]).map((r) => r.shop_id))];
+  // 買取店が自社ページに表示している更新日（取得日とは別。無い店は「—」）
+  const pageUpdated = (v?: string | null) => {
+    if (!v) return null;
+    const m = v.match(/(\d{4})[.\-/](\d{1,2})[.\-/](\d{1,2})/);
+    return m ? `${m[1]}-${m[2].padStart(2, "0")}-${m[3].padStart(2, "0")}` : null;
+  };
+  const hasPageUpdated = s.records.some((r) => pageUpdated(r.page_updated));
+  const spec = specFor(ref);
+  const dials = dialComparison(s.records, master[ref]?.brand);
   // variant（店の行名）から、ブランド名・型番・モデル名と重なる語を除いた「区別の語」だけを表示する
   const refKey = (t: string) => t.replace(/[./-]+/g, ".").toUpperCase();
   const variantLabel = (r: (typeof s.records)[number]) => {
@@ -177,7 +191,7 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
                 <th>区分</th>
                 <th>状態・仕様</th>
                 <th className="r">価格</th>
-                <th>取得日</th>
+                <th>取得日{hasPageUpdated && <small className="th-sub">買取店の更新日</small>}</th>
                 <th>出典</th>
               </tr>
             </thead>
@@ -187,11 +201,14 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
                   <td className="strong whitespace-nowrap">
                     {shopLink(r.shop_id) ? <a href={shopLink(r.shop_id)!}>{r.shop}</a> : r.shop}
                   </td>
-                  <td className="whitespace-nowrap">{r.price_type}</td>
+                  <td className="whitespace-nowrap">
+                    {r.price_type}
+                    {priceTypeLabel(r.shop_id, r.price_type) !== r.price_type && <small className="cell-sub">キャンペーン加算後</small>}
+                  </td>
                   {/* 同じ型番でもブレス違い等でモデル名が分かれることがある（例: 126300 の
                       オイスターブレス/ジュビリーブレス）。モデルが複数ある型番では名前を出さないと
                       「同じ状態・同じ文字盤なのに価格が違う行」に見えてしまうため、そのときだけ併記する。 */}
-                  <td>
+                  <td className="spec-cell">
                     {[s.models.length > 1 ? r.model : null, r.condition, r.dial, r.material, variantLabel(r)].filter(Boolean).join(" / ") || "—"}
                     {/* 区別のつかない複数の価格を中央値1行にまとめた行（lib/prices.ts collapseUndistinguished） */}
                     {r.collapsed && (
@@ -207,6 +224,7 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
                     {!r.fetched_at ? "—"
                       : r.fetched_at === date ? r.fetched_at
                       : <strong className="text-[var(--ink)]">{r.fetched_at}</strong>}
+                    {hasPageUpdated && <small className="cell-sub" title="買取店の更新日">{pageUpdated(r.page_updated) ?? "—"}</small>}
                   </td>
                   <td className="whitespace-nowrap">
                     <a href={r.source_url} target="_blank" rel="noopener noreferrer" className="text-xs">
@@ -222,7 +240,12 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
         <p className="note mt-4">
           ※価格は各社の公開ページから取得したもので、取得日は買取店ごとに上表に記載しています。
           取得元のサイトを一時的に閲覧できない日は、直近で取得できた日の価格を掲載し、その取得日を表示しています。「上限」は状態が良好な場合の最大額、「相場」は各社が相場として公開している値です。実際の査定額は、個体の状態・付属品・時期により変動します。ご利用前に、各社の公開ページにて最新の価格をご確認ください。
+          {hasPageUpdated && <>取得日の下の日付は「買取店の更新日」で、買取店が自社のページに表示している価格表の更新日です（表示のない買取店は「—」）。当サイトが毎日取得していても、買取店が価格表を更新していなければ同じ価格が続きます。</>}
+          価格の区分や比べ方は、<a href="/guide/how-to-read-prices/">売却ガイド「時計の買取相場の見方」</a>でご説明しています。
         </p>
+        {campaignShops.map((id) => (
+          <p key={id} className="note mt-2">※{CAMPAIGN_CEILING[id].note}</p>
+        ))}
         {splitShops.length > 0 && (
           <p className="note mt-2">
             ※{splitShops.join("・")}は、文字盤・仕様の違いにより同じ型番に複数の価格を公開しており、価格は文字盤・仕様によって異なります。
@@ -239,6 +262,62 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
           <p className="note mt-4">
             ※各社が公開している上限額・相場を1社1本で表示しています（文字盤・仕様違いで複数の価格がある買取店は、その中央値）。棒の長さは、最も高い価格を100%とした割合です。
             {regularOnly.length > 0 && <>{regularOnly.join("・")}は通常の買取価格のみを公開しているため、この図には含めていません（各社の価格は上表に記載しています）。</>}
+            {campaignShops.length > 0 && <>「{CAMPAIGN_CEILING[campaignShops[0]].label}」と表示している{campaignShops.map((id) => s.records.find((r) => r.shop_id === id)!.shop).join("・")}の棒は、キャンペーンによる加算を含む金額です。</>}
+          </p>
+        </section>
+      )}
+
+      {/* 文字盤別の比較（同じ文字盤の価格を2社以上が出している場合のみ・lib/dials.ts） */}
+      {dials && (
+        <section className="reveal">
+          <h2 className="block-title"><IconTable />文字盤別の比較</h2>
+          <p className="prose-jp mb-5">
+            文字盤の色ごとに価格を公開している買取店について、同じ文字盤どうしで上限額・相場を比べています。文字盤の表記は買取店により異なるため、同じ色を指す表記（例：「BK」「黒」「ブラック」）は1つにまとめています。
+          </p>
+          <div className="table-frame">
+            <table className="data-table dial-table">
+              <thead>
+                <tr>
+                  <th>文字盤</th>
+                  {dials.shops.map((sh) => <th key={sh.id} className="r">{sh.name}</th>)}
+                  <th className="r">差額<small className="th-sub">最高／最低</small></th>
+                </tr>
+              </thead>
+              <tbody>
+                {dials.rows.map((row) => (
+                  <tr key={row.dial}>
+                    <td className="whitespace-nowrap strong">
+                      {row.dial}
+                      {row.rawNames.length > 0 && <small className="dial-table__raw">表記：{row.rawNames.join("・")}</small>}
+                    </td>
+                    {dials.shops.map((sh) => {
+                      const c = row.cells[sh.id];
+                      return (
+                        <td key={sh.id} className={`r${c && c.price === row.max ? " strong" : ""}`}>
+                          {c ? (
+                            <>
+                              {yen(c.price)}
+                              <small className="dial-table__sub">
+                                {[c.price_type === "相場" ? "相場" : null, priceTypeLabel(sh.id, c.price_type) !== c.price_type ? "加算後" : null, c.condition, c.n > 1 ? `${c.n}件の中央値` : null].filter(Boolean).join("・")}
+                              </small>
+                            </>
+                          ) : "—"}
+                        </td>
+                      );
+                    })}
+                    <td className="r strong">
+                      {row.gap > 0 ? yen(row.gap) : "0円"}
+                      <small className="dial-table__sub">{yen(row.max)}／{yen(row.min)}</small>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="table-scroll-hint">表は横にスクロールしてご覧いただけます。</p>
+          <p className="note mt-4">
+            ※対象は区分「上限」「相場」の価格で、文字盤の記載がある行だけです（価格の下に「相場」と記載のないものは「上限」。「加算後」はキャンペーンによる加算後の上限です）。同じ買取店に同じ文字盤の価格が複数ある場合は、状態ごとの中央値のうち最も高いものを表示しています。右端の「差額」は、その文字盤の価格を公開している買取店どうしの最高額と最低額の差で、下段に最高額／最低額を記載しています。
+            {dials.rows.some((r) => r.dial === "GR") && "「GR」は買取店の略記のまま掲載しています（この型番では文字盤の色を確定できないため）。"}
           </p>
         </section>
       )}
@@ -312,6 +391,37 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
         </section>
       )}
 
+      {/* メーカー公式の基本仕様（data/specs・taro-2）。英語ページが出典の型番は数値・固有名詞だけ */}
+      {spec && (
+        <section className="reveal">
+          <h2 className="block-title"><IconDocument />基本仕様（メーカー公式）</h2>
+          <dl className="kv">
+            {spec.rows.map((r, i) => (
+              <Fragment key={i}>
+                <dt>{r.label}</dt>
+                <dd>{r.value}</dd>
+              </Fragment>
+            ))}
+            {spec.status && (
+              <>
+                <dt>掲載状況</dt>
+                <dd>{spec.status}</dd>
+              </>
+            )}
+          </dl>
+          <p className="note mt-4">
+            ※出典：
+            <a href={spec.source.url} target="_blank" rel="noopener noreferrer">メーカー公式サイトの型番ページ</a>
+            {spec.source.archive && (
+              <>（<a href={spec.source.archive} target="_blank" rel="noopener noreferrer">{spec.source.snapshot ? `${spec.source.snapshot}時点の保存版` : "保存版"}</a>）</>
+            )}
+            {spec.source.checked && <>・{spec.source.checked}確認</>}。
+            {spec.english && "出典が英語のページのため、数値と固有名詞の項目のみを掲載しています。"}
+            公式サイトに記載のない項目は掲載しておりません。
+          </p>
+        </section>
+      )}
+
       {/* 高く売るための実務ポイント(データから導ける事実のみ) */}
       <section className="reveal">
         <h2 className="block-title"><IconDocument />掲載データについて</h2>
@@ -349,6 +459,8 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
           {brand && <a href={`/brand/${brand.slug}/`} className="btn btn-sm">{brand.label}の買取相場</a>}
           {fam && <a href={`/model/${fam.slug}/`} className="btn btn-sm">{fam.label}の買取相場</a>}
           <a href="/ranking/" className="btn btn-sm">買取価格ランキング</a>
+          <a href="/guide/how-to-read-prices/" className="btn btn-sm">売却ガイド：相場の見方</a>
+          <a href="/faq/" className="btn btn-sm">よくある質問</a>
           {[...new Set(s.records.map((r) => r.shop_id))]
             .filter((id) => shopLink(id))
             .map((id) => (

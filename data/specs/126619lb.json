@@ -1,0 +1,50 @@
+{
+  "ref": "126619LB",
+  "brand": "ロレックス",
+  "model": "サブマリーナー 18K",
+  "case_diameter_mm": 41,
+  "case_material": "18 ct ホワイトゴールド",
+  "bezel": "60分目盛り入り逆回転防止、耐傷性に優れたブルーのセラミック製セラクロムベゼルインサート、数字と目盛りはプラチナコーティング",
+  "crown": "スクリュー式、トリプロック（三重防水システム）",
+  "crystal": "傷防止サファイア、日付表示部にサイクロップレンズ",
+  "dial": "ブラック",
+  "movement": "パーペチュアル、機械式、自動巻",
+  "caliber": "3235",
+  "precision": "日差-2～+2秒（ケーシング後）",
+  "functions": "時針、分針、秒針。早送り機能付瞬時に変わる日付。秒針停止機能による正確な時刻設定",
+  "oscillator": "常磁性ブルー パラクロム・ヘアスプリング。高性能パラフレックス ショック・アブソーバ",
+  "winding": "パーペチュアルローターによる両方向自動巻",
+  "power_reserve_h": 70,
+  "water_resistance_m": 300,
+  "bracelet": "オイスター（3列リンク）",
+  "clasp": "セーフティキャッチ付オイスターロック、 ロレックスグライドロック エクステンション システム",
+  "certification": "高精度クロノメーター (COSC、ケーシング後にロレックス認定)",
+  "status": "2025-09-13時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.rolex.com/ja/watches/submariner/m126619lb-0003",
+      "archive": "http://web.archive.org/web/20250913144413/https://www.rolex.com/ja/watches/submariner/m126619lb-0003",
+      "snapshot": "2025-09-13",
+      "checked": "2026-10-17",
+      "fields": [
+        "bezel",
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "certification",
+        "clasp",
+        "crown",
+        "crystal",
+        "dial",
+        "functions",
+        "movement",
+        "oscillator",
+        "power_reserve_h",
+        "precision",
+        "water_resistance_m",
+        "winding"
+      ]
+    }
+  ]
+}

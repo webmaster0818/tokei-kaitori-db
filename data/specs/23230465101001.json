@@ -1,0 +1,28 @@
+{
+  "ref": "232.30.46.51.01.001",
+  "brand": "オメガ",
+  "model": "シーマスター プラネットオーシャン クロノグラフ",
+  "case_diameter_mm": 45.5,
+  "case_material": "ステンレススティール",
+  "dial": "ブラック",
+  "crystal": "両面に無反射加工を施したドーム型強化無反射サファイアガラス",
+  "water_resistance_m": 600,
+  "bracelet": "ステンレススティール",
+  "status": "2021-05-18時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.jp/ja/watch-omega-seamaster-planet-ocean-600m-co-axial-chronometer-chronograph-45-5-mm-23230465101001",
+      "archive": "http://web.archive.org/web/20210518010204/https://www.omegawatches.jp/ja/watch-omega-seamaster-planet-ocean-600m-co-axial-chronometer-chronograph-45-5-mm-23230465101001",
+      "snapshot": "2021-05-18",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

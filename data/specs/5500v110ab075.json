@@ -1,0 +1,35 @@
+{
+  "ref": "5500V.110A.B075",
+  "brand": "ヴァシュロン・コンスタンタン",
+  "model": "オーヴァーシーズ クロノグラフ",
+  "case_diameter_mm": 42.5,
+  "case_material": "ステンレススティール",
+  "case_back": "シースルーケースバック、サファイアガラス",
+  "movement": "自動巻き",
+  "caliber": "5200",
+  "functions": "時表示, 分, スモールセコンド, カレンダー表示用小窓, クロノグラフ, 12-hour counter, 30-minute counter",
+  "water_resistance_atm": 15,
+  "bracelet": "ステンレススティール, ポリッシュ／サテン仕上げ, ミシシッピアリゲーター (ブラック), ラバー (ブラック)",
+  "certification": "ジュネーブ・シール",
+  "status": "2022-07-07時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.vacheron-constantin.com/jp/ja/collections/overseas/5500v-110a-b075.html",
+      "archive": "http://web.archive.org/web/20220707181154/https://www.vacheron-constantin.com/jp/ja/collections/overseas/5500v-110a-b075.html",
+      "snapshot": "2022-07-07",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "certification",
+        "functions",
+        "movement",
+        "water_resistance_atm"
+      ]
+    }
+  ]
+}
