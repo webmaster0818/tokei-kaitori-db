@@ -1,6 +1,23 @@
 import type { ReactNode } from "react";
 import { guideSlugFor, localize, type Block, type Editorial } from "@/lib/content";
 import { IconDocument } from "./Icons";
+import { publishedBrands, publishedFamilies } from "@/lib/models";
+import { publishableRefs } from "@/lib/prices";
+
+// 段階公開でまだページが無い内部リンク（/model/ /brand/ /ref/）は、リンクにせず文字だけ残す（2026-10-17）
+let livePaths: Set<string> | null = null;
+function isLive(href: string): boolean {
+  const m = href.match(/^\/(model|brand|ref)\/([^/]+)\/?$/);
+  if (!m) return true;
+  if (!livePaths) {
+    livePaths = new Set([
+      ...publishedFamilies().map((f) => `/model/${f.slug}/`),
+      ...publishedBrands().map((b) => `/brand/${b.slug}/`),
+      ...publishableRefs().map((r) => `/ref/${r.toLowerCase()}/`),
+    ]);
+  }
+  return livePaths.has(`/${m[1]}/${m[2].toLowerCase()}/`);
+}
 
 // 解説文（content/*.md）の表示枠。ファイルが無いページでは何も描画しない。
 // ⚠️ 外部リンクは新しいタブで開き、rel="noopener noreferrer" を付ける。
@@ -19,6 +36,7 @@ function inline(text: string, keyBase: string, nSources: number): ReactNode[] {
     if (m[1]) {
       const href = localize(m[2]);
       const ext = /^https?:\/\//.test(href);
+      if (!ext && !isLive(href)) { out.push(m[1]); last = m.index + m[0].length; continue; }
       out.push(<a key={key} href={href} {...(ext ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{m[1]}</a>);
     } else if (m[3]) {
       out.push(<strong key={key}>{m[3]}</strong>);

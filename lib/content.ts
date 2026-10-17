@@ -178,6 +178,10 @@ export function listEditorial(kind: Kind): string[] {
   return fs.readdirSync(dir).filter((f) => f.endsWith(".md")).map((f) => f.replace(/\.md$/, "")).sort();
 }
 
+export function loadGlossary(): Editorial | null {
+  return read(path.join(process.cwd(), "content", "glossary.md"), "glossary", "glossary");
+}
+
 export function loadFaq(): Editorial | null {
   return read(path.join(process.cwd(), "content", "faq.md"), "faq", "faq");
 }

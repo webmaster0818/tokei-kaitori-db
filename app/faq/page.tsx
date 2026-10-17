@@ -63,6 +63,7 @@ export default function FaqPage() {
           <section className="reveal">
             <h2 className="block-title"><IconLink />売却ガイド</h2>
             <div className="link-grid">
+              <Link href="/glossary/" className="link-card"><span className="link-card__label">時計の用語集</span></Link>
               {guides().map((g) => (
                 <Link key={g.slug} href={`/guide/${g.slug}/`} className="link-card">
                   <span className="link-card__label">{g.title}</span>

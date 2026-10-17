@@ -29,6 +29,7 @@ export function SiteFooter() {
             ))}
             <li><a href="/guide/">売却ガイド</a></li>
             <li><a href="/faq/">よくある質問</a></li>
+            <li><a href="/glossary/">時計の用語集</a></li>
             <li><a href="/#policy">掲載ポリシー</a></li>
           </ul>
         </div>
