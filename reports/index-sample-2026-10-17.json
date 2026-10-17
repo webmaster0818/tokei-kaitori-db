@@ -1,0 +1,783 @@
+{
+ "site": "brandwatchbank.com",
+ "date": "2026-10-17",
+ "checked_at_jst": "2026-10-17 09:31",
+ "property": "https://brandwatchbank.com/",
+ "policy": "A（様子見＋計測）。構造変更・デプロイなし。10/16 は URL 単位のファイルを保存していないため 10/15 と比較（07:00 の daily-site-check は 10/16=0・10/17=0）",
+ "index_sample": {
+  "n": 32,
+  "method": "sitemap の <loc> を md5 順に並べた先頭32本（daily-site-check.py INDEX_SAMPLE と同一）",
+  "sitemap_url_count_at_check": 227,
+  "sample_set_vs_2026_10_15": "同一の32本",
+  "today": {
+   "Crawled - currently not indexed": 22,
+   "URL is unknown to Google": 9,
+   "Not found (404)": 1
+  },
+  "today_indexed": 0,
+  "previous": {
+   "indexed": 1,
+   "source": "reports/index-sample-2026-10-15.json（10/16 07:00 の daily-site-check は 0）"
+  },
+  "url_level_diff": {
+   "state_changed": [
+    {
+     "url": "https://brandwatchbank.com/ref/522.30.42.30.04.001/",
+     "from": "Submitted and indexed",
+     "to": "Crawled - currently not indexed",
+     "lastCrawlTime_from": "2026-09-10T04:01:48Z",
+     "lastCrawlTime_to": "2026-10-14T22:05:23Z"
+    }
+   ],
+   "crawl_advanced_count": 15,
+   "crawl_went_back_count": 0
+  },
+  "urls": [
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-02T14:43:26Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/126505/",
+    "userCanonical": "https://brandwatchbank.com/ref/126505/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/126505/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-02T14:43:26Z",
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "googleCanonical": null,
+    "userCanonical": null,
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/126334g/",
+    "prev_2026_10_15_coverageState": "URL is unknown to Google",
+    "prev_2026_10_15_lastCrawlTime": null,
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "googleCanonical": null,
+    "userCanonical": null,
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/277200/",
+    "prev_2026_10_15_coverageState": "URL is unknown to Google",
+    "prev_2026_10_15_lastCrawlTime": null,
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-01T13:53:01Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/47040.b01a.9094/",
+    "userCanonical": "https://brandwatchbank.com/ref/47040.b01a.9094/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/47040.b01a.9094/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-01T13:53:01Z",
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-08T03:04:40Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/116520/",
+    "userCanonical": "https://brandwatchbank.com/ref/116520/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/116520/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-08T03:04:40Z",
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "googleCanonical": null,
+    "userCanonical": null,
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/231.10.43.22.03.001/",
+    "prev_2026_10_15_coverageState": "URL is unknown to Google",
+    "prev_2026_10_15_lastCrawlTime": null,
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-15T15:45:01Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/214270/",
+    "userCanonical": "https://brandwatchbank.com/ref/214270/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/214270/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-13T15:49:45Z",
+    "state_changed": false,
+    "crawl_advanced": true,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-16T19:57:29Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/331.10.42.51.01.001/",
+    "userCanonical": "https://brandwatchbank.com/ref/331.10.42.51.01.001/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/331.10.42.51.01.001/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-14T19:44:51Z",
+    "state_changed": false,
+    "crawl_advanced": true,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "googleCanonical": null,
+    "userCanonical": null,
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/5500v.110a.b075/",
+    "prev_2026_10_15_coverageState": "URL is unknown to Google",
+    "prev_2026_10_15_lastCrawlTime": null,
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-16T10:14:34Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/14000/",
+    "userCanonical": "https://brandwatchbank.com/ref/14000/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/14000/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-14T10:29:06Z",
+    "state_changed": false,
+    "crawl_advanced": true,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Not found (404)",
+    "lastCrawlTime": "2026-09-20T05:18:11Z",
+    "googleCanonical": null,
+    "userCanonical": null,
+    "pageFetchState": "NOT_FOUND",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/126900/",
+    "prev_2026_10_15_coverageState": "Not found (404)",
+    "prev_2026_10_15_lastCrawlTime": "2026-09-20T05:18:11Z",
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-16T20:15:54Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/226659/",
+    "userCanonical": "https://brandwatchbank.com/ref/226659/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/226659/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-14T20:19:03Z",
+    "state_changed": false,
+    "crawl_advanced": true,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-14T22:05:23Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/522.30.42.30.04.001/",
+    "userCanonical": "https://brandwatchbank.com/ref/522.30.42.30.04.001/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/522.30.42.30.04.001/",
+    "prev_2026_10_15_coverageState": "Submitted and indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-09-10T04:01:48Z",
+    "state_changed": true,
+    "crawl_advanced": true,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-15T15:01:02Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/126331/",
+    "userCanonical": "https://brandwatchbank.com/ref/126331/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/126331/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-13T15:09:14Z",
+    "state_changed": false,
+    "crawl_advanced": true,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-15T19:38:25Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/15450st.oo.1256st.03/",
+    "userCanonical": "https://brandwatchbank.com/ref/15450st.oo.1256st.03/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/15450st.oo.1256st.03/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-13T17:01:09Z",
+    "state_changed": false,
+    "crawl_advanced": true,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-16T18:24:28Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/116233g/",
+    "userCanonical": "https://brandwatchbank.com/ref/116233g/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/116233g/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-14T18:36:39Z",
+    "state_changed": false,
+    "crawl_advanced": true,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-04T10:12:14Z",
+    "googleCanonical": "https://brandwatchbank.com/brand/vacheron-constantin/",
+    "userCanonical": "https://brandwatchbank.com/brand/vacheron-constantin/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/brand/vacheron-constantin/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-04T10:12:14Z",
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "googleCanonical": null,
+    "userCanonical": null,
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/15500st.oo.1220st.01/",
+    "prev_2026_10_15_coverageState": "URL is unknown to Google",
+    "prev_2026_10_15_lastCrawlTime": null,
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "googleCanonical": null,
+    "userCanonical": null,
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/model/seamaster/",
+    "prev_2026_10_15_coverageState": "URL is unknown to Google",
+    "prev_2026_10_15_lastCrawlTime": null,
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-14T20:05:26Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/26331st.oo.1220st.03/",
+    "userCanonical": "https://brandwatchbank.com/ref/26331st.oo.1220st.03/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/26331st.oo.1220st.03/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-14T20:05:26Z",
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-15T15:45:33Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/16713/",
+    "userCanonical": "https://brandwatchbank.com/ref/16713/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/16713/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-13T15:45:59Z",
+    "state_changed": false,
+    "crawl_advanced": true,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-16T15:38:21Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/116509g/",
+    "userCanonical": "https://brandwatchbank.com/ref/116509g/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/116509g/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-14T15:40:18Z",
+    "state_changed": false,
+    "crawl_advanced": true,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-17T00:06:26Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/116300/",
+    "userCanonical": "https://brandwatchbank.com/ref/116300/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/116300/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-09-30T12:26:01Z",
+    "state_changed": false,
+    "crawl_advanced": true,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-15T19:38:40Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/3576.50/",
+    "userCanonical": "https://brandwatchbank.com/ref/3576.50/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/3576.50/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-02T14:00:11Z",
+    "state_changed": false,
+    "crawl_advanced": true,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-14T12:20:25Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/15300st.oo.1220st.01/",
+    "userCanonical": "https://brandwatchbank.com/ref/15300st.oo.1220st.01/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/15300st.oo.1220st.01/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-14T12:20:25Z",
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "googleCanonical": null,
+    "userCanonical": null,
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/4500v.110a.b126/",
+    "prev_2026_10_15_coverageState": "URL is unknown to Google",
+    "prev_2026_10_15_lastCrawlTime": null,
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "googleCanonical": null,
+    "userCanonical": null,
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/326934/",
+    "prev_2026_10_15_coverageState": "URL is unknown to Google",
+    "prev_2026_10_15_lastCrawlTime": null,
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-15T15:02:06Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/116506/",
+    "userCanonical": "https://brandwatchbank.com/ref/116506/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/116506/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-13T13:04:06Z",
+    "state_changed": false,
+    "crawl_advanced": true,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-15T15:01:15Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/116710blnr/",
+    "userCanonical": "https://brandwatchbank.com/ref/116710blnr/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/116710blnr/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-13T12:43:40Z",
+    "state_changed": false,
+    "crawl_advanced": true,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-16T23:13:54Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/210.30.42.20.03.001/",
+    "userCanonical": "https://brandwatchbank.com/ref/210.30.42.20.03.001/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/210.30.42.20.03.001/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-14T22:17:47Z",
+    "state_changed": false,
+    "crawl_advanced": true,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "Crawled - currently not indexed",
+    "lastCrawlTime": "2026-10-02T11:24:28Z",
+    "googleCanonical": "https://brandwatchbank.com/ref/47450.b01a.9227/",
+    "userCanonical": "https://brandwatchbank.com/ref/47450.b01a.9227/",
+    "pageFetchState": "SUCCESSFUL",
+    "indexingState": "INDEXING_ALLOWED",
+    "robotsTxtState": "ALLOWED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/ref/47450.b01a.9227/",
+    "prev_2026_10_15_coverageState": "Crawled - currently not indexed",
+    "prev_2026_10_15_lastCrawlTime": "2026-10-02T11:24:28Z",
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   },
+   {
+    "coverageState": "URL is unknown to Google",
+    "lastCrawlTime": null,
+    "googleCanonical": null,
+    "userCanonical": null,
+    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+    "indexingState": "INDEXING_STATE_UNSPECIFIED",
+    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "verdict": "NEUTRAL",
+    "url": "https://brandwatchbank.com/model/oyster-perpetual/",
+    "prev_2026_10_15_coverageState": "URL is unknown to Google",
+    "prev_2026_10_15_lastCrawlTime": null,
+    "state_changed": false,
+    "crawl_advanced": false,
+    "crawl_went_back": false
+   }
+  ]
+ },
+ "gsc_daily_all": [
+  {
+   "date": "2026-09-20",
+   "impressions": 109,
+   "clicks": 2,
+   "position": 35.0,
+   "final": true
+  },
+  {
+   "date": "2026-09-21",
+   "impressions": 21,
+   "clicks": 0,
+   "position": 27.1,
+   "final": true
+  },
+  {
+   "date": "2026-09-22",
+   "impressions": 249,
+   "clicks": 1,
+   "position": 28.7,
+   "final": true
+  },
+  {
+   "date": "2026-09-23",
+   "impressions": 178,
+   "clicks": 1,
+   "position": 18.0,
+   "final": true
+  },
+  {
+   "date": "2026-09-24",
+   "impressions": 190,
+   "clicks": 1,
+   "position": 17.4,
+   "final": true
+  },
+  {
+   "date": "2026-09-25",
+   "impressions": 148,
+   "clicks": 1,
+   "position": 17.4,
+   "final": true
+  },
+  {
+   "date": "2026-09-26",
+   "impressions": 125,
+   "clicks": 0,
+   "position": 21.3,
+   "final": true
+  },
+  {
+   "date": "2026-09-27",
+   "impressions": 127,
+   "clicks": 3,
+   "position": 22.8,
+   "final": true
+  },
+  {
+   "date": "2026-09-28",
+   "impressions": 99,
+   "clicks": 5,
+   "position": 22.6,
+   "final": true
+  },
+  {
+   "date": "2026-09-29",
+   "impressions": 112,
+   "clicks": 0,
+   "position": 29.6,
+   "final": true
+  },
+  {
+   "date": "2026-09-30",
+   "impressions": 136,
+   "clicks": 3,
+   "position": 21.6,
+   "final": true
+  },
+  {
+   "date": "2026-10-01",
+   "impressions": 36,
+   "clicks": 0,
+   "position": 59.5,
+   "final": true
+  },
+  {
+   "date": "2026-10-02",
+   "impressions": 22,
+   "clicks": 0,
+   "position": 53.5,
+   "final": true
+  },
+  {
+   "date": "2026-10-03",
+   "impressions": 12,
+   "clicks": 0,
+   "position": 51.3,
+   "final": true
+  },
+  {
+   "date": "2026-10-04",
+   "impressions": 0,
+   "clicks": 0,
+   "position": 0,
+   "final": true
+  },
+  {
+   "date": "2026-10-05",
+   "impressions": 0,
+   "clicks": 0,
+   "position": 0,
+   "final": true
+  },
+  {
+   "date": "2026-10-06",
+   "impressions": 1,
+   "clicks": 0,
+   "position": 76,
+   "final": true
+  },
+  {
+   "date": "2026-10-07",
+   "impressions": 0,
+   "clicks": 0,
+   "position": 0,
+   "final": true
+  },
+  {
+   "date": "2026-10-08",
+   "impressions": 1,
+   "clicks": 0,
+   "position": 78,
+   "final": true
+  },
+  {
+   "date": "2026-10-09",
+   "impressions": 0,
+   "clicks": 0,
+   "position": 0,
+   "final": true
+  },
+  {
+   "date": "2026-10-10",
+   "impressions": 0,
+   "clicks": 0,
+   "position": 0,
+   "final": true
+  },
+  {
+   "date": "2026-10-11",
+   "impressions": 0,
+   "clicks": 0,
+   "position": 0,
+   "final": true
+  },
+  {
+   "date": "2026-10-12",
+   "impressions": 0,
+   "clicks": 0,
+   "position": 0,
+   "final": true
+  },
+  {
+   "date": "2026-10-13",
+   "impressions": 0,
+   "clicks": 0,
+   "position": 0,
+   "final": true
+  },
+  {
+   "date": "2026-10-14",
+   "impressions": 2,
+   "clicks": 0,
+   "position": 54,
+   "final": true
+  },
+  {
+   "date": "2026-10-15",
+   "impressions": 1,
+   "clicks": 0,
+   "position": 75,
+   "final": false
+  },
+  {
+   "date": "2026-10-16",
+   "impressions": 0,
+   "clicks": 0,
+   "position": 0,
+   "final": false
+  }
+ ],
+ "gsc_pages_since_2026_10_07": [
+  [
+   [
+    "2026-10-08",
+    "https://brandwatchbank.com/"
+   ],
+   1
+  ],
+  [
+   [
+    "2026-10-14",
+    "https://brandwatchbank.com/ref/16610/"
+   ],
+   2
+  ],
+  [
+   [
+    "2026-10-15",
+    "https://brandwatchbank.com/"
+   ],
+   1
+  ]
+ ],
+ "sitemaps": [
+  {
+   "path": "https://brandwatchbank.com/sitemap.xml",
+   "lastSubmitted": "2026-10-15T01:14:15.897Z",
+   "isPending": false,
+   "isSitemapsIndex": false,
+   "type": "sitemap",
+   "lastDownloaded": "2026-10-15T01:14:18.134Z",
+   "warnings": "0",
+   "errors": "0",
+   "contents": [
+    {
+     "type": "web",
+     "submitted": "242",
+     "indexed": "0"
+    }
+   ]
+  }
+ ]
+}
