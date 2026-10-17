@@ -11,6 +11,7 @@ import { ceilingChange, fromMs, priceSeries } from "@/lib/history";
 import { man, refPath, signedPct, signedYen, similarPriced } from "@/lib/insights";
 import { CAMPAIGN_CEILING, SHOP_IDS, priceTypeLabel } from "@/lib/shops";
 import { specFor } from "@/lib/specs";
+import { pct0, retailFor, retailRatio, taxLabel } from "@/lib/retail";
 import { dialComparison } from "@/lib/dials";
 import { PriceHistoryChart } from "@/components/PriceHistoryChart";
 import { ShopGapBars } from "@/components/ShopGapBars";
@@ -79,6 +80,9 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
   };
   const hasPageUpdated = s.records.some((r) => pageUpdated(r.page_updated));
   const spec = specFor(ref);
+  // メーカー公式サイトの小売価格（data/retail・taro-2）。税込の表記はページに書かれていたときだけ
+  const retail = retailFor(ref);
+  const ratio = retailRatio(s, retail);
   const dials = dialComparison(s.records, master[ref]?.brand);
   // variant（店の行名）から、ブランド名・型番・モデル名と重なる語を除いた「区別の語」だけを表示する
   const refKey = (t: string) => t.replace(/[./-]+/g, ".").toUpperCase();
@@ -387,6 +391,93 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
             ※月次の相場推移は、
             <a href={history[0].source_url} target="_blank" rel="noopener noreferrer" className="underline decoration-[var(--silver-2)] underline-offset-2">出典元</a>
             が公開している履歴データにもとづいています。
+          </p>
+        </section>
+      )}
+
+      {/* メーカー公式サイトの小売価格（data/retail）。買取価格とは日付も出典も違うので、割合は参考値として注記する */}
+      {retail && (
+        <section className="reveal" id="retail">
+          <h2 className="block-title"><IconFigures />メーカーの小売価格と買取価格</h2>
+          <div className="panel">
+            <div className="figures figures--3" style={{ ["--cols" as string]: ratio != null ? 3 : 1 }}>
+              <div>
+                <p className="figures__value">{yen(retail.latest.price_jpy)}</p>
+                <p className="figures__label">公式サイトの表示価格{taxLabel(retail.latest)}</p>
+              </div>
+              {ratio != null && (
+                <>
+                  <div>
+                    <p className="figures__value">{yen(s.ceilingMax as number)}</p>
+                    <p className="figures__label">上限額（最高）</p>
+                  </div>
+                  <div>
+                    <p className="figures__value">{pct0(ratio)}</p>
+                    <p className="figures__label">小売価格に対する上限額（最高）の割合</p>
+                  </div>
+                </>
+              )}
+            </div>
+            <p className="summary-text">
+              メーカー公式サイトの型番ページには、{retail.latest.as_of}時点で{yen(retail.latest.price_jpy)}{taxLabel(retail.latest)}と表示されていました（
+              {retail.latest.archive ? (
+                <>
+                  <a href={retail.latest.archive} target="_blank" rel="noopener noreferrer">{retail.latest.snapshot ?? retail.latest.as_of}時点の保存版</a>
+                  ・<a href={retail.latest.url} target="_blank" rel="noopener noreferrer">公式ページ</a>
+                </>
+              ) : (
+                <a href={retail.latest.url} target="_blank" rel="noopener noreferrer">公式ページ</a>
+              )}
+              ）。
+              {ratio != null && <>{date}時点の上限額（最高）{yen(s.ceilingMax as number)}は、この価格の{pct0(ratio)}にあたります。</>}
+            </p>
+          </div>
+
+          {retail.points.length >= 2 && (
+            <>
+              <h3 className="sub-title mt-8 mb-3">公式サイトの表示価格の推移</h3>
+              <div className="table-frame">
+                <table className="data-table">
+                  <thead>
+                    <tr>
+                      <th>確認日</th>
+                      <th className="r">表示価格</th>
+                      <th className="r">前回からの改定</th>
+                      <th>出典</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {retail.points.map((pt, i, arr) => {
+                      const prev = i > 0 ? arr[i - 1].price_jpy : null;
+                      const diff = prev != null ? pt.price_jpy - prev : null;
+                      return (
+                        <tr key={`${pt.as_of}-${i}`}>
+                          <td className="whitespace-nowrap">{pt.as_of}</td>
+                          <td className="r strong">{yen(pt.price_jpy)}{pt.tax_included === true && <small className="cell-sub">消費税込</small>}</td>
+                          <td className={`r whitespace-nowrap ${diff == null ? "" : diff > 0 ? "up" : diff < 0 ? "down" : ""}`}>
+                            {diff == null ? "—" : diff === 0 ? "変更なし" : <>{signedYen(diff)}<small className="cell-sub">{signedPct(diff / (prev as number))}</small></>}
+                          </td>
+                          <td className="whitespace-nowrap text-xs">
+                            {pt.archive ? (
+                              <a href={pt.archive} target="_blank" rel="noopener noreferrer">保存版{pt.snapshot && pt.snapshot !== pt.as_of ? `（${pt.snapshot}）` : ""}</a>
+                            ) : (
+                              <a href={pt.url} target="_blank" rel="noopener noreferrer">公式ページ</a>
+                            )}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+              <p className="table-scroll-hint">表は横にスクロールしてご覧いただけます。</p>
+            </>
+          )}
+
+          <p className="note mt-4">
+            ※「公式サイトの表示価格」は、メーカー公式サイトの型番ページ（またはインターネット上の保存版）に表示されていた日本円の価格です。消費税込の表記がある場合だけ「（消費税込）」と記載しています。日本円の価格が表示されていない時点の値は掲載しておりません。
+            {retail.points.length >= 2 && "推移の表の確認日は、公式ページまたは保存版でその価格を確認できた日であり、価格が改定された日ではありません。改定は、前回の確認日からその確認日までの間に行われています。"}
+            {ratio != null && <>「小売価格に対する上限額（最高）の割合」は、上限額（最高）を最新の公式サイトの表示価格で割った値です。小売価格（{retail.latest.as_of}時点・メーカー公式サイト）と買取価格（{date}時点・各買取店の公開ページ）は日付も出典も異なるため、この割合は参考値としてご覧ください。</>}
           </p>
         </section>
       )}

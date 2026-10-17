@@ -1,0 +1,24 @@
+{
+  "ref": "126301",
+  "brand": "ロレックス",
+  "model": "デイトジャスト 41",
+  "prices": [
+    {
+      "price_jpy": 2317700,
+      "tax_included": null,
+      "as_of": "2025-07-15",
+      "url": "https://www.rolex.com/ja/watches/datejust/m126301-0001",
+      "archive": "http://web.archive.org/web/20250715034123/https://www.rolex.com/ja/watches/datejust/m126301-0001",
+      "snapshot": "2025-07-15"
+    },
+    {
+      "price_jpy": 2514600,
+      "tax_included": null,
+      "as_of": "2026-01-03",
+      "url": "https://www.rolex.com/ja/watches/datejust/m126301-0001",
+      "archive": "http://web.archive.org/web/20260103140930/https://www.rolex.com/ja/watches/datejust/m126301-0001",
+      "snapshot": "2026-01-03"
+    }
+  ],
+  "checked": "2026-10-17"
+}

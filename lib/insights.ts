@@ -5,6 +5,7 @@ import { latestDate, masterRefs, publishableRefs, summarize, type RefSummary } f
 import { familyOfRef, publishedBrandOf, publishedFamilyOfRef } from "./models";
 import { ceilingChange, type CeilingChange } from "./history";
 import { SHOP_IDS, SHOP_PAGES } from "./shops";
+import { retailFor, retailRatio, type RetailView } from "./retail";
 
 export type RefRow = {
   ref: string;
@@ -46,6 +47,19 @@ export function topCeiling(n: number): RefRow[] {
     .filter((r) => r.s.ceilingMax != null)
     .sort((a, b) => (b.s.ceilingMax ?? 0) - (a.s.ceilingMax ?? 0) || a.ref.localeCompare(b.ref))
     .slice(0, n);
+}
+
+export type RetailRow = RefRow & { retail: RetailView; ratio: number };
+
+/** 上限額（最高）÷ 最新の公式小売価格が高い順（公開中で公式小売価格のある型番だけ） */
+export function topRetailRatio(n: number): RetailRow[] {
+  const out: RetailRow[] = [];
+  for (const r of publishedRows()) {
+    const retail = retailFor(r.ref);
+    const ratio = retailRatio(r.s, retail);
+    if (retail && ratio != null) out.push({ ...r, retail, ratio });
+  }
+  return out.sort((a, b) => b.ratio - a.ratio || a.ref.localeCompare(b.ref)).slice(0, n);
 }
 
 export type MoveRow = RefRow & { c: CeilingChange };

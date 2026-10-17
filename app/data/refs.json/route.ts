@@ -4,6 +4,7 @@
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { latestDate } from "@/lib/prices";
 import { hubsFor, publishedRows, refPath } from "@/lib/insights";
+import { retailFor, retailRatio } from "@/lib/retail";
 
 export const dynamic = "force-static";
 
@@ -14,13 +15,15 @@ export function GET() {
     url: `${SITE_URL}/`,
     updated: latestDate(),
     description:
-      "買取店が自社サイトで公開している腕時計の型番別買取価格を毎日取得し、2社以上の価格がそろった型番を比較したデータです。max_ceiling_jpy は区分「上限」「相場」の価格の買取店ごとの代表値（同じ買取店に文字盤・仕様違いの複数価格がある場合は状態ごとの中央値）のうち最も高いもの、spread_jpy は代表値の最高額と最低額の差です。",
+      "買取店が自社サイトで公開している腕時計の型番別買取価格を毎日取得し、2社以上の価格がそろった型番を比較したデータです。max_ceiling_jpy は区分「上限」「相場」の価格の買取店ごとの代表値（同じ買取店に文字盤・仕様違いの複数価格がある場合は状態ごとの中央値）のうち最も高いもの、spread_jpy は代表値の最高額と最低額の差です。retail_price_jpy はメーカー公式サイトの型番ページ（またはその保存版）に表示されていた最新の日本円の価格（税込・税抜はページの表記どおりで、retail_tax_included はページに消費税込の表記があれば true・表記が無ければ null）、retail_as_of はその確認日、retail_ratio は max_ceiling_jpy ÷ retail_price_jpy です。小売価格と買取価格は日付も出典も異なるため、retail_ratio は参考値です。公式の価格を確認できない型番では、これらの値は null です。",
     count: rows.length,
     refs: rows
       .slice()
       .sort((a, b) => a.ref.localeCompare(b.ref))
       .map((r) => {
         const { fam, brand } = hubsFor(r.ref);
+        const retail = retailFor(r.ref);
+        const ratio = retailRatio(r.s, retail);
         return {
           ref: r.ref,
           brand: r.brand,
@@ -33,6 +36,10 @@ export function GET() {
           shop_count: r.s.shops.length,
           shops: r.s.shops,
           latest_date: r.latest,
+          retail_price_jpy: retail?.latest.price_jpy ?? null,
+          retail_tax_included: retail ? retail.latest.tax_included ?? null : null,
+          retail_as_of: retail?.latest.as_of ?? null,
+          retail_ratio: ratio != null ? Math.round(ratio * 1000) / 1000 : null,
           url: `${SITE_URL}${refPath(r.ref)}`,
           model_url: fam ? `${SITE_URL}/model/${fam.slug}/` : null,
           brand_url: brand ? `${SITE_URL}/brand/${brand.slug}/` : null,

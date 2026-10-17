@@ -1,0 +1,33 @@
+{
+  "ref": "IW356502",
+  "brand": "IWC",
+  "model": "ポートフィノ・オートマティック - ステンレススティール",
+  "prices": [
+    {
+      "price_jpy": 772200,
+      "tax_included": true,
+      "tax_note": "税込",
+      "as_of": "2025-10-18",
+      "url": "https://www.iwc.com/jp-ja/watches/portofino/iw356502-portofino-automatic",
+      "archive": "http://web.archive.org/web/20251018080148/https://www.iwc.com/jp-ja/watches/portofino/iw356502-portofino-automatic",
+      "snapshot": "2025-10-18"
+    },
+    {
+      "price_jpy": 803000,
+      "tax_included": true,
+      "tax_note": "税込",
+      "as_of": "2026-01-21",
+      "url": "https://www.iwc.com/jp-ja/watches/portofino/iw356502-portofino-automatic",
+      "archive": "http://web.archive.org/web/20260121010851/https://www.iwc.com/jp-ja/watches/portofino/iw356502-portofino-automatic",
+      "snapshot": "2026-01-21"
+    },
+    {
+      "price_jpy": 873400,
+      "tax_included": true,
+      "as_of": "2026-10-17",
+      "url": "https://www.iwc.com/jp-ja/watches/portofino/iw356502-portofino-automatic",
+      "tax_note": "税込"
+    }
+  ],
+  "checked": "2026-10-17"
+}

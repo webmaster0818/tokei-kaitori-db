@@ -1,0 +1,48 @@
+{
+  "ref": "124270",
+  "brand": "ロレックス",
+  "model": "エクスプローラー 36",
+  "prices": [
+    {
+      "price_jpy": 1036200,
+      "tax_included": null,
+      "as_of": "2024-04-03",
+      "url": "https://www.rolex.com/ja/watches/explorer/m124270-0001",
+      "archive": "http://web.archive.org/web/20240403195551/https://www.rolex.com/ja/watches/explorer/m124270-0001",
+      "snapshot": "2024-04-03"
+    },
+    {
+      "price_jpy": 1036200,
+      "tax_included": null,
+      "as_of": "2024-06-18",
+      "url": "https://www.rolex.com/ja/watches/explorer/m124270-0001",
+      "archive": "http://web.archive.org/web/20240618002224/https://www.rolex.com/ja/watches/explorer/m124270-0001",
+      "snapshot": "2024-06-18"
+    },
+    {
+      "price_jpy": 1104400,
+      "tax_included": null,
+      "as_of": "2025-01-21",
+      "url": "https://www.rolex.com/ja/watches/explorer/m124270-0001",
+      "archive": "http://web.archive.org/web/20250121140453/https://www.rolex.com/ja/watches/explorer/m124270-0001",
+      "snapshot": "2025-01-21"
+    },
+    {
+      "price_jpy": 1104400,
+      "tax_included": null,
+      "as_of": "2025-04-17",
+      "url": "https://www.rolex.com/ja/watches/explorer/m124270-0001",
+      "archive": "http://web.archive.org/web/20250417221321/https://www.rolex.com/ja/watches/explorer/m124270-0001",
+      "snapshot": "2025-04-17"
+    },
+    {
+      "price_jpy": 1177000,
+      "tax_included": null,
+      "as_of": "2026-01-25",
+      "url": "https://www.rolex.com/ja/watches/explorer/m124270-0001",
+      "archive": "http://web.archive.org/web/20260125131246/https://www.rolex.com/ja/watches/explorer/m124270-0001",
+      "snapshot": "2026-01-25"
+    }
+  ],
+  "checked": "2026-10-17"
+}

@@ -1,0 +1,48 @@
+{
+  "ref": "126711CHNR",
+  "brand": "ロレックス",
+  "model": "GMTマスター Ⅱ",
+  "prices": [
+    {
+      "price_jpy": 2355100,
+      "tax_included": null,
+      "as_of": "2024-01-04",
+      "url": "https://www.rolex.com/ja/watches/gmt-master-ii/m126711chnr-0002",
+      "archive": "http://web.archive.org/web/20240104173139/https://www.rolex.com/ja/watches/gmt-master-ii/m126711chnr-0002",
+      "snapshot": "2024-01-04"
+    },
+    {
+      "price_jpy": 2355100,
+      "tax_included": null,
+      "as_of": "2024-03-05",
+      "url": "https://www.rolex.com/ja/watches/gmt-master-ii/m126711chnr-0002",
+      "archive": "http://web.archive.org/web/20240305112756/https://www.rolex.com/ja/watches/gmt-master-ii/m126711chnr-0002",
+      "snapshot": "2024-03-05"
+    },
+    {
+      "price_jpy": 2429900,
+      "tax_included": null,
+      "as_of": "2024-09-17",
+      "url": "https://www.rolex.com/ja/watches/gmt-master-ii/m126711chnr-0002",
+      "archive": "http://web.archive.org/web/20240917113758/https://www.rolex.com/ja/watches/gmt-master-ii/m126711chnr-0002",
+      "snapshot": "2024-09-17"
+    },
+    {
+      "price_jpy": 2675200,
+      "tax_included": null,
+      "as_of": "2025-08-02",
+      "url": "https://www.rolex.com/ja/watches/gmt-master-ii/m126711chnr-0002",
+      "archive": "http://web.archive.org/web/20250802234034/https://www.rolex.com/ja/watches/gmt-master-ii/m126711chnr-0002",
+      "snapshot": "2025-08-02"
+    },
+    {
+      "price_jpy": 2907300,
+      "tax_included": null,
+      "as_of": "2026-01-02",
+      "url": "https://www.rolex.com/ja/watches/gmt-master-ii/m126711chnr-0002",
+      "archive": "http://web.archive.org/web/20260102133807/https://www.rolex.com/ja/watches/gmt-master-ii/m126711chnr-0002",
+      "snapshot": "2026-01-02"
+    }
+  ],
+  "checked": "2026-10-17"
+}

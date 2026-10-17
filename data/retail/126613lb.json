@@ -1,0 +1,48 @@
+{
+  "ref": "126613LB",
+  "brand": "ロレックス",
+  "model": "サブマリーナー デイト",
+  "prices": [
+    {
+      "price_jpy": 2266000,
+      "tax_included": null,
+      "as_of": "2024-02-21",
+      "url": "https://www.rolex.com/ja/watches/submariner/m126613lb-0002",
+      "archive": "http://web.archive.org/web/20240221175814/https://www.rolex.com/ja/watches/submariner/m126613lb-0002",
+      "snapshot": "2024-02-21"
+    },
+    {
+      "price_jpy": 2266000,
+      "tax_included": null,
+      "as_of": "2024-04-07",
+      "url": "https://www.rolex.com/ja/watches/submariner/m126613lb-0002",
+      "archive": "http://web.archive.org/web/20240407192551/https://www.rolex.com/ja/watches/submariner/m126613lb-0002",
+      "snapshot": "2024-04-07"
+    },
+    {
+      "price_jpy": 2339700,
+      "tax_included": null,
+      "as_of": "2024-08-03",
+      "url": "https://www.rolex.com/ja/watches/submariner/m126613lb-0002",
+      "archive": "http://web.archive.org/web/20240803101330/https://www.rolex.com/ja/watches/submariner/m126613lb-0002",
+      "snapshot": "2024-08-03"
+    },
+    {
+      "price_jpy": 2581700,
+      "tax_included": null,
+      "as_of": "2025-06-13",
+      "url": "https://www.rolex.com/ja/watches/submariner/m126613lb-0002",
+      "archive": "http://web.archive.org/web/20250613161920/https://www.rolex.com/ja/watches/submariner/m126613lb-0002",
+      "snapshot": "2025-06-13"
+    },
+    {
+      "price_jpy": 2581700,
+      "tax_included": null,
+      "as_of": "2025-11-04",
+      "url": "https://www.rolex.com/ja/watches/submariner/m126613lb-0002",
+      "archive": "http://web.archive.org/web/20251104212018/https://www.rolex.com/ja/watches/submariner/m126613lb-0002",
+      "snapshot": "2025-11-04"
+    }
+  ],
+  "checked": "2026-10-17"
+}

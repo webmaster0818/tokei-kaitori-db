@@ -1,0 +1,40 @@
+{
+  "ref": "126500LN",
+  "brand": "ロレックス",
+  "model": "コスモグラフ デイトナ",
+  "prices": [
+    {
+      "price_jpy": 1795200,
+      "tax_included": null,
+      "as_of": "2023-08-12",
+      "url": "https://www.rolex.com/ja/watches/cosmograph-daytona/m126500ln-0001",
+      "archive": "http://web.archive.org/web/20230812193139/https://www.rolex.com/ja/watches/cosmograph-daytona/m126500ln-0001",
+      "snapshot": "2023-08-12"
+    },
+    {
+      "price_jpy": 2176900,
+      "tax_included": null,
+      "as_of": "2024-01-05",
+      "url": "https://www.rolex.com/ja/watches/cosmograph-daytona/m126500ln-0001",
+      "archive": "http://web.archive.org/web/20240105195343/https://www.rolex.com/ja/watches/cosmograph-daytona/m126500ln-0001",
+      "snapshot": "2024-01-05"
+    },
+    {
+      "price_jpy": 2349600,
+      "tax_included": null,
+      "as_of": "2025-08-07",
+      "url": "https://www.rolex.com/ja/watches/cosmograph-daytona/m126500ln-0001",
+      "archive": "http://web.archive.org/web/20250807002600/https://www.rolex.com/ja/watches/cosmograph-daytona/m126500ln-0001",
+      "snapshot": "2025-08-07"
+    },
+    {
+      "price_jpy": 2349600,
+      "tax_included": null,
+      "as_of": "2025-12-28",
+      "url": "https://www.rolex.com/ja/watches/cosmograph-daytona/m126500ln-0001",
+      "archive": "http://web.archive.org/web/20251228085305/https://www.rolex.com/ja/watches/cosmograph-daytona/m126500ln-0001",
+      "snapshot": "2025-12-28"
+    }
+  ],
+  "checked": "2026-10-17"
+}

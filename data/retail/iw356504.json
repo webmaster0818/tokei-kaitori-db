@@ -1,0 +1,42 @@
+{
+  "ref": "IW356504",
+  "brand": "IWC",
+  "model": "ポートフィノ・オートマティック - 18Kレッドゴールド",
+  "prices": [
+    {
+      "price_jpy": 2090000,
+      "tax_included": true,
+      "tax_note": "税込",
+      "as_of": "2025-10-21",
+      "url": "https://www.iwc.com/jp-ja/watches/portofino/iw356504-portofino-automatic",
+      "archive": "http://web.archive.org/web/20251021093615/https://www.iwc.com/jp-ja/watches/portofino/iw356504-portofino-automatic",
+      "snapshot": "2025-10-21"
+    },
+    {
+      "price_jpy": 2090000,
+      "tax_included": true,
+      "tax_note": "税込",
+      "as_of": "2025-12-10",
+      "url": "https://www.iwc.com/jp-ja/watches/portofino/iw356504-portofino-automatic",
+      "archive": "http://web.archive.org/web/20251210042553/https://www.iwc.com/jp-ja/watches/portofino/iw356504-portofino-automatic",
+      "snapshot": "2025-12-10"
+    },
+    {
+      "price_jpy": 2277000,
+      "tax_included": true,
+      "tax_note": "税込",
+      "as_of": "2026-04-12",
+      "url": "https://www.iwc.com/jp-ja/watches/portofino/iw356504-portofino-automatic",
+      "archive": "http://web.archive.org/web/20260412184622/https://www.iwc.com/jp-ja/watches/portofino/iw356504-portofino-automatic",
+      "snapshot": "2026-04-12"
+    },
+    {
+      "price_jpy": 2612500,
+      "tax_included": true,
+      "as_of": "2026-10-17",
+      "url": "https://www.iwc.com/jp-ja/watches/portofino/iw356504-portofino-automatic",
+      "tax_note": "税込"
+    }
+  ],
+  "checked": "2026-10-17"
+}

@@ -884,6 +884,9 @@ body {
 .rank-nav { display: flex; flex-wrap: wrap; gap: 10px; }
 .data-table .rank { width: 3.2em; color: var(--ink-3); text-align: right; }
 .data-table td.model { white-space: normal; min-width: 10em; }
+/* 小見出し（セクション内） */
+.sub-title { font-family: var(--serif); font-size: 17px; font-weight: 500; color: var(--ink); letter-spacing: 0.04em; padding-left: 12px; border-left: 3px solid var(--navy); line-height: 1.6; }
+
 .subnote { margin-top: 10px; font-size: 13px; line-height: 1.9; color: var(--ink-2); }
 
 /* 解説文の枠（content/*.md） */

@@ -1,0 +1,42 @@
+{
+  "ref": "IW371609",
+  "brand": "IWC",
+  "model": "ポルトギーゼ・クロノグラフ - ステンレススティール",
+  "prices": [
+    {
+      "price_jpy": 1287000,
+      "tax_included": true,
+      "tax_note": "税込",
+      "as_of": "2025-09-16",
+      "url": "https://www.iwc.com/jp-ja/watches/portugieser/iw371609-portugieser-chronograph",
+      "archive": "http://web.archive.org/web/20250916193520/https://www.iwc.com/jp-ja/watches/portugieser/iw371609-portugieser-chronograph",
+      "snapshot": "2025-09-16"
+    },
+    {
+      "price_jpy": 1287000,
+      "tax_included": true,
+      "tax_note": "税込",
+      "as_of": "2025-10-13",
+      "url": "https://www.iwc.com/jp-ja/watches/portugieser/iw371609-portugieser-chronograph",
+      "archive": "http://web.archive.org/web/20251013102352/https://www.iwc.com/jp-ja/watches/portugieser/iw371609-portugieser-chronograph",
+      "snapshot": "2025-10-13"
+    },
+    {
+      "price_jpy": 1338700,
+      "tax_included": true,
+      "tax_note": "税込",
+      "as_of": "2026-04-10",
+      "url": "https://www.iwc.com/jp-ja/watches/portugieser/iw371609-portugieser-chronograph",
+      "archive": "http://web.archive.org/web/20260410233514/https://www.iwc.com/jp-ja/watches/portugieser/iw371609-portugieser-chronograph",
+      "snapshot": "2026-04-10"
+    },
+    {
+      "price_jpy": 1457500,
+      "tax_included": true,
+      "as_of": "2026-10-17",
+      "url": "https://www.iwc.com/jp-ja/watches/portugieser/iw371609-portugieser-chronograph",
+      "tax_note": "税込"
+    }
+  ],
+  "checked": "2026-10-17"
+}
