@@ -15,7 +15,9 @@
     "オーデマ・ピゲ": "audemarspiguet.com は直接取得できる（robots も製品ページを禁じていない）。日本語サイトマップ（/ja/sitemap.xml）の製品ページを現在の内容で取得。Crawl-delay 5 を遵守",
     "ヴァシュロン・コンスタンタン": "vacheron-constantin.com は直接取得すると403。Waybackアーカイブ（日本語ページ）を使用",
     "パテック フィリップ": "patek.com は直接取得できる。現行モデルは現在の日本語ページ、生産終了品は同じURLのアーカイブ",
-    "チューダー": "tudorwatch.com は curl だと Access Denied。ブラウザと同じ条件のヘッドレスChrome（UA・言語・ウィンドウサイズ指定）で現在の日本語ページを取得"
+    "チューダー": "tudorwatch.com は curl だと Access Denied。ブラウザと同じ条件のヘッドレスChrome（UA・言語・ウィンドウサイズ指定）で現在の日本語ページを取得",
+    "IWC": "iwc.com は curl だと403。ヘッドレスChromeで現在の日本語ページを取得。生産終了品も公式サイトに残っている（/jp-ja/past-collections/…）",
+    "カルティエ": "対象型番は現在の公式サイトに無く、アーカイブも2015年ごろで仕様表が無い。公式ページにある製品名と素材・サイズの一行だけを入れ、spec_level: name_only を付けた。ケース径などは入れていない（2026-10-17 tomomi-2 判断）"
   },
   "verification": "書き込んだ全項目について、値が公式ページの該当ラベルの直下にあるかを機械照合した（ブランドごとに実施）",
   "known_issues_fixed": [
@@ -26,6 +28,7 @@
     "2026-10-17 ヴァシュロン: 「リファレンス」がウォッチ欄（製品番号）とムーブメント欄（キャリバー番号）の両方にあり、製品番号をキャリバーに入れていた（3型番）"
   ],
   "notes": [
+    "spec_level が name_only の型番は、公式ページに仕様表が無く製品名と素材の一行しか取れていない（カルティエ）。仕様表として表示しない前提",
     "model は公式ページのタイトルから取っている（出所は sources[].model_source）。data/watch-master.json の model は買取店のデータ由来で、公式の表記と違うことがある（123.10.35.60.01.001 は公式がクォーツなのに master は「オートマチック」だった）。食い違った型番の一覧は scratchpad/model_diffs.json に出してある",
     "ヴァシュロン・コンスタンタンの防水は公式の表記どおりに入れる。気圧は water_resistance_atm、メートル併記がある版は water_resistance_m にも入れる。気圧からメートルへの換算はしない",
     "ヴァシュロン・コンスタンタンの公式ページはスナップショットにより作りが2種類ある（〜2023年の節形式と、2025年〜の「時計の仕様」形式）。両方に対応している",
@@ -35,11 +38,13 @@
     "_note": "なし（公開対象はすべて作成済みか、作成不可として not_created に記録）"
   },
   "counts": {
-    "created": 338,
+    "created": 401,
     "not_created": 203,
     "by_brand": {
+      "IWC": 45,
       "オメガ": 185,
       "オーデマ・ピゲ": 60,
+      "カルティエ": 18,
       "チューダー": 26,
       "パテック フィリップ": 12,
       "ロレックス": 43,
@@ -50,10 +55,460 @@
       "オメガ": 13,
       "ヴァシュロン・コンスタンタン": 4
     },
-    "fields_total": 3220,
-    "snapshot_2025_or_earlier": 239
+    "fields_total": 3728,
+    "snapshot_2025_or_earlier": 257
   },
   "created": [
+    {
+      "ref": "IW323904",
+      "brand": "IWC",
+      "file": "data/specs/iw323904.json",
+      "model": "インヂュニア・オートマティック - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/ingenieur/iw323904-ingenieur-automatic",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW323906",
+      "brand": "IWC",
+      "file": "data/specs/iw323906.json",
+      "model": "インヂュニア・オートマティック - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/ingenieur/iw323906-ingenieur-automatic",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW326504",
+      "brand": "IWC",
+      "file": "data/specs/iw326504.json",
+      "model": "パイロット・ウォッチ・マーク XVII - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/pilot-watches/iw326504-pilots-watch-mark-xvii",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW327001",
+      "brand": "IWC",
+      "file": "data/specs/iw327001.json",
+      "model": "パイロット・ウォッチ・マーク XVIII - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/pilot-watches/iw327001-pilots-watch-mark-xviii",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW327002",
+      "brand": "IWC",
+      "file": "data/specs/iw327002.json",
+      "model": "パイロット・ウォッチ・マーク XVIII - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/pilot-watches/iw327002-pilots-watch-mark-xviii",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW327004",
+      "brand": "IWC",
+      "file": "data/specs/iw327004.json",
+      "model": "パイロット・ウォッチ・マーク XVIII “プティ・プランス” - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/pilot-watches/iw327004-pilots-watch-mark-xviii-edition-le-petit-prince",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW327011",
+      "brand": "IWC",
+      "file": "data/specs/iw327011.json",
+      "model": "パイロット・ウォッチ・マーク XVIII - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/pilot-watches/iw327011-pilots-watch-mark-xviii",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW329001",
+      "brand": "IWC",
+      "file": "data/specs/iw329001.json",
+      "model": "アクアタイマー・オートマティック - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/aquatimer/iw329001-aquatimer-automatic",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW329002",
+      "brand": "IWC",
+      "file": "data/specs/iw329002.json",
+      "model": "アクアタイマー・オートマティック - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/aquatimer/iw329002-aquatimer-automatic",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW329003",
+      "brand": "IWC",
+      "file": "data/specs/iw329003.json",
+      "model": "アクアタイマー・オートマティック - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/aquatimer/iw329003-aquatimer-automatic",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW329004",
+      "brand": "IWC",
+      "file": "data/specs/iw329004.json",
+      "model": "アクアタイマー・オートマティック - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/aquatimer/iw329004-aquatimer-automatic",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW329005",
+      "brand": "IWC",
+      "file": "data/specs/iw329005.json",
+      "model": "アクアタイマー・オートマティック “エクスペディション・ジャック＝イヴ・クストー” - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/aquatimer/iw329005-aquatimer-automatic-edition-expedition-jacques-yves-cousteau",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW356501",
+      "brand": "IWC",
+      "file": "data/specs/iw356501.json",
+      "model": "ポートフィノ・オートマティック - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/watches/portofino/iw356501-portofino-automatic",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW356502",
+      "brand": "IWC",
+      "file": "data/specs/iw356502.json",
+      "model": "ポートフィノ・オートマティック - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/watches/portofino/iw356502-portofino-automatic",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW356504",
+      "brand": "IWC",
+      "file": "data/specs/iw356504.json",
+      "model": "ポートフィノ・オートマティック - 18Kレッドゴールド",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/watches/portofino/iw356504-portofino-automatic",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW356505",
+      "brand": "IWC",
+      "file": "data/specs/iw356505.json",
+      "model": "ポートフィノ・オートマティック - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/watches/portofino/iw356505-portofino-automatic",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW356506",
+      "brand": "IWC",
+      "file": "data/specs/iw356506.json",
+      "model": "ポートフィノ・オートマティック - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/watches/portofino/iw356506-portofino-automatic",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW356517",
+      "brand": "IWC",
+      "file": "data/specs/iw356517.json",
+      "model": "ポートフィノ・オートマティック - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/watches/portofino/iw356517-portofino-automatic",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW358304",
+      "brand": "IWC",
+      "file": "data/specs/iw358304.json",
+      "model": "ポルトギーゼ・​オートマティック40 - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/watches/portugieser/iw358304-portugieser-automatic-40",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW358305",
+      "brand": "IWC",
+      "file": "data/specs/iw358305.json",
+      "model": "ポルトギーゼ・​オートマティック40 - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/watches/portugieser/iw358305-portugieser-automatic-40",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW371445",
+      "brand": "IWC",
+      "file": "data/specs/iw371445.json",
+      "model": "ポルトギーゼ・クロノグラフ - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/portugieser/iw371445-portugieser-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW371446",
+      "brand": "IWC",
+      "file": "data/specs/iw371446.json",
+      "model": "ポルトギーゼ・クロノグラフ - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/portugieser/iw371446-portugieser-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW371447",
+      "brand": "IWC",
+      "file": "data/specs/iw371447.json",
+      "model": "ポルトギーゼ・クロノグラフ - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/portugieser/iw371447-portugieser-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW371480",
+      "brand": "IWC",
+      "file": "data/specs/iw371480.json",
+      "model": "ポルトギーゼ・クロノグラフ - 18Kレッドゴールド",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/portugieser/iw371480-portugieser-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW371482",
+      "brand": "IWC",
+      "file": "data/specs/iw371482.json",
+      "model": "ポルトギーゼ・クロノグラフ - 18Kレッドゴールド",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/portugieser/iw371482-portugieser-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW371609",
+      "brand": "IWC",
+      "file": "data/specs/iw371609.json",
+      "model": "ポルトギーゼ・クロノグラフ - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/watches/portugieser/iw371609-portugieser-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW376801",
+      "brand": "IWC",
+      "file": "data/specs/iw376801.json",
+      "model": "アクアタイマー・クロノグラフ - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/aquatimer/iw376801-aquatimer-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW376802",
+      "brand": "IWC",
+      "file": "data/specs/iw376802.json",
+      "model": "アクアタイマー・クロノグラフ - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/aquatimer/iw376802-aquatimer-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW376803",
+      "brand": "IWC",
+      "file": "data/specs/iw376803.json",
+      "model": "アクアタイマー・クロノグラフ - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/watches/aquatimer/iw376803-aquatimer-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW376804",
+      "brand": "IWC",
+      "file": "data/specs/iw376804.json",
+      "model": "アクアタイマー・クロノグラフ - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/aquatimer/iw376804-aquatimer-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW376805",
+      "brand": "IWC",
+      "file": "data/specs/iw376805.json",
+      "model": "アクアタイマー・クロノグラフ “エクスペディション・ジャック＝イヴ・クストー” - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/aquatimer/iw376805-aquatimer-chronograph-edition-expedition-jacques-yves-cousteau",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW377701",
+      "brand": "IWC",
+      "file": "data/specs/iw377701.json",
+      "model": "パイロット・ウォッチ・クロノグラフ - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/pilot-watches/iw377701-pilots-watch-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW377709",
+      "brand": "IWC",
+      "file": "data/specs/iw377709.json",
+      "model": "パイロット・ウォッチ・クロノグラフ - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/pilot-watches/iw377709-pilots-watch-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW377710",
+      "brand": "IWC",
+      "file": "data/specs/iw377710.json",
+      "model": "パイロット・ウォッチ・クロノグラフ - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/pilot-watches/iw377710-pilots-watch-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW377719",
+      "brand": "IWC",
+      "file": "data/specs/iw377719.json",
+      "model": "パイロット・ウォッチ・クロノグラフ ・スピットファイア - ステンレススティール",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/pilot-watches/iw377719-pilots-watch-chronograph-spitfire",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW390502",
+      "brand": "IWC",
+      "file": "data/specs/iw390502.json",
+      "model": "ポルトギーゼ・ヨットクラブ・クロノグラフ - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/portugieser/iw390502-portugieser-yacht-club-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW390503",
+      "brand": "IWC",
+      "file": "data/specs/iw390503.json",
+      "model": "ポルトギーゼ・ヨットクラブ・クロノグラフ - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/portugieser/iw390503-portugieser-yacht-club-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW391007",
+      "brand": "IWC",
+      "file": "data/specs/iw391007.json",
+      "model": "ポートフィノ・クロノグラフ - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/portofino/iw391007-portofino-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW391008",
+      "brand": "IWC",
+      "file": "data/specs/iw391008.json",
+      "model": "ポートフィノ・クロノグラフ - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/portofino/iw391008-portofino-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW391009",
+      "brand": "IWC",
+      "file": "data/specs/iw391009.json",
+      "model": "ポートフィノ・クロノグラフ - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/portofino/iw391009-portofino-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW391010",
+      "brand": "IWC",
+      "file": "data/specs/iw391010.json",
+      "model": "ポートフィノ・クロノグラフ - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/portofino/iw391010-portofino-chronograph",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW500703",
+      "brand": "IWC",
+      "file": "data/specs/iw500703.json",
+      "model": "ポルトギーゼ・オートマティック - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/portugieser/iw500703-portugieser-automatic",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW500704",
+      "brand": "IWC",
+      "file": "data/specs/iw500704.json",
+      "model": "ポルトギーゼ・オートマティック - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/portugieser/iw500704-portugieser-automatic",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW500705",
+      "brand": "IWC",
+      "file": "data/specs/iw500705.json",
+      "model": "ポルトギーゼ・オートマティック - ステンレススティール",
+      "fields": 10,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/portugieser/iw500705-portugieser-automatic",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
+    {
+      "ref": "IW501902",
+      "brand": "IWC",
+      "file": "data/specs/iw501902.json",
+      "model": "ビッグ・パイロット・ウォッチ “トップガン・ミラマー” - セラミック",
+      "fields": 11,
+      "lang": "ja",
+      "source_url": "https://www.iwc.com/jp-ja/past-collections/pilot-watches/iw501902-big-pilots-watch-top-gun-miramar",
+      "source": "公式サイトを直接取得（アーカイブではない）"
+    },
     {
       "ref": "123.10.35.60.01.001",
       "brand": "オメガ",
@@ -2930,6 +3385,222 @@
       "snapshot": "2020-10-30",
       "archive": "http://web.archive.org/web/20201030034303/https://www.audemarspiguet.com/ja/watch-collection/royal-oak-offshore/26480TI.OO.A027CA.01",
       "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "W20012C4",
+      "brand": "カルティエ",
+      "file": "data/specs/w20012c4.json",
+      "model": "サントス ドゥ カルティエ ガルベ ウォッチ",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E5%A5%B3%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8/w20012c4-%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%82%AC%E3%83%AB%E3%83%99-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "snapshot": "2015-04-09",
+      "archive": "http://web.archive.org/web/20150409224039/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E5%A5%B3%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8/w20012c4-%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%82%AC%E3%83%AB%E3%83%99-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "note": "公式ページのアーカイブが2015年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "W20056D6",
+      "brand": "カルティエ",
+      "file": "data/specs/w20056d6.json",
+      "model": "サントス ドゥ カルティエ ガルベ ウォッチ",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E5%A5%B3%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/w20056d6-%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%82%AC%E3%83%AB%E3%83%99-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "snapshot": "2015-04-05",
+      "archive": "http://web.archive.org/web/20150405020326/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E5%A5%B3%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/w20056d6-%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%82%AC%E3%83%AB%E3%83%99-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "note": "公式ページのアーカイブが2015年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "W20106X8",
+      "brand": "カルティエ",
+      "file": "data/specs/w20106x8.json",
+      "model": "サントス 100 ウォッチ",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E7%94%B7%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/w20106x8-%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-100-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "snapshot": "2015-05-12",
+      "archive": "http://web.archive.org/web/20150512035339/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E7%94%B7%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/w20106x8-%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-100-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "note": "公式ページのアーカイブが2015年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "W20126X8",
+      "brand": "カルティエ",
+      "file": "data/specs/w20126x8.json",
+      "model": "サントス 100 ウォッチ",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E5%A5%B3%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8/w20126x8-%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-100-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "snapshot": "2015-04-02",
+      "archive": "http://web.archive.org/web/20150402062526/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E5%A5%B3%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8/w20126x8-%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-100-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "note": "公式ページのアーカイブが2015年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "W25066Z6",
+      "brand": "カルティエ",
+      "file": "data/specs/w25066z6.json",
+      "model": "サントス ドゥモワゼル ウォッチ",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E5%A5%B3%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8/w25066z6-%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-%E3%83%89%E3%82%A5%E3%83%A2%E3%83%AF%E3%82%BC%E3%83%AB-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "snapshot": "2015-04-10",
+      "archive": "http://web.archive.org/web/20150410063226/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E5%A5%B3%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8/w25066z6-%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-%E3%83%89%E3%82%A5%E3%83%A2%E3%83%AF%E3%82%BC%E3%83%AB-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "note": "公式ページのアーカイブが2015年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "W51002Q3",
+      "brand": "カルティエ",
+      "file": "data/specs/w51002q3.json",
+      "model": "タンク フランセーズ ウォッチ",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E7%94%B7%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/w51002q3-%E3%82%BF%E3%83%B3%E3%82%AF-%E3%83%95%E3%83%A9%E3%83%B3%E3%82%BB%E3%83%BC%E3%82%BA-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "snapshot": "2015-04-17",
+      "archive": "http://web.archive.org/web/20150417165349/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E7%94%B7%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/w51002q3-%E3%82%BF%E3%83%B3%E3%82%AF-%E3%83%95%E3%83%A9%E3%83%B3%E3%82%BB%E3%83%BC%E3%82%BA-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "note": "公式ページのアーカイブが2015年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "W5200004",
+      "brand": "カルティエ",
+      "file": "data/specs/w5200004.json",
+      "model": "タンク ソロ ウォッチ",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E7%94%B7%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/w5200004-%E3%82%BF%E3%83%B3%E3%82%AF-%E3%82%BD%E3%83%AD-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "snapshot": "2015-04-17",
+      "archive": "http://web.archive.org/web/20150417100337/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E7%94%B7%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/w5200004-%E3%82%BF%E3%83%B3%E3%82%AF-%E3%82%BD%E3%83%AD-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "note": "公式ページのアーカイブが2015年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "W5310022",
+      "brand": "カルティエ",
+      "file": "data/specs/w5310022.json",
+      "model": "タンク アングレーズ ウォッチ、SM",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E5%A5%B3%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%BF%E3%83%B3%E3%82%AF/w5310022-%E3%82%BF%E3%83%B3%E3%82%AF-%E3%82%A2%E3%83%B3%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%BA-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81%E3%80%81sm",
+      "snapshot": "2015-04-03",
+      "archive": "http://web.archive.org/web/20150403210932/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E5%A5%B3%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%BF%E3%83%B3%E3%82%AF/w5310022-%E3%82%BF%E3%83%B3%E3%82%AF-%E3%82%A2%E3%83%B3%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%BA-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81%E3%80%81sm",
+      "note": "公式ページのアーカイブが2015年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "W5310036",
+      "brand": "カルティエ",
+      "file": "data/specs/w5310036.json",
+      "model": "タンク アングレーズ ウォッチ SM",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E5%A5%B3%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%BF%E3%83%B3%E3%82%AF/w5310036-%E3%82%BF%E3%83%B3%E3%82%AF-%E3%82%A2%E3%83%B3%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%BA-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81-sm",
+      "snapshot": "2015-04-04",
+      "archive": "http://web.archive.org/web/20150404110308/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E5%A5%B3%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%BF%E3%83%B3%E3%82%AF/w5310036-%E3%82%BF%E3%83%B3%E3%82%AF-%E3%82%A2%E3%83%B3%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%BA-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81-sm",
+      "note": "公式ページのアーカイブが2015年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "W5330003",
+      "brand": "カルティエ",
+      "file": "data/specs/w5330003.json",
+      "model": "Tank MC watch",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/ja/%E5%95%86%E5%93%81%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%83%BC/%E6%99%82%E8%A8%88/%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/valentines-day/w5330003-tank-mc-watch.html",
+      "snapshot": "2021-09-24",
+      "archive": "http://web.archive.org/web/20210924081238/https://www.cartier.jp/ja/%E5%95%86%E5%93%81%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%83%BC/%E6%99%82%E8%A8%88/%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/valentines-day/w5330003-tank-mc-watch.html",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "W5330007",
+      "brand": "カルティエ",
+      "file": "data/specs/w5330007.json",
+      "model": "タンク MC ウォッチ",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E7%94%B7%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%BF%E3%83%B3%E3%82%AF/w5330007-%E3%82%BF%E3%83%B3%E3%82%AF-mc-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "snapshot": "2015-04-04",
+      "archive": "http://web.archive.org/web/20150404142253/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E7%94%B7%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%BF%E3%83%B3%E3%82%AF/w5330007-%E3%82%BF%E3%83%B3%E3%82%AF-mc-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "note": "公式ページのアーカイブが2015年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "W5330008",
+      "brand": "カルティエ",
+      "file": "data/specs/w5330008.json",
+      "model": "タンク MC ウォッチ",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E7%94%B7%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%BF%E3%83%B3%E3%82%AF/w5330008-%E3%82%BF%E3%83%B3%E3%82%AF-mc-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "snapshot": "2015-04-03",
+      "archive": "http://web.archive.org/web/20150403143219/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E7%94%B7%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%BF%E3%83%B3%E3%82%AF/w5330008-%E3%82%BF%E3%83%B3%E3%82%AF-mc-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "note": "公式ページのアーカイブが2015年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "W6701005",
+      "brand": "カルティエ",
+      "file": "data/specs/w6701005.json",
+      "model": "ロンド ソロ ドゥ カルティエ ウォッチ",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E5%A5%B3%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/w6701005-%E3%83%AD%E3%83%B3%E3%83%89-%E3%82%BD%E3%83%AD-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "snapshot": "2015-04-02",
+      "archive": "http://web.archive.org/web/20150402022011/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E5%A5%B3%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/w6701005-%E3%83%AD%E3%83%B3%E3%83%89-%E3%82%BD%E3%83%AD-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "note": "公式ページのアーカイブが2015年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "W7100055",
+      "brand": "カルティエ",
+      "file": "data/specs/w7100055.json",
+      "model": "カリブル ドゥ カルティエ ダイバー ウォッチ",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E6%96%B0%E4%BD%9C/w7100055-%E3%82%AB%E3%83%AA%E3%83%96%E3%83%AB-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%83%80%E3%82%A4%E3%83%90%E3%83%BC-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "snapshot": "2015-04-02",
+      "archive": "http://web.archive.org/web/20150402160006/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E6%96%B0%E4%BD%9C/w7100055-%E3%82%AB%E3%83%AA%E3%83%96%E3%83%AB-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%83%80%E3%82%A4%E3%83%90%E3%83%BC-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "note": "公式ページのアーカイブが2015年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "W7100056",
+      "brand": "カルティエ",
+      "file": "data/specs/w7100056.json",
+      "model": "カリブル ドゥ カルティエ ダイバー ウォッチ",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E7%94%B7%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/w7100056-%E3%82%AB%E3%83%AA%E3%83%96%E3%83%AB-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%83%80%E3%82%A4%E3%83%90%E3%83%BC-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "snapshot": "2014-09-09",
+      "archive": "http://web.archive.org/web/20140909110634/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E7%94%B7%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/w7100056-%E3%82%AB%E3%83%AA%E3%83%96%E3%83%AB-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%83%80%E3%82%A4%E3%83%90%E3%83%BC-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "note": "公式ページのアーカイブが2014年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "W7100057",
+      "brand": "カルティエ",
+      "file": "data/specs/w7100057.json",
+      "model": "カリブル ドゥ カルティエ ダイバー ウォッチ",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E7%94%B7%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%AB%E3%83%AA%E3%83%96%E3%83%AB-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8/w7100057-%E3%82%AB%E3%83%AA%E3%83%96%E3%83%AB-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%83%80%E3%82%A4%E3%83%90%E3%83%BC-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "snapshot": "2015-04-03",
+      "archive": "http://web.archive.org/web/20150403064609/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E7%94%B7%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%AB%E3%83%AA%E3%83%96%E3%83%AB-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8/w7100057-%E3%82%AB%E3%83%AA%E3%83%96%E3%83%AB-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%83%80%E3%82%A4%E3%83%90%E3%83%BC-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "note": "公式ページのアーカイブが2015年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "WF9005Y8",
+      "brand": "カルティエ",
+      "file": "data/specs/wf9005y8.json",
+      "model": "サントス ドゥモワゼル ウォッチ",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E5%A5%B3%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8/wf9005y8-%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-%E3%83%89%E3%82%A5%E3%83%A2%E3%83%AF%E3%82%BC%E3%83%AB-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "snapshot": "2015-04-02",
+      "archive": "http://web.archive.org/web/20150402065235/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E5%A5%B3%E6%80%A7%E7%94%A8%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-%E3%83%89%E3%82%A5-%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8/wf9005y8-%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9-%E3%83%89%E3%82%A5%E3%83%A2%E3%83%AF%E3%82%BC%E3%83%AB-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "note": "公式ページのアーカイブが2015年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "WT100024",
+      "brand": "カルティエ",
+      "file": "data/specs/wt100024.json",
+      "model": "タンク アングレーズ ウォッチ",
+      "fields": 2,
+      "lang": "ja",
+      "source_url": "https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E6%96%B0%E4%BD%9C/wt100024-%E3%82%BF%E3%83%B3%E3%82%AF-%E3%82%A2%E3%83%B3%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%BA-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "snapshot": "2015-04-02",
+      "archive": "http://web.archive.org/web/20150402203514/https://www.cartier.jp/%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81/%E3%82%AB%E3%83%AB%E3%83%86%E3%82%A3%E3%82%A8-%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/%E6%96%B0%E4%BD%9C/wt100024-%E3%82%BF%E3%83%B3%E3%82%AF-%E3%82%A2%E3%83%B3%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%BA-%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81",
+      "note": "公式ページのアーカイブが2015年のものしか取得できず、その時点の内容を採用"
     },
     {
       "ref": "25407N.0001",

@@ -1,0 +1,38 @@
+{
+  "ref": "IW376803",
+  "brand": "IWC",
+  "model": "アクアタイマー・クロノグラフ - ステンレススティール",
+  "case_diameter_mm": 44,
+  "case_material": "ステンレススティール",
+  "dial": "ブラック",
+  "crown": "ねじ込み式",
+  "case_back": "スタンダード",
+  "movement": "自動巻き",
+  "caliber": "79320",
+  "functions": "秒針停止機能付きスモールセコンド、両面反射防止加工を施したドーム型サファイアガラス、クイック交換システム、セーフダイブ・システム付き機械式回転式アウター/インナーベゼル、日付・曜日表示、ストップウォッチ機能（時・分・秒）",
+  "power_reserve_h": 44,
+  "water_resistance_atm": 30,
+  "bracelet": "IWC特許取得のブレスレットクイック交換システムを備えたブラックのラバー・ストラップ",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.iwc.com/jp-ja/watches/aquatimer/iw376803-aquatimer-chronograph",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "crown",
+        "dial",
+        "functions",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_atm"
+      ]
+    }
+  ]
+}

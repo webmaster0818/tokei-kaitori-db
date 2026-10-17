@@ -1,0 +1,36 @@
+{
+  "ref": "IW500703",
+  "brand": "IWC",
+  "model": "ポルトギーゼ・オートマティック - ステンレススティール",
+  "case_diameter_mm": 42.3,
+  "case_material": "ステンレススティール",
+  "dial": "ブラック",
+  "case_back": "シンセティック サファイア クリスタル付き",
+  "movement": "自動巻き",
+  "caliber": "52010",
+  "functions": "秒針停止機能付きスモールセコンド、両面反射防止加工を施したドーム型サファイアガラス、日付表示、ペラトン自動巻き機構、18Kゴールド製メダルを配したローター、パワーリザーブ表示、7日間パワーリザーブ",
+  "power_reserve_h": 168,
+  "water_resistance_atm": 3,
+  "bracelet": "ブラックのアリゲーター・ストラップ",
+  "status": "2026-10-17時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.iwc.com/jp-ja/past-collections/portugieser/iw500703-portugieser-automatic",
+      "checked": "2026-10-17",
+      "lang": "ja",
+      "model_source": "公式ページのタイトル",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_back",
+        "case_diameter_mm",
+        "case_material",
+        "dial",
+        "functions",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_atm"
+      ]
+    }
+  ]
+}
