@@ -25,22 +25,22 @@
     "ヴァシュロン・コンスタンタンの「文字盤」は色ではなく素材（ブラス等）のため dial には入れていない"
   ],
   "counts": {
-    "created": 103,
-    "not_created": 20,
+    "created": 140,
+    "not_created": 96,
     "by_brand": {
-      "オメガ": 49,
+      "オメガ": 86,
       "オーデマ・ピゲ": 21,
       "ロレックス": 21,
       "ヴァシュロン・コンスタンタン": 12
     },
     "not_created_by_brand": {
       "ロレックス": 4,
-      "オメガ": 2,
+      "オメガ": 78,
       "オーデマ・ピゲ": 10,
       "ヴァシュロン・コンスタンタン": 4
     },
-    "fields_total": 1034,
-    "snapshot_2025_or_earlier": 58
+    "fields_total": 1354,
+    "snapshot_2025_or_earlier": 92
   },
   "created": [
     {
@@ -60,7 +60,7 @@
       "brand": "オメガ",
       "file": "data/specs/12310382102001.json",
       "model": "コンステレーション コーアクシャル クロノメーター 38mm",
-      "fields": 8,
+      "fields": 9,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/watch-omega-constellation-co-axial-chronometer-38-mm-12310382102001",
       "snapshot": "2025-01-20",
@@ -105,7 +105,7 @@
       "brand": "オメガ",
       "file": "data/specs/21030422004001.json",
       "model": "オメガ シーマスター コーアクシャル マスター クロノメーター",
-      "fields": 8,
+      "fields": 9,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21030422004001",
       "snapshot": "2025-11-15",
@@ -117,7 +117,7 @@
       "brand": "オメガ",
       "file": "data/specs/21030422006001.json",
       "model": null,
-      "fields": 8,
+      "fields": 9,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21030422006001",
       "snapshot": "2025-06-28",
@@ -125,11 +125,34 @@
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "210.32.42.20.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/21032422001001.json",
+      "model": "シーマスター",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21032422001001",
+      "snapshot": "2026-09-15",
+      "archive": "http://web.archive.org/web/20260915082724/https://www.omegawatches.com/en-us/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21032422001001"
+    },
+    {
+      "ref": "210.32.42.20.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/21032422003001.json",
+      "model": "シーマスター",
+      "fields": 6,
+      "lang": "ja",
+      "source_url": "https://www.omegawatches.jp/ja/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21032422003001",
+      "snapshot": "2021-07-24",
+      "archive": "http://web.archive.org/web/20210724102215/https://www.omegawatches.jp/ja/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21032422003001",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "210.90.42.20.01.001",
       "brand": "オメガ",
       "file": "data/specs/21090422001001.json",
       "model": "オメガ シーマスター 300M 007",
-      "fields": 8,
+      "fields": 9,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21090422001001",
       "snapshot": "2025-11-26",
@@ -141,12 +164,23 @@
       "brand": "オメガ",
       "file": "data/specs/21092422001001.json",
       "model": "シーマスター",
-      "fields": 8,
+      "fields": 9,
       "lang": "en",
-      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21092422001001",
-      "snapshot": "2025-08-10",
-      "archive": "http://web.archive.org/web/20250810195253/https://www.omegawatches.com/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21092422001001",
-      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21092422001001",
+      "snapshot": "2026-09-30",
+      "archive": "http://web.archive.org/web/20260930063557/https://www.omegawatches.com/en-us/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21092422001001"
+    },
+    {
+      "ref": "212.30.36.20.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/21230362003001.json",
+      "model": "シーマスター",
+      "fields": 7,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-diver-300m-co-axial-36-25-mm-21230362003001",
+      "snapshot": "2020-11-12",
+      "archive": "http://web.archive.org/web/20201112004256/https://www.omegawatches.com/watch-omega-seamaster-diver-300m-co-axial-36-25-mm-21230362003001",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
     },
     {
       "ref": "212.30.41.20.01.003",
@@ -185,11 +219,119 @@
       "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "215.30.40.20.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/21530402001001.json",
+      "model": "シーマスター プラネットオーシャン",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-39-5-mm-21530402001001",
+      "snapshot": "2025-08-01",
+      "archive": "http://web.archive.org/web/20250801083821/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-39-5-mm-21530402001001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "215.30.44.21.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/21530442101001.json",
+      "model": "シーマスター プラネットオーシャン",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21530442101001",
+      "snapshot": "2025-11-15",
+      "archive": "http://web.archive.org/web/20251115162259/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21530442101001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "215.30.44.21.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/21530442103001.json",
+      "model": "シーマスター プラネットオーシャン",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21530442103001",
+      "snapshot": "2025-08-01",
+      "archive": "http://web.archive.org/web/20250801083821/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21530442103001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "215.30.46.51.01.002",
+      "brand": "オメガ",
+      "file": "data/specs/21530465101002.json",
+      "model": "シーマスター プラネットオーシャン",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-chronograph-45-5-mm-21530465101002",
+      "snapshot": "2025-08-01",
+      "archive": "http://web.archive.org/web/20250801083821/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-chronograph-45-5-mm-21530465101002",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "215.30.46.51.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/21530465103001.json",
+      "model": "シーマスター プラネットオーシャン",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-chronograph-45-5-mm-21530465103001",
+      "snapshot": "2025-07-31",
+      "archive": "http://web.archive.org/web/20250731143213/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-chronograph-45-5-mm-21530465103001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "215.33.46.51.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/21533465101001.json",
+      "model": "シーマスター プラネットオーシャン",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-chronograph-45-5-mm-21533465101001",
+      "snapshot": "2025-02-19",
+      "archive": "http://web.archive.org/web/20250219151254/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-chronograph-45-5-mm-21533465101001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "215.90.44.21.99.001",
+      "brand": "オメガ",
+      "file": "data/specs/21590442199001.json",
+      "model": "シーマスター プラネットオーシャン",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21590442199001",
+      "snapshot": "2025-08-10",
+      "archive": "http://web.archive.org/web/20250810195302/https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21590442199001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "215.92.44.21.99.001",
+      "brand": "オメガ",
+      "file": "data/specs/21592442199001.json",
+      "model": "シーマスター プラネットオーシャン",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21592442199001",
+      "snapshot": "2025-11-15",
+      "archive": "http://web.archive.org/web/20251115223452/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-43-5-mm-21592442199001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "215.92.46.22.01.002",
+      "brand": "オメガ",
+      "file": "data/specs/21592462201002.json",
+      "model": "シーマスター プラネットオーシャン",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-gmt-45-5-mm-21592462201002",
+      "snapshot": "2024-04-04",
+      "archive": "http://web.archive.org/web/20240404064524/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-co-axial-master-chronometer-gmt-45-5-mm-21592462201002",
+      "note": "公式ページのアーカイブが2024年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "220.10.38.20.01.002",
       "brand": "オメガ",
       "file": "data/specs/22010382001002.json",
       "model": "シーマスター レイルマスター コーアクシャル マスター クロノメーター 38mm",
-      "fields": 8,
+      "fields": 9,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-railmaster-co-axial-master-chronometer-38-mm-22010382001002",
       "snapshot": "2025-09-16",
@@ -197,11 +339,23 @@
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "220.10.40.20.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/22010402001001.json",
+      "model": "レイルマスター",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-railmaster-co-axial-master-chronometer-40-mm-22010402001001",
+      "snapshot": "2025-07-31",
+      "archive": "http://web.archive.org/web/20250731075417/https://www.omegawatches.com/en-us/watch-omega-seamaster-railmaster-co-axial-master-chronometer-40-mm-22010402001001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "220.10.41.21.01.001",
       "brand": "オメガ",
       "file": "data/specs/22010412101001.json",
       "model": "オメガ シーマスター",
-      "fields": 8,
+      "fields": 9,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-41-mm-22010412101001",
       "snapshot": "2025-10-12",
@@ -209,11 +363,83 @@
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "220.10.41.21.02.002",
+      "brand": "オメガ",
+      "file": "data/specs/22010412102002.json",
+      "model": "シーマスターアクアテラ",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-small-seconds-41-mm-22010412102002",
+      "snapshot": "2025-12-23",
+      "archive": "http://web.archive.org/web/20251223060624/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-small-seconds-41-mm-22010412102002",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "220.12.41.21.02.005",
+      "brand": "オメガ",
+      "file": "data/specs/22012412102005.json",
+      "model": "シーマスターアクアテラ",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-small-seconds-41-mm-22012412102005",
+      "snapshot": "2025-12-23",
+      "archive": "http://web.archive.org/web/20251223060624/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-small-seconds-41-mm-22012412102005",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "220.12.41.21.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/22012412103001.json",
+      "model": "シーマスターアクアテラ",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-41-mm-22012412103001",
+      "snapshot": "2025-03-23",
+      "archive": "http://web.archive.org/web/20250323033717/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-41-mm-22012412103001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "227.90.55.21.04.001",
+      "brand": "オメガ",
+      "file": "data/specs/22790552104001.json",
+      "model": "シーマスター",
+      "fields": 8,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-ploprof-1200m-co-axial-master-chronometer-55-x-48-mm-22790552104001",
+      "snapshot": "2025-03-18",
+      "archive": "http://web.archive.org/web/20250318143608/https://www.omegawatches.com/en-us/watch-omega-seamaster-ploprof-1200m-co-axial-master-chronometer-55-x-48-mm-22790552104001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.10.39.21.01.002",
+      "brand": "オメガ",
+      "file": "data/specs/23110392101002.json",
+      "model": "シーマスターアクアテラ",
+      "fields": 6,
+      "lang": "ja",
+      "source_url": "https://www.omegawatches.jp/ja/watch-omega-seamaster-aqua-terra-150m-omega-master-co-axial-38-5-mm-23110392101002",
+      "snapshot": "2019-12-10",
+      "archive": "http://web.archive.org/web/20191210110507/https://www.omegawatches.jp/ja/watch-omega-seamaster-aqua-terra-150m-omega-master-co-axial-38-5-mm-23110392101002",
+      "note": "公式ページのアーカイブが2019年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.10.39.21.02.002",
+      "brand": "オメガ",
+      "file": "data/specs/23110392102002.json",
+      "model": "シーマスターアクアテラ",
+      "fields": 7,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-master-co-axial-chronometer-38-5-mm-23110392102002",
+      "snapshot": "2022-04-25",
+      "archive": "http://web.archive.org/web/20220425233928/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-master-co-axial-chronometer-38-5-mm-23110392102002",
+      "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "231.10.39.21.03.001",
       "brand": "オメガ",
       "file": "data/specs/23110392103001.json",
       "model": "シーマスター アクアテラ コーアクシャル クロノメーター",
-      "fields": 8,
+      "fields": 9,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-omega-co-axial-38-5-mm-23110392103001",
       "snapshot": "2025-03-01",
@@ -221,16 +447,100 @@
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "231.10.42.21.01.004",
+      "brand": "オメガ",
+      "file": "data/specs/23110422101004.json",
+      "model": "シーマスターアクアテラ",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-master-co-axial-chronometer-41-5-mm-23110422101004",
+      "snapshot": "2024-12-06",
+      "archive": "http://web.archive.org/web/20241206193429/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-master-co-axial-chronometer-41-5-mm-23110422101004",
+      "note": "公式ページのアーカイブが2024年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.10.42.21.03.003",
+      "brand": "オメガ",
+      "file": "data/specs/23110422103003.json",
+      "model": "シーマスターアクアテラ",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-master-co-axial-chronometer-41-5-mm-23110422103003",
+      "snapshot": "2025-01-24",
+      "archive": "http://web.archive.org/web/20250124213840/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-master-co-axial-chronometer-41-5-mm-23110422103003",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.10.43.22.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/23110432203001.json",
+      "model": "シーマスターアクアテラ",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-gmt-43-mm-23110432203001",
+      "snapshot": "2024-10-01",
+      "archive": "http://web.archive.org/web/20241001070831/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-gmt-43-mm-23110432203001",
+      "note": "公式ページのアーカイブが2024年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.10.43.52.02.001",
+      "brand": "オメガ",
+      "file": "data/specs/23110435202001.json",
+      "model": "シーマスターアクアテラ",
+      "fields": 7,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-gmt-chronograph-43-mm-23110435202001",
+      "snapshot": "2021-12-06",
+      "archive": "http://web.archive.org/web/20211206115301/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-gmt-chronograph-43-mm-23110435202001",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.10.43.52.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/23110435203001.json",
+      "model": "シーマスターアクアテラ",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-gmt-chronograph-43-mm-23110435203001",
+      "snapshot": "2024-12-08",
+      "archive": "http://web.archive.org/web/20241208081625/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-gmt-chronograph-43-mm-23110435203001",
+      "note": "公式ページのアーカイブが2024年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "231.10.44.50.06.001",
+      "brand": "オメガ",
+      "file": "data/specs/23110445006001.json",
+      "model": "シーマスターアクアテラ",
+      "fields": 8,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-chronograph-44-mm-23110445006001",
+      "snapshot": "2021-04-21",
+      "archive": "http://web.archive.org/web/20210421020423/https://www.omegawatches.com/watch-omega-seamaster-aqua-terra-150m-co-axial-chronometer-chronograph-44-mm-23110445006001",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "232.30.42.21.01.001",
       "brand": "オメガ",
       "file": "data/specs/23230422101001.json",
       "model": "シーマスター600 プラネットオーシャン",
-      "fields": 8,
+      "fields": 9,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-42-mm-23230422101001",
       "snapshot": "2025-01-22",
       "archive": "http://web.archive.org/web/20250122061451/https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-42-mm-23230422101001",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "232.30.42.21.01.002",
+      "brand": "オメガ",
+      "file": "data/specs/23230422101002.json",
+      "model": "シーマスター600 プラネットオーシャン",
+      "fields": 7,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-42-mm-23230422101002",
+      "snapshot": "2022-01-27",
+      "archive": "http://web.archive.org/web/20220127125622/https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-42-mm-23230422101002",
+      "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
     },
     {
       "ref": "232.30.46.21.01.001",
@@ -257,11 +567,35 @@
       "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "232.30.46.51.01.002",
+      "brand": "オメガ",
+      "file": "data/specs/23230465101002.json",
+      "model": "シーマスター プラネットオーシャン",
+      "fields": 6,
+      "lang": "ja",
+      "source_url": "https://www.omegawatches.jp/ja/watch-omega-seamaster-planet-ocean-600m-co-axial-chronometer-chronograph-45-5-mm-23230465101002",
+      "snapshot": "2021-04-18",
+      "archive": "http://web.archive.org/web/20210418180448/https://www.omegawatches.jp/ja/watch-omega-seamaster-planet-ocean-600m-co-axial-chronometer-chronograph-45-5-mm-23230465101002",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "232.32.44.22.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/23232442201001.json",
+      "model": "シーマスター プラネットオーシャン",
+      "fields": 6,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-gmt-43-5-mm-23232442201001",
+      "snapshot": "2020-11-11",
+      "archive": "http://web.archive.org/web/20201111221812/https://www.omegawatches.com/en-us/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-gmt-43-5-mm-23232442201001",
+      "note": "公式ページのアーカイブが2020年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "233.30.41.21.01.001",
       "brand": "オメガ",
       "file": "data/specs/23330412101001.json",
       "model": "シーマスター300 マスター コーアクシャル クロノメーター 41mm",
-      "fields": 8,
+      "fields": 9,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-300-master-co-axial-chronometer-41-mm-23330412101001",
       "snapshot": "2025-07-13",
@@ -273,7 +607,7 @@
       "brand": "オメガ",
       "file": "data/specs/23390412103001.json",
       "model": "シーマスター300 マスター コーアクシャル クロノメーター 41mm",
-      "fields": 8,
+      "fields": 9,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-300-master-co-axial-chronometer-41-mm-23390412103001",
       "snapshot": "2025-03-06",
@@ -285,7 +619,7 @@
       "brand": "オメガ",
       "file": "data/specs/23410392001001.json",
       "model": "シーマスター300 コーアクシャル マスター クロノメーター 39mm",
-      "fields": 8,
+      "fields": 9,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-300-co-axial-master-chronometer-39-mm-23410392001001",
       "snapshot": "2025-03-03",
@@ -319,7 +653,7 @@
       "brand": "オメガ",
       "file": "data/specs/31020425001001.json",
       "model": "スピードマスター ムーンウォッチ",
-      "fields": 6,
+      "fields": 7,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/watch-omega-speedmaster-moonwatch-anniversary-limited-series-31020425001001",
       "snapshot": "2020-09-29",
@@ -386,7 +720,7 @@
       "brand": "オメガ",
       "file": "data/specs/31110393001001.json",
       "model": "スピードマスター Speedmaster '57 クロノグラフ 38.6MM",
-      "fields": 8,
+      "fields": 9,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/watch-omega-speedmaster-57-chronograph-38-6-mm-31110393001001",
       "snapshot": "2025-04-27",
@@ -420,7 +754,7 @@
       "brand": "オメガ",
       "file": "data/specs/31130423001006.json",
       "model": "スピードマスター ムーンウォッチ プロフェッショナル クロノグラフ 42mm",
-      "fields": 8,
+      "fields": 9,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-moonwatch-professional-chronograph-42-mm-31130423001006",
       "snapshot": "2025-07-10",
@@ -455,12 +789,36 @@
       "brand": "オメガ",
       "file": "data/specs/31133423001002.json",
       "model": "スピードマスター ムーンウォッチ プロフェッショナル クロノグラフ 42mm",
-      "fields": 8,
+      "fields": 9,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/watch-omega-speedmaster-moonwatch-professional-chronograph-42-mm-31133423001002",
       "snapshot": "2024-04-23",
       "archive": "http://web.archive.org/web/20240423015120/https://www.omegawatches.com/watch-omega-speedmaster-moonwatch-professional-chronograph-42-mm-31133423001002",
       "note": "公式ページのアーカイブが2024年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "311.63.44.51.99.001",
+      "brand": "オメガ",
+      "file": "data/specs/31163445199001.json",
+      "model": "スピードマスター ムーンウォッチ",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-dark-side-of-the-moon-co-axial-chronometer-chronograph-44-25-mm-31163445199001",
+      "snapshot": "2025-04-30",
+      "archive": "http://web.archive.org/web/20250430141840/https://www.omegawatches.com/en-us/watch-omega-speedmaster-dark-side-of-the-moon-co-axial-chronometer-chronograph-44-25-mm-31163445199001",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "311.90.44.51.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/31190445103001.json",
+      "model": "スピードマスター ムーンウォッチ",
+      "fields": 6,
+      "lang": "ja",
+      "source_url": "https://www.omegawatches.jp/ja/watch-omega-speedmaster-two-counters-co-axial-chronometer-chronograph-44-25-mm-31190445103001",
+      "snapshot": "2021-05-14",
+      "archive": "http://web.archive.org/web/20210514161619/https://www.omegawatches.jp/ja/watch-omega-speedmaster-two-counters-co-axial-chronometer-chronograph-44-25-mm-31190445103001",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
     },
     {
       "ref": "311.92.44.30.01.001",
@@ -475,6 +833,42 @@
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "311.92.44.51.01.005",
+      "brand": "オメガ",
+      "file": "data/specs/31192445101005.json",
+      "model": "スピードマスター ムーンウォッチ",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-dark-side-of-the-moon-co-axial-chronometer-chronograph-44-25-mm-31192445101005",
+      "snapshot": "2025-03-25",
+      "archive": "http://web.archive.org/web/20250325003527/https://www.omegawatches.com/en-us/watch-omega-speedmaster-dark-side-of-the-moon-co-axial-chronometer-chronograph-44-25-mm-31192445101005",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "311.92.44.51.01.006",
+      "brand": "オメガ",
+      "file": "data/specs/31192445101006.json",
+      "model": "スピードマスター ムーンウォッチ",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-speedmaster-dark-side-of-the-moon-co-axial-chronometer-chronograph-44-25-mm-31192445101006",
+      "snapshot": "2025-06-26",
+      "archive": "http://web.archive.org/web/20250626140227/https://www.omegawatches.com/watch-omega-speedmaster-dark-side-of-the-moon-co-axial-chronometer-chronograph-44-25-mm-31192445101006",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "323.30.40.40.06.001",
+      "brand": "オメガ",
+      "file": "data/specs/32330404006001.json",
+      "model": "スピードマスター デイト",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-speedmaster-date-day-date-chronograph-40-mm-date-32330404006001",
+      "snapshot": "2022-04-12",
+      "archive": "http://web.archive.org/web/20220412003559/https://www.omegawatches.com/watch-omega-speedmaster-date-day-date-chronograph-40-mm-date-32330404006001",
+      "note": "公式ページのアーカイブが2022年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "324.23.38.50.02.002",
       "brand": "オメガ",
       "file": "data/specs/32423385002002.json",
@@ -487,11 +881,23 @@
       "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "324.30.38.50.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/32430385001001.json",
+      "model": "スピードマスター",
+      "fields": 6,
+      "lang": "ja",
+      "source_url": "https://www.omegawatches.jp/ja/watch-omega-speedmaster-38-co-axial-chronometer-chronograph-38-mm-32430385001001",
+      "snapshot": "2021-05-05",
+      "archive": "http://web.archive.org/web/20210505221116/https://www.omegawatches.jp/ja/watch-omega-speedmaster-38-co-axial-chronometer-chronograph-38-mm-32430385001001",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
+    },
+    {
       "ref": "325.92.43.79.01.001",
       "brand": "オメガ",
       "file": "data/specs/32592437901001.json",
       "model": "スピードマスター",
-      "fields": 7,
+      "fields": 8,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-spacemaster-z-33-chronograph-43-x-53-mm-32592437901001",
       "snapshot": "2024-04-04",
@@ -547,16 +953,51 @@
       "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
     },
     {
+      "ref": "329.30.44.51.01.001",
+      "brand": "オメガ",
+      "file": "data/specs/32930445101001.json",
+      "model": "スピードマスター",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-racing-co-axial-master-chronometer-chronograph-44-25-mm-32930445101001",
+      "snapshot": "2026-02-10",
+      "archive": "http://web.archive.org/web/20260210161815/https://www.omegawatches.com/en-us/watch-omega-speedmaster-racing-co-axial-master-chronometer-chronograph-44-25-mm-32930445101001"
+    },
+    {
       "ref": "331.10.42.51.01.001",
       "brand": "オメガ",
       "file": "data/specs/33110425101001.json",
       "model": "オメガ スピードマスター",
-      "fields": 8,
+      "fields": 9,
       "lang": "en",
       "source_url": "https://www.omegawatches.com/en-us/watch-omega-speedmaster-57-co-axial-chronometer-chronograph-41-5-mm-33110425101001",
       "snapshot": "2025-07-26",
       "archive": "http://web.archive.org/web/20250726093825/https://www.omegawatches.com/en-us/watch-omega-speedmaster-57-co-axial-chronometer-chronograph-41-5-mm-33110425101001",
       "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "331.10.42.51.01.002",
+      "brand": "オメガ",
+      "file": "data/specs/33110425101002.json",
+      "model": "スピードマスター",
+      "fields": 9,
+      "lang": "en",
+      "source_url": "https://www.omegawatches.com/watch-omega-speedmaster-57-co-axial-chronometer-chronograph-41-5-mm-33110425101002",
+      "snapshot": "2025-01-20",
+      "archive": "http://web.archive.org/web/20250120160141/https://www.omegawatches.com/watch-omega-speedmaster-57-co-axial-chronometer-chronograph-41-5-mm-33110425101002",
+      "note": "公式ページのアーカイブが2025年のものしか取得できず、その時点の内容を採用"
+    },
+    {
+      "ref": "522.12.41.21.03.001",
+      "brand": "オメガ",
+      "file": "data/specs/52212412103001.json",
+      "model": "シーマスターアクアテラ",
+      "fields": 6,
+      "lang": "ja",
+      "source_url": "https://www.omegawatches.jp/ja/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-41-mm-52212412103001",
+      "snapshot": "2021-08-01",
+      "archive": "http://web.archive.org/web/20210801143231/https://www.omegawatches.jp/ja/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-41-mm-52212412103001",
+      "note": "公式ページのアーカイブが2021年のものしか取得できず、その時点の内容を採用"
     },
     {
       "ref": "522.20.42.30.01.001",
@@ -1240,16 +1681,472 @@
       "reason": "公式ページのアーカイブが2023-08-23のものしか無く、そのページから技術的詳細を取得できなかった"
     },
     {
-      "ref": "323.30.40.40.06.001",
+      "ref": "3570.50",
       "brand": "オメガ",
-      "model": "スピードマスター デイト",
-      "reason": "公式ページのアーカイブが見つからず（生産終了品とみられる）"
+      "model": "スピードマスター プロフェッショナル クロノグラフ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
     },
     {
-      "ref": "232.30.42.21.01.002",
+      "ref": "3573.50",
+      "brand": "オメガ",
+      "model": "スピードマスター プロフェッショナル クロノグラフ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3576.50",
+      "brand": "オメガ",
+      "model": "スピードマスター プロフェッショナル クロノグラフ ムーンフェイズ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "311.30.42.30.13.001",
+      "brand": "オメガ",
+      "model": "スピードマスター ムーンウォッチ プロフェッショナル クロノグラフ 42mm",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "310.30.42.50.04.001",
+      "brand": "オメガ",
+      "model": "スピードマスター ムーンウォッチ プロフェッショナル クロノグラフ 42mm",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "332.10.41.51.01.001",
+      "brand": "オメガ",
+      "model": "スピードマスター",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "323.30.40.40.04.001",
+      "brand": "オメガ",
+      "model": "スピードマスター デイト",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3539.50",
+      "brand": "オメガ",
+      "model": "スピードマスター オートマティック",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "210.30.42.20.10.001",
+      "brand": "オメガ",
+      "model": null,
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3513.50",
+      "brand": "オメガ",
+      "model": "スピードマスター デイト",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3590.50",
+      "brand": "オメガ",
+      "model": "スピードマスター プロフェッショナル",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3594.50",
+      "brand": "オメガ",
+      "model": "スピードマスター プロフェッショナル 1stレプリカ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3560.50",
+      "brand": "オメガ",
+      "model": "スピードマスター プロフェッショナル アポロ11号",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3572.50",
+      "brand": "オメガ",
+      "model": "スピードマスター プロフェッショナル（バックスケルトン）",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3592.50",
+      "brand": "オメガ",
+      "model": "スピードマスター プロフェッショナル（バックスケルトン）",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3577.50",
+      "brand": "オメガ",
+      "model": "スピードマスター FROM THE MOON TO MARS",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3311.20",
+      "brand": "オメガ",
+      "model": "スピードマスター オートマチック",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3510.50",
+      "brand": "オメガ",
+      "model": "スピードマスター オートマチック",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "321.10.42.50.04.001",
+      "brand": "オメガ",
+      "model": "スピードマスター オリンピック コレクション",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3220.50",
+      "brand": "オメガ",
+      "model": "スピードマスター デイデイト",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3523.30",
+      "brand": "オメガ",
+      "model": "スピードマスター デイデイト",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3210.50",
+      "brand": "オメガ",
+      "model": "スピードマスター デイト",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3211.30",
+      "brand": "オメガ",
+      "model": "スピードマスター デイト",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3511.50",
+      "brand": "オメガ",
+      "model": "スピードマスター デイト",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3366.51",
+      "brand": "オメガ",
+      "model": "スピードマスター プロフェッショナル",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3520.53",
+      "brand": "オメガ",
+      "model": "スピードマスター マーク40 AM/PM",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3520.50",
+      "brand": "オメガ",
+      "model": "スピードマスター マーク40 コスモス",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "321.30.44.50.01.001",
+      "brand": "オメガ",
+      "model": "スピードマスター レジェンド",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3506.31",
+      "brand": "オメガ",
+      "model": "スピードマスター レジェンド ミハエルシューマッハ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "3221.30",
+      "brand": "オメガ",
+      "model": "スピードマスター デイデイト",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2201.50",
+      "brand": "オメガ",
+      "model": "シーマスター プラネットオーシャン",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2209.50",
+      "brand": "オメガ",
+      "model": "シーマスター プラネットオーシャン",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2210.50",
+      "brand": "オメガ",
+      "model": "シーマスター プラネットオーシャン クロノグラフ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2218.50",
+      "brand": "オメガ",
+      "model": "シーマスター プラネットオーシャン クロノグラフ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "232.30.42.21.01.003",
       "brand": "オメガ",
       "model": "シーマスター600 プラネットオーシャン",
-      "reason": "公式ページのアーカイブが見つからず（生産終了品とみられる）"
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "232.30.46.21.01.002",
+      "brand": "オメガ",
+      "model": "シーマスター600 プラネットオーシャン",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "232.30.46.21.01.003",
+      "brand": "オメガ",
+      "model": "シーマスター600 プラネットオーシャン コーアクシャル",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2298.80",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル クロノグラフ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2220.80",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル コーアクシャル",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2231.80",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル300",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2236.50",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル300",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2254.50",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル300",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2531.80",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル300",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2532.80",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル300",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2551.80",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル300",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2552.80",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル300",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2538.20",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル300 GMT",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2595.50",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル300 アプネア マイヨール",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2533.50",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル300 アメリカズカップ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2221.80",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル300 クォーツ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2262.50",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル300 クォーツ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2264.50",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル300 クォーツ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2541.80",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル300 クォーツ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2561.80",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル300 クォーツ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "212.30.41.20.01.002",
+      "brand": "オメガ",
+      "model": "シーマスター プロフェッショナル300 コーアクシャル",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2501.81",
+      "brand": "オメガ",
+      "model": "シーマスター120m クロノメーター",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2501.31",
+      "brand": "オメガ",
+      "model": "シーマスター120m クロノメーター",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2503.50",
+      "brand": "オメガ",
+      "model": "シーマスター アクアテラ コーアクシャル",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2504.50",
+      "brand": "オメガ",
+      "model": "シーマスター アクアテラ コーアクシャル",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "231.10.39.21.06.001",
+      "brand": "オメガ",
+      "model": "シーマスター アクアテラ コーアクシャル クロノメーター",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2509.75",
+      "brand": "オメガ",
+      "model": "シーマスター アクアテラ ダイヤベゼル",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2517.30",
+      "brand": "オメガ",
+      "model": "シーマスター アクアテラ150ｍ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "2518.50",
+      "brand": "オメガ",
+      "model": "シーマスター アクアテラ150ｍ クォーツ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "1513.51",
+      "brand": "オメガ",
+      "model": "コンステレーション ダブルイーグル",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "1362.70",
+      "brand": "オメガ",
+      "model": "コンステレーション ミニ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "311.30.42.30.01.004",
+      "brand": "オメガ",
+      "model": "スピードマスター ムーンウォッチ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "231.10.39.60.06.001",
+      "brand": "オメガ",
+      "model": "シーマスターアクアテラ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "231.10.44.50.01.001",
+      "brand": "オメガ",
+      "model": "シーマスターアクアテラ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "231.10.39.60.02.001",
+      "brand": "オメガ",
+      "model": "シーマスターアクアテラ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "222.32.38.50.01.003",
+      "brand": "オメガ",
+      "model": "シーマスター プラネットオーシャン",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "222.32.38.50.01.001",
+      "brand": "オメガ",
+      "model": "シーマスター プラネットオーシャン",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "1460.75",
+      "brand": "オメガ",
+      "model": "コンステレーション",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "232.32.42.21.01.003",
+      "brand": "オメガ",
+      "model": "シーマスター プラネットオーシャン",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "231.10.42.21.03.001",
+      "brand": "オメガ",
+      "model": "シーマスターアクアテラ",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "329.30.43.51.03.001",
+      "brand": "オメガ",
+      "model": "スピードマスター",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "329.30.43.51.02.001",
+      "brand": "オメガ",
+      "model": "スピードマスター",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "210.30.42.20.06.002",
+      "brand": "オメガ",
+      "model": "シーマスター",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
+    },
+    {
+      "ref": "212.30.36.20.01.002",
+      "brand": "オメガ",
+      "model": "シーマスター",
+      "reason": "公式サイト（omegawatches）に製品ページのURLを特定できず（アーカイブにも無し）。3570.50 のような旧表記が中心で、生産終了により公式サイトから削除されているとみられる"
     },
     {
       "ref": "15450ST.OO.1256ST.01",

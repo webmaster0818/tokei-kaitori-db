@@ -6,10 +6,11 @@
   "case_material": "Steel",
   "dial": "Black",
   "crystal": "Domed, scratch‑resistant sapphire crystal with anti‑reflective treatment inside",
+  "movement": "Manual‑winding",
   "caliber": "Omega 1863",
   "power_reserve_h": 48,
   "water_resistance_m": 50,
-  "bracelet": "Material",
+  "bracelet": "Steel",
   "status": "2025-07-10時点の公式サイトに掲載",
   "sources": [
     {
@@ -24,6 +25,7 @@
         "case_material",
         "crystal",
         "dial",
+        "movement",
         "power_reserve_h",
         "water_resistance_m"
       ],

@@ -1,0 +1,28 @@
+{
+  "ref": "522.12.41.21.03.001",
+  "brand": "オメガ",
+  "model": "シーマスターアクアテラ",
+  "case_diameter_mm": 41,
+  "case_material": "ステンレススティール",
+  "dial": "ブルー",
+  "crystal": "両面に無反射加工を施したドーム型強化無反射サファイアガラス",
+  "water_resistance_m": 150,
+  "bracelet": "ラバーストラップ",
+  "status": "2021-08-01時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.jp/ja/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-41-mm-52212412103001",
+      "archive": "http://web.archive.org/web/20210801143231/https://www.omegawatches.jp/ja/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-41-mm-52212412103001",
+      "snapshot": "2021-08-01",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

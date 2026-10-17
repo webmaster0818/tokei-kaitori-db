@@ -1,0 +1,31 @@
+{
+  "ref": "232.30.42.21.01.002",
+  "brand": "オメガ",
+  "model": "シーマスター600 プラネットオーシャン",
+  "case_diameter_mm": 42,
+  "case_material": "Steel",
+  "dial": "Black",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "caliber": "OMEGA 8500",
+  "water_resistance_m": 600,
+  "bracelet": "steel",
+  "status": "2022-01-27時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-42-mm-23230422101002",
+      "archive": "http://web.archive.org/web/20220127125622/https://www.omegawatches.com/watch-omega-seamaster-planet-ocean-600m-omega-co-axial-42-mm-23230422101002",
+      "snapshot": "2022-01-27",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

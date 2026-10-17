@@ -1,0 +1,28 @@
+{
+  "ref": "311.90.44.51.03.001",
+  "brand": "オメガ",
+  "model": "スピードマスター ムーンウォッチ",
+  "case_diameter_mm": 44.25,
+  "case_material": "チタン",
+  "dial": "ブルー",
+  "crystal": "両面に無反射処理を施した、ボックス型強化サファイアガラス",
+  "water_resistance_m": 100,
+  "bracelet": "チタン",
+  "status": "2021-05-14時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.jp/ja/watch-omega-speedmaster-two-counters-co-axial-chronometer-chronograph-44-25-mm-31190445103001",
+      "archive": "http://web.archive.org/web/20210514161619/https://www.omegawatches.jp/ja/watch-omega-speedmaster-two-counters-co-axial-chronometer-chronograph-44-25-mm-31190445103001",
+      "snapshot": "2021-05-14",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "water_resistance_m"
+      ]
+    }
+  ]
+}

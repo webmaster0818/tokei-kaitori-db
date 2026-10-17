@@ -5,10 +5,11 @@
   "case_material": "Steel",
   "dial": "Grey",
   "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
   "caliber": "Omega 8800",
   "power_reserve_h": 55,
   "water_resistance_m": 300,
-  "bracelet": "Material",
+  "bracelet": "Steel",
   "status": "2025-06-28時点の公式サイトに掲載",
   "sources": [
     {
@@ -23,6 +24,7 @@
         "case_material",
         "crystal",
         "dial",
+        "movement",
         "power_reserve_h",
         "water_resistance_m"
       ],

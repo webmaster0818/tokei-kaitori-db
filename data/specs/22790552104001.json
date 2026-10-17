@@ -1,0 +1,33 @@
+{
+  "ref": "227.90.55.21.04.001",
+  "brand": "オメガ",
+  "model": "シーマスター",
+  "case_material": "Titanium",
+  "dial": "White",
+  "crystal": "Flat scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "Omega 8912",
+  "power_reserve_h": 60,
+  "water_resistance_m": 1200,
+  "bracelet": "Titanium",
+  "status": "2025-03-18時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-ploprof-1200m-co-axial-master-chronometer-55-x-48-mm-22790552104001",
+      "archive": "http://web.archive.org/web/20250318143608/https://www.omegawatches.com/en-us/watch-omega-seamaster-ploprof-1200m-co-axial-master-chronometer-55-x-48-mm-22790552104001",
+      "snapshot": "2025-03-18",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

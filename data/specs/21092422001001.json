@@ -6,16 +6,17 @@
   "case_material": "Titanium",
   "dial": "Brown",
   "crystal": "Domed, scratch‑resistant sapphire crystal with anti‑reflective treatment inside",
+  "movement": "Self winding",
   "caliber": "Omega 8806",
   "power_reserve_h": 55,
   "water_resistance_m": 300,
   "bracelet": "NATO strap",
-  "status": "2025-08-10時点の公式サイトに掲載",
+  "status": "2026-09-30時点の公式サイトに掲載",
   "sources": [
     {
-      "url": "https://www.omegawatches.com/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21092422001001",
-      "archive": "http://web.archive.org/web/20250810195253/https://www.omegawatches.com/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21092422001001",
-      "snapshot": "2025-08-10",
+      "url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21092422001001",
+      "archive": "http://web.archive.org/web/20260930063557/https://www.omegawatches.com/en-us/watch-omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21092422001001",
+      "snapshot": "2026-09-30",
       "checked": "2026-10-17",
       "fields": [
         "bracelet",
@@ -24,6 +25,7 @@
         "case_material",
         "crystal",
         "dial",
+        "movement",
         "power_reserve_h",
         "water_resistance_m"
       ],

@@ -1,0 +1,35 @@
+{
+  "ref": "220.12.41.21.02.005",
+  "brand": "オメガ",
+  "model": "シーマスターアクアテラ",
+  "case_diameter_mm": 41,
+  "case_material": "Steel",
+  "dial": "Silver",
+  "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "movement": "Self winding",
+  "caliber": "OMEGA 8916",
+  "power_reserve_h": 60,
+  "water_resistance_m": 150,
+  "bracelet": "Rubber strap",
+  "status": "2025-12-23時点の公式サイトに掲載",
+  "sources": [
+    {
+      "url": "https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-small-seconds-41-mm-22012412102005",
+      "archive": "http://web.archive.org/web/20251223060624/https://www.omegawatches.com/en-us/watch-omega-seamaster-aqua-terra-150m-co-axial-master-chronometer-small-seconds-41-mm-22012412102005",
+      "snapshot": "2025-12-23",
+      "checked": "2026-10-17",
+      "fields": [
+        "bracelet",
+        "caliber",
+        "case_diameter_mm",
+        "case_material",
+        "crystal",
+        "dial",
+        "movement",
+        "power_reserve_h",
+        "water_resistance_m"
+      ],
+      "lang": "en"
+    }
+  ]
+}

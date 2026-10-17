@@ -6,6 +6,7 @@
   "case_material": "Steel",
   "dial": "Black",
   "crystal": "Domed scratch‑resistant sapphire crystal with anti‑reflective treatment on both sides",
+  "caliber": "OMEGA 3861",
   "water_resistance_m": 50,
   "bracelet": "steel",
   "status": "2020-09-29時点の公式サイトに掲載",
@@ -17,6 +18,7 @@
       "checked": "2026-10-17",
       "fields": [
         "bracelet",
+        "caliber",
         "case_diameter_mm",
         "case_material",
         "crystal",
