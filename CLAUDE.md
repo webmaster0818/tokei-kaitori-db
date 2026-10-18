@@ -190,3 +190,9 @@
 - **feat/phase2 の追加（10/17 夜）**: コレクション解説6本（saburo-2）・Dブルー→ディープシー・`data/ref-overrides.json`（見出し名の上書き＝126503/123.10.35.60.01.001、公開保留＝231.10.43.22.02.001/231.10.42.21.02.002、行の保留 hold_rows＝232.32.44.22.01.001 ロデオ）・大黒屋パーサの名前上限40→80字・taro-2 スペック401型番（`spec_level: name_only` は仕様表を出さない）・公式小売価格（`data/retail/` 73型番130点・型番ページ「メーカーの小売価格と買取価格」・ランキング「小売価格に対する上限額の割合」）・用語集 /glossary/ 77語。最新 bc9d8ffd・533ページ・precheck OK・転送0。
   ⚠️ ゲート外ブランドの解説文（カルティエ等22本）は `content/models/` に入っているがページは出ない。本文内の未公開ページへのリンクは EditorialSection が文字だけにする。
   ⚠️ 保留型番は generate-redirects でも転送しない（一度も本番に出ていないため）。
+
+### 2026-10-18 朝 10/24 失効のシミュレーション（本番未変更）
+- 現 main（d28927a6）で 10/9 取得 40行を落としてビルド: sitemap **233→214（−19）**・公開型番 **206→189**・モデル −2（day-date / sky-dweller）。しきい値 221 → **ガードで止まる**＝10/15 と同じ「照合後に1回だけ通す」が要る。消える19本は `reports/expiry-2026-10-24-urls.txt` と完全一致。詳細 `reports/expiry-2026-10-24-sim.md`。
+- 🚨 `reports/expiry-check.py` §3 がフェーズ1の generate-sitemap（out/ 必須）で落ちる不具合 → next build を通す形に修正。dry で一致=OK／予定外1本=NG を確認。
+- ⚠️ /model/day-date/・/model/sky-dweller/ は 10/24 に 301 でなく 404 になる（generate-redirects は /ref/ のみ）。
+- 登録サンプル（10/17 と同じ32本）0/32・状態変化1（/model/seamaster/ 未知→未登録）・クロール前進9（`reports/index-sample-2026-10-18.json`）。
