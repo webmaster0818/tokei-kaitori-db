@@ -1,5 +1,5 @@
 # 掲載を終えた型番ページの転送（scripts/generate-redirects.mjs がビルドごとに生成。手で編集しない）
-# 生成: 2026-10-17T10:18:23.018Z / 過去に公開した型番 221 / 公開中 206 / 転送 15
+# 生成: 2026-10-18T02:37:43.744Z / 過去に公開した型番 221 / 公開中 206 / 転送 15
 /ref/116622/ /model/yacht-master/ 301
 /ref/116622 /model/yacht-master/ 301
 /ref/126713grnr/ /model/gmt-master-2/ 301
