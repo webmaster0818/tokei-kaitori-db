@@ -35,9 +35,13 @@ export async function generateMetadata({ params }: { params: Promise<{ ref: stri
   //    モデル名を先頭に出し、うちにしか出せない「店による差額」を見出しに使う。
   const ym = `${latestDate().slice(0, 4)}年${Number(latestDate().slice(5, 7))}月`;
   const gap = s?.spread ? `${s.shops.length}社で最大${yen(s.spread)}の差` : `${s?.shops.length ?? 0}社比較`;
+  // ⚠️ オメガ等はモデル名が長く（例「スピードマスター Speedmaster '57 コーアクシャル…」）160字を超える（2026-10-19 precheck）。
+  //    超えるときは末尾の定型文を外す。
+  const body = `${model} Ref.${ref}の買取価格を、${s?.shops.length ?? 0}社の公開情報から比較しています。${s?.ceilingMin && s?.ceilingMax ? `上限額は${yen(s.ceilingMin)}〜${yen(s.ceilingMax)}で、店舗間の差額は${yen(s.spread ?? 0)}です。` : ""}`;
+  const full = `${body}各社の出典リンクと取得日を明記しています。`;
   return {
     title: `${model} ${ref}の買取相場｜${gap}【${ym}】| ${SITE_NAME}`,
-    description: `${model} Ref.${ref}の買取価格を、${s?.shops.length ?? 0}社の公開情報から比較しています。${s?.ceilingMin && s?.ceilingMax ? `上限額は${yen(s.ceilingMin)}〜${yen(s.ceilingMax)}で、店舗間の差額は${yen(s.spread ?? 0)}です。` : ""}各社の出典リンクと取得日を明記しています。`,
+    description: full.length <= 160 ? full : body,
     alternates: { canonical: `${SITE_URL}/ref/${ref.toLowerCase()}/` },
   };
 }
