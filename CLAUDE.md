@@ -209,3 +209,11 @@
   コード上の挙動: `fetch()` は接続エラーを3回再試行 → それでも失敗なら errors に記録して続行（スクリプトは exit 0）→ 店の行が0件なら `CARRY_DAYS=14` で直近スナップショットの行を元の取得日つきで引き継ぐ＝**価格は消えず、ページには前日の取得日が出る**。ガード（−5%）にも掛からない。
 - **10/24 シミュ（本番未変更・`/tmp/bwb1019/sim*`）**: d1ade6c1（10/18 スナップ）で 233→214・予定外0・予定だが残る0＝10/18 と同一。11:25 後の HEAD 6d676916（10/19 スナップ）では **233→215（−18）**: ウォッチニアンが 310.32.42.50.01.002 を再掲載したため1本減。予定外 0。しきい値 221 → **止まるのは同じ**。新たに 226659・311.92.44.51.01.006 が 10/18 取得で引き継ぎ入り（期限 11/1）。
 - 登録サンプル（10/18 と同じ32本）0/32・状態変化0・クロール前進7・戻り0（`reports/index-sample-2026-10-19.json`）。
+
+### 2026-10-19 昼 ✅ フェーズ2 本番公開（MediaXAI「A」＝段階公開・msg 1561578514933751872）
+- feat/phase2 に main（10/18・10/19 日次）を merge（dd5d6c9c）。data/history 338件の衝突は日付の和集合で解決、sitemap/_redirects/watch-master は phase2 側（ビルドで再生成）。
+- 🚨 main の 10/18・10/19 スナップショットは旧スクリプト（5社）で取得されていた → phase2 の fetch で 10/19 を8社で取り直し（12,866行・外れ値保留3件）。以後の日次は main の新スクリプトで8社。
+- precheck で description 160字超4件（オメガの長いモデル名）→ 超えるときは末尾の定型文を外す（app/ref/[ref]/page.tsx）。
+- 本番: sitemap 233→**534**・公開型番 206→**490**・534 URL 全て200・保留型番/ゲート外ブランド 404・転送0。commit 83bbb178＋7688605b。
+- 🚨 **CF の罠**: 同じコミットを feat/phase2 と main に続けて push したら、CF は feat/phase2 のプレビューだけビルドし main の本番ビルドを走らせなかった（GitHub の check-run は success だが中身は Branch Preview）。空コミットを main に push して本番ビルドを起動。→ 本番に出すコミットは、ブランチへの push と同一 SHA にしない（main で空コミット or merge commit を作る）。check-run の確認は `GH_TOKEN=$(cat ~/.openclaw/workspace/secrets/github-admin-pat-webmaster0818.txt) gh api repos/webmaster0818/tokei-kaitori-db/commits/<sha>/check-runs`。
+- 残り: 6ブランド（パネライ・カルティエ・ウブロ・IWC・チューダー・パテック 299型番）は1〜2週間後に data/publish-gate.json を null にして公開。宝石広場の判断待ち。10/24 の 10/9 取得分失効は8社化で影響が変わる＝前日に再シミュ。
