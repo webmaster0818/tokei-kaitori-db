@@ -627,7 +627,8 @@
    ],
    "shops": [
     "jackroad",
-    "nanboya"
+    "nanboya",
+    "watchnian"
    ]
   },
   "279171": {
@@ -5195,5 +5196,5 @@
    ]
   }
  },
- "updated_at": "2026-10-18"
+ "updated_at": "2026-10-19"
 }
