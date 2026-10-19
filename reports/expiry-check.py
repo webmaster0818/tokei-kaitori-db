@@ -2,6 +2,7 @@
 """引き継ぎ期限切れの日（10/15・10/24）に、ガード停止を確認し「消えたURLが予定どおりか」を照合する。
 
 読むだけ。commit・push・デプロイ・通知はしない（標準ライブラリのみ・ネットワークは使わない）。
+§3 は一時ディレクトリで next build を1回走らせる（約30秒〜1分）。
 
 使い方（ガードで止まった日の 11:40 以降に）:
   python3 -I reports/expiry-check.py --date 2026-10-15 --expected reports/expiry-2026-10-15-urls.txt
@@ -17,6 +18,7 @@ exit 1 = 不一致あり（通さない）／ exit 2 = ガードで止まった�
 """
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
@@ -110,7 +112,16 @@ def main():
         expired = len(base_doc["records"]) - len(keep)
         (Path(td) / f"data/prices/{D}.json").write_text(
             json.dumps({**base_doc, "records": keep}, ensure_ascii=False), encoding="utf-8")
-        subprocess.run(["node", "scripts/generate-sitemap.mjs"], cwd=td, capture_output=True, check=True)
+        # ⚠️ 2026-10-17 のフェーズ1以降、generate-sitemap.mjs は out/（next build の出力）を列挙する方式になり、
+        #    単体では動かない（out/data/refs.json が無いと exit 1）。HEAD のコピーで next build から通す。
+        #    node_modules はシンボリックリンクだと Turbopack が拒否するので APFS クローン（cp -cR）で複製する。
+        subprocess.run(["cp", "-cR", str(repo / "node_modules"), str(Path(td) / "node_modules")], check=True)
+        b = subprocess.run(["npm", "run", "build"], cwd=td, capture_output=True, text=True,
+                           env={**os.environ, "NODE_OPTIONS": "--max-old-space-size=8192"})
+        if b.returncode != 0:
+            print(b.stdout[-2000:], b.stderr[-2000:], sep="\n")
+            res(False, "[3] HEAD のコピーでのビルド")
+            return 1
         sim = locs((Path(td) / "public/sitemap.xml").read_text(encoding="utf-8"))
     lost_sim = sorted(set(prev) - set(sim))
     print(f"[3] HEAD のスナップショット {snaps[-1].stem} から期限切れ {expired} 行だけ落とすと {len(prev)} → {len(sim)}")
