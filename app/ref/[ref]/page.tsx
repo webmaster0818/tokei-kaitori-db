@@ -93,7 +93,8 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
   const variantLabel = (r: (typeof s.records)[number]) => {
     if (!r.variant) return null;
     const modelWords = new Set((r.model ?? "").split(/\s+/));
-    const shown = new Set([r.dial, r.material].filter(Boolean));
+    // 文字盤・素材は複数語のこともある（例「最新型 ベンツ針」）ので語単位で持つ（丸ごとだと重複表示になる）
+    const shown = new Set([r.dial, r.material].filter(Boolean).flatMap((t) => [t as string, ...(t as string).split(/\s+/)]));
     const brandWords = new Set(["ロレックス", "オメガ", "オーデマ・ピゲ", "オーデマピゲ", "ヴァシュロン・コンスタンタン", "カルティエ", "IWC", "パネライ", "ウブロ", "パテック・フィリップ", "パテックフィリップ", "チューダー", "グランドセイコー"]);
     const words = r.variant.split(/\s+/).filter((w) => w && w !== "/" && !brandWords.has(w)
       && refKey(w) !== r.ref && !modelWords.has(w) && !shown.has(w));
