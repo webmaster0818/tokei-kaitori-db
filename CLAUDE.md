@@ -217,3 +217,10 @@
 - 本番: sitemap 233→**534**・公開型番 206→**490**・534 URL 全て200・保留型番/ゲート外ブランド 404・転送0。commit 83bbb178＋7688605b。
 - 🚨 **CF の罠**: 同じコミットを feat/phase2 と main に続けて push したら、CF は feat/phase2 のプレビューだけビルドし main の本番ビルドを走らせなかった（GitHub の check-run は success だが中身は Branch Preview）。空コミットを main に push して本番ビルドを起動。→ 本番に出すコミットは、ブランチへの push と同一 SHA にしない（main で空コミット or merge commit を作る）。check-run の確認は `GH_TOKEN=$(cat ~/.openclaw/workspace/secrets/github-admin-pat-webmaster0818.txt) gh api repos/webmaster0818/tokei-kaitori-db/commits/<sha>/check-runs`。
 - 残り: 6ブランド（パネライ・カルティエ・ウブロ・IWC・チューダー・パテック 299型番）は1〜2週間後に data/publish-gate.json を null にして公開。宝石広場の判断待ち。10/24 の 10/9 取得分失効は8社化で影響が変わる＝前日に再シミュ。
+
+### 2026-10-20 朝 登録サンプル・上位3型番の価格突合・jackroad（文字盤の二重表示を修正 `ed0fe6c2`）
+- **登録サンプル（10/19 と同じ32本・`reports/index-sample-2026-10-20.json`）**: 0/32（未登録23・未知8・404 1＝/ref/126900/ の 9/20 版）・状態変化0・クロール前進7・戻り0。
+  ⚠️ **07:00 点検の「未登録10・未知21」は別の32本**: `daily-site-check.py` は「sitemap md5順の先頭32本」を取るので、10/19 昼に sitemap が 233→534 になった時点でサンプルが入れ替わった（重なり15本）。新しい集合は 0/32（未登録10・未知21・404 1）。悪化ではない。以後 URL 単位の比較は新集合で行う（json の sample_0700 に保存）。
+- **上位3型番（GSC 9/20〜10/19 表示順: 16713=56・116689=37・228239=22）**: 本番の価格・取得日・買取店の更新日はスナップショット 10/19 と全行一致。出典リンク7本（大黒屋・ロデオ・RASIN・jackroad・なんぼや×3、計測リンクではない）すべて 200。今日の公式値も全行データと一致。
+- **修正**: 状態・仕様欄で複数語の文字盤が二重表示（「最新型 ベンツ針 / 最新型 ベンツ針」）→ variantLabel の重複除外を語単位に。本番で約39型番が該当（GINZA RASIN 中心）。修正後の out/ で 2,338セル中 重複0。sitemap 534・計測リンク 0→0・precheck OK。
+- **jackroad**: 09:22 に 200（0.15〜0.19秒）×3・dry parse 170行/58型番＝10/19 と同数。
