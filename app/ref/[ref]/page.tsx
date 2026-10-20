@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { latestDate, masterRefs, monthlyHistory, publishableRefs, summarize, yen } from "@/lib/prices";
-import { publishedBrandOf, publishedFamilyOfRef } from "@/lib/models";
+import { publishedBrandOf, publishedFamilyOfRef, refsByFamily } from "@/lib/models";
 import { breadcrumb, graph, organization } from "@/lib/jsonld";
 import { IconDocument, IconFigures, IconLink, IconShop, IconTable, IconTrend } from "@/components/Icons";
 import { ceilingChange, fromMs, priceSeries } from "@/lib/history";
@@ -13,6 +13,8 @@ import { CAMPAIGN_CEILING, SHOP_IDS, priceTypeLabel } from "@/lib/shops";
 import { specFor } from "@/lib/specs";
 import { pct0, retailFor, retailRatio, taxLabel } from "@/lib/retail";
 import { dialComparison } from "@/lib/dials";
+import { cleanModelName, conditionRows, displayName, refInfo } from "@/lib/refinfo";
+import { publishedRows } from "@/lib/insights";
 import { PriceHistoryChart } from "@/components/PriceHistoryChart";
 import { ShopGapBars } from "@/components/ShopGapBars";
 
@@ -29,7 +31,8 @@ export async function generateMetadata({ params }: { params: Promise<{ ref: stri
   const ref = resolve(p);
   if (!ref) return { title: "該当する型番のページはありません" };
   const s = summarize(ref);
-  const model = s?.models[0] ?? "";
+  // ブランド名を先頭に付けた表示名（lib/refinfo.ts displayName。2026-10-20 上位の買取店の title と比べて追加）
+  const model = displayName(s?.models[0], masterRefs()[ref]?.brand, ref);
   // ⚠️ 以前は型番が先頭だったため、型番を知らない人には何のページか分からなかった
   //    （GSC実測 2026-09-21: 流入が型番クエリだけ・CTR 0.72%）。
   //    モデル名を先頭に出し、うちにしか出せない「店による差額」を見出しに使う。
@@ -40,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ ref: stri
   const body = `${model} Ref.${ref}の買取価格を、${s?.shops.length ?? 0}社の公開情報から比較しています。${s?.ceilingMin && s?.ceilingMax ? `上限額は${yen(s.ceilingMin)}〜${yen(s.ceilingMax)}で、店舗間の差額は${yen(s.spread ?? 0)}です。` : ""}`;
   const full = `${body}各社の出典リンクと取得日を明記しています。`;
   return {
-    title: `${model} ${ref}の買取相場｜${gap}【${ym}】| ${SITE_NAME}`,
+    title: `${model} ${ref} 買取価格・相場｜${gap}【${ym}】| ${SITE_NAME}`,
     description: full.length <= 160 ? full : body,
     alternates: { canonical: `${SITE_URL}/ref/${ref.toLowerCase()}/` },
   };
@@ -88,6 +91,25 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
   const retail = retailFor(ref);
   const ratio = retailRatio(s, retail);
   const dials = dialComparison(s.records, master[ref]?.brand);
+  // 2026-10-20 追加: 表示名（ブランド＋モデル）・型番の基本情報・状態別の上限額・同じモデルの型番（lib/refinfo.ts）
+  const brandName = master[ref]?.brand;
+  const name = displayName(s.models[0], brandName, ref) || "腕時計";
+  const info = refInfo(s.records, brandName, ref);
+  const byCond = conditionRows(s);
+  const jpDate = `${date.slice(0, 4)}年${Number(date.slice(5, 7))}月${Number(date.slice(8, 10))}日`;
+  const SAME_MODEL_MAX = 20;
+  const sameModelAll = fam
+    ? publishedRows()
+        .filter((r) => (refsByFamily()[fam.slug] ?? []).includes(r.ref) && r.s.ceilingMax != null)
+        .sort((a, b) => (b.s.ceilingMax ?? 0) - (a.s.ceilingMax ?? 0) || a.ref.localeCompare(b.ref))
+    : [];
+  const sameModel = sameModelAll.length >= 2
+    ? (() => {
+        const top = sameModelAll.slice(0, SAME_MODEL_MAX);
+        const self = sameModelAll.find((r) => r.ref === ref);
+        return self && !top.includes(self) ? [...top.slice(0, SAME_MODEL_MAX - 1), self] : top;
+      })()
+    : [];
   // variant（店の行名）から、ブランド名・型番・モデル名と重なる語を除いた「区別の語」だけを表示する
   const refKey = (t: string) => t.replace(/[./-]+/g, ".").toUpperCase();
   const variantLabel = (r: (typeof s.records)[number]) => {
@@ -104,7 +126,7 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
   const ld = graph(
     {
       "@type": "Dataset",
-      name: `${s.models[0] ?? ""} Ref.${ref} の買取価格比較データ`,
+      name: `${name} Ref.${ref} の買取価格比較データ`,
       description: `買取店${s.shops.length}社が公開している Ref.${ref} の買取価格を収集・比較したデータ（${date}時点）。`,
       creator: { "@id": `${SITE_URL}/#organization` },
       dateModified: date,
@@ -150,9 +172,11 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
           </nav>
 
           <h1 className="page-title">
-            {s.models[0] ?? "腕時計"} Ref.{ref} の買取価格
+            {name} Ref.{ref} の買取価格・相場
           </h1>
-          <p className="page-meta">{date}時点 / 買取店{s.shops.length}社の公開情報を比較</p>
+          <p className="page-meta">
+            更新日：<time dateTime={date}>{jpDate}</time> / 買取店{s.shops.length}社の公開情報を毎日取得して比較
+          </p>
         </div>
       </div>
 
@@ -262,6 +286,40 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
           </p>
         )}
       </section>
+
+      {/* 状態別の上限額（新品・未使用・中古のうち2つ以上の価格が公開されている型番のみ・lib/refinfo.ts） */}
+      {byCond && (
+        <section className="reveal">
+          <h2 className="block-title"><IconTable />状態別の上限額</h2>
+          <div className="table-frame">
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th>状態</th>
+                  <th className="r">上限額（最高）</th>
+                  <th className="r">上限額（最低）</th>
+                  <th>最高額の買取店</th>
+                  <th className="r">社数</th>
+                </tr>
+              </thead>
+              <tbody>
+                {byCond.map((c) => (
+                  <tr key={c.condition}>
+                    <td className="strong whitespace-nowrap">{c.condition}</td>
+                    <td className="r strong">{yen(c.max)}</td>
+                    <td className="r">{c.shops > 1 ? yen(c.min) : "—"}</td>
+                    <td className="whitespace-nowrap">{c.maxShop}</td>
+                    <td className="r">{c.shops}社</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="note mt-4">
+            ※各社が状態（新品・未使用・中古）を分けて公開している上限額・相場を、状態ごとにまとめています（文字盤・仕様違いで複数の価格がある買取店は、その中央値）。状態の基準は買取店により異なり、状態ごとに価格を公開している買取店の顔ぶれも異なるため、状態どうしの差には買取店の違いによる差が含まれます。
+          </p>
+        </section>
+      )}
 
       {/* 店舗間の差額（横棒）。上限・相場の価格を出している店が2社以上ある場合のみ */}
       {ceilingShopIds.size >= 2 && (
@@ -487,6 +545,64 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
         </section>
       )}
 
+      {/* 型番の基本情報（買取店の公開ページの表記から・lib/refinfo.ts） */}
+      <section className="reveal" id="ref-info">
+        <h2 className="block-title"><IconDocument />Ref.{ref}の基本情報</h2>
+        <dl className="kv">
+          {brandName && (
+            <>
+              <dt>ブランド</dt>
+              <dd>{brand ? <a href={`/brand/${brand.slug}/`}>{brandName}</a> : brandName}</dd>
+            </>
+          )}
+          {fam && (
+            <>
+              <dt>モデル</dt>
+              <dd><a href={`/model/${fam.slug}/`}>{fam.label}</a></dd>
+            </>
+          )}
+          <dt>型番</dt>
+          <dd className="num">Ref.{ref}</dd>
+          {info.names.length > 0 && (
+            <>
+              <dt>買取店での掲載名</dt>
+              <dd>
+                {info.names.map((n, i) => (
+                  <Fragment key={n.name}>
+                    {i > 0 && "、"}
+                    {n.name}<small className="text-[var(--ink-3)]">（{n.shops.join("・")}）</small>
+                  </Fragment>
+                ))}
+              </dd>
+            </>
+          )}
+          {info.dials.length > 0 && (
+            <>
+              <dt>買取店が記載している文字盤</dt>
+              <dd>{info.dials.join("・")}</dd>
+            </>
+          )}
+          {info.materials.length > 0 && (
+            <>
+              <dt>買取店が記載している素材</dt>
+              <dd>{info.materials.join("・")}</dd>
+            </>
+          )}
+          {info.conditions.length > 0 && (
+            <>
+              <dt>買取店が記載している状態</dt>
+              <dd>{info.conditions.join("・")}</dd>
+            </>
+          )}
+          <dt>比較している買取店</dt>
+          <dd>{s.shops.join("・")}（{s.shops.length}社）</dd>
+        </dl>
+        <p className="note mt-4">
+          ※買取店での掲載名・文字盤・素材・状態は、各買取店が公開ページに記載している表記をもとにしています（ブランド名と型番は除いています。文字盤は同じ色を指す表記を1つにまとめています）。
+          {spec ? "メーカー公式サイトに記載のある仕様は、下の「基本仕様（メーカー公式）」に掲載しています。" : "この型番は、メーカー公式サイトで仕様を確認できなかったため、公式の仕様は掲載しておりません。"}
+        </p>
+      </section>
+
       {/* メーカー公式の基本仕様（data/specs・taro-2）。英語ページが出典の型番は数値・固有名詞だけ */}
       {spec && (
         <section className="reveal">
@@ -530,6 +646,41 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
           <li>価格を毎日更新する買取店もあるため、当サイトでも日次で取得し直しています（最終取得日：{date}）。</li>
         </ul>
       </section>
+
+      {sameModel.length >= 2 && fam && (
+        <section className="reveal">
+          <h2 className="block-title"><IconLink />{fam.label}の型番別の買取価格</h2>
+          <p className="prose-jp mb-5">
+            当サイトで掲載している{fam.label}の型番{sameModelAll.length}件を、上限額（最高）の高い順に掲載しています（{jpDate}時点）。
+            {sameModelAll.length > sameModel.length && <>上位{SAME_MODEL_MAX}件まで掲載しています。すべての型番は<a href={`/model/${fam.slug}/`}>{fam.label}の買取相場</a>でご覧いただけます。</>}
+          </p>
+          <div className="table-frame">
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th>型番</th>
+                  <th>モデル名</th>
+                  <th className="r">上限額（最高）</th>
+                  <th className="r">比較社数</th>
+                </tr>
+              </thead>
+              <tbody>
+                {sameModel.map((r) => (
+                  <tr key={r.ref}>
+                    <td className="whitespace-nowrap num strong">
+                      {r.ref === ref ? <>Ref.{r.ref}<small className="cell-sub">このページ</small></> : <a href={refPath(r.ref)}>Ref.{r.ref}</a>}
+                    </td>
+                    <td>{cleanModelName(r.model, r.brand, r.ref) || "—"}</td>
+                    <td className="r strong">{yen(r.s.ceilingMax as number)}</td>
+                    <td className="r">{r.s.shops.length}社</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="table-scroll-hint">表は横にスクロールしてご覧いただけます。</p>
+        </section>
+      )}
 
       {similar.length > 0 && s.ceilingMax != null && (
         <section className="reveal">
