@@ -12,7 +12,9 @@
   2. 消えたURL == 予定リスト（--expected）。予定より少ない分はウォッチニアンが当日再掲載した型番に限り可
   3. 消えたURL == HEAD のスナップショットから「引き継ぎ期限切れの行だけ」を落として作った sitemap との差
      （＝期限切れ以外の理由で消えたURLが無い）
-  4. 5店すべてが当日取得できている（期限切れ以外の引き継ぎ・取得失敗が無い）
+  4. 8店すべてが当日取得できている（期限切れ以外の引き継ぎ・取得失敗が無い）。
+     メンテ等で前から丸ごと引き継ぎ中と分かっている店は --known-carry で名前を渡すと NG にしない
+     （例 --known-carry ギャラリーレア。10/21 からメンテ中）。渡した店も行数・取得日は表示する
   5. out/ の ref ページ数が sitemap の ref 数と一致し、消えたURLのページが out/ に無い
 exit 1 = 不一致あり（通さない）／ exit 2 = ガードで止まった状態ではない（手順書 §1 の分岐へ）
 """
@@ -26,7 +28,9 @@ import tempfile
 from datetime import date
 from pathlib import Path
 
-SHOPS = ["なんぼや", "大黒屋", "クォーク", "ジャックロード", "ウォッチニアン"]
+# 2026-10-19 フェーズ2で8店（scripts/fetch-watch-prices.py の既存5店＋EXTRA_SHOPS の3店）。店名はスナップショットの shop 値
+SHOPS = ["なんぼや", "大黒屋", "クォーク", "ジャックロード", "ウォッチニアン",
+         "ロデオドライブ", "GINZA RASIN", "ギャラリーレア"]
 CARRY_DAYS = 14  # scripts/fetch-watch-prices.py と同じ値
 
 
@@ -44,6 +48,8 @@ def main():
     ap.add_argument("--date", required=True)
     ap.add_argument("--expected", required=True, help="消えるはずのURL（1行1URL）")
     ap.add_argument("--log", default="/tmp/tokei-daily.log")
+    ap.add_argument("--known-carry", nargs="*", default=[],
+                    help="丸ごと引き継ぎ中と分かっている店（メンテ等）。当日取得0行でも NG にしない")
     a = ap.parse_args()
     repo, D = Path(a.repo), a.date
     ok = True
@@ -135,15 +141,29 @@ def main():
 
     # ---- 4. 当日の取得 ----
     print(f"[4] {D} のスナップショット（carried_over={doc.get('carried_over')}）")
+    known = set(a.known_carry)
+    for s in sorted(known - set(SHOPS)):
+        print(f"      ⚠️ --known-carry の店名が SHOPS に無い: {s}")
+    unlisted = sorted({r["shop"] for r in doc["records"]} - set(SHOPS))
+    res(not unlisted, "スナップショットの店がすべて SHOPS にある" + (f"（無い: {unlisted}）" if unlisted else ""))
+    fully_carried = set()
     for s in SHOPS:
         rows = [r for r in doc["records"] if r["shop"] == s]
         today = sum(1 for r in rows if (r.get("fetched_at") or "")[:10] == D)
         olds = sorted({(r.get("fetched_at") or "?")[:10] for r in rows} - {D})
-        res(today > 0, f"{s}: 当日取得 {today} 行" + (f"（引き継ぎ {len(rows) - today} 行 {olds}）" if olds else ""))
+        if today == 0:
+            fully_carried.add(s)
+        msg = f"{s}: 当日取得 {today} 行" + (f"（引き継ぎ {len(rows) - today} 行 {olds}）" if olds else "")
+        res(today > 0 or (s in known and rows), msg + ("（既知の引き継ぎ・--known-carry）" if today == 0 and s in known else ""))
     stale = [r for r in doc["records"] if r.get("fetched_at")
              and (Dd - date.fromisoformat(r["fetched_at"][:10])).days > CARRY_DAYS]
     res(not stale, f"期限（{CARRY_DAYS}日）を超えた行が残っていない（{len(stale)} 行）")
-    res(set(doc.get("carried_over") or {}) <= {"ウォッチニアン"}, "引き継ぎ中の店はウォッチニアンのみ")
+    # 当日取れた店の一部行の引き継ぎ（復旧した店で掲載から消えた型番。fetch-watch-prices.py の2段目）は正常。
+    # 丸ごと引き継ぎの店だけを、既知のもの（--known-carry）に限る。
+    carried = set(doc.get("carried_over") or {})
+    print(f"      引き継ぎ中の店: {sorted(carried)}（うち丸ごと: {sorted(fully_carried & carried)}）")
+    res(fully_carried <= known, "丸ごと引き継ぎの店は --known-carry で渡した店のみ"
+        + (f"（想定外: {sorted(fully_carried - known)}）" if fully_carried - known else ""))
 
     # ---- 5. out/ ----
     out = repo / "out/ref"
