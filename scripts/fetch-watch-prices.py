@@ -199,6 +199,40 @@ def yen(t: str) -> int | None:
     return v if 10_000 <= v <= 100_000_000 else None
 
 
+def date_marks(html: str, pattern: str) -> list[tuple[int, str]]:
+    """ページ内の「更新日」等の日付表示を (位置, "YYYY-MM-DD") の一覧で返す。
+
+    pattern は 年・月・日 の3グループを持つ正規表現。
+    2026-10-25: 大黒屋・クォークの page_updated が常に None だった（パーサが更新日を読んでいなかった）。
+      大黒屋   価格表の直前に「更新日: 2026年10月23日」（1ページ1か所）
+      クォーク ロレックス: 各表の直前に「更新日： 2026/10/23」（スポーツ/メンズの2か所）
+               オメガ  : 表の直後に「上記価格は2026年10月23日現在のものです。」
+    表示（型番ページの「買取店の更新日」・店ページ）にしか使わない。取得件数・公開判定には影響しない。
+    """
+    out = []
+    for m in re.finditer(pattern, html):
+        y, mo, d = m.group(1), int(m.group(2)), int(m.group(3))
+        if 1 <= mo <= 12 and 1 <= d <= 31:
+            out.append((m.start(), f"{y}-{mo:02d}-{d:02d}"))
+    return out
+
+
+def date_before(pos: int, marks: list[tuple[int, str]]) -> str | None:
+    """pos より前で最も近い日付。前に無ければページ内の最初の日付（無ければ None）。"""
+    prev = [d for p, d in marks if p < pos]
+    return prev[-1] if prev else (marks[0][1] if marks else None)
+
+
+def date_after(pos: int, marks: list[tuple[int, str]]) -> str | None:
+    """pos より後で最も近い日付（「上記価格は…現在」型）。後ろに無ければ最後の日付。"""
+    nxt = [d for p, d in marks if p > pos]
+    return nxt[0] if nxt else (marks[-1][1] if marks else None)
+
+
+UPDATED_LABEL = r"更新日[\s:：]*(?:<[^>]+>\s*)*(20\d\d)\s*[年/.\-]\s*(\d{1,2})\s*[月/.\-]\s*(\d{1,2})"
+QUARK_AS_OF = r"上記価格は\s*(20\d\d)\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日\s*現在"
+
+
 def norm_ref(ref: str) -> str:
     """型番の表記ゆれをそろえる。
 
@@ -237,6 +271,7 @@ def parse_quark(html: str, url: str) -> list[dict]:
         r"<td><b>([^<]{2,30})</b></td>\s*<td><b>([A-Za-z0-9./-]{4,20})</b></td>"
         r"\s*<td>([^<]{1,20})</td>\s*<td[^>]*>([^<]{1,10})</td>\s*<td[^>]*>￥([\d,]+)</td>"
     )
+    marks = date_marks(html, UPDATED_LABEL)  # 各表の直前「更新日： 2026/10/23」
     for m in pat.finditer(html):
         v = yen(m.group(5))
         if v:
@@ -244,7 +279,8 @@ def parse_quark(html: str, url: str) -> list[dict]:
                         "model": m.group(1).strip(), "dial": m.group(4).strip(),
                         "material": m.group(3).strip(),
                         "price_type": "上限", "condition": "中古", "price_jpy": v,
-                        "source_url": url, "fetched_at": TODAY})
+                        "source_url": url, "page_updated": date_before(m.start(), marks),
+                        "fetched_at": TODAY})
     return out
 
 
@@ -268,7 +304,9 @@ def parse_daikokuya(html: str, url: str) -> list[dict]:
     dial_pat = re.compile(r'<span class="end">([^<]{1,30})</span>')
     cell_pat = re.compile(r'<td class="price-cell">([\s\S]*?)</td>', re.I)
 
-    for row in row_pat.findall(html):
+    marks = date_marks(html, UPDATED_LABEL)  # 価格表の直前「更新日: 2026年10月23日」
+    for m_row in row_pat.finditer(html):
+        row = m_row.group(1)
         m_ref = ref_pat.search(row)
         if not m_ref:
             continue
@@ -285,7 +323,8 @@ def parse_daikokuya(html: str, url: str) -> list[dict]:
             if v:
                 rec = {"shop": "大黒屋", "shop_id": "daikokuya", "ref": ref, "model": model,
                        "price_type": "上限", "condition": cond, "price_jpy": v,
-                       "source_url": url, "fetched_at": TODAY}
+                       "source_url": url, "page_updated": date_before(m_row.start(), marks),
+                       "fetched_at": TODAY}
                 if dial:
                     rec["dial"] = dial
                 out.append(rec)
@@ -351,13 +390,15 @@ def parse_quark3(html: str, url: str) -> list[dict]:
         r"<td><b>([^<]{2,40})</b></td>\s*<td><b>([A-Za-z0-9./-]{4,20})</b></td>"
         r"\s*<td[^>]*>￥([\d,]+)</td>"
     )
+    marks = date_marks(html, QUARK_AS_OF)  # 表の直後「上記価格は2026年10月23日現在のものです。」
     for m in pat.finditer(html):
         v = yen(m.group(3))
         if v:
             out.append({"shop": "クォーク", "shop_id": "quark", "ref": norm_ref(m.group(2)),
                         "model": m.group(1).strip(),
                         "price_type": "上限", "condition": "中古", "price_jpy": v,
-                        "source_url": url, "fetched_at": TODAY})
+                        "source_url": url, "page_updated": date_after(m.end(), marks),
+                        "fetched_at": TODAY})
     return out
 
 
