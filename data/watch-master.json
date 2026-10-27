@@ -514,7 +514,8 @@
     "nanboya",
     "watchnian",
     "ginzarasin",
-    "galleryrare"
+    "galleryrare",
+    "rodeodrive"
    ]
   },
   "126618LB": {
@@ -603,7 +604,8 @@
     "シードウェラー ディープシー",
     "シードウェラー ディープブルー",
     "ディープシー D-BLUEダイアル ブルー",
-    "ディープシー ブラック"
+    "ディープシー ブラック",
+    "シードウェラー ディープシー シードウェラー ディープシー"
    ],
    "shops": [
     "jackroad",
@@ -21764,7 +21766,8 @@
     "アクアノート エクストララージ"
    ],
    "shops": [
-    "ginzarasin"
+    "ginzarasin",
+    "rodeodrive"
    ]
   },
   "5168G.001": {
@@ -24828,5 +24831,5 @@
    ]
   }
  },
- "updated_at": "2026-10-26"
+ "updated_at": "2026-10-27"
 }
