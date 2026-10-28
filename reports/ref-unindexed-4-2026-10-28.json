@@ -1,0 +1,107 @@
+{
+ "_note": "sites.md の「/ref/ 4本 未登録」の特定（2026-10-28）。4本は growth ルーチンが 10/21 から追っている検索表示のある /ref/（workspace growth/kw-status.md 10/21: 116231g・116719blro・16713・116681）。10/26 以降は 16713rg も同じ扱いで見ているので併記。",
+ "property": "https://brandwatchbank.com/",
+ "inspected_at": "2026-10-28T09:23:24",
+ "gsc_range": [
+  "2026-09-29",
+  "2026-10-26"
+ ],
+ "urls": {
+  "https://brandwatchbank.com/ref/116231g/": {
+   "verdict": "NEUTRAL",
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-26T16:35:38Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/ref/116231g/",
+   "userCanonical": "https://brandwatchbank.com/ref/116231g/",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "sitemap": null,
+   "referringUrls": [
+    "https://brandwatchbank.com/"
+   ],
+   "gsc_28d": {
+    "clicks": 0,
+    "impressions": 15,
+    "position": 20.1
+   }
+  },
+  "https://brandwatchbank.com/ref/116719blro/": {
+   "verdict": "NEUTRAL",
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-26T20:33:44Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/ref/116719blro/",
+   "userCanonical": "https://brandwatchbank.com/ref/116719blro/",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "sitemap": null,
+   "referringUrls": [
+    "https://brandwatchbank.com/"
+   ],
+   "gsc_28d": {
+    "clicks": 0,
+    "impressions": 12,
+    "position": 12.8
+   }
+  },
+  "https://brandwatchbank.com/ref/16713/": {
+   "verdict": "NEUTRAL",
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-27T18:09:17Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/ref/16713/",
+   "userCanonical": "https://brandwatchbank.com/ref/16713/",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "sitemap": null,
+   "referringUrls": [
+    "https://brandwatchbank.com/"
+   ],
+   "gsc_28d": {
+    "clicks": 1,
+    "impressions": 13,
+    "position": 9.5
+   }
+  },
+  "https://brandwatchbank.com/ref/16713rg/": {
+   "verdict": "NEUTRAL",
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-26T20:39:40Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/ref/16713rg/",
+   "userCanonical": "https://brandwatchbank.com/ref/16713rg/",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "sitemap": null,
+   "referringUrls": [
+    "https://brandwatchbank.com/"
+   ],
+   "gsc_28d": {
+    "clicks": 0,
+    "impressions": 24,
+    "position": 8.3
+   }
+  },
+  "https://brandwatchbank.com/ref/116681/": {
+   "verdict": "NEUTRAL",
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-08T14:46:44Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/ref/116681/",
+   "userCanonical": "https://brandwatchbank.com/ref/116681/",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "sitemap": null,
+   "referringUrls": [
+    "https://brandwatchbank.com/"
+   ],
+   "gsc_28d": {
+    "clicks": 0,
+    "impressions": 4,
+    "position": 42.2
+   }
+  }
+ },
+ "ref_pages_with_impressions": 82
+}

@@ -268,3 +268,9 @@
 - 72本は公式検索（JP/US/INT/IT）0件・現行コレクション一覧144型番（`reports/official-panerai-current-refs-2026-10-27.txt`）にも無い。PAM01312 の旧URLは PAM03312 にリダイレクト（同一品とは扱わない）。
 - ⚠️ panerai.com は curl/WebFetch で 403（Akamai）。ヘッドレス Chrome（CDP・実UA）でページを開き、同じページから公式の検索 API `/jp/ja/search/free-search/_jcr_content/par/search_result.search.json?q=<型番>&priceCountryCode=JP` を fetch すると取れる。Wayback CDX は当日 Temporarily Offline。
 - 10/26 日次: 11:25:03 開始 → 11:40:37 デプロイOK（ガード停止なし）。sitemap 531・lastmod 2026-10-26（本番 ?cb= で確認）。errors=3 は外れ値保留3件。
+
+### 2026-10-28 朝 カルティエ68型番の公式照合（全件済み）・/ref/ 未登録4本の特定（デプロイなし）
+- 結果 `reports/official-match-cartier-2026-10-28.{md,tsv}`: **一致3（WSSA0029・WSSA0046・WSSA0062）・公式に無い65**。公式の現行ウォッチ一覧 `reports/official-cartier-current-refs-2026-10-28.txt`（JP/FR/GB/CH/HK の和集合321型番）。公式に無い65本は旧型番体系（W2…/W5…/W6…/WE…/WT… など）が大半。
+- ⚠️ cartier.com は curl で 403。ヘッドレス Chrome（CDP）で公式ページを開き、ページに埋め込まれた Algolia（app `96TW5XP97E`・検索専用キーはページの `data-algolia-algoliakey`）を同じページから呼ぶ。インデックス `prod_cartier_apac_ja_jp_products` ほか、`filters: englishProductFamily:WATCH` で全件（JP 225＝公式「225 アイテム」と一致）。⚠️ JP の検索は旧型番をシリーズ名に読み替える検索ルールがある（W51008Q3→タンク フランセーズ）ので、ヒット数ではなく `localReference` の完全一致で判定する。米国のインデックス名は不明。
+- 店側の気づき: W6701005 はロデオドライブが「ロンドソロ LM」「XL」の2つの名前で掲載（サイズ違いの混在の可能性）。
+- **/ref/ 未登録4本＝116231g・116719blro・16713・116681**（出所は workspace の `growth/kw-status.md` 10/21＝growth ルーチンが検索表示のある /ref/ として追っている）。10/28 の URL 検査で4本とも「Crawled - currently not indexed」・取得成功・canonical 一致・本番 200。16713rg（10/26 から同じく追跡・28日で表示24 最多）も同じ状態。116681 だけ最終クロール 10/8 のまま。`reports/ref-unindexed-4-2026-10-28.json`。
