@@ -274,3 +274,9 @@
 - ⚠️ cartier.com は curl で 403。ヘッドレス Chrome（CDP）で公式ページを開き、ページに埋め込まれた Algolia（app `96TW5XP97E`・検索専用キーはページの `data-algolia-algoliakey`）を同じページから呼ぶ。インデックス `prod_cartier_apac_ja_jp_products` ほか、`filters: englishProductFamily:WATCH` で全件（JP 225＝公式「225 アイテム」と一致）。⚠️ JP の検索は旧型番をシリーズ名に読み替える検索ルールがある（W51008Q3→タンク フランセーズ）ので、ヒット数ではなく `localReference` の完全一致で判定する。米国のインデックス名は不明。
 - 店側の気づき: W6701005 はロデオドライブが「ロンドソロ LM」「XL」の2つの名前で掲載（サイズ違いの混在の可能性）。
 - **/ref/ 未登録4本＝116231g・116719blro・16713・116681**（出所は workspace の `growth/kw-status.md` 10/21＝growth ルーチンが検索表示のある /ref/ として追っている）。10/28 の URL 検査で4本とも「Crawled - currently not indexed」・取得成功・canonical 一致・本番 200。16713rg（10/26 から同じく追跡・28日で表示24 最多）も同じ状態。116681 だけ最終クロール 10/8 のまま。`reports/ref-unindexed-4-2026-10-28.json`。
+
+### 2026-10-29 朝 ウブロ64型番の公式照合（全件済み）・/ref/ 未登録4本の URL 検査（デプロイなし）
+- 結果 `reports/official-match-hublot-2026-10-29.{md,tsv}`: **一致1（525.CM.0170.RX）・公式に無い63**。公式の現行ウォッチ一覧 `reports/official-hublot-current-refs-2026-10-29.txt`（302型番）。公式の現行品に 301・311・341・342・411・515・545 で始まる型番は0（ウニコは 441/421 系が現行）。末尾だけ違う公式型番がある5本（.LR→公式 .RX）は同一品か未確認のため「公式に無い」のまま。
+- ⚠️ hublot.com は curl で 403。ヘッドレス Chrome（CDP）で公式ページを開き、同じページから sitemap（商品302本）と公式の商品検索（Algolia app `GXB9J0YDAN`・インデックス `hublot_watch`・検索専用キーはページの drupalSettings.algolia）を呼ぶ。検索の全件302＝sitemap の商品ページ302。各商品ページの JSON-LD `sku` でも照合（地域サフィックス `.JPN18` 等の表記違いあり）。抽出は `npx tsx cands.mts ウブロ out.tsv`（10/28 と同じ：masterRefs→hold 除外→summarize で2社以上）。
+- 店側の気づき: 342.SE.230.RW は GINZA RASIN「ビッグバン スチール ホワイト」/ロデオドライブ「ビッグバン サンモリッツ オールホワイト」で名称が食い違う。
+- **/ref/ 未登録4本の URL 検査（10/29 09:28）**: 4本とも「Crawled - currently not indexed」のまま・取得成功・canonical 一致・本番 200（?cb=）。最終クロール 116231g 10/28・116719blro 10/28（いずれも 10/26 から更新）・16713 10/27（同じ）・116681 10/8（同じ）。16713rg も同じ状態（10/28 再クロール）。`reports/ref-unindexed-4-2026-10-29.json`。
