@@ -1,0 +1,212 @@
+{
+ "site": "brandwatchbank.com",
+ "date": "2026-10-30",
+ "checked_at_jst": "2026-10-30 09:18",
+ "property": "https://brandwatchbank.com/",
+ "method": "07:00 点検（daily-site-check.py の index_sample）と同じ「現 sitemap md5順の先頭32本」を、1本ずつ最大3回再試行つきで URL 検査。07:00 は URL検査 API の 500 で全体がエラーになったための再試行",
+ "sitemap_n": 532,
+ "states": {
+  "URL is unknown to Google": 21,
+  "Crawled - currently not indexed": 10,
+  "Not found (404)": 1
+ },
+ "indexed": 0,
+ "errors": 0,
+ "retries": 0,
+ "same_urls_as_2026-10-20_sample_0700": 32,
+ "state_changed_vs_2026-10-20": [],
+ "urls": {
+  "https://brandwatchbank.com/ref/212.30.44.50.03.001/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/126505/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-02T14:43:26Z",
+   "pageFetchState": "SUCCESSFUL",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/126334g/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/277200/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/guide/accessories-and-price/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/47040.b01a.9094/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-01T13:53:01Z",
+   "pageFetchState": "SUCCESSFUL",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/116520/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-08T03:04:40Z",
+   "pageFetchState": "SUCCESSFUL",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/231.10.43.22.03.001/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/214270/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-29T18:17:43Z",
+   "pageFetchState": "SUCCESSFUL",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/116200/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/116523/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/331.10.42.51.01.001/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-28T02:36:25Z",
+   "pageFetchState": "SUCCESSFUL",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/26320st.oo.1220st.01/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ranking/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/115234/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/5500v.110a.b075/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/26240st.oo.1320st.06/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/228235a/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/16233g/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/15400or.oo.1220or.03/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/14000/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-17T12:35:38Z",
+   "pageFetchState": "SUCCESSFUL",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/116261/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/311.92.44.30.01.001/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/118238/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/231.10.42.22.01.001/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/15400sr.oo.1220sr.01/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/126900/": {
+   "coverageState": "Not found (404)",
+   "lastCrawlTime": "2026-09-20T05:18:11Z",
+   "pageFetchState": "NOT_FOUND",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/226659/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-18T01:15:21Z",
+   "pageFetchState": "SUCCESSFUL",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/522.30.42.30.04.001/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-14T22:05:23Z",
+   "pageFetchState": "SUCCESSFUL",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/168622/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/126331/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-29T18:17:14Z",
+   "pageFetchState": "SUCCESSFUL",
+   "attempts": 1
+  },
+  "https://brandwatchbank.com/ref/15450st.oo.1256st.03/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-15T19:38:25Z",
+   "pageFetchState": "SUCCESSFUL",
+   "attempts": 1
+  }
+ }
+}
