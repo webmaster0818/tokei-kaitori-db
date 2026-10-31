@@ -243,6 +243,8 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
                       「同じ状態・同じ文字盤なのに価格が違う行」に見えてしまうため、そのときだけ併記する。 */}
                   <td className="spec-cell">
                     {[s.models.length > 1 ? r.model : null, r.condition, r.dial, r.material, variantLabel(r)].filter(Boolean).join(" / ") || "—"}
+                    {/* 店の表記を公式の表記に直した行（lib/prices.ts applyRowFix） */}
+                    {r.fixed_note && <small className="mt-1 block text-[var(--ink-3)]">{r.fixed_note}</small>}
                     {/* 区別のつかない複数の価格を中央値1行にまとめた行（lib/prices.ts collapseUndistinguished） */}
                     {r.collapsed && (
                       <small className="mt-1 block text-[var(--ink-3)]">

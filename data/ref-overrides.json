@@ -15,5 +15,61 @@
       "model_contains": "グッドプラネット",
       "reason": "店の行名はグッドプラネット、公式のグッドプラネットは .03.001（jiro-2 check-names 10/17）"
     }
+  ],
+  "fix_rows_note": "店の掲載のうち、公式（メーカーのページ）と食い違う文字盤・名称を公式の表記に直して表示する（2026-10-31）。match の値が今も店の掲載と同じときだけ置き換える（店が直したら自動で外れる）。価格・店・出典URLは変えない。型番ページの該当行に「店の表記」を併記する。",
+  "fix_rows": [
+    {
+      "ref": "IW329002",
+      "shop_id": "rodeodrive",
+      "match": {
+        "dial": "シルバー"
+      },
+      "set": {
+        "dial": "ブラック"
+      },
+      "reason": "ロデオドライブの文字盤「シルバー」、公式は「ブラック」（IW329003 と入れ替わっている可能性）",
+      "official_url": "https://www.iwc.com/jp-ja/past-collections/aquatimer/iw329002-aquatimer-automatic",
+      "checked": "2026-10-31"
+    },
+    {
+      "ref": "IW329003",
+      "shop_id": "rodeodrive",
+      "match": {
+        "dial": "黒"
+      },
+      "set": {
+        "dial": "シルバー"
+      },
+      "reason": "ロデオドライブの文字盤「黒」、公式は「シルバー」（IW329002 と入れ替わっている可能性）",
+      "official_url": "https://www.iwc.com/jp-ja/past-collections/aquatimer/iw329003-aquatimer-automatic",
+      "checked": "2026-10-31"
+    },
+    {
+      "ref": "IW390503",
+      "shop_id": "rodeodrive",
+      "match": {
+        "dial": "グレー"
+      },
+      "set": {
+        "dial": "ブラック"
+      },
+      "reason": "ロデオドライブの文字盤「グレー」、公式は「ブラック」",
+      "official_url": "https://www.iwc.com/jp-ja/past-collections/portugieser/iw390503-portugieser-yacht-club-chronograph",
+      "checked": "2026-10-31"
+    },
+    {
+      "ref": "IW371480",
+      "shop_id": "ginzarasin",
+      "match": {
+        "model": "ポルトギーゼ オートマティック"
+      },
+      "set": {
+        "model": "ポルトギーゼ クロノグラフ",
+        "variant": "IWC ポルトギーゼ クロノグラフ IW371480"
+      },
+      "reason": "GINZA RASIN の掲載名「ポルトギーゼ オートマティック」、公式は「ポルトギーゼ・クロノグラフ」（18Kレッドゴールド）",
+      "official_url": "https://www.iwc.com/jp-ja/past-collections/portugieser/iw371480-portugieser-chronograph",
+      "checked": "2026-10-31"
+    }
   ]
 }

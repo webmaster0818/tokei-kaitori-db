@@ -26,6 +26,8 @@ export type PriceRecord = {
    * 中央値1行にまとめた場合の元の値の範囲（collapseUndistinguished()）。
    */
   collapsed?: { n: number; min: number; max: number };
+  /** 店の表記を公式の表記に直した行の注記（applyRowFix・data/ref-overrides.json fix_rows） */
+  fixed_note?: string;
 };
 
 /**
@@ -91,7 +93,7 @@ function readSnapshot(date: string): PriceRecord[] {
   //    すべてこの関数を通るので、保留した値がページ・ランキング・公開型番数に混ざらない。
   //    区別のつかない複数の価格は中央値1行にまとめる（collapseUndistinguished）。
   const rows = fs.existsSync(p)
-    ? collapseUndistinguished(((JSON.parse(fs.readFileSync(p, "utf8")).records ?? []) as PriceRecord[]).filter((r) => !r.held && !isHeldRow(r)))
+    ? collapseUndistinguished(((JSON.parse(fs.readFileSync(p, "utf8")).records ?? []) as PriceRecord[]).filter((r) => !r.held && !isHeldRow(r)).map(applyRowFix))
     : [];
   snapshotCache.set(date, rows);
   return rows;
@@ -293,6 +295,23 @@ export function isHeldRow(r: PriceRecord): boolean {
     heldRowsCache = fs.existsSync(p) ? (JSON.parse(fs.readFileSync(p, "utf8")).hold_rows ?? []) : [];
   }
   return heldRowsCache!.some((h) => h.ref === r.ref && h.shop_id === r.shop_id && (!h.model_contains || (r.model ?? "").includes(h.model_contains)));
+}
+
+// 行の表記の訂正（data/ref-overrides.json fix_rows・2026-10-31）
+// 店の掲載の文字盤・名称が公式（メーカー）と食い違う行を、公式の表記に直して表示する。
+// match の値が今も店の掲載と同じときだけ置き換える（店が直したら自動で外れる）。価格・店・出典URLは変えない。
+type RowFix = { ref: string; shop_id: string; match: Partial<Record<"model" | "dial" | "variant", string>>; set: Partial<Record<"model" | "dial" | "variant", string>> };
+let rowFixCache: RowFix[] | null = null;
+export function applyRowFix(r: PriceRecord): PriceRecord {
+  if (!rowFixCache) {
+    const p = path.join(process.cwd(), "data", "ref-overrides.json");
+    rowFixCache = fs.existsSync(p) ? (JSON.parse(fs.readFileSync(p, "utf8")).fix_rows ?? []) : [];
+  }
+  const f = rowFixCache!.find((x) => x.ref === r.ref && x.shop_id === r.shop_id
+    && Object.entries(x.match).every(([k, v]) => (r[k as keyof PriceRecord] ?? "") === v));
+  if (!f) return r;
+  const shopLabel = Object.values(f.match).map((v) => `「${v}」`).join("");
+  return { ...r, ...f.set, fixed_note: `店の表記${shopLabel}を公式の表記に直しています` };
 }
 
 // 型番マスタの取り違えの手当て（data/ref-overrides.json）
