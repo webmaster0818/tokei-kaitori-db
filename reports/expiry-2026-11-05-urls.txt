@@ -1,0 +1,6 @@
+# 2026-11-05 に sitemap から消える見込みのURL（3本）。2026-11-04 09:2x に data/prices/2026-11-03.json（HEAD 98c88beb）から模擬ビルドで算出（533→530）。
+# 計算: 元の取得日から14日を超える行（ギャラリーレア 10/21取得 165行・ロデオドライブ 16233 1行）を落とし、外れ値判定をやり直して next build。
+# ギャラリーレアは全行失効で店ページも生成されない（/shop/galleryrare/ は _redirects の対象外＝404）。
+https://brandwatchbank.com/ref/115200/
+https://brandwatchbank.com/ref/18346a/
+https://brandwatchbank.com/shop/galleryrare/
