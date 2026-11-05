@@ -14,7 +14,9 @@
      （＝期限切れ以外の理由で消えたURLが無い）
   4. 8店すべてが当日取得できている（期限切れ以外の引き継ぎ・取得失敗が無い）。
      メンテ等で前から丸ごと引き継ぎ中と分かっている店は --known-carry で名前を渡すと NG にしない
-     （例 --known-carry ギャラリーレア。10/21 からメンテ中）。渡した店も行数・取得日は表示する
+     （例 --known-carry ギャラリーレア。10/21 からメンテ中）。渡した店も行数・取得日は表示する。
+     渡した店の行が0件でもよいのは、HEAD のスナップショットの行がすべて当日で期限切れのときだけ
+     （2026-11-05 ギャラリーレアのように全行失効した店。期限内の行が消えていれば NG）
   5. out/ の ref ページ数が sitemap の ref 数と一致し、消えたURLのページが out/ に無い
 exit 1 = 不一致あり（通さない）／ exit 2 = ガードで止まった状態ではない（手順書 §1 の分岐へ）
 """
@@ -113,8 +115,11 @@ def main():
         snaps = sorted((Path(td) / "data/prices").glob("*.json"))
         base_doc = json.loads(snaps[-1].read_text(encoding="utf-8"))
         Dd = date.fromisoformat(D)
-        keep = [r for r in base_doc["records"]
-                if not r.get("fetched_at") or (Dd - date.fromisoformat(r["fetched_at"][:10])).days <= CARRY_DAYS]
+
+        def in_term(r):
+            return not r.get("fetched_at") or (Dd - date.fromisoformat(r["fetched_at"][:10])).days <= CARRY_DAYS
+
+        keep = [r for r in base_doc["records"] if in_term(r)]
         expired = len(base_doc["records"]) - len(keep)
         (Path(td) / f"data/prices/{D}.json").write_text(
             json.dumps({**base_doc, "records": keep}, ensure_ascii=False), encoding="utf-8")
@@ -154,7 +159,12 @@ def main():
         if today == 0:
             fully_carried.add(s)
         msg = f"{s}: 当日取得 {today} 行" + (f"（引き継ぎ {len(rows) - today} 行 {olds}）" if olds else "")
-        res(today > 0 or (s in known and rows), msg + ("（既知の引き継ぎ・--known-carry）" if today == 0 and s in known else ""))
+        # 行が0件の店は「全行が期限切れで消えた」と HEAD のスナップショットで説明できるときだけ通す
+        live_in_head = sum(1 for r in base_doc["records"] if r["shop"] == s and in_term(r))
+        known_ok = s in known and (rows or live_in_head == 0)
+        if today == 0 and s in known:
+            msg += "（既知の引き継ぎ・--known-carry）" if rows else f"（行0件。HEAD の期限内の行 {live_in_head}＝0なら全行失効）"
+        res(today > 0 or known_ok, msg)
     stale = [r for r in doc["records"] if r.get("fetched_at")
              and (Dd - date.fromisoformat(r["fetched_at"][:10])).days > CARRY_DAYS]
     res(not stale, f"期限（{CARRY_DAYS}日）を超えた行が残っていない（{len(stale)} 行）")
