@@ -1,5 +1,5 @@
 # 掲載を終えた型番ページの転送（scripts/generate-redirects.mjs がビルドごとに生成。手で編集しない）
-# 生成: 2026-11-05T02:39:43.363Z / 過去に公開した型番 496 / 公開中 488 / 転送 8型番・ハブ 0
+# 生成: 2026-11-06T02:39:59.699Z / 過去に公開した型番 496 / 公開中 488 / 転送 8型番・ハブ 0
 /ref/115200/ /model/oyster-perpetual/ 301
 /ref/115200 /model/oyster-perpetual/ 301
 /ref/18346a/ /model/day-date/ 301
