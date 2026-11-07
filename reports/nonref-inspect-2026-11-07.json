@@ -1,0 +1,359 @@
+{
+ "_note": "sitemap の /ref/ 以外の全URLの URL 検査（2026-11-07・読み取りのみ）",
+ "inspected_at": "2026-11-07T09:34:31",
+ "urls": {
+  "https://brandwatchbank.com/": {
+   "coverageState": "Submitted and indexed",
+   "lastCrawlTime": "2026-11-05T21:44:31Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/",
+   "referringUrls": [
+    "https://brandwatchbank.com/ref/522.20.42.30.01.001/",
+    "https://brandwatchbank.com/ref/231.10.44.50.06.001/"
+   ],
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/brand/audemars-piguet/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/brand/omega/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/brand/rolex/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/brand/vacheron-constantin/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-04T10:12:14Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/brand/vacheron-constantin/",
+   "referringUrls": [
+    "https://brandwatchbank.com/ref/7900v.110a.b546/"
+   ],
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/air-king/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/code-11-59/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/constellation/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/datejust/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-09-28T03:59:21Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/model/datejust/",
+   "referringUrls": [
+    "https://brandwatchbank.com/model/daytona/"
+   ],
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/day-date/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-18T17:17:50Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/model/day-date/",
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/daytona/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-03T01:20:56Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/model/daytona/",
+   "referringUrls": [
+    "https://brandwatchbank.com/ref/116503/"
+   ],
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/de-ville/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/deepsea/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/explorer/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/gmt-master-2/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-18T09:48:23Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/model/gmt-master-2/",
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/lady-datejust/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/milgauss/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/overseas/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/oyster-perpetual/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/royal-oak-offshore/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/royal-oak/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/sea-dweller/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/seamaster/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-18T16:21:13Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/model/seamaster/",
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/sky-dweller/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/speedmaster/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-18T08:49:38Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/model/speedmaster/",
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/submariner/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/model/yacht-master/": {
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-19T03:52:30Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/model/yacht-master/",
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/ranking/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/shop/daikokuya/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/shop/ginzarasin/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/shop/jackroad/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/shop/nanboya/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/shop/quark/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/shop/rodeodrive/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/shop/watchnian/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/faq/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/glossary/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/guide/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/guide/accessories-and-price/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/guide/choosing-a-buyer/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/guide/how-to-read-prices/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/guide/overhaul-before-selling/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/guide/rolex-reference-numbers/": {
+   "coverageState": "URL is unknown to Google",
+   "lastCrawlTime": null,
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "googleCanonical": null,
+   "referringUrls": null,
+   "sitemap": null
+  }
+ }
+}

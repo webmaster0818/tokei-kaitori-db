@@ -1,0 +1,57 @@
+{
+ "_note": "/ref/ 未登録4本（116231g・116719blro・16713・116681）＋16713rg の URL 検査（2026-11-07・読み取りのみ）",
+ "property": "https://brandwatchbank.com/",
+ "inspected_at": "2026-11-07T09:18:52",
+ "urls": {
+  "https://brandwatchbank.com/ref/116231g/": {
+   "verdict": "NEUTRAL",
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-11-05T19:55:36Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/ref/116231g/",
+   "userCanonical": "https://brandwatchbank.com/ref/116231g/",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED"
+  },
+  "https://brandwatchbank.com/ref/116719blro/": {
+   "verdict": "NEUTRAL",
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-11-05T20:09:10Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/ref/116719blro/",
+   "userCanonical": "https://brandwatchbank.com/ref/116719blro/",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED"
+  },
+  "https://brandwatchbank.com/ref/16713/": {
+   "verdict": "NEUTRAL",
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-11-06T17:41:59Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/ref/16713/",
+   "userCanonical": "https://brandwatchbank.com/ref/16713/",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED"
+  },
+  "https://brandwatchbank.com/ref/116681/": {
+   "verdict": "NEUTRAL",
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-08T14:46:44Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/ref/116681/",
+   "userCanonical": "https://brandwatchbank.com/ref/116681/",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED"
+  },
+  "https://brandwatchbank.com/ref/16713rg/": {
+   "verdict": "NEUTRAL",
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-11-05T20:39:51Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/ref/16713rg/",
+   "userCanonical": "https://brandwatchbank.com/ref/16713rg/",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED"
+  }
+ }
+}
