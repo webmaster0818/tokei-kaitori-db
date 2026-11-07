@@ -765,7 +765,8 @@
    ],
    "shops": [
     "jackroad",
-    "ginzarasin"
+    "ginzarasin",
+    "watchnian"
    ]
   },
   "126900": {
@@ -6446,12 +6447,14 @@
    "brand": "オメガ",
    "models": [
     "スピードマスター ムーンウォッチ ダークサイド・オブ・ムーン",
-    "オメガ スピードマスター"
+    "オメガ スピードマスター",
+    "スピードマスター ムーンウォッチ"
    ],
    "shops": [
     "rodeodrive",
     "ginzarasin",
-    "nanboya"
+    "nanboya",
+    "watchnian"
    ]
   },
   "331.12.42.51.01.002": {
@@ -6892,11 +6895,13 @@
    "brand": "オメガ",
    "models": [
     "シーマスター 600 プラネットオーシャン GMT",
-    "オメガ シーマスター プラネットオーシャン GMT"
+    "オメガ シーマスター プラネットオーシャン GMT",
+    "シーマスター プラネットオーシャン"
    ],
    "shops": [
     "rodeodrive",
-    "nanboya"
+    "nanboya",
+    "watchnian"
    ]
   },
   "232.30.44.22.01.002": {
@@ -11659,10 +11664,12 @@
    "brand": "ロレックス",
    "models": [
     "1908 ブラック",
-    "1908 ホワイト"
+    "1908 ホワイト",
+    "1908"
    ],
    "shops": [
-    "ginzarasin"
+    "ginzarasin",
+    "watchnian"
    ]
   },
   "16523G": {
@@ -24859,7 +24866,52 @@
    "shops": [
     "ginzarasin"
    ]
+  },
+  "127234": {
+   "brand": "ロレックス",
+   "models": [
+    "ランドドゥエラー"
+   ],
+   "shops": [
+    "watchnian"
+   ]
+  },
+  "127334": {
+   "brand": "ロレックス",
+   "models": [
+    "ランドドゥエラー"
+   ],
+   "shops": [
+    "watchnian"
+   ]
+  },
+  "127235": {
+   "brand": "ロレックス",
+   "models": [
+    "ランドドゥエラー"
+   ],
+   "shops": [
+    "watchnian"
+   ]
+  },
+  "310.60.42.50.99.001": {
+   "brand": "オメガ",
+   "models": [
+    "スピードマスター"
+   ],
+   "shops": [
+    "watchnian"
+   ]
+  },
+  "1242770": {
+   "brand": "ロレックス",
+   "models": [
+    "サブマリーナ"
+   ],
+   "shops": [
+    "rodeodrive"
+   ]
   }
  },
- "updated_at": "2026-11-06"
+ "updated_at": "2026-11-07"
 }
