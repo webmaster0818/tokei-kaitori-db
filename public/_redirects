@@ -1,5 +1,5 @@
 # 掲載を終えた型番ページの転送（scripts/generate-redirects.mjs がビルドごとに生成。手で編集しない）
-# 生成: 2026-11-09T02:40:11.447Z / 過去に公開した型番 498 / 公開中 479 / 転送 19型番・ハブ 0
+# 生成: 2026-11-10T02:39:44.797Z / 過去に公開した型番 500 / 公開中 484 / 転送 16型番・ハブ 0
 /ref/115200/ /model/oyster-perpetual/ 301
 /ref/115200 /model/oyster-perpetual/ 301
 /ref/123.10.35.60.01.001/ /model/constellation/ 301
@@ -10,12 +10,6 @@
 /ref/210.32.42.20.01.001 /model/seamaster/ 301
 /ref/215.30.46.51.03.001/ /model/seamaster/ 301
 /ref/215.30.46.51.03.001 /model/seamaster/ 301
-/ref/215.33.46.51.01.001/ /model/seamaster/ 301
-/ref/215.33.46.51.01.001 /model/seamaster/ 301
-/ref/231.10.43.52.02.001/ /model/seamaster/ 301
-/ref/231.10.43.52.02.001 /model/seamaster/ 301
-/ref/231.10.43.52.03.001/ /model/seamaster/ 301
-/ref/231.10.43.52.03.001 /model/seamaster/ 301
 /ref/232.32.44.22.01.001/ /model/seamaster/ 301
 /ref/232.32.44.22.01.001 /model/seamaster/ 301
 /ref/3210.50/ /model/speedmaster/ 301
