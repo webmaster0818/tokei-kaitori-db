@@ -1,0 +1,77 @@
+{
+ "_note": "/ref/ 未登録4本（116231g・116719blro・16713・116681）＋16713rg の URL 検査（2026-11-11・読み取りのみ）",
+ "property": "https://brandwatchbank.com/",
+ "inspected_at": "2026-11-11T09:18:01",
+ "urls": {
+  "https://brandwatchbank.com/ref/116231g/": {
+   "verdict": "NEUTRAL",
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-11-09T07:23:54Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/ref/116231g/",
+   "userCanonical": "https://brandwatchbank.com/ref/116231g/",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "referringUrls": [
+    "https://brandwatchbank.com/"
+   ],
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/ref/116719blro/": {
+   "verdict": "NEUTRAL",
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-11-09T21:33:23Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/ref/116719blro/",
+   "userCanonical": "https://brandwatchbank.com/ref/116719blro/",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "referringUrls": [
+    "https://brandwatchbank.com/"
+   ],
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/ref/16713/": {
+   "verdict": "NEUTRAL",
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-11-10T17:39:36Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/ref/16713/",
+   "userCanonical": "https://brandwatchbank.com/ref/16713/",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "referringUrls": [
+    "https://brandwatchbank.com/"
+   ],
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/ref/116681/": {
+   "verdict": "NEUTRAL",
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-10-08T14:46:44Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/ref/116681/",
+   "userCanonical": "https://brandwatchbank.com/ref/116681/",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "referringUrls": [
+    "https://brandwatchbank.com/"
+   ],
+   "sitemap": null
+  },
+  "https://brandwatchbank.com/ref/16713rg/": {
+   "verdict": "NEUTRAL",
+   "coverageState": "Crawled - currently not indexed",
+   "lastCrawlTime": "2026-11-09T23:27:08Z",
+   "pageFetchState": "SUCCESSFUL",
+   "googleCanonical": "https://brandwatchbank.com/ref/16713rg/",
+   "userCanonical": "https://brandwatchbank.com/ref/16713rg/",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "referringUrls": [
+    "https://brandwatchbank.com/"
+   ],
+   "sitemap": null
+  }
+ }
+}

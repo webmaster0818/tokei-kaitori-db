@@ -1,13 +1,9 @@
-# 2026-11-14 に sitemap から消える見込みのURL（11本）。2026-11-07 09:3x に data/prices/2026-11-06.json（HEAD 9900dcae）＋ウォッチニアン公式の今朝の一覧（rolex・omega。更新日 2026.11.06 17:0x）で模擬ビルド（531→520）。
-# 計算: 元の取得日から14日を超える行（ウォッチニアン 10/23 取得 6行・10/30 取得 40行。公式に再掲載された型番は当日取得扱い）を落とし、外れ値判定をやり直して next build。11本とも _redirects で 301（→/model/...）。
-# 336933 は 11/6 の取得では 10/30 の引き継ぎだが、今朝の公式一覧に再掲載されているので 11/7 の取得で外れる見込み（再掲載が無い場合は 12本）。11/8〜11/14 の取得で変わりうる。
-https://brandwatchbank.com/ref/128239a/
-https://brandwatchbank.com/ref/18038a/
+# 2026-11-14 に sitemap から消える見込みのURL（7本）。2026-11-11 09:2x に data/prices/2026-11-10.json（HEAD 1341083d）で模擬ビルド（本番 528→521）。
+# 計算: 元の取得日から14日を超える行（ウォッチニアン 10/30 取得 22行）を落とし、外れ値判定をやり直して next build。7本とも _redirects で 301（→/model/seamaster/・speedmaster）。
+# 11/7 の一覧（11本）から外れた4本（128239a・18038a・310.32.42.50.01.001・311.92.44.30.01.001）は 11/10 の取得でウォッチニアンが再掲載（取得日 11/10）。11/11〜11/13 の取得で変わりうる。
 https://brandwatchbank.com/ref/215.92.46.22.01.002/
 https://brandwatchbank.com/ref/234.30.41.21.01.001/
-https://brandwatchbank.com/ref/310.32.42.50.01.001/
 https://brandwatchbank.com/ref/311.10.39.30.01.001/
-https://brandwatchbank.com/ref/311.92.44.30.01.001/
 https://brandwatchbank.com/ref/324.23.38.50.02.002/
 https://brandwatchbank.com/ref/324.30.38.50.03.002/
 https://brandwatchbank.com/ref/329.92.43.51.10.001/
