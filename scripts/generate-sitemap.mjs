@@ -13,6 +13,8 @@
 // ⚠️ daily-update.sh は build の後にこのスクリプトを単体でもう一度実行する。out/ を読むだけなので何度実行しても同じ結果になる。
 import fs from "node:fs";
 import path from "node:path";
+import crypto from "node:crypto";
+import { execSync } from "node:child_process";
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://brandwatchbank.com";
 const root = process.cwd();
@@ -54,10 +56,99 @@ if (missing.length || extra.length) {
   process.exit(1);
 }
 
+// ■ 2026-11-12 lastmod を「表示している値・本文が変わった日」に変更
+//   以前は 型番＝最新取得日／それ以外＝データ全体の最新取得日 で、毎日 530 本すべてが同じ日付になっていた
+//   （値が変わったかとは無関係＝Google が lastmod を当てにしなくなる）。
+//   いまはページごとに「表示内容の指紋」を data/sitemap-lastmod.json に保存し、指紋が前回と変わった日だけ lastmod を進める。
+//   - 型番ページ: refs.json の表示値（最高額・最低額・差額・最高額の店・社数・店の並び・定価）＋ページ上の各社の最新価格
+//   - それ以外（TOP・ハブ・ランキング・買取店・ガイド・FAQ・用語集）: <main> の本文から日付の文字列を除いたもの
+//   ⚠️ daily-update.sh は build 内と単体の2回このスクリプトを走らせる。2回目は指紋が一致するので結果は同じ（冪等）。
+//   ⚠️ data/sitemap-lastmod.json は日次ジョブの git add -A でスナップショットと一緒にコミットされる。
+//   初回（ファイルが無いとき）だけ、型番は data/history の価格が最後に変わった日、本文ページは content/*.md の最終コミット日で埋める。
+const STATE_PATH = path.join(root, "data", "sitemap-lastmod.json");
+const sha1 = (s) => crypto.createHash("sha1").update(s).digest("hex").slice(0, 16);
+const DATE_RE = /\d{4}-\d{2}-\d{2}|\d{4}年\d{1,2}月\d{1,2}日|\d{4}-\d{2}|\d{1,2}\/\d{1,2}/g;
+const mainText = (p) => {
+  const h = fs.readFileSync(path.join(outDir, p, "index.html"), "utf8");
+  const m = h.match(/<main[\s\S]*?<\/main>/);
+  return (m ? m[0] : h)
+    .replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, "")
+    .replace(/<[^>]+>/g, " ");
+};
+const refByPath = new Map(refsJson.refs.map((r) => [new URL(r.url).pathname, r]));
+const fingerprint = (p) => {
+  const r = refByPath.get(p);
+  if (r) {
+    const { latest_date, url, model_url, brand_url, ...shown } = r;
+    const shopPrices = [...new Set([...mainText(p).matchAll(/([^\s:：]+（[^）]+）) \d{4}-\d{2}-\d{2}: ([\d,]+)円/g)].map((m) => `${m[1]}=${m[2]}`))].sort();
+    return sha1(JSON.stringify(shown) + "|" + shopPrices.join(","));
+  }
+  return sha1(mainText(p).replace(DATE_RE, "").replace(/\s+/g, ""));
+};
+
+// 初回の埋め込み用
+const gitDate = (rel) => {
+  try {
+    return execSync(`git log -1 --format=%cs -- "${rel}"`, { cwd: root, encoding: "utf8" }).trim() || null;
+  } catch {
+    return null;
+  }
+};
+const historyChangeDate = (ref) => {
+  const f = path.join(root, "data", "history", `${ref}.json`);
+  if (!fs.existsSync(f)) return null;
+  const days = JSON.parse(fs.readFileSync(f, "utf8")).days ?? [];
+  let prev = null, changed = null;
+  for (const d of days) {
+    const best = {};
+    for (const x of d.records ?? []) {
+      const k = `${x.shop}/${x.price_type}`;
+      if (!(k in best) || x.price_jpy > best[k]) best[k] = x.price_jpy;
+    }
+    const sig = JSON.stringify(Object.entries(best).sort());
+    if (sig !== prev) changed = d.date;
+    prev = sig;
+  }
+  return changed;
+};
+const seedDate = (p) => {
+  const r = refByPath.get(p);
+  if (r) return historyChangeDate(r.ref) ?? latest;
+  const m = p.match(/^\/(guide|brand|model|shop)\/([^/]+)\/$/);
+  const dir = { guide: "guides", brand: "brands", model: "models", shop: "shops" };
+  if (m && m[1] !== "shop" && fs.existsSync(path.join(root, "content", dir[m[1]], `${m[2]}.md`))) {
+    const md = gitDate(`content/${dir[m[1]]}/${m[2]}.md`);
+    if (m[1] === "guide") return md ?? latest;
+    // ブランド・モデルは価格も表示する＝本文の更新日と、含む型番の値が変わった日の新しい方
+    const key = m[1] === "brand" ? "brand_url" : "model_url";
+    const refDates = refsJson.refs.filter((x) => x[key] && new URL(x[key]).pathname === p).map((x) => historyChangeDate(x.ref) ?? latest);
+    return [md, ...refDates].filter(Boolean).sort().pop() ?? latest;
+  }
+  if (p === "/faq/" || p === "/glossary/") return gitDate(`content${p.slice(0, -1)}.md`) ?? latest;
+  if (p === "/guide/") return gitDate("content/guides") ?? latest;
+  return latest; // TOP・ランキング・買取店ページは全体（その店）の価格を表示する
+};
+
+const prevState = fs.existsSync(STATE_PATH) ? JSON.parse(fs.readFileSync(STATE_PATH, "utf8")).pages ?? {} : null;
+const state = {};
+let changedCount = 0;
+for (const p of urls) {
+  const h = fingerprint(p);
+  const prev = prevState?.[p];
+  if (prevState === null) state[p] = { h, d: seedDate(p) };
+  else if (prev && prev.h === h) state[p] = prev;
+  else { state[p] = { h, d: latest }; changedCount++; }
+}
+fs.writeFileSync(
+  STATE_PATH,
+  JSON.stringify({ _note: "sitemap の lastmod の元（scripts/generate-sitemap.mjs が更新。h=表示内容の指紋 d=それが変わった日）", pages: state }, null, 1) + "\n",
+);
+console.log(`lastmod: ${prevState === null ? "初回の埋め込み" : `表示内容が変わったページ ${changedCount}本`}・最新=${latest}・異なる日付 ${new Set(Object.values(state).map((x) => x.d)).size}種`);
+
 const xml = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-  ...urls.map((p) => `  <url><loc>${SITE}${p}</loc><lastmod>${refLastmod.get(p) ?? latest}</lastmod><changefreq>daily</changefreq></url>`),
+  ...urls.map((p) => `  <url><loc>${SITE}${p}</loc><lastmod>${state[p].d}</lastmod><changefreq>daily</changefreq></url>`),
   "</urlset>",
   "",
 ].join("\n");
