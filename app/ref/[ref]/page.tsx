@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
-import { latestDate, masterRefs, monthlyHistory, publishableRefs, summarize, yen } from "@/lib/prices";
+import { discontinuedNote, latestDate, masterRefs, monthlyHistory, publishableRefs, summarize, yen } from "@/lib/prices";
 import { publishedBrandOf, publishedFamilyOfRef, refsByFamily } from "@/lib/models";
 import { breadcrumb, graph, organization } from "@/lib/jsonld";
 import { IconDocument, IconFigures, IconLink, IconShop, IconTable, IconTrend } from "@/components/Icons";
@@ -87,6 +87,8 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
   };
   const hasPageUpdated = s.records.some((r) => pageUpdated(r.page_updated));
   const spec = specFor(ref);
+  // メーカー公式サイトに載っていない型番の注釈（data/discontinued-refs.json・MediaXAI 指定の文言）
+  const discontinued = discontinuedNote(ref);
   // メーカー公式サイトの小売価格（data/retail・taro-2）。税込の表記はページに書かれていたときだけ
   const retail = retailFor(ref);
   const ratio = retailRatio(s, retail);
@@ -599,6 +601,7 @@ export default async function RefPage({ params }: { params: Promise<{ ref: strin
           <dt>比較している買取店</dt>
           <dd>{s.shops.join("・")}（{s.shops.length}社）</dd>
         </dl>
+        {discontinued && <p className="note mt-4">※{discontinued}</p>}
         <p className="note mt-4">
           ※買取店での掲載名・文字盤・素材・状態は、各買取店が公開ページに記載している表記をもとにしています（ブランド名と型番は除いています。文字盤は同じ色を指す表記を1つにまとめています）。
           {spec ? "メーカー公式サイトに記載のある仕様は、下の「基本仕様（メーカー公式）」に掲載しています。" : "この型番は、メーカー公式サイトで仕様を確認できなかったため、公式の仕様は掲載しておりません。"}

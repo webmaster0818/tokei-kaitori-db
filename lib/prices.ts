@@ -324,6 +324,17 @@ export function refOverrides() {
   return overridesCache;
 }
 
+// メーカー公式サイトに載っていない型番の注釈（data/discontinued-refs.json・2026-11-14 MediaXAI 指定の文言）
+let discontinuedCache: { note: string; refs: Set<string> } | null = null;
+export function discontinuedNote(ref: string): string | null {
+  if (!discontinuedCache) {
+    const p = path.join(process.cwd(), "data", "discontinued-refs.json");
+    const d = fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, "utf8")) : {};
+    discontinuedCache = { note: d.note ?? "", refs: new Set<string>(d.refs ?? []) };
+  }
+  return discontinuedCache.refs.has(ref) && discontinuedCache.note ? discontinuedCache.note : null;
+}
+
 // 段階的な公開（data/publish-gate.json）。brands が null なら全ブランド。
 function publishGateBrands(): Set<string> | null {
   const p = path.join(process.cwd(), "data", "publish-gate.json");
