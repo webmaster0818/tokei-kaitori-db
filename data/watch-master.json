@@ -24911,7 +24911,16 @@
    "shops": [
     "quark"
    ]
+  },
+  "W25034B9": {
+   "brand": "カルティエ",
+   "models": [
+    "ミニパンテール YG"
+   ],
+   "shops": [
+    "rodeodrive"
+   ]
   }
  },
- "updated_at": "2026-11-16"
+ "updated_at": "2026-11-17"
 }
