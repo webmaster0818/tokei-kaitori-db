@@ -2,7 +2,7 @@
  "_note": "sitemap の lastmod の元（scripts/generate-sitemap.mjs が更新。h=表示内容の指紋 d=それが変わった日）",
  "pages": {
   "/": {
-   "h": "1961736cae1ff1da",
+   "h": "cf20aa94e8e44b68",
    "d": "2026-11-21"
   },
   "/brand/audemars-piguet/": {
@@ -258,36 +258,56 @@
    "d": "2026-11-21"
   },
   "/faq/": {
-   "h": "2e74ac47ced7d77d",
-   "d": "2026-10-17"
+   "h": "c5e3849b18733da7",
+   "d": "2026-11-21"
   },
   "/glossary/": {
-   "h": "343c8e2b978fc05c",
-   "d": "2026-10-17"
+   "h": "e222b0ebdc910bbc",
+   "d": "2026-11-21"
   },
   "/guide/": {
-   "h": "dc4cc8e59c27bf7a",
-   "d": "2026-10-17"
+   "h": "a5bf32e85190c9a5",
+   "d": "2026-11-21"
   },
   "/guide/accessories-and-price/": {
-   "h": "b28634772d7b0b15",
-   "d": "2026-10-17"
+   "h": "44603579a412e5ef",
+   "d": "2026-11-21"
+  },
+  "/guide/broken-rolex-buyback/": {
+   "h": "f04235f7e0ec1670",
+   "d": "2026-11-22"
   },
   "/guide/choosing-a-buyer/": {
-   "h": "52d3b3ea326f1279",
-   "d": "2026-10-17"
+   "h": "85b2ec40bad4bfcb",
+   "d": "2026-11-21"
   },
   "/guide/how-to-read-prices/": {
-   "h": "96932b101ca13ea5",
-   "d": "2026-10-17"
+   "h": "5240788f41ac0a80",
+   "d": "2026-11-21"
+  },
+  "/guide/old-rolex-buyback/": {
+   "h": "706cb8e76682ee56",
+   "d": "2026-11-22"
   },
   "/guide/overhaul-before-selling/": {
-   "h": "4c2a5932b699743d",
-   "d": "2026-10-17"
+   "h": "2dfdd72baae6665b",
+   "d": "2026-11-21"
+  },
+  "/guide/rolex-home-visit-buyback/": {
+   "h": "728232a8ac162662",
+   "d": "2026-11-22"
+  },
+  "/guide/rolex-inheritance/": {
+   "h": "47e41b3be330e027",
+   "d": "2026-11-22"
   },
   "/guide/rolex-reference-numbers/": {
-   "h": "6abfc804c4a73e52",
-   "d": "2026-10-17"
+   "h": "ffc053e4de5e78d0",
+   "d": "2026-11-21"
+  },
+  "/guide/watch-mail-in-buyback/": {
+   "h": "f9849e40fe001f63",
+   "d": "2026-11-22"
   },
   "/ref/114060/": {
    "h": "0995b498fc43ee77",
