@@ -1,0 +1,10 @@
+# 2026-11-24 に sitemap から消える見込みのURL（7本）。2026-11-23 09:2x〜09:38 に data/prices/2026-11-22.json（HEAD 67a478b2d）で模擬ビルド（本番 864→857）。
+# 計算: 11/24 時点で元の取得日から14日を超える行（ウォッチニアン 11/9 取得 36行のみ）を落とし、外れ値判定をやり直して npm run build。増えるURL 0。ガードのしきい値 820 で止まらない。
+# 7本とも _redirects で 301（seamaster 2・speedmaster 3・sky-dweller 1・santos 1）。precheck 全項目OK。11/23 以降の取得でウォッチニアンが復旧・再掲載すれば減らない。
+https://brandwatchbank.com/ref/231.10.42.21.03.003/
+https://brandwatchbank.com/ref/232.30.44.22.01.001/
+https://brandwatchbank.com/ref/325.92.43.79.01.001/
+https://brandwatchbank.com/ref/326235/
+https://brandwatchbank.com/ref/329.30.44.51.01.001/
+https://brandwatchbank.com/ref/331.10.42.51.01.002/
+https://brandwatchbank.com/ref/wssa0048/

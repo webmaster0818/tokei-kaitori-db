@@ -438,3 +438,8 @@
 - **859→864**: 11/22 02:2x の kwexp でガイド5本（broken-rolex-buyback・old-rolex-buyback・rolex-home-visit-buyback・watch-mail-in-buyback・rolex-inheritance）を追加（`9893f0fb1`）＝追加5本のみ・消えた URL 0。07:00 の 864 はこの状態。
 - **11/22 日次（`f0dc0a4c9`）**: 11:25:05 開始 → 11:39:31 取得OK → 11:43:04 push → 11:43:31 デプロイOK（ガード停止なし）。sitemap **864→864**（URL 集合の変化0・lastmod 11/22 は93本＝新ガイド5＋表示値が変わった88）。brandwatchbank.com は 12:01 に HEAD と loc/lastmod 差分0（pages.dev は 11:53 時点で反映済み）。864 URL 全て 200（?cb=）。
 - ⚠️ ウォッチニアンは 11/21・11/22 とも取得0件（watchnian.com は TLS エラー／HTTP 000）→ 前日分181件を元の取得日のまま引き継ぎ中。11/9 取得の36行が 11/24 に失効する（再掲載・復旧が無ければ）＝11/23 に dry を。
+
+### 2026-11-23 朝 ウォッチニアン応答確認・11/24 失効の dry（864→857・本番未変更）
+- **ウォッチニアン**: 09:21 も watchnian.com は TLS エラー（証明書のホスト名不一致）・www は接続リセット（HTTP 000）。取得元の価格ページ /buy/categories/item_watch/brand_rolex/ も 000。回避はしていない。11/23 日次も引き継ぎ（11/9 取得36行は 11/23 時点で14日＝まだ残る）。
+- **11/24 失効の dry（`/tmp/bwb1123/sim`・HEAD 67a478b2d の archive・11/22 スナップショットから 11/24 時点で14日超の行を落とし hold_outliers をかけ直して npm run build）**: 落ちる行はウォッチニアン 11/9 取得 36行のみ（保留は 1→1）。sitemap **864→857**（−7・増える URL 0）。消えるのは /ref/231.10.42.21.03.003/・232.30.44.22.01.001/（→/model/seamaster/）・325.92.43.79.01.001/・329.30.44.51.01.001/・331.10.42.51.01.002/（→/model/speedmaster/）・326235/（→/model/sky-dweller/）・wssa0048/（→/model/santos/）＝7本とも 301。ガードのしきい値 820 で止まらない。precheck 全項目OK。リスト `reports/expiry-2026-11-24-urls.txt`。
+  - ⚠️ sim の node_modules はシンボリックリンクだと Turbopack が「filesystem root の外」で落ちる → コピーで通した。load 8〜9 で /ref/ が 300 秒超の再試行あり（完走 約16分）。
